@@ -1338,7 +1338,7 @@ Configuracoes As screen:
                         )*/
                         Icon.Trash
                     Height: =40
-                    Visible: =!localShowEditForm And !localShowNewForm
+                    Visible: =!localShowEliminacaoForm
                     Width: =160
                     X: =416
                     Y: =6
@@ -1359,7 +1359,7 @@ Configuracoes As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    Visible: =!localShowEditForm And !localShowNewForm
+                    Visible: =!localShowEliminacaoForm
                     X: =DynamicBtn_9.X
                     Y: =DynamicBtn_9.Y
                     ZIndex: =4
