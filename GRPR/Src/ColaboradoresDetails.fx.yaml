@@ -883,8 +883,7 @@ ColaboradoresDetails As screen:
             "<b>" & DataCardValue9_1.Text & "</b> " &
             If(
                 !DataCardValue2.Selected.Value,
-                " (eliminado)",
-                ""
+                " (eliminado)"
             )
         Size: =14
         Visible: =ColabFormMode <> FormMode.New
