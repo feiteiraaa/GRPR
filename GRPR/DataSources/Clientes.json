@@ -1,0 +1,1711 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "accounts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "account",
+    "MaxGetRowsCount": 500,
+    "Name": "Clientes",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Carteira",
+      "{Attachments}": "Attachments",
+      "account_actioncard": "Cartões de Ação",
+      "Account_ActivityPointers": "Atividades (Account_ActivityPointers)",
+      "account_adx_alertsubscriptions": "Subscrições de Alerta",
+      "account_adx_inviteredemptions": "Resgates de Convites",
+      "account_adx_portalcomments": "Comentários do Portal",
+      "Account_Annotation": "Notas",
+      "Account_Appointments": "Appointments (Account_Appointments)",
+      "Account_AsyncOperations": "Tarefas de Sistema",
+      "account_ava_clientes_acompanhamento_atividades": "Clientes_Acompanhamento_Atividades",
+      "account_bookableresource_AccountId": "Recursos Reserváveis",
+      "Account_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "account_BulkOperations": "Campanhas Rápidas (account_BulkOperations)",
+      "account_CampaignResponses": "Respostas à Campanha",
+      "account_chats": "Chats do Teams",
+      "account_connections1": "Ligações (account_connections1)",
+      "account_connections2": "Ligações (account_connections2)",
+      "Account_CustomerAddress": "Endereços",
+      "Account_DuplicateBaseRecord": "Registos Duplicados (Account_DuplicateBaseRecord)",
+      "Account_DuplicateMatchingRecord": "Registos Duplicados (Account_DuplicateMatchingRecord)",
+      "Account_Email_EmailSender": "Mensagens de Correio Eletrónico (Account_Email_EmailSender)",
+      "Account_Email_SendersAccount": "Mensagens de Correio Eletrónico (Account_Email_SendersAccount)",
+      "Account_Emails": "Mensagens de Correio Eletrónico (Account_Emails)",
+      "account_entitlement_Account": "Elegibilidades (account_entitlement_Account)",
+      "account_entitlement_Customer": "Elegibilidades (account_entitlement_Customer)",
+      "Account_Faxes": "Visitas Clientes (Account_Faxes)",
+      "account_IncidentResolutions": "Aprovações de Casos",
+      "Account_Letters": "Cartas (Account_Letters)",
+      "account_li_inmails": "inMails",
+      "account_li_messages": "Mensagens",
+      "account_li_pointdrivepresentationvieweds": "Conteúdo de Ligações Inteligentes Visualizado",
+      "Account_MailboxTrackingFolder": "Pastas de Monitorização Automática da Caixa de Correio",
+      "account_master_account": "Clientes (account_master_account)",
+      "account_msdyn_ocliveworkitems": "Conversações (account_msdyn_ocliveworkitems)",
+      "account_msdyn_ocsessions": "Sessões",
+      "account_msdyn_surveyinvites": "Atividades do Inquérito (account_msdyn_surveyinvites)",
+      "account_msfp_alerts": "Alerta do Customer Voice",
+      "account_msfp_surveyinvites": "Convites para inquérito do Customer Voice",
+      "account_msfp_surveyresponses": "Respostas a inquéritos do Customer Voice",
+      "account_mtp_eventos": "Tarefa Eventos (account_mtp_eventos)",
+      "account_OpportunityCloses": "Atividades de Fecho da Oportunidade",
+      "account_OrderCloses": "Atividades de Fecho da Encomenda",
+      "account_parent_account": "Clientes (account_parent_account)",
+      "Account_Phonecalls": "Chamadas Telefónicas (Account_Phonecalls)",
+      "account_PostFollows": "Seguimentos",
+      "account_PostRegardings": "Publicação Relativa A",
+      "account_Posts": "Publicações",
+      "account_principalobjectattributeaccess": "Partilha de Campos",
+      "Account_ProcessSessions": "Sessões de Processo",
+      "account_QuoteCloses": "Atividades de Fecho da Proposta",
+      "Account_RecurringAppointmentMasters": "Presenciais Periódicos",
+      "Account_ServiceAppointments": "Atividades de Serviço",
+      "Account_SharepointDocumentLocation": "Localizações de Documentos",
+      "Account_SocialActivities": "Atividades de Rede Social (Account_SocialActivities)",
+      "Account_SyncErrors": "Erros de Sincronização",
+      "Account_Tasks": "Tarefas Gerais (Account_Tasks)",
+      "accountcategorycode": "Categoria",
+      "accountclassificationcode": "Classificação",
+      "accountid": "Cliente",
+      "accountleads_association": "Oportunidades Potenciais (accountleads_association)",
+      "accountnumber": "Nº Cl.",
+      "accountratingcode": "Classificação do Cliente",
+      "address1_addresstypecode": "Endereço 1: Tipo de Endereço",
+      "address1_city": "Endereço 1: Localidade",
+      "address1_composite": "Endereço 1",
+      "address1_country": "Endereço 1: País/Região",
+      "address1_county": "Endereço 1: Concelho",
+      "address1_fax": "Endereço 1: Fax",
+      "address1_freighttermscode": "Endereço 1: Condições de Transporte",
+      "address1_latitude": "Endereço 1: Latitude",
+      "address1_line1": "Endereço 1: Rua 1",
+      "address1_line2": "Endereço 1: Rua 2",
+      "address1_line3": "Endereço 1: Rua 3",
+      "address1_longitude": "Endereço 1: Longitude",
+      "address1_name": "Endereço 1: Nome",
+      "address1_postalcode": "Endereço 1: Código Postal",
+      "address1_postofficebox": "Endereço 1: Apartado",
+      "address1_primarycontactname": "Endereço 1: Nome do Contacto Primário",
+      "address1_shippingmethodcode": "Endereço 1: Forma de Envio",
+      "address1_stateorprovince": "Endereço 1: Distrito",
+      "address1_telephone1": "Telefone de Casa",
+      "address1_telephone2": "Telefone do Trabalho",
+      "address1_telephone3": "Endereço 1: Telefone 3",
+      "address1_upszone": "Endereço 1: Zona UPS",
+      "address1_utcoffset": "Endereço 1: Desvio UTC",
+      "address2_addresstypecode": "Endereço 2: Tipo de Endereço",
+      "address2_city": "Endereço 2: Localidade",
+      "address2_composite": "Endereço 2",
+      "address2_country": "Endereço 2: País/Região",
+      "address2_county": "Endereço 2: Concelho",
+      "address2_fax": "Endereço 2: Fax",
+      "address2_freighttermscode": "Endereço 2: Condições de Transporte",
+      "address2_latitude": "Endereço 2: Latitude",
+      "address2_line1": "Endereço 2: Rua 1",
+      "address2_line2": "Endereço 2: Rua 2",
+      "address2_line3": "Endereço 2: Rua 3",
+      "address2_longitude": "Endereço 2: Longitude",
+      "address2_name": "Endereço 2: Nome",
+      "address2_postalcode": "Endereço 2: Código Postal",
+      "address2_postofficebox": "Endereço 2: Apartado",
+      "address2_primarycontactname": "Endereço 2: Nome do Contacto Primário",
+      "address2_shippingmethodcode": "Endereço 2: Forma de Envio",
+      "address2_stateorprovince": "Endereço 2: Distrito",
+      "address2_telephone1": "Endereço 2: Telefone 1",
+      "address2_telephone2": "Endereço 2: Telefone 2",
+      "address2_telephone3": "Endereço 2: Telefone 3",
+      "address2_upszone": "Endereço 2: Zona UPS",
+      "address2_utcoffset": "Endereço 2: Desvio UTC",
+      "adx_account_badge": "Distintivos",
+      "adx_AccountContentAccessLevel": "Níveis de Acesso a Conteúdos",
+      "adx_accountproduct": "Produtos",
+      "adx_createdbyipaddress": "Criado Por (Endereço IP)",
+      "adx_createdbyusername": "Criado Por (Nome de Utilizador)",
+      "adx_invitation_assigntoaccount": "Convites",
+      "adx_modifiedbyipaddress": "Modificado Por (Endereço IP)",
+      "adx_modifiedbyusername": "Modificado Por (Nome de Utilizador)",
+      "adx_webrole_account": "Funções Web",
+      "adx_website_sponsor": "Sites",
+      "aging30": "Envelhecimento 30",
+      "aging30_base": "Envelhecimento 30 (Base)",
+      "aging60": "Envelhecimento 60",
+      "aging60_base": "Envelhecimento 60 (Base)",
+      "aging90": "Envelhecimento 90",
+      "aging90_base": "Envelhecimento 90 (Base)",
+      "ava_cliente_360_Account_Account": "Clientes_360",
+      "ava_Proposals_cliente_account_Account": "Propostas (ava_Proposals_cliente_account_Account)",
+      "BulkOperation_Logs_Accounts": "Campanhas Rápidas (BulkOperation_Logs_Accounts)",
+      "businesstypecode": "Tipo",
+      "CampaignActivity_Logs_Accounts": "Atividades de Campanha",
+      "contact_customer_accounts": "Clientes Potenciais (contact_customer_accounts)",
+      "contract_billingcustomer_accounts": "Contratos (contract_billingcustomer_accounts)",
+      "contract_customer_accounts": "Contratos (contract_customer_accounts)",
+      "contractlineitem_customer_accounts": "Itens de Contrato",
+      "createdby": "Criado Por",
+      "createdon": "Criado Em",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "creditlimit": "Limite de Crédito",
+      "creditlimit_base": "Limite de Crédito (Base)",
+      "creditonhold": "Suspensão de Crédito",
+      "customersizecode": "Dimensão do Cliente",
+      "customertypecode": "Tipo de Relação",
+      "defaultpricelevelid": "Lista de Preços",
+      "description": "Descrição",
+      "donotbulkemail": "Não permitir Email em Massa",
+      "donotbulkpostalmail": "Não permitir Correio em Massa",
+      "donotemail": "Não permitir Mensagens de Email",
+      "donotfax": "Não permitir Faxes",
+      "donotphone": "Não permitir Chamadas Telefónicas",
+      "donotpostalmail": "Não permitir Correio",
+      "donotsendmm": "Enviar Materiais de Marketing",
+      "emailaddress1": "Email",
+      "emailaddress2": "Endereço de Email 2",
+      "emailaddress3": "Endereço de Email 3",
+      "entityimage": "Imagem Predefinida",
+      "entityimageid": "Id de Imagem da Entidade",
+      "exchangerate": "Câmbio",
+      "fax": "Fax",
+      "followemail": "Atividade Seguir Email",
+      "ftpsiteurl": "Local de FTP",
+      "importsequencenumber": "Número de Sequência da Importação",
+      "incident_customer_accounts": "Casos (incident_customer_accounts)",
+      "industrycode": "Setor",
+      "invoice_customer_accounts": "Faturas",
+      "lastonholdtime": "Último Tempo Suspenso",
+      "lastusedincampaign": "Última Data Incluída na Campanha",
+      "lead_customer_accounts": "Oportunidades Potenciais (lead_customer_accounts)",
+      "lead_parent_account": "Oportunidades Potenciais (lead_parent_account)",
+      "listaccount_association": "Listas de marketing",
+      "marketcap": "Capitalização de Mercado",
+      "marketcap_base": "Capitalização de Mercado (Base)",
+      "marketingonly": "Apenas Marketing",
+      "masterid": "ID Mestre",
+      "merged": "Intercalado",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Modificado Em",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "msa_account_incident": "Casos (msa_account_incident)",
+      "msa_account_managingpartner": "Clientes (msa_account_managingpartner)",
+      "msa_contact_managingpartner": "Clientes Potenciais (msa_contact_managingpartner)",
+      "msa_managingpartnerid": "Parceiro de Gestão",
+      "msa_partner_opportunity": "Oportunidades Comerciais (msa_partner_opportunity)",
+      "msdyn_account_dailyaccountkpiitem_entityid": "dailyaccountkpiitems",
+      "msdyn_account_msdyn_accountkpiitem_accountid": "Itens de KPI de Conta",
+      "msdyn_account_msdyn_aicontactsuggestion_sourcerecord": "Sugestão de Contacto do Teams por IA",
+      "msdyn_account_msdyn_customerasset_Account": "Ativos do Cliente",
+      "msdyn_account_msdyn_iotdevice_Account": "Dispositivos IoT",
+      "msdyn_account_msdyn_liveconversation_Customer": "Conversações em curso (Preterido)",
+      "msdyn_account_msdyn_mostcontacted_regardingObjectId": "Mais Contactado",
+      "msdyn_account_msdyn_mostcontactedby_regardingObjectId": "Mais Contactado Por",
+      "msdyn_account_msdyn_ocliveworkitem_Customer": "Conversações (msdyn_account_msdyn_ocliveworkitem_Customer)",
+      "msdyn_account_msdyn_responseoutcome_Account": "Resultados de Resposta",
+      "msdyn_account_msdyn_surveyinvite_AccountId": "Atividades do Inquérito (msdyn_account_msdyn_surveyinvite_AccountId)",
+      "msdyn_account_msdyn_surveyresponse_Account": "Respostas a Inquéritos",
+      "msdyn_accountkpiid": "KPI",
+      "msdyn_gdproptout": "Opção Ativa de Não Participação no GDPR",
+      "msdyn_msdyn_functionallocation_account": "Localizações Funcionais",
+      "msdyn_msdyn_preferredagent_account_msdyn_recordId": "Agentes Preferenciais",
+      "msdyn_playbookinstance_account": "Manuais de Procedimentos",
+      "msdyn_sabackupdiagnostic_account_msdyn_target": "sabackupdiagnostics",
+      "msdyn_salesaccelerationinsightid": "ID de Informações de Aceleração de Vendas",
+      "msdyn_salesaccelerationinsights_account": "Informações de aceleração de vendas",
+      "msdyn_salesroutingdiagnostic_account_msdyn_target": "salesroutingdiagnostics",
+      "msdyn_salessuggestion_account": "Sugestões",
+      "msdyn_segmentid": "ID do Segmento",
+      "msdyn_sequencetarget_account_msdyn_target": "Objetivos da Sequência",
+      "msdyn_swarm_account": "Aglomerados",
+      "msdyncrm_insights_placeholder": "Insights",
+      "msevtmgt_account_msevtmgt_eventvendor_Account": "Fornecedores de Eventos",
+      "msevtmgt_account_msevtmgt_sponsorship_Sponsor": "Patrocínios",
+      "msevtmgt_hotelgroup": "Grupo hoteleiro",
+      "msevtmgt_rentalcarprovider": "Fornecedor de aluguer de automóveis",
+      "mtp_account_appointment_clientelookup": "Appointments (mtp_account_appointment_clientelookup)",
+      "mtp_account_email_clientelookup": "Mensagens de Correio Eletrónico (mtp_account_email_clientelookup)",
+      "mtp_account_fax_clientelookup": "Visitas Clientes (mtp_account_fax_clientelookup)",
+      "mtp_account_in_ata": "Atas (mtp_account_in_ata)",
+      "mtp_account_in_ata2": "Atas (mtp_account_in_ata2)",
+      "mtp_account_in_interacaoEmail": "Interações Email",
+      "mtp_account_letter_clientelookup": "Cartas (mtp_account_letter_clientelookup)",
+      "mtp_account_mtp_alerta_cliente": "Alertas",
+      "mtp_account_mtp_contarelacionada": "Contas Relacionadas",
+      "mtp_account_mtp_detalheevento_cliente": "Detalhe de Eventos",
+      "mtp_account_mtp_evento_clientelookup": "Tarefa Eventos (mtp_account_mtp_evento_clientelookup)",
+      "mtp_account_mtp_identificationrequest": "Identifications Request",
+      "mtp_account_mtp_marketplacesimulation_ClientID": "Simulações Collection",
+      "mtp_account_mtp_operationrequest_accountid": "Operations Requests",
+      "mtp_account_mtp_opevento_cliente": "Eventos",
+      "mtp_account_mtp_produtodecampanha": "Produtos de Campanha",
+      "mtp_account_mtp_simulation_customerid": "Simulações",
+      "mtp_account_phonecall_clientelookup": "Chamadas Telefónicas (mtp_account_phonecall_clientelookup)",
+      "mtp_account_task_clientelookup": "Tarefas Gerais (mtp_account_task_clientelookup)",
+      "mtp_affluent": "Afluente",
+      "mtp_antiguidade": "Antiguidade",
+      "mtp_appgestorremoto": "App GestorRemoto",
+      "mtp_associado": "Associado",
+      "mtp_associatetype": "Tipo de Associado",
+      "mtp_balcaoabertura": "Unidade de Negócio de Abertura",
+      "mtp_balcaoseguimento": "Unid. Neg. de Seguimento",
+      "mtp_balcaotitular": "Balcão Titular",
+      "mtp_balcogestorlookup": "Balcão Gestor",
+      "mtp_birthday": "Data de Aniversário",
+      "mtp_clienteactivo_central": "Cliente Ativo Central",
+      "mtp_clientetp": "Cliente Top Premium",
+      "mtp_colaborador": "Colaborador (mtp_colaborador)",
+      "mtp_colaboradornum": "Colaborador (mtp_colaboradornum)",
+      "mtp_contactogestor": "Contacto Gestor",
+      "mtp_country": "Pais",
+      "mtp_crmsynch": "CRm SYNCH",
+      "mtp_datadeabertura": "Data de Abertura",
+      "mtp_dataprocessing": "Data Processing",
+      "mtp_employee": "Indicador de Empregado",
+      "mtp_estrategico": "Estratégico",
+      "mtp_eventsandsponsorships": "Events And Sponsorships",
+      "mtp_forgetfulnessindicator": "Forgetfulness Indicator",
+      "mtp_gender": "Sexo",
+      "mtp_gestorcliente": "Gestor de Cliente(old)",
+      "mtp_grandparentbu": "Direção Comercial",
+      "mtp_idadecliente": "Idade do Cliente / Tempo de Atividade",
+      "mtp_iinimail": "Ind. de inibição mailing",
+      "mtp_iinimkt": "Ind. de inibição telemarketing",
+      "mtp_inet24": "Ind. net24 Ativo",
+      "mtp_inetmov": "Ind. netmóvel Ativo",
+      "mtp_ioutcan": "Ind. outros canais da PMC Ativos",
+      "mtp_iphone24": "Ind. phone24 Ativo",
+      "mtp_isms24": "Ind.  SMS24 Ativo",
+      "mtp_lastmodificationondatetime": "Dt Última Modificação (mtp_lastmodificationondatetime)",
+      "mtp_lastmodifiedon": "Dt Última Modificação (mtp_lastmodifiedon)",
+      "mtp_lastmodifiedon_date": "LastModifiedOn (Última Atualização Em)",
+      "mtp_lastmodifiedon_state": "LastModifiedOn (Estado)",
+      "mtp_limitationindicator": "Limitation Indicator",
+      "mtp_maritalstatus": "Estado civil",
+      "mtp_mtp_proposalinformation_cliente_account": "Informação de Proposta",
+      "mtp_mutualistproductcomercialization": "Mutualist Product Comercialization",
+      "mtp_newsletter": "Newsletter",
+      "mtp_numdocfiscal": "Nº Doc. Fiscal",
+      "mtp_numdocfiscalint": "Número de Documento Fiscal Int",
+      "mtp_numdocfiscalstring": "Número de Documento Fiscal String",
+      "mtp_numdocidenti": "Nº Doc. Identificação",
+      "mtp_numdocidentiint": "Número Documento Identificação Int",
+      "mtp_numdocidentistring": "Número Documento Identificação String",
+      "mtp_numerocliente": "Nº Cl.(Int)",
+      "mtp_origempromotor": "Origem Promotor",
+      "mtp_paisemissordocfiscal": "País Doc. Fiscal",
+      "mtp_paisemissordocidenti": "País Doc. Identificação",
+      "mtp_partnernumber": "Nº de Associado",
+      "mtp_powerapp_pcfbutton": "powerapp_pcfbutton",
+      "mtp_profissao": "Profissão",
+      "mtp_profissao_cae": "Profissão / CAE",
+      "mtp_relation": "Relação",
+      "mtp_runcallout": "Run Callout",
+      "mtp_salutation": "Titulo Honorífico",
+      "mtp_segmentodecliente": "Segmento de cliente",
+      "mtp_serviceproductcontent": "Service Product Content",
+      "mtp_smallname": "Nome Reduzido",
+      "mtp_sms": "SMS",
+      "mtp_socialeconomicinitiative": "Social Economic Initiative",
+      "mtp_teste": "teste",
+      "mtp_tipoclientenome": "Tipo Cliente Nome",
+      "mtp_tipodocfiscal": "Tipo Doc. Fiscal",
+      "mtp_tipodocident": "Tipo Doc. Identificação",
+      "mtp_tipogestorcliente": "Tipo de Gestor de Cliente",
+      "mtp_tratadoem": "Tratado em",
+      "mtp_tratadoporid": "Tratado por",
+      "name": "Nome Cl.",
+      "new_account_msdyn_orgchartnodeupdated_msdyn_parentrecordupdated": "Entidades de nó de Organograma Microsoft",
+      "numberofemployees": "Número de Empregados",
+      "onholdtime": "Tempo Suspenso (Minutos)",
+      "opendeals": "Negócios Abertos",
+      "opendeals_date": "Negócios Abertos (Hora da Última Atualização)",
+      "opendeals_state": "Negócios Abertos(Estado)",
+      "openrevenue": "Receita Aberta",
+      "openrevenue_base": "Receita Aberta (Base)",
+      "openrevenue_date": "Receita Aberta (Hora da Última Atualização)",
+      "openrevenue_state": "Receita Aberta(Estado)",
+      "opportunity_customer_accounts": "Oportunidades Comerciais (opportunity_customer_accounts)",
+      "opportunity_parent_account": "Oportunidades Comerciais (opportunity_parent_account)",
+      "order_customer_accounts": "Encomendas",
+      "originatingleadid": "Fonte da Oportunidade Potencial",
+      "overriddencreatedon": "Registo Criado Em",
+      "ownershipcode": "Propriedade",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "parentaccountid": "Conta Principal",
+      "participatesinworkflow": "Participa no Fluxo de Trabalho",
+      "paymenttermscode": "Termos de Pagamento",
+      "preferredappointmentdaycode": "Dia Preferencial",
+      "preferredappointmenttimecode": "Hora Preferencial",
+      "preferredcontactmethodcode": "Método de Contacto Preferencial",
+      "preferredequipmentid": "Instalações/Equipamento Preferencial",
+      "preferredserviceid": "Serviço Preferencial",
+      "preferredsystemuserid": "Utilizador Preferencial",
+      "primarycontactid": "Contacto Primário",
+      "primarysatoriid": "ID do Satori Primário",
+      "primarytwitterid": "ID do Twitter Primário",
+      "processid": "Processo",
+      "quote_customer_accounts": "Propostas (quote_customer_accounts)",
+      "revenue": "Receita Anual",
+      "revenue_base": "Receita Anual (Base)",
+      "sharesoutstanding": "Ações por Liquidar",
+      "shippingmethodcode": "Forma de Envio",
+      "sic": "Código CAE",
+      "sla_account_sla": "SLA",
+      "slainvokedid_account_sla": "Último SLA aplicado",
+      "slakpiinstance_account": "Instâncias de KPI de SLA",
+      "SocialActivity_PostAuthor_accounts": "Atividades de Rede Social (SocialActivity_PostAuthor_accounts)",
+      "SocialActivity_PostAuthorAccount_accounts": "Atividades de Rede Social (SocialActivity_PostAuthorAccount_accounts)",
+      "Socialprofile_customer_accounts": "Perfis de Rede Social",
+      "stageid": "(Preterido) Fase do Processo",
+      "statecode": "Estado",
+      "statuscode": "Razão do Estado",
+      "stockexchange": "Bolsa de Valores",
+      "teamsfollowed": "TeamsFollowed",
+      "telephone1": "Telefone Principal",
+      "telephone2": "Outro Telefone (telephone2)",
+      "telephone3": "Outro Telefone (telephone3)",
+      "territorycode": "Código do Território",
+      "territoryid": "Território",
+      "tickersymbol": "Sigla de Ticker",
+      "timespentbymeonemailandmeetings": "Tempo Despendido por mim",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "transactioncurrencyid": "Moeda",
+      "traversedpath": "(Preterido) Caminho Percorrido",
+      "uipp_account_uipp_atividade_848": "Atividades (uipp_account_uipp_atividade_848)",
+      "uipp_account_uipp_listagens_243": "Listagens (uipp_account_uipp_listagens_243)",
+      "uipp_account_uipp_listagens_35": "Listagens (uipp_account_uipp_listagens_35)",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão UTC",
+      "versionnumber": "Número de Versão",
+      "websiteurl": "Web site",
+      "yominame": "Nome da Conta Yomi"
+    },
+    "PreferredName": "Clientes",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Clientes (Views)",
+    "Name": "_account_views",
+    "RelatedEntityName": "Clientes",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000000666000": "Vista Localização Avançada de Clientes",
+      "00000000-0000-0000-00aa-000010001002": "Todos os Clientes do Banco",
+      "00000000-0000-0000-00aa-000010001200": "Vista Associada de Clientes",
+      "0b64db06-5810-e611-80d5-00155d0f5447": "Clientes ENI",
+      "199a7fea-93b3-47c8-b950-4b6d60b2c955": "Lista de nomes de conta",
+      "2d328697-690b-e511-80c5-00155d0f522f": "Os Clientes da minha Unid. Neg.",
+      "38a21ffb-4e32-4038-beb9-03172a0dd034": "Vista de Membros da Lista de Contas",
+      "4bfea08c-9a4d-e611-80fc-0024e84720c6": "As Minhas Contas Ativas por Relação",
+      "59e57080-0cc2-e211-9b83-00155d89b902": "Vista BulkOperation de Clientes",
+      "65ffaf9a-e8c5-432d-860b-32f841b00d87": "Todas as Contas",
+      "7de498c2-508f-49a4-b2e8-d550d5b1b9ee": "Campanhas de Contas Excluídas",
+      "a9af0ab8-861d-4cfa-92a5-c6281fed7fab": "Vista de Pesquisa de Clientes",
+      "c9d85f1d-5810-e611-80d5-00155d0f5447": "Clientes Particulares",
+      "d15e48f6-e8fe-e811-8165-000d3af92c6e": "Campanhas de Contas Selecionadas",
+      "e5870747-90c3-eb11-bacc-000d3adc21d0": "Os Clientes do meu Balcão com Casos",
+      "eb4358e8-5710-e611-80d5-00155d0f5447": "Clientes Empresa"
+    }
+  },
+  {
+    "DisplayName": "Categoria (Clientes)",
+    "Name": "account_accountcategorycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Cliente Preferencial",
+      "100000000": "NULL",
+      "2": "Padrão"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "accountcategorycode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "accountcategorycode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Classificação (Clientes)",
+    "Name": "account_accountclassificationcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "accountclassificationcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "accountclassificationcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Classificação do Cliente (Clientes)",
+    "Name": "account_accountratingcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "accountratingcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "accountratingcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 1: Tipo de Endereço (Clientes)",
+    "Name": "account_address1_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Cobrar A",
+      "2": "Enviar Para",
+      "3": "Primário",
+      "4": "Outro"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_addresstypecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_addresstypecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 1: Condições de Transporte (Clientes)",
+    "Name": "account_address1_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "FOB",
+      "2": "Grátis"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_freighttermscode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_freighttermscode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 1: Forma de Envio (Clientes)",
+    "Name": "account_address1_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Via Aérea",
+      "2": "DHL",
+      "3": "FedEx",
+      "4": "UPS",
+      "5": "Correio Postal",
+      "6": "Carga Completa",
+      "7": "Cliente Levanta"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_shippingmethodcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 2: Tipo de Endereço (Clientes)",
+    "Name": "account_address2_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_addresstypecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_addresstypecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 2: Condições de Transporte (Clientes)",
+    "Name": "account_address2_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_freighttermscode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_freighttermscode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 2: Forma de Envio (Clientes)",
+    "Name": "account_address2_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_shippingmethodcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tipo (Clientes)",
+    "Name": "account_businesstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido",
+      "2": "Empresa",
+      "3": "Particular",
+      "4": "ENI"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "businesstypecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "businesstypecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Suspensão de Crédito (Clientes)",
+    "Name": "account_creditonhold",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "creditonhold",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "creditonhold",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Dimensão do Cliente (Clientes)",
+    "Name": "account_customersizecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "customersizecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "customersizecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tipo de Relação (Clientes)",
+    "Name": "account_customertypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Concorrente",
+      "10": "Prestador",
+      "11": "Fornecedor",
+      "12": "Outro",
+      "2": "Consultor",
+      "3": "Cliente",
+      "4": "Investidor",
+      "5": "Parceiro",
+      "6": "Influenciador",
+      "7": "Imprensa",
+      "8": "Cliente Potencial",
+      "9": "Revendedor"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "customertypecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "customertypecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Email em Massa (Clientes)",
+    "Name": "account_donotbulkemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotbulkemail",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotbulkemail",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Correio em Massa (Clientes)",
+    "Name": "account_donotbulkpostalmail",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotbulkpostalmail",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotbulkpostalmail",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Mensagens de Email (Clientes)",
+    "Name": "account_donotemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotemail",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotemail",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Faxes (Clientes)",
+    "Name": "account_donotfax",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotfax",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotfax",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Chamadas Telefónicas (Clientes)",
+    "Name": "account_donotphone",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotphone",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotphone",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Correio (Clientes)",
+    "Name": "account_donotpostalmail",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotpostalmail",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotpostalmail",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Enviar Materiais de Marketing (Clientes)",
+    "Name": "account_donotsendmm",
+    "OptionSetInfoNameMapping": {
+      "0": "Enviar",
+      "1": "Não Enviar"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotsendmm",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotsendmm",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Atividade Seguir Email (Clientes)",
+    "Name": "account_followemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Não Permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "followemail",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "followemail",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Setor (Clientes)",
+    "Name": "account_industrycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Gestão de contas",
+      "10": "Distribuidores, Expedidores e Processadores",
+      "11": "Consultórios e Clínicas Médicas",
+      "12": "Fabrico de Materiais Duráveis",
+      "13": "Restauração",
+      "14": "Setor de Entretenimento",
+      "15": "Aluguer e Leasing de Equipamentos",
+      "16": "Atividades Financeiras",
+      "17": "Indústria Alimentar e Tabaqueira",
+      "18": "Processamento Interno de Custo Elevado",
+      "19": "Reparação e Serviços Internos",
+      "2": "Agricultura e Extração de Recursos Naturais Não Petrolíferos",
+      "20": "Seguros",
+      "21": "Serviços Jurídicos",
+      "22": "Comércio a Retalho de Mercadorias Perecíveis",
+      "23": "Serviço de Consumo para o Exterior",
+      "24": "Extração e Distribuição Petroquímica",
+      "25": "Prestação de Serviços",
+      "26": "Filiações SIG",
+      "27": "Serviços Sociais",
+      "28": "Empresas de Construção Especializadas",
+      "29": "Serviços Imobiliários",
+      "3": "Difusão, Impressão e Publicação",
+      "30": "Transporte",
+      "31": "Criação e Distribuição de Utilitários",
+      "32": "Comércio de Veículos a Retalho",
+      "33": "Comércio por Grosso",
+      "4": "Agentes",
+      "5": "Retalho de Materiais de Construção",
+      "6": "Serviços Empresariais",
+      "7": "Consultadoria",
+      "8": "Serviços de Consumo",
+      "9": "Design, Direção e Gestão Criativa"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "industrycode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "industrycode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "IsPrivate (Clientes)",
+    "Name": "account_isprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isprivate",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isprivate",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Apenas Marketing (Clientes)",
+    "Name": "account_marketingonly",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "marketingonly",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "marketingonly",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Intercalado (Clientes)",
+    "Name": "account_merged",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "merged",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "merged",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Propriedade (Clientes)",
+    "Name": "account_ownershipcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Público",
+      "2": "Privado",
+      "3": "Subsidiária",
+      "4": "Outro"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ownershipcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "ownershipcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Participa no Fluxo de Trabalho (Clientes)",
+    "Name": "account_participatesinworkflow",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "participatesinworkflow",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "participatesinworkflow",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Termos de Pagamento (Clientes)",
+    "Name": "account_paymenttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Líq. a 30 Dias",
+      "2": "2% a 10 Dias, Líq. a 30 Dias",
+      "3": "Líq. a 45 Dias",
+      "4": "Líq. a 60 Dias"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "paymenttermscode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "paymenttermscode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Dia Preferencial (Clientes)",
+    "Name": "account_preferredappointmentdaycode",
+    "OptionSetInfoNameMapping": {
+      "0": "Domingo",
+      "1": "Segunda-feira",
+      "2": "Terça-feira",
+      "3": "Quarta-feira",
+      "4": "Quinta-feira",
+      "5": "Sexta-feira",
+      "6": "Sábado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredappointmentdaycode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredappointmentdaycode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Hora Preferencial (Clientes)",
+    "Name": "account_preferredappointmenttimecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Manhã",
+      "2": "Tarde",
+      "3": "Noite"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredappointmenttimecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredappointmenttimecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Método de Contacto Preferencial (Clientes)",
+    "Name": "account_preferredcontactmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Qualquer",
+      "2": "Email",
+      "3": "Telefone",
+      "4": "Visitas clientes",
+      "5": "Correio"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredcontactmethodcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredcontactmethodcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Forma de Envio (Clientes)",
+    "Name": "account_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "shippingmethodcode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Estado (Clientes)",
+    "Name": "account_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo",
+      "1": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Clientes)",
+    "Name": "account_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo",
+      "2": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Código do Território (Clientes)",
+    "Name": "account_territorycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "territorycode",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "territorycode",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Opção Ativa de Não Participação no GDPR (Clientes)",
+    "Name": "msdyn_account_msdyn_gdproptout",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_gdproptout",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_gdproptout",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Conjunto de opções sim/não",
+    "Name": "msevtmgt_nooryes",
+    "OptionSetInfoNameMapping": {
+      "100000001": "Não",
+      "100000002": "Sim"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msevtmgt_hotelgroup",
+        "OptionSetReferenceEntityName": "Clientes"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "msevtmgt_rentalcarprovider",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msevtmgt_hotelgroup",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Afluente (Clientes)",
+    "Name": "mtp_account_mtp_affluent",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_affluent",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_affluent",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Associado (Clientes)",
+    "Name": "mtp_account_mtp_associado",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_associado",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_associado",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Cliente Ativo Central (Clientes)",
+    "Name": "mtp_account_mtp_clienteactivo_central",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_clienteactivo_central",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_clienteactivo_central",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Cliente Top Premium (Clientes)",
+    "Name": "mtp_account_mtp_clientetp",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_clientetp",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_clientetp",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Colaborador (Clientes)",
+    "Name": "mtp_account_mtp_colaborador",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_colaborador",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_colaborador",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "CRm SYNCH (Clientes)",
+    "Name": "mtp_account_mtp_crmsynch",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_crmsynch",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_crmsynch",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Data Processing (Clientes)",
+    "Name": "mtp_account_mtp_dataprocessing",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_dataprocessing",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_dataprocessing",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Indicador de Empregado (Clientes)",
+    "Name": "mtp_account_mtp_employee",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_employee",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_employee",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Events And Sponsorships (Clientes)",
+    "Name": "mtp_account_mtp_eventsandsponsorships",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_eventsandsponsorships",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_eventsandsponsorships",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Forgetfulness Indicator (Clientes)",
+    "Name": "mtp_account_mtp_forgetfulnessindicator",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_forgetfulnessindicator",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_forgetfulnessindicator",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind. de inibição mailing (Clientes)",
+    "Name": "mtp_account_mtp_iinimail",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_iinimail",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_iinimail",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind. de inibição telemarketing (Clientes)",
+    "Name": "mtp_account_mtp_iinimkt",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_iinimkt",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_iinimkt",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind. net24 Ativo (Clientes)",
+    "Name": "mtp_account_mtp_inet24",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_inet24",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_inet24",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind. netmóvel Ativo (Clientes)",
+    "Name": "mtp_account_mtp_inetmov",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_inetmov",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_inetmov",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind. outros canais da PMC Ativos (Clientes)",
+    "Name": "mtp_account_mtp_ioutcan",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_ioutcan",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_ioutcan",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind. phone24 Ativo (Clientes)",
+    "Name": "mtp_account_mtp_iphone24",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_iphone24",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_iphone24",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Ind.  SMS24 Ativo (Clientes)",
+    "Name": "mtp_account_mtp_isms24",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_isms24",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_isms24",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Limitation Indicator (Clientes)",
+    "Name": "mtp_account_mtp_limitationindicator",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_limitationindicator",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_limitationindicator",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Mutualist Product Comercialization (Clientes)",
+    "Name": "mtp_account_mtp_mutualistproductcomercialization",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_mutualistproductcomercialization",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_mutualistproductcomercialization",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Newsletter (Clientes)",
+    "Name": "mtp_account_mtp_newsletter",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_newsletter",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_newsletter",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Origem Promotor (Clientes)",
+    "Name": "mtp_account_mtp_origempromotor",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_origempromotor",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_origempromotor",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Run Callout (Clientes)",
+    "Name": "mtp_account_mtp_runcallout",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_runcallout",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_runcallout",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Service Product Content (Clientes)",
+    "Name": "mtp_account_mtp_serviceproductcontent",
+    "OptionSetInfoNameMapping": {
+      "0": "0",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_serviceproductcontent",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_serviceproductcontent",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "SMS (Clientes)",
+    "Name": "mtp_account_mtp_sms",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_sms",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_sms",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Social Economic Initiative (Clientes)",
+    "Name": "mtp_account_mtp_socialeconomicinitiative",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_socialeconomicinitiative",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_socialeconomicinitiative",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  }
+]

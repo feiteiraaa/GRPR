@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "uipp_alarmisticas",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "uipp_alarmistica",
+    "MaxGetRowsCount": 500,
+    "Name": "Alarmisticas",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "createdby": "Criado Por",
+      "createdon": "Criado Em",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "importsequencenumber": "Número de Sequência da Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Modificado Em",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "overriddencreatedon": "Registo Criado Em",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "statecode": "Estado",
+      "statuscode": "Razão do Estado",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "uipp_alarmistica_AsyncOperations": "Tarefas de Sistema",
+      "uipp_alarmistica_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "uipp_alarmistica_DuplicateBaseRecord": "Registos Duplicados (uipp_alarmistica_DuplicateBaseRecord)",
+      "uipp_alarmistica_DuplicateMatchingRecord": "Registos Duplicados (uipp_alarmistica_DuplicateMatchingRecord)",
+      "uipp_alarmistica_MailboxTrackingFolders": "Pastas de Monitorização Automática da Caixa de Correio",
+      "uipp_alarmistica_PrincipalObjectAttributeAccesses": "Partilha de Campos",
+      "uipp_alarmistica_ProcessSession": "Sessões de Processo",
+      "uipp_alarmistica_SyncErrors": "Erros de Sincronização",
+      "uipp_alarmisticaid": "Alarmistica",
+      "uipp_id": "ID",
+      "uipp_ndedias": "Nº de dias",
+      "utcconversiontimezonecode": "Código de Fuso Horário da Conversão UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Alarmisticas",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Alarmisticas (Views)",
+    "Name": "_uipp_alarmistica_views",
+    "RelatedEntityName": "Alarmisticas",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "183775bd-91f8-429d-a39d-37aafe965b18": "Alarmistica Advanced Find View",
+      "3b022c59-b056-40bf-973f-4a2661cceaf3": "Alarmistica Lookup View",
+      "6557bd47-1ca0-45a6-aede-6952eb899646": "Active Alarmisticas",
+      "8908670e-9d22-46ec-8ac3-6ffa1dc5e02f": "Alarmistica Associated View",
+      "92155b39-717e-4629-9fa9-3a15042e03dd": "Inactive Alarmisticas"
+    }
+  },
+  {
+    "DisplayName": "Estado (Alarmisticas)",
+    "Name": "uipp_alarmistica_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo",
+      "1": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Alarmisticas"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Alarmisticas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Alarmisticas)",
+    "Name": "uipp_alarmistica_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo",
+      "2": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Alarmisticas"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Alarmisticas",
+    "Type": "OptionSetInfo"
+  }
+]

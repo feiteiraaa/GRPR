@@ -1,0 +1,1968 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "contacts",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "contact",
+    "MaxGetRowsCount": 500,
+    "Name": "Clientes Potenciais",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "_parentcustomerid_value": "Cliente",
+      "{Attachments}": "Attachments",
+      "account_primary_contact": "Clientes",
+      "accountrolecode": "Função",
+      "address1_addresstypecode": "Endereço 1: Tipo de Endereço",
+      "address1_city": "Endereço 1: Localidade",
+      "address1_composite": "Endereço 1",
+      "address1_country": "Endereço 1: País/Região",
+      "address1_county": "Endereço 1: Concelho",
+      "address1_fax": "Endereço 1: Fax",
+      "address1_freighttermscode": "Endereço 1: Condições de Transporte",
+      "address1_latitude": "Endereço 1: Latitude",
+      "address1_line1": "Endereço 1: Rua 1",
+      "address1_line2": "Endereço 1: Rua 2",
+      "address1_line3": "Endereço 1: Rua 3",
+      "address1_longitude": "Endereço 1: Longitude",
+      "address1_name": "Endereço 1: Nome",
+      "address1_postalcode": "Endereço 1: Código Postal",
+      "address1_postofficebox": "Endereço 1: Apartado",
+      "address1_primarycontactname": "Endereço 1: Nome do Contacto Primário",
+      "address1_shippingmethodcode": "Endereço 1: Forma de Envio",
+      "address1_stateorprovince": "Endereço 1: Distrito",
+      "address1_telephone1": "Endereço 1: Telefone",
+      "address1_telephone2": "Endereço 1: Telefone 2",
+      "address1_telephone3": "Endereço 1: Telefone 3",
+      "address1_upszone": "Endereço 1: Zona UPS",
+      "address1_utcoffset": "Endereço 1: Desvio UTC",
+      "address2_addresstypecode": "Endereço 2: Tipo de Endereço",
+      "address2_city": "Endereço 2: Localidade",
+      "address2_composite": "Endereço 2",
+      "address2_country": "Endereço 2: País/Região",
+      "address2_county": "Endereço 2: Concelho",
+      "address2_fax": "Endereço 2: Fax",
+      "address2_freighttermscode": "Endereço 2: Condições de Transporte",
+      "address2_latitude": "Endereço 2: Latitude",
+      "address2_line1": "Endereço 2: Rua 1",
+      "address2_line2": "Endereço 2: Rua 2",
+      "address2_line3": "Endereço 2: Rua 3",
+      "address2_longitude": "Endereço 2: Longitude",
+      "address2_name": "Endereço 2: Nome",
+      "address2_postalcode": "Endereço 2: Código Postal",
+      "address2_postofficebox": "Endereço 2: Apartado",
+      "address2_primarycontactname": "Endereço 2: Nome do Contacto Primário",
+      "address2_shippingmethodcode": "Endereço 2: Forma de Envio",
+      "address2_stateorprovince": "Endereço 2: Distrito",
+      "address2_telephone1": "Endereço 2: Telefone 1",
+      "address2_telephone2": "Endereço 2: Telefone 2",
+      "address2_telephone3": "Endereço 2: Telefone 3",
+      "address2_upszone": "Endereço 2: Zona UPS",
+      "address2_utcoffset": "Endereço 2: Desvio UTC",
+      "address3_addresstypecode": "Endereço 3: Tipo de Endereço",
+      "address3_city": "Endereço 3: Localidade",
+      "address3_composite": "Endereço 3",
+      "address3_country": "Endereço3: País/Região",
+      "address3_county": "Endereço 3: Concelho",
+      "address3_fax": "Endereço 3: Fax",
+      "address3_freighttermscode": "Endereço 3: Condições de Transporte",
+      "address3_latitude": "Endereço 3: Latitude",
+      "address3_line1": "Endereço3: Rua 1",
+      "address3_line2": "Endereço3: Rua 2",
+      "address3_line3": "Endereço3: Rua 3",
+      "address3_longitude": "Endereço 3: Longitude",
+      "address3_name": "Endereço 3: Nome",
+      "address3_postalcode": "Endereço3: Código Postal",
+      "address3_postofficebox": "Endereço 3: Apartado",
+      "address3_primarycontactname": "Endereço 3: Nome do Contacto Principal",
+      "address3_shippingmethodcode": "Endereço 3: Forma de Envio",
+      "address3_stateorprovince": "Endereço3: Distrito",
+      "address3_telephone1": "Endereço 3: Telefone1",
+      "address3_telephone2": "Endereço 3: Telefone2",
+      "address3_telephone3": "Endereço 3: Telefone3",
+      "address3_upszone": "Endereço 3: Zona UPS",
+      "address3_utcoffset": "Endereço 3: Desvio UTC",
+      "adx_changedcontact_webpagehistory": "Histórico de Páginas Web",
+      "adx_communityforumthread_contact": "Tópicos do Fórum",
+      "adx_confirmremovepassword": "W\\\\'Çóñfîrm Rémòvè Påsswôrð ĉĉĉ ĉĉĉ ĉĉ?W",
+      "adx_contact_adx_casedeflection_Contact": "Deflexões de Incidentes",
+      "adx_contact_adx_idea_FlaggedBy": "Ideias (adx_contact_adx_idea_FlaggedBy)",
+      "adx_contact_adx_idea_ModeratedBy": "Ideias (adx_contact_adx_idea_ModeratedBy)",
+      "adx_contact_badge": "Distintivos",
+      "adx_contact_blogpost": "Publicações no Blogue",
+      "adx_contact_communityforumalert": "Alertas do Fórum",
+      "adx_contact_communityforumannouncement": "Anúncios de Fórum",
+      "adx_contact_communityforumpost": "Publicações em Fóruns",
+      "adx_contact_externalidentity": "Identidades Externas",
+      "adx_contact_feedback_Flaggedby": "Comentários (adx_contact_feedback_Flaggedby)",
+      "adx_contact_feedback_Moderatedby": "Comentários (adx_contact_feedback_Moderatedby)",
+      "adx_contact_forumnotification": "Notificações do Fórum",
+      "adx_contact_idea": "Ideias (adx_contact_idea)",
+      "adx_contact_idea_statusauthor": "Ideias (adx_contact_idea_statusauthor)",
+      "adx_contact_pagenotification": "Notificações da Página",
+      "adx_contact_pollsubmission": "Submissões de Sondagem",
+      "adx_contact_webfilelog": "Registos de Ficheiros Web",
+      "adx_contact_webpage": "Páginas Web",
+      "adx_contact_webpagelog": "Registos de Páginas Web",
+      "adx_ContactContentAccessLevel": "Níveis de Acesso a Conteúdos",
+      "adx_contactproduct": "Produtos",
+      "adx_createdbyipaddress": "Criado Por Endereço IP",
+      "adx_createdbyusername": "Criado Por Nome de Utilizador",
+      "adx_forum_activityalert": "Fóruns",
+      "adx_identity_accessfailedcount": "Contagem de Acessos Falhados",
+      "adx_identity_emailaddress1confirmed": "E-mail Confirmado",
+      "adx_identity_lastsuccessfullogin": "Último Início de Sessão Com Êxito",
+      "adx_identity_locallogindisabled": "Início de Sessão Local Desativado",
+      "adx_identity_lockoutenabled": "Bloqueio Ativado",
+      "adx_identity_lockoutenddate": "Data de Fim do Bloqueio",
+      "adx_identity_logonenabled": "Início de Sessão Ativado",
+      "adx_identity_mobilephoneconfirmed": "Número do Telemóvel Confirmado",
+      "adx_identity_newpassword": "W\\\\'Ñèw Pâsswôrð Ïñpüt ĉĉĉ ĉĉĉ ?W",
+      "adx_identity_passwordhash": "Hash de Palavra-passe",
+      "adx_identity_securitystamp": "Carimbo de Segurança",
+      "adx_identity_twofactorenabled": "Dois Fatores Ativados",
+      "adx_identity_username": "Nome de Utilizador",
+      "adx_invitation_invitecontact": "Convites (adx_invitation_invitecontact)",
+      "adx_invitation_invitecontacts": "Convites (adx_invitation_invitecontacts)",
+      "adx_invitation_invitercontact": "Convites (adx_invitation_invitercontact)",
+      "adx_invitation_redeemedContact": "Convites (adx_invitation_redeemedContact)",
+      "adx_invitation_redeemedcontacts": "Convites (adx_invitation_redeemedcontacts)",
+      "adx_modifiedbyipaddress": "Modificado Por Endereço IP",
+      "adx_modifiedbyusername": "Modificado Por Nome de Utilizador",
+      "adx_organizationname": "Nome da Organização",
+      "adx_portalinvitationcode": "Código do convite do portal",
+      "adx_portalinvitationurl": "URL de convite do portal",
+      "adx_preferredlanguageid": "Idioma Preferencial",
+      "adx_profilealert": "Alerta de Perfil",
+      "adx_profilealertdate": "Data de alerta de perfil",
+      "adx_profilealertinstructions": "Instruções de alerta de perfil",
+      "adx_profileisanonymous": "O Perfil é Anónimo",
+      "adx_profilelastactivity": "Última Atividade do Perfil",
+      "adx_profilemodifiedon": "Perfil Modificado Em",
+      "adx_publicprofilecopy": "Cópia de perfil público",
+      "adx_subscribercontact_pagealert": "Alertas da Página",
+      "adx_timezone": "Fuso Horário",
+      "adx_webformsession_contact": "Sessões de Formulários Web",
+      "adx_webrole_contact": "Funções Web",
+      "aging30": "Envelhecimento 30",
+      "aging30_base": "Envelhecimento 30 (Base)",
+      "aging60": "Envelhecimento 60",
+      "aging60_base": "Envelhecimento 60 (Base)",
+      "aging90": "Envelhecimento 90",
+      "aging90_base": "Envelhecimento 90 (Base)",
+      "anniversary": "Aniversário",
+      "annualincome": "Rendimentos Anuais",
+      "annualincome_base": "Rendimentos Anuais (Base)",
+      "assistantname": "Assistente",
+      "assistantphone": "Número de Telefone do Assistente",
+      "birthdate": "Data de Nascimento",
+      "bpf_contact_adx_bpf_c2857b638fa7473d8e2f112c232cebd8": "Change password for portal contact",
+      "BulkOperation_Logs_Contacts": "Campanhas Rápidas (BulkOperation_Logs_Contacts)",
+      "business2": "Telefone da Empresa 2",
+      "businesscard": "Cartão de Visita",
+      "businesscardattributes": "BusinessCardAttributes",
+      "callback": "Número de Chamada de Retorno",
+      "CampaignActivity_Logs_Contacts": "Atividades de Campanha",
+      "childrensnames": "Nomes dos Filhos",
+      "company": "Telefone Preferencial (company)",
+      "contact_actioncard": "Cartões de Ação",
+      "Contact_ActivityPointers": "Atividades (Contact_ActivityPointers)",
+      "contact_adx_alertsubscriptions": "Subscrições de Alerta",
+      "contact_adx_inviteredemptions": "Resgates de Convites",
+      "contact_adx_portalcomments": "Comentários do Portal",
+      "Contact_Annotation": "Notas",
+      "Contact_Appointments": "Appointments",
+      "contact_as_primary_contact": "Casos (contact_as_primary_contact)",
+      "contact_as_responsible_contact": "Casos (contact_as_responsible_contact)",
+      "Contact_AsyncOperations": "Tarefas de Sistema",
+      "contact_ava_clientes_acompanhamento_atividades": "Clientes_Acompanhamento_Atividades",
+      "contact_bookableresource_ContactId": "Recursos Reserváveis",
+      "Contact_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "contact_BulkOperations": "Campanhas Rápidas (contact_BulkOperations)",
+      "contact_CampaignResponses": "Respostas à Campanha",
+      "contact_chats": "Chats do Teams",
+      "contact_connections1": "Ligações (contact_connections1)",
+      "contact_connections2": "Ligações (contact_connections2)",
+      "contact_customer_contacts": "Clientes Potenciais (contact_customer_contacts)",
+      "Contact_CustomerAddress": "Endereços",
+      "Contact_DuplicateBaseRecord": "Registos Duplicados (Contact_DuplicateBaseRecord)",
+      "Contact_DuplicateMatchingRecord": "Registos Duplicados (Contact_DuplicateMatchingRecord)",
+      "Contact_Email_EmailSender": "Mensagens de Correio Eletrónico (Contact_Email_EmailSender)",
+      "Contact_Emails": "Mensagens de Correio Eletrónico (Contact_Emails)",
+      "contact_entitlement_ContactId": "Elegibilidades (contact_entitlement_ContactId)",
+      "contact_entitlement_Customer": "Elegibilidades (contact_entitlement_Customer)",
+      "Contact_Faxes": "Visitas Clientes",
+      "Contact_Feedback": "Comentários (Contact_Feedback)",
+      "Contact_Letters": "Cartas",
+      "contact_li_inmails": "inMails",
+      "contact_li_messages": "Mensagens",
+      "contact_li_pointdrivepresentationvieweds": "Conteúdo de Ligações Inteligentes Visualizado",
+      "Contact_MailboxTrackingFolder": "Pastas de Monitorização Automática da Caixa de Correio",
+      "contact_master_contact": "Clientes Potenciais (contact_master_contact)",
+      "contact_msdyn_ocliveworkitems": "Conversações (contact_msdyn_ocliveworkitems)",
+      "contact_msdyn_ocsessions": "Sessões",
+      "contact_msdyn_surveyinvites": "Atividades do Inquérito (contact_msdyn_surveyinvites)",
+      "contact_msfp_alerts": "Alerta do Customer Voice",
+      "contact_msfp_surveyinvites": "Convites para inquérito do Customer Voice",
+      "contact_msfp_surveyresponses": "Respostas a inquéritos do Customer Voice",
+      "contact_mtp_eventos": "Tarefa Eventos",
+      "contact_parent_contact": "Clientes Potenciais (contact_parent_contact)",
+      "Contact_Phonecalls": "Chamadas Telefónicas",
+      "contact_PostFollows": "Seguimentos",
+      "contact_PostRegardings": "Publicação Relativa A",
+      "contact_Posts": "Publicações",
+      "contact_principalobjectattributeaccess": "Partilha de Campos",
+      "Contact_ProcessSessions": "Sessões de Processo",
+      "Contact_RecurringAppointmentMasters": "Presenciais Periódicos",
+      "Contact_ServiceAppointments": "Atividades de Serviço",
+      "contact_SharePointDocumentLocations": "Localizações de Documentos",
+      "Contact_SocialActivities": "Atividades de Rede Social (Contact_SocialActivities)",
+      "Contact_SyncErrors": "Erros de Sincronização",
+      "Contact_Tasks": "Tarefas Gerais",
+      "contactid": "Contacto (contactid)",
+      "contactinvoices_association": "Faturas (contactinvoices_association)",
+      "contactleads_association": "Oportunidades Potenciais (contactleads_association)",
+      "contactorders_association": "Encomendas (contactorders_association)",
+      "contactquotes_association": "Propostas (contactquotes_association)",
+      "contract_billingcustomer_contacts": "Contratos (contract_billingcustomer_contacts)",
+      "contract_customer_contacts": "Contratos (contract_customer_contacts)",
+      "contractlineitem_customer_contacts": "Itens de Contrato",
+      "createdby": "Criado Por",
+      "createdon": "Criado Em",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "creditlimit": "Limite de Crédito",
+      "creditlimit_base": "Limite de Crédito (Base)",
+      "creditonhold": "Suspensão de Crédito",
+      "customersizecode": "Dimensão do Cliente",
+      "customertypecode": "Tipo de Relação",
+      "defaultpricelevelid": "Lista de Preços",
+      "department": "Departamento",
+      "description": "Informação de Cliente",
+      "donotbulkemail": "Não permitir Correio Eletrónico em Massa",
+      "donotbulkpostalmail": "Não permitir Correio em Massa",
+      "donotemail": "Não permitir Mensagens de Correio Eletrónico",
+      "donotfax": "Não permitir Faxes",
+      "donotphone": "Não permitir Chamadas Telefónicas",
+      "donotpostalmail": "Não permitir Correio",
+      "donotsendmm": "Enviar Materiais de Marketing",
+      "educationcode": "Educação",
+      "emailaddress1": "Correio Eletrónico",
+      "emailaddress2": "Endereço de Correio Eletrónico 2",
+      "emailaddress3": "Endereço de Correio Eletrónico 3",
+      "employeeid": "Empregado",
+      "entitlementcontacts_association": "Elegibilidades (entitlementcontacts_association)",
+      "entityimage": "Imagem da Entidade",
+      "entityimageid": "Id de Imagem da Entidade",
+      "exchangerate": "Câmbio",
+      "externaluseridentifier": "Identificador de Utilizador Externo",
+      "familystatuscode": "Estado Civil",
+      "fax": "Fax",
+      "firstname": "Nome Próprio",
+      "followemail": "Atividade Seguir Correio Eletrónico",
+      "ftpsiteurl": "Local de FTP",
+      "fullname": "Nome Completo",
+      "gendercode": "Sexo",
+      "governmentid": "Estatal",
+      "haschildrencode": "Tem Filhos",
+      "home2": "Telefone de Casa 2",
+      "importsequencenumber": "Número de Sequência da Importação",
+      "incident_customer_contacts": "Casos (incident_customer_contacts)",
+      "invoice_customer_contacts": "Faturas (invoice_customer_contacts)",
+      "isbackofficecustomer": "Cliente de Back Office",
+      "jobtitle": "Cargo",
+      "lastname": "Apelido",
+      "lastonholdtime": "Último Tempo Suspenso",
+      "lastusedincampaign": "Última Data Incluída na Campanha",
+      "lead_customer_contacts": "Oportunidades Potenciais (lead_customer_contacts)",
+      "lead_parent_contact": "Oportunidades Potenciais (lead_parent_contact)",
+      "leadsourcecode": "Origem de Oportunidade Potencial",
+      "listcontact_association": "Listas de marketing",
+      "lk_contact_feedback_createdby": "Comentários (lk_contact_feedback_createdby)",
+      "lk_contact_feedback_createdonbehalfby": "Comentários (lk_contact_feedback_createdonbehalfby)",
+      "managername": "Gestor",
+      "managerphone": "Telefone do Gestor",
+      "marketingonly": "Apenas Marketing",
+      "masterid": "ID Mestre",
+      "merged": "Intercalado",
+      "middlename": "Segundo Nome",
+      "mobilephone": "Outro Telefone",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Modificado Em",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "msa_contact_incident": "Casos (msa_contact_incident)",
+      "msa_contact_opportunity": "Oportunidades Comerciais (msa_contact_opportunity)",
+      "msa_managingpartnerid": "Parceiro de Gestão",
+      "msdyn_contact_dailycontactkpiitem_entityid": "dailycontactkpiitems",
+      "msdyn_contact_msdyn_contactkpiitem_contactid": "Itens de KPI de Contacto",
+      "msdyn_contact_msdyn_liveconversation_Customer": "Conversações em curso (Preterido)",
+      "msdyn_contact_msdyn_mostcontacted_regardingObjectId": "Mais Contactado",
+      "msdyn_contact_msdyn_mostcontactedby_regardingObjectId": "Mais Contactado Por",
+      "msdyn_contact_msdyn_ocliveworkitem_Customer": "Conversações (msdyn_contact_msdyn_ocliveworkitem_Customer)",
+      "msdyn_contact_msdyn_responseoutcome_Contact": "Resultados de Resposta",
+      "msdyn_contact_msdyn_salessuggestion": "Sugestões",
+      "msdyn_contact_msdyn_surveyinvite_ContactId": "Atividades do Inquérito (msdyn_contact_msdyn_surveyinvite_ContactId)",
+      "msdyn_contact_msdyn_surveyresponse_Contact": "Respostas a Inquéritos",
+      "msdyn_contactkpiid": "KPI",
+      "msdyn_decisioninfluencetag": "Decision influence labels",
+      "msdyn_disablewebtracking": "Desativar Monitorização da Web",
+      "msdyn_gdproptout": "Opção Ativa de Não Participação no GDPR",
+      "msdyn_isassistantinorgchart": "É Assistente",
+      "msdyn_isminor": "É Menor",
+      "msdyn_isminorwithparentalconsent": "É Menor com Autorização Parental",
+      "msdyn_linkeditemvalidity_polymorphic_contactid": "Validações de Atributos de Entidades Associadas",
+      "msdyn_msdyn_preferredagent_contact_msdyn_recordId": "Agentes Preferenciais",
+      "msdyn_msdyn_taggedrecord_contact_msdyn_dynamicsrecordid": "Tagged Records",
+      "msdyn_orgchangestatus": "Sinalizador Não está na Empresa",
+      "msdyn_playbookinstance_contact": "Manuais de Procedimentos",
+      "msdyn_portaltermsagreementdate": "Data de Aceitação dos Termos do Portal",
+      "msdyn_sabackupdiagnostic_contact_msdyn_target": "sabackupdiagnostics",
+      "msdyn_salesroutingdiagnostic_contact_msdyn_target": "salesroutingdiagnostics",
+      "msdyn_segmentid": "ID do Segmento",
+      "msdyn_sequencetarget_contact_msdyn_target": "Objetivos da Sequência",
+      "msdyncrm_contact_marketingformsubmission_matched": "Submissões de formulário de marketing (msdyncrm_contact_marketingformsubmission_matched)",
+      "msdyncrm_contact_marketingformsubmission_original": "Submissões de formulário de marketing (msdyncrm_contact_marketingformsubmission_original)",
+      "msdyncrm_contact_msdyncrm_customerjourneycustomchannelactivity_Contact": "Atividades de canal personalizado",
+      "msdyncrm_contact_msdyncrm_defaultmarketingsetting_DefaultTestContact": "Predefinições",
+      "msdyncrm_contact_msdyncrm_geopin": "Geomarcadores",
+      "msdyncrm_contact_msdyncrm_linkedinformsubmission_contact": "Submissões do LinkedIn Lead Gen Form",
+      "msdyncrm_contact_msdyncrm_marketingemailtestsend_testcontactid": "Envio de teste de e-mails de marketing",
+      "msdyncrm_ContactId": "Contacto de SendNow",
+      "msdyncrm_customerjourneyid": "Percurso do cliente de origem",
+      "msdyncrm_emailid": "E-mail de origem",
+      "msdyncrm_insights_placeholder": "Insights",
+      "msdyncrm_marketingformid": "Formulário de origem",
+      "msdyncrm_marketingformsubmissiondateprecise": "carimbo de data/hora de submissão de formulário",
+      "msdyncrm_marketingpageid": "Página de destino de origem",
+      "msdyncrm_rememberme": "Memorizar-me",
+      "msdyncrm_SegmentMemberId": "Membro do Segmento",
+      "msdynmkt_customerjourneyid": "Source customer journey",
+      "msdynmkt_emailid": "Source email",
+      "msdynmkt_marketingformid": "Source form",
+      "msevtmgt_aadobjectid": "ID de objeto do AAD",
+      "msevtmgt_contact_eventregistration_registeredby": "Registos de Eventos (msevtmgt_contact_eventregistration_registeredby)",
+      "msevtmgt_contact_msevtmgt_attendeepass_contact": "Passes de Participante",
+      "msevtmgt_contact_msevtmgt_building_PrimaryContact": "Edifícios",
+      "msevtmgt_contact_msevtmgt_checkin_Contact": "Entradas",
+      "msevtmgt_contact_msevtmgt_eventpurchase": "Compras de Evento",
+      "msevtmgt_contact_msevtmgt_eventpurchaseattendee": "Participantes de Compra de Evento",
+      "msevtmgt_contact_msevtmgt_eventregistration_Contact": "Registos de Eventos (msevtmgt_contact_msevtmgt_eventregistration_Contact)",
+      "msevtmgt_contact_msevtmgt_eventteammember_Contact": "Membros da Equipa de Evento",
+      "msevtmgt_contact_msevtmgt_hotel_PrimaryContact": "Hotéis",
+      "msevtmgt_contact_msevtmgt_hotelroomallocation_PrimaryContact": "Alocações de Quarto de Hotel",
+      "msevtmgt_contact_msevtmgt_room_PrimaryContact": "Salas",
+      "msevtmgt_contact_msevtmgt_sessionregistration_contactid": "Registos de Sessões",
+      "msevtmgt_contact_msevtmgt_speaker_Contact": "Oradores",
+      "msevtmgt_contact_msevtmgt_venue_PrimaryContact": "Locais",
+      "msevtmgt_contact_waitlistitem": "Itens da Lista de Espera (msevtmgt_contact_waitlistitem)",
+      "msevtmgt_contact_waitlistitem_addedby": "Itens da Lista de Espera (msevtmgt_contact_waitlistitem_addedby)",
+      "msevtmgt_ContactId": "Contacto (msevtmgt_ContactId)",
+      "msevtmgt_originatingeventid": "Fonte do evento",
+      "msgdpr_consentchangesourceformId": "consent change source form Id",
+      "msgdpr_contact_msgdpr_gdprconsentchangerecord": "Registos de alteração de consentimento do RGPD",
+      "msgdpr_contact_msgdpr_gdprparent": "Clientes Potenciais (msgdpr_contact_msgdpr_gdprparent)",
+      "msgdpr_donottrack": "Não monitorizar",
+      "msgdpr_gdprconsent": "Consentimento dado",
+      "msgdpr_gdprischild": "RGPD é subordinado",
+      "msgdpr_GDPRParentId": "Encarregado de educação ou tutor",
+      "mtp_companyname": "Nome da Empresa",
+      "mtp_consent_authotization": "Consent_Authotization",
+      "mtp_contact_mtp_matchingtask": "Tarefas de Matching",
+      "mtp_contact_mtp_segmentsupport_Contacto": "Segmentos de Envio",
+      "mtp_contact_mtp_simulation_customerid": "Simulações",
+      "mtp_dataprocessing": "Data Processing",
+      "mtp_email2ndtit": "Email 2nd Tit",
+      "mtp_email3rdtit": "Email 3rd Tit",
+      "mtp_eventsandsponsorships": "Events And Sponsorships",
+      "mtp_firstname2ndtit": "First Name 2nd Tit",
+      "mtp_firstname3rdtit": "First Name 3rd Tit",
+      "mtp_fiscaldoctypecompany": "Tipo de documento Fiscal Empresa",
+      "mtp_fiscaldoctypeparticular": "Tipo de documento Fiscal Particular",
+      "mtp_fiscalnumber": "Nº de Contribuinte",
+      "mtp_forgetfulnessindicator": "Forgetfulness Indicator",
+      "mtp_lastname2ndtit": "Last Name 2nd Tit",
+      "mtp_lastname3rdtit": "Last Name 3rd Tit",
+      "mtp_limitationindicator": "Limitation Indicator",
+      "mtp_mutualistproductcomercialization": "Mutualist Product Comercialization",
+      "mtp_newsletter": "Newsletter",
+      "mtp_nif2ndtit": "Nif 2nd Tit",
+      "mtp_nif3rdtit": "Nif 3rd Tit",
+      "mtp_nifnumber": "Nº de Contribuinte (old)",
+      "mtp_phone2ndtit": "Phone 2nd Tit Number",
+      "mtp_phone2ndtittext": "Phone 2nd Tit",
+      "mtp_phone3ndtittext": "Phone 3rd Tit",
+      "mtp_phone3rdtit": "Phone 3rd Tit Number",
+      "mtp_serviceproductcontent": "Service Product Content",
+      "mtp_sms": "SMS",
+      "mtp_socialeconomicinitiative": "Social Economic Initiative",
+      "mtp_tipodecliente": "TipoDeCliente",
+      "new_contact_msdyn_orgchartnodeupdated_msdyn_noderecordupdated": "Entidades de nó de Organograma Microsoft",
+      "nickname": "Alcunha",
+      "numberofchildren": "N.º de Filhos",
+      "onholdtime": "Tempo Suspenso (Minutos)",
+      "opportunity_customer_contacts": "Oportunidades Comerciais (opportunity_customer_contacts)",
+      "opportunity_parent_contact": "Oportunidades Comerciais (opportunity_parent_contact)",
+      "order_customer_contacts": "Encomendas (order_customer_contacts)",
+      "originatingleadid": "Fonte da Oportunidade Potencial",
+      "overriddencreatedon": "Registo Criado Em",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "pager": "Pager",
+      "parent_contactid": "parent_contactid",
+      "participatesinworkflow": "Participa no Fluxo de Trabalho",
+      "paymenttermscode": "Termos de Pagamento",
+      "preferredappointmentdaycode": "Dia Preferencial",
+      "preferredappointmenttimecode": "Hora Preferencial",
+      "preferredcontactmethodcode": "Método de Contacto Preferencial",
+      "preferredequipmentid": "Instalações/Equipamento Preferencial",
+      "preferredserviceid": "Serviço Preferencial",
+      "preferredsystemuserid": "Utilizador Preferencial",
+      "processid": "Processo",
+      "quote_customer_contacts": "Propostas (quote_customer_contacts)",
+      "salutation": "Saudação",
+      "servicecontractcontacts_association": "Contratos (servicecontractcontacts_association)",
+      "shippingmethodcode": "Forma de Envio",
+      "sla_contact_sla": "SLA",
+      "slainvokedid_contact_sla": "Último SLA aplicado",
+      "slakpiinstance_contact": "Instâncias de KPI de SLA",
+      "socialactivity_postauthor_contacts": "Atividades de Rede Social (socialactivity_postauthor_contacts)",
+      "socialactivity_postauthoraccount_contacts": "Atividades de Rede Social (socialactivity_postauthoraccount_contacts)",
+      "Socialprofile_customer_contacts": "Perfis de Rede Social",
+      "spousesname": "Nome do Cônjuge/Companheiro",
+      "stageid": "(Preterido) Fase do Processo",
+      "statecode": "Estado",
+      "statuscode": "Razão do Estado",
+      "suffix": "Sufixo",
+      "teamsfollowed": "TeamsFollowed",
+      "telephone1": "Telefone Preferencial (telephone1)",
+      "telephone2": "Telefone de Casa",
+      "telephone3": "Telefone 3",
+      "territorycode": "Território",
+      "timespentbymeonemailandmeetings": "Tempo Despendido por mim",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "transactioncurrencyid": "Moeda",
+      "traversedpath": "(Preterido) Caminho Percorrido",
+      "uipp_contact_uipp_atividade_848": "Atividades (uipp_contact_uipp_atividade_848)",
+      "uipp_contact_uipp_listagens_243": "Listagens (uipp_contact_uipp_listagens_243)",
+      "uipp_contact_uipp_listagens_35": "Listagens (uipp_contact_uipp_listagens_35)",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão UTC",
+      "versionnumber": "Número de Versão",
+      "websiteurl": "Web site",
+      "yomifirstname": "Nome Próprio Yomi",
+      "yomifullname": "Nome Completo Yomi",
+      "yomilastname": "Apelido Yomi",
+      "yomimiddlename": "Segundo Nome Yomi"
+    },
+    "PreferredName": "Clientes Potenciais",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Clientes Potenciais (Views)",
+    "Name": "_contact_views",
+    "RelatedEntityName": "Clientes Potenciais",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000000666400": "Vista Localização Avançada de Contactos",
+      "00000000-0000-0000-00aa-000010001003": "Os Meus Contactos Ativos",
+      "00000000-0000-0000-00aa-000010001004": "Contactos Ativos",
+      "00000000-0000-0000-00aa-000010001033": "Contactos Inativos",
+      "00000000-0000-0000-00aa-000010001210": "Vista Associada de Contactos",
+      "0a8fa653-4147-4282-bf6b-168cfa839803": "Contactos: Negócios Influenciados Ganhos por Nós",
+      "0d5d377b-5e7c-47b5-bab1-a5cb8b4ac105": "Todos os Contactos",
+      "38962192-31ff-46fc-9ac3-2db0a7d9dc7c": "Campanhas de Contactos Selecionadas",
+      "3a282da1-5d90-e011-95ae-00155d9cfa02": "Clientes Potenciais I Seguir",
+      "3a282da1-5d90-e011-95ae-00155d9cfa03": "Clientes Potenciais em Fase de Seguimento",
+      "4129e27c-d0ce-e811-8158-000d3afd9907": "Membros do segmento",
+      "69103b65-f27e-45ce-a69c-eb1a7c805a45": "Campanhas de Contactos Excluídas",
+      "6d6dae97-567c-e711-810d-5065f38aea61": "Titulares",
+      "73bc2d9b-4e0e-424c-8839-ed59d6817e3a": "Vista Subgrelha de Contactos Ativos",
+      "927e6cd8-b3ed-4c20-a154-b8bd8a86d172": "Contactos: Sem Atividades de Campanha Nos Últimos 3 Meses",
+      "9c241a33-ca0b-4e50-ae92-db780d5b2a12": "Contactos: Responderam a Campanhas nos Últimos 6 Meses",
+      "a2d479c5-53e3-4c69-addd-802327e67a0d": "Vista de Pesquisa de Contactos",
+      "ab582fb0-a846-453e-ad88-77f75ce91264": "As Minhas Ligações",
+      "eda26f1e-dbcc-40ad-91f2-ff2878d1d8d8": "Contactos de Elegibilidade",
+      "ef26335d-6f4e-e611-80be-0024e8469fb9": "Os Meus Contactos Ativos por Relação"
+    }
+  },
+  {
+    "DisplayName": "W\\\\'Çóñfîrm Rémòvè Påsswôrð ĉĉĉ ĉĉĉ ĉĉ?W (Clientes Potenciais)",
+    "Name": "adx_contact_adx_confirmremovepassword",
+    "OptionSetInfoNameMapping": {
+      "0": "W\\\\'Ñõ ĉĉ?W",
+      "1": "W\\\\'Ýës ĉĉ?W"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_confirmremovepassword",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_confirmremovepassword",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "E-mail Confirmado (Clientes Potenciais)",
+    "Name": "adx_contact_adx_identity_emailaddress1confirmed",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_identity_emailaddress1confirmed",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_identity_emailaddress1confirmed",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Início de Sessão Local Desativado (Clientes Potenciais)",
+    "Name": "adx_contact_adx_identity_locallogindisabled",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_identity_locallogindisabled",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_identity_locallogindisabled",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Bloqueio Ativado (Clientes Potenciais)",
+    "Name": "adx_contact_adx_identity_lockoutenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_identity_lockoutenabled",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_identity_lockoutenabled",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Início de Sessão Ativado (Clientes Potenciais)",
+    "Name": "adx_contact_adx_identity_logonenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_identity_logonenabled",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_identity_logonenabled",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Número do Telemóvel Confirmado (Clientes Potenciais)",
+    "Name": "adx_contact_adx_identity_mobilephoneconfirmed",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_identity_mobilephoneconfirmed",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_identity_mobilephoneconfirmed",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Dois Fatores Ativados (Clientes Potenciais)",
+    "Name": "adx_contact_adx_identity_twofactorenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_identity_twofactorenabled",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_identity_twofactorenabled",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Alerta de Perfil (Clientes Potenciais)",
+    "Name": "adx_contact_adx_profilealert",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_profilealert",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_profilealert",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "O Perfil é Anónimo (Clientes Potenciais)",
+    "Name": "adx_profileisanonymous_contact",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "adx_profileisanonymous",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "adx_profileisanonymous",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Função (Clientes Potenciais)",
+    "Name": "contact_accountrolecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Decisor",
+      "2": "Empregado",
+      "3": "Influenciador"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "accountrolecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "accountrolecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 1: Tipo de Endereço (Clientes Potenciais)",
+    "Name": "contact_address1_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Cobrar A",
+      "2": "Enviar Para",
+      "3": "Primário",
+      "4": "Outro"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_addresstypecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_addresstypecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 1: Condições de Transporte (Clientes Potenciais)",
+    "Name": "contact_address1_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "FOB",
+      "2": "Grátis"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_freighttermscode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_freighttermscode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 1: Forma de Envio (Clientes Potenciais)",
+    "Name": "contact_address1_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Via Aérea",
+      "2": "DHL",
+      "3": "FedEx",
+      "4": "UPS",
+      "5": "Correio Postal",
+      "6": "Carga Completa",
+      "7": "Cliente Levanta"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address1_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address1_shippingmethodcode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 2: Tipo de Endereço (Clientes Potenciais)",
+    "Name": "contact_address2_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_addresstypecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_addresstypecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 2: Condições de Transporte (Clientes Potenciais)",
+    "Name": "contact_address2_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_freighttermscode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_freighttermscode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 2: Forma de Envio (Clientes Potenciais)",
+    "Name": "contact_address2_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address2_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address2_shippingmethodcode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 3: Tipo de Endereço (Clientes Potenciais)",
+    "Name": "contact_address3_addresstypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address3_addresstypecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address3_addresstypecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 3: Condições de Transporte (Clientes Potenciais)",
+    "Name": "contact_address3_freighttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address3_freighttermscode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address3_freighttermscode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Endereço 3: Forma de Envio (Clientes Potenciais)",
+    "Name": "contact_address3_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "address3_shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "address3_shippingmethodcode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Suspensão de Crédito (Clientes Potenciais)",
+    "Name": "contact_creditonhold",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "creditonhold",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "creditonhold",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Dimensão do Cliente (Clientes Potenciais)",
+    "Name": "contact_customersizecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "customersizecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "customersizecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tipo de Relação (Clientes Potenciais)",
+    "Name": "contact_customertypecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "customertypecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "customertypecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Correio Eletrónico em Massa (Clientes Potenciais)",
+    "Name": "contact_donotbulkemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotbulkemail",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotbulkemail",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Correio em Massa (Clientes Potenciais)",
+    "Name": "contact_donotbulkpostalmail",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotbulkpostalmail",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotbulkpostalmail",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Mensagens de Correio Eletrónico (Clientes Potenciais)",
+    "Name": "contact_donotemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotemail",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotemail",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Faxes (Clientes Potenciais)",
+    "Name": "contact_donotfax",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotfax",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotfax",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Chamadas Telefónicas (Clientes Potenciais)",
+    "Name": "contact_donotphone",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotphone",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotphone",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não permitir Correio (Clientes Potenciais)",
+    "Name": "contact_donotpostalmail",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotpostalmail",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotpostalmail",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Enviar Materiais de Marketing (Clientes Potenciais)",
+    "Name": "contact_donotsendmm",
+    "OptionSetInfoNameMapping": {
+      "0": "Enviar",
+      "1": "Não Enviar"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "donotsendmm",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "donotsendmm",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Educação (Clientes Potenciais)",
+    "Name": "contact_educationcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "educationcode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "educationcode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Estado Civil (Clientes Potenciais)",
+    "Name": "contact_familystatuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Solteiro(a)",
+      "2": "Casado(a)",
+      "3": "Divorciado(a)",
+      "4": "Viúvo(a)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "familystatuscode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "familystatuscode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Atividade Seguir Correio Eletrónico (Clientes Potenciais)",
+    "Name": "contact_followemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Não Permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "followemail",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "followemail",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Sexo (Clientes Potenciais)",
+    "Name": "contact_gendercode",
+    "OptionSetInfoNameMapping": {
+      "1": "Masculino",
+      "2": "Feminino"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "gendercode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "gendercode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tem Filhos (Clientes Potenciais)",
+    "Name": "contact_haschildrencode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "haschildrencode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "haschildrencode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Criado automaticamente (Clientes Potenciais)",
+    "Name": "contact_isautocreate",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isautocreate",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isautocreate",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Cliente de Back Office (Clientes Potenciais)",
+    "Name": "contact_isbackofficecustomer",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isbackofficecustomer",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isbackofficecustomer",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "IsPrivate (Clientes Potenciais)",
+    "Name": "contact_isprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isprivate",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isprivate",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Origem de Oportunidade Potencial (Clientes Potenciais)",
+    "Name": "contact_leadsourcecode",
+    "OptionSetInfoNameMapping": {
+      "962110000": "1º Titular",
+      "962110001": "2º Titular",
+      "962110002": "3º Titular",
+      "962110003": "Survey"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "leadsourcecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "leadsourcecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Apenas Marketing (Clientes Potenciais)",
+    "Name": "contact_marketingonly",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "marketingonly",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "marketingonly",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Intercalado (Clientes Potenciais)",
+    "Name": "contact_merged",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "merged",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "merged",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Decision influence labels (Clientes Potenciais)",
+    "Name": "contact_msdyn_decisioninfluencetag",
+    "OptionSetInfoNameMapping": {
+      "0": "Decisor",
+      "1": "Influenciador",
+      "2": "Bloqueador",
+      "3": "Desconhecido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_decisioninfluencetag",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_decisioninfluencetag",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Assistente (Clientes Potenciais)",
+    "Name": "contact_msdyn_isassistantinorgchart",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_isassistantinorgchart",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_isassistantinorgchart",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Sinalizador Não está na Empresa (Clientes Potenciais)",
+    "Name": "contact_msdyn_orgchangestatus",
+    "OptionSetInfoNameMapping": {
+      "0": "Sem Comentários",
+      "1": "Não está na Empresa",
+      "2": "Ignorar"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_orgchangestatus",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msdyn_orgchangestatus",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Participa no Fluxo de Trabalho (Clientes Potenciais)",
+    "Name": "contact_participatesinworkflow",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "participatesinworkflow",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "participatesinworkflow",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Termos de Pagamento (Clientes Potenciais)",
+    "Name": "contact_paymenttermscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Líq. a 30 Dias",
+      "2": "2% a 10 Dias, Líq. a 30 Dias",
+      "3": "Líq. a 45 Dias",
+      "4": "Líq. a 60 Dias"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "paymenttermscode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "paymenttermscode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Dia Preferencial (Clientes Potenciais)",
+    "Name": "contact_preferredappointmentdaycode",
+    "OptionSetInfoNameMapping": {
+      "0": "Domingo",
+      "1": "Segunda-feira",
+      "2": "Terça-feira",
+      "3": "Quarta-feira",
+      "4": "Quinta-feira",
+      "5": "Sexta-feira",
+      "6": "Sábado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredappointmentdaycode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredappointmentdaycode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Hora Preferencial (Clientes Potenciais)",
+    "Name": "contact_preferredappointmenttimecode",
+    "OptionSetInfoNameMapping": {
+      "1": "Manhã",
+      "2": "Tarde",
+      "3": "Noite"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredappointmenttimecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredappointmenttimecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Método de Contacto Preferencial (Clientes Potenciais)",
+    "Name": "contact_preferredcontactmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Qualquer",
+      "2": "Correio Eletrónico",
+      "3": "Telefone",
+      "4": "Fax",
+      "5": "Correio"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "preferredcontactmethodcode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "preferredcontactmethodcode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Forma de Envio (Clientes Potenciais)",
+    "Name": "contact_shippingmethodcode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "shippingmethodcode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "shippingmethodcode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Estado (Clientes Potenciais)",
+    "Name": "contact_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo",
+      "1": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Clientes Potenciais)",
+    "Name": "contact_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo",
+      "2": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Território (Clientes Potenciais)",
+    "Name": "contact_territorycode",
+    "OptionSetInfoNameMapping": {
+      "1": "Valor Predefinido"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "territorycode",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "territorycode",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Desativar Monitorização da Web (Clientes Potenciais)",
+    "Name": "msdyn_contact_msdyn_disablewebtracking",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_disablewebtracking",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_disablewebtracking",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Opção Ativa de Não Participação no GDPR (Clientes Potenciais)",
+    "Name": "msdyn_contact_msdyn_gdproptout",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_gdproptout",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_gdproptout",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Menor (Clientes Potenciais)",
+    "Name": "msdyn_contact_msdyn_isminor",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_isminor",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_isminor",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Menor com Autorização Parental (Clientes Potenciais)",
+    "Name": "msdyn_contact_msdyn_isminorwithparentalconsent",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyn_isminorwithparentalconsent",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyn_isminorwithparentalconsent",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Memorizar-me (Clientes Potenciais)",
+    "Name": "msdyncrm_contact_msdyncrm_rememberme",
+    "OptionSetInfoNameMapping": {
+      "0": "Não permitir",
+      "1": "Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msdyncrm_rememberme",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msdyncrm_rememberme",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Não monitorizar (Clientes Potenciais)",
+    "Name": "msgdpr_contact_msgdpr_donottrack",
+    "OptionSetInfoNameMapping": {
+      "0": "Permitir",
+      "1": "Não Permitir"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msgdpr_donottrack",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msgdpr_donottrack",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "RGPD é subordinado (Clientes Potenciais)",
+    "Name": "msgdpr_contact_msgdpr_gdprischild",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msgdpr_gdprischild",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "msgdpr_gdprischild",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Consentimento",
+    "Name": "msgdpr_gdpr_consent_option_set",
+    "OptionSetInfoNameMapping": {
+      "587030001": "(1) Consentimento",
+      "587030002": "(2) Transacional",
+      "587030003": "(3) Subscrições",
+      "587030004": "(4) Marketing",
+      "587030005": "(5) Criação de Perfis",
+      "962110000": "(6) Conteúdo Personalizado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msgdpr_gdprconsent",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msgdpr_gdprconsent",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Consent_Authotization (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_consent_authotization",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_consent_authotization",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_consent_authotization",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Data Processing (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_dataprocessing",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_dataprocessing",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_dataprocessing",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Events And Sponsorships (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_eventsandsponsorships",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_eventsandsponsorships",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_eventsandsponsorships",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tipo de documento Fiscal Empresa (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_fiscaldoctypecompany",
+    "OptionSetInfoNameMapping": {
+      "962110000": "N.I.P.C. - EMPRESA",
+      "962110001": "NIPC ESPECIAL-EMPRESA",
+      "962110002": "NIF ESPECIAL-ENI"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_fiscaldoctypecompany",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mtp_fiscaldoctypecompany",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tipo de documento Fiscal Particular (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_fiscaldoctypeparticular",
+    "OptionSetInfoNameMapping": {
+      "962110000": "NR. FISCAL DE PESSOA SINGULAR",
+      "962110001": "NIF ESPECIAL-PARTICULAR"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_fiscaldoctypeparticular",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mtp_fiscaldoctypeparticular",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Forgetfulness Indicator (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_forgetfulnessindicator",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_forgetfulnessindicator",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_forgetfulnessindicator",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Limitation Indicator (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_limitationindicator",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_limitationindicator",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_limitationindicator",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Mutualist Product Comercialization (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_mutualistproductcomercialization",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_mutualistproductcomercialization",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_mutualistproductcomercialization",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Newsletter (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_newsletter",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_newsletter",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_newsletter",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Service Product Content (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_serviceproductcontent",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_serviceproductcontent",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_serviceproductcontent",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "SMS (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_sms",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_sms",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_sms",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Social Economic Initiative (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_socialeconomicinitiative",
+    "OptionSetInfoNameMapping": {
+      "0": "Do Not Allow",
+      "1": "Allow"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_socialeconomicinitiative",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_socialeconomicinitiative",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "TipoDeCliente (Clientes Potenciais)",
+    "Name": "mtp_contact_mtp_tipodecliente",
+    "OptionSetInfoNameMapping": {
+      "0": "Particular",
+      "1": "Empresa"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mtp_tipodecliente",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "mtp_tipodecliente",
+    "RelatedEntityName": "Clientes Potenciais",
+    "Type": "OptionSetInfo"
+  }
+]

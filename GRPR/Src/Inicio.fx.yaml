@@ -1,0 +1,234 @@
+Inicio As screen:
+    OnVisible: =
+
+    LeftSectionComponent_1 As LeftSectionComponent:
+        TabelaMenu: |-
+            =Table(
+                {
+                    selected: true,
+                    icon: Icon.Home,
+                    text: "Inicio",
+                    Navigate: App.ActiveScreen,
+                    VisivelPara: true
+                },
+                /*{
+                    selected: false,
+                    icon: Icon.Bug,
+                    text: "Developer",
+                    Navigate: Developer,
+                    VisivelPara: true
+                },*/
+                {
+                    selected: false,
+                    icon: Icon.People,
+                    text: "Particulares e empresas respetivas",
+                    Navigate: Particulares,
+                    VisivelPara: true
+                },
+                {
+                    selected: false,
+                    icon: Icon.OfficeBuilding,
+                    text: "Empresas participadas do grupo",
+                    Navigate: Participadas,
+                    VisivelPara: true
+                },
+                {
+                    selected: false,
+                    icon: Icon.Information,
+                    text: "Atividade",
+                    Navigate: Atividade,
+                    VisivelPara: true
+                },
+                {
+                    selected: false,
+                    icon: Icon.Notebook,
+                    text: "Listagens",
+                    Navigate: Listagens,
+                    VisivelPara: true
+                },
+                {
+                    selected: false,
+                    icon: Icon.Settings,
+                    text: "Configurações",
+                    Navigate: Configuracoes,
+                    VisivelPara: true
+                }
+            )
+
+    TopSectionComponent_1 As TopSectionComponent:
+        X: =342
+        ZIndex: =3
+
+    Label1 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =15
+        Text: ="Bem vindo(a), " & User().FullName
+        Width: =692
+        X: =365
+        Y: =26
+        ZIndex: =4
+
+    Gallery2 As gallery.variableTemplateHeightGallery:
+        BorderColor: =RGBA(128, 128, 128, 1)
+        BorderThickness: =0.5
+        DelayItemLoading: =true
+        Fill: =RGBA(219, 219, 219, 1)
+        Height: =479
+        Items: |-
+            =With(
+                    {
+                        records:
+                        //substituir pelos dados das notificações
+                        CustomGallerySample
+                    },
+                    ForAll(
+                        Sequence(CountRows(records)),
+                        Patch(
+                            Last(
+                                FirstN(records,Value)
+                            ),
+                            {rowNumber: Value}
+                        )
+                    )
+                )
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        ShowScrollbar: =false
+        TemplatePadding: =0
+        TemplateSize: =55
+        Width: =692
+        X: =365
+        Y: =138
+        ZIndex: =5
+
+        Rectangle1_1 As rectangle:
+            Fill: |-
+                =If(
+                    Mod(ThisItem.rowNumber, 2) = 0,
+                    RGBA(219, 219, 219, 1),
+                    Color.White
+                )
+            Height: =50
+            OnSelect: =Select(Parent)
+            Width: =692
+            Y: =1
+            ZIndex: =1
+
+        Label5 As label:
+            Color: =RGBA(77, 77, 77, 1)
+            Height: =53
+            OnSelect: =Select(Parent)
+            PaddingRight: =0
+            Text: =ThisItem.SampleHeading
+            ZIndex: =2
+
+        Label3_4 As label:
+            Color: =RGBA(77, 77, 77, 1)
+            Height: =53
+            OnSelect: =Select(Parent)
+            PaddingRight: =0
+            Text: =ThisItem.SampleHeading
+            Width: =376
+            X: =150
+            ZIndex: =3
+
+        Label3_5 As label:
+            Color: =RGBA(77, 77, 77, 1)
+            Height: =53
+            OnSelect: =Select(Parent)
+            Text: =ThisItem.SampleHeading
+            Width: =166
+            X: =526
+            ZIndex: =4
+
+    Label1_1 As label:
+        Color: =RGBA(128, 128, 128, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="Notificações (brevemente)"
+        Width: =270
+        X: =354
+        Y: =98
+        ZIndex: =6
+
+    Label7 As label:
+        Height: =299
+        Text: |-
+            ="DRI: " & DRI &
+            "
+            DGC Editor: " & DGC_Editor &
+            "
+            DCRF Editor: " & DCRF_Editor &
+            "
+            DGP Editor: " & DGP_Editor &
+            "
+            GCONT Editor: " & GCONT_Editor &
+            "
+            DGC Validador: " & DGC_Validador &
+            "
+            DGP Validador: " & DGP_Validador &
+            "
+            DCRF Validador: " & DCRF_Validador &
+            "
+            GCONT Validador: " & GCONT_Validador &
+            "
+            DCOMP Consulta: " & DCOMP_Consulta &
+            "
+            DAI Consulta: " & DAI_Consulta &
+            "
+            DMK Consulta: " & DMK_Consulta &
+            "
+            CCOMP Consulta: " & CCOMP_Consulta
+        Visible: =godMode
+        Width: =203
+        X: =1163
+        Y: =28
+        ZIndex: =7
+
+    Label1_7 As label:
+        Color: =cores.cinzento
+        Height: =25
+        PaddingTop: =0
+        Text: |-
+            ="("&
+            If(
+                DRI,
+                "DRI",
+            
+                DGC_Editor,
+                "DGC - Editor",
+                DCRF_Editor,
+                "DCRF - Editor",
+                DGP_Editor,
+                "DGP - Editor",
+                GCONT_Editor,
+                "GCONT - Editor",
+            
+                DGC_Validador,
+                "DGC - Validador",
+                DCRF_Validador,
+                "DCRF - Validador",
+                DGP_Validador,
+                "DGP - Validador",
+                GCONT_Validador,
+                "GCONT - Validador",
+            
+                DCOMP_Consulta,
+                "DCOMP - Consulta",
+                DAI_Consulta,
+                "DAI - Consulta",
+                DMK_Consulta,
+                "DMK - Consulta",
+                CCOMP_Consulta,
+                "CCOMP - Consulta",
+            
+                godMode,
+                "Unipartner"
+            )
+            &")"
+        Width: =194
+        X: =365
+        Y: =65
+        ZIndex: =8
+
