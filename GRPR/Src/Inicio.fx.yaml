@@ -232,3 +232,10 @@ Inicio As screen:
         Y: =65
         ZIndex: =8
 
+    Label10 As label:
+        Text: =appVersion
+        Width: =51
+        X: =1315
+        Y: =728
+        ZIndex: =9
+
