@@ -483,7 +483,7 @@ Configuracoes As screen:
                 Items: =Legislaçãos
                 NoDataText: ="Não existem registos a apresentar, de momento"
                 SelectedFill: =cores.amareloMontepio
-                Visible: =!localShowNewForm And !localShowEditForm
+                Visible: =!localShowLegForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =BtnDelete.Y+15
@@ -548,13 +548,13 @@ Configuracoes As screen:
 
             "'Form Legislacao' As form":
                 DataSource: =Legislaçãos
-                DefaultMode: =If(localShowNewForm,FormMode.New,localShowEditForm,FormMode.Edit)
+                DefaultMode: =localFormMode
                 Height: ='Legislacao Content'.Height - BtnDelete.Y -25
                 Item: =Edit
                 NumberOfColumns: =2
                 OnFailure: =Notify("Falha ao guardar informação de legislação!",NotificationType.Error)
                 OnSuccess: =
-                Visible: =localShowNewForm Or localShowEditForm
+                Visible: =localShowLegForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =BtnDelete.Y+15
@@ -870,7 +870,7 @@ Configuracoes As screen:
                         )*/
                         Icon.Trash
                     Height: =40
-                    Visible: =!localShowEditForm And !localShowNewForm
+                    Visible: =!localShowLegForm
                     Width: =160
                     X: =416
                     Y: =6
@@ -896,7 +896,7 @@ Configuracoes As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    Visible: =!localShowEditForm And !localShowNewForm
+                    Visible: =!localShowLegForm
                     X: =416
                     Y: =6
                     ZIndex: =8
@@ -910,8 +910,18 @@ Configuracoes As screen:
 
                 ParticularesAdd_3 As DynamicBtn:
                     BtnOnSelect: =
-                    BtnText: =If(localShowEditForm Or localShowNewForm,"Cancelar","Editar")
-                    ButtonIcon: =If(localShowEditForm Or localShowNewForm,Icon.Cancel,Icon.Edit)
+                    BtnText: |-
+                        =If(
+                            localShowLegForm,
+                            "Cancelar",
+                            "Editar"
+                        )
+                    ButtonIcon: |-
+                        =If(
+                            localShowLegForm,
+                            Icon.Cancel,
+                            Icon.Edit
+                        )
                     X: =604
                     Y: =7
                     ZIndex: =2
@@ -928,7 +938,7 @@ Configuracoes As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =Set(Edit,'Data legislacao'.Selected);
-                        If(
+                        /*If(
                             localShowNewForm,
                             UpdateContext(
                                 {
@@ -942,7 +952,12 @@ Configuracoes As screen:
                                     localShowNewForm: false
                                 }
                             )
-                        )
+                        )*/
+                        
+                        UpdateContext({
+                            localShowLegForm: !localShowLegForm,
+                            localFormMode: FormMode.Edit
+                        })
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -959,8 +974,18 @@ Configuracoes As screen:
 
                 ParticularesAdd_2 As DynamicBtn:
                     BtnOnSelect: =
-                    BtnText: =If(localShowNewForm Or localShowEditForm,"Guardar","Novo")
-                    ButtonIcon: =If(localShowNewForm Or localShowEditForm,Icon.Save,Icon.Add)
+                    BtnText: |-
+                        =If(
+                            localShowLegForm,
+                            "Guardar",
+                            "Novo"
+                        )
+                    ButtonIcon: |-
+                        =If(
+                            localShowLegForm,
+                            Icon.Save,
+                            Icon.Add
+                        )
                     X: =793
                     Y: =7
 
@@ -976,15 +1001,23 @@ Configuracoes As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =If(
-                            SubmitForm('Form Legislacao'),
+                            localShowLegForm,
+                            If(
+                                SubmitForm('Form Legislacao'),
                             
-                            Notify("O registo foi submetido com sucesso!",NotificationType.Success);
-                            ResetForm(DataReferenciaForm);
-                            UpdateContext({
-                                localShowLeg: false
-                            }),
+                                Notify("O registo foi submetido com sucesso!",NotificationType.Success);
+                                ResetForm(DataReferenciaForm);
+                                UpdateContext({
+                                    localShowLeg: false,
+                                    localShowLegForm: !localShowLegForm
+                                }),
                         
-                            Notify("Por favor, tente novamente.")
+                                Notify("Por favor, tente novamente.")
+                            ),
+                            UpdateContext({
+                                localShowLegForm: !localShowLegForm,
+                                localFormMode: FormMode.New
+                            })
                         )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
