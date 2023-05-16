@@ -578,9 +578,7 @@ Particulares As screen:
                     varSortDir,
                     SortOrder.Descending
                 )
-            Text: |-
-                ="Membros dos Orgãos Sociais
-                (Brevemente)"
+            Text: ="Membros dos Orgãos Sociais"
             Width: =288
             X: =14
             Y: =3
