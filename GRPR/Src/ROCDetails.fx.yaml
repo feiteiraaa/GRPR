@@ -407,14 +407,16 @@ ROCDetails As screen:
                 ChevronBackground: =cores.amareloMontepio
                 ChevronHoverBackground: =ColorFade(cores.amareloMontepio, -20%)
                 DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["uipp_id"]
+                DisplayFields: =["uipp_tipodeenquadramento"]
                 DisplayMode: =Parent.DisplayMode
                 HoverFill: =cores.amareloMontepio
                 IsSearchable: =false
-                Items: =Choices([@ROCS].uipp_Legislacaoaplicada)
+                Items: |-
+                    =Choices([@ROCS].uipp_Legislacaoaplicada)
+                    //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedFill: =cores.cinzento
-                SearchFields: =["uipp_id"]
+                SearchFields: =["uipp_tipodeenquadramento"]
                 SearchItems: =[]
                 SelectionFill: =cores.amareloMontepio
                 SelectMultiple: =false
