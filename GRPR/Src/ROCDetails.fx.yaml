@@ -614,35 +614,14 @@ ROCDetails As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
                 =If(
-                    colabFormMode = FormMode.View,
-                    UpdateContext({
-                        localShowModal: true
-                    }),
-                    UpdateContext({
-                        colabFormMode: FormMode.View
-                    })
-                )
-                
-                /*If(
-                    ColabFormMode = FormMode.View,
-                    If(
-                        Patch(
-                            ROCS,
-                            LookUp(ROCS, ThisRecord.ID = _ROC),
-                            {
-                                Ativo: false,
-                                Bloqueado: true,
-                                'Data de saida': Now()
-                            }
-                        ).Ativo = false,
-                        Back();
-                        Notify("Registo de ROC Eliminado com sucesso!", NotificationType.Success),
-                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
-                    ),
+                    DynamicBtn_5.BtnText = "Cancelar",
                     UpdateContext({
                         ColabFormMode: FormMode.View
+                    }),
+                    UpdateContext({
+                        localShowModal: true
                     })
-                )*/
+                )
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
