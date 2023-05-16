@@ -11,13 +11,13 @@ Inicio As screen:
                     Navigate: App.ActiveScreen,
                     VisivelPara: true
                 },
-                /*{
+                {
                     selected: false,
                     icon: Icon.Bug,
                     text: "Developer",
                     Navigate: Developer,
                     VisivelPara: true
-                },*/
+                },
                 {
                     selected: false,
                     icon: Icon.People,

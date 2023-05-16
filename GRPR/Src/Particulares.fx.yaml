@@ -28,13 +28,13 @@ Particulares As screen:
                     Navigate: Inicio,
                     VisivelPara: true
                 },
-                /*{
+                {
                     selected: false,
                     icon: Icon.Bug,
                     text: "Developer",
                     Navigate: Developer,
                     VisivelPara: true
-                },*/
+                },
                 {
                     selected: false,
                     icon: Icon.People,
@@ -578,7 +578,9 @@ Particulares As screen:
                     varSortDir,
                     SortOrder.Descending
                 )
-            Text: ="Membros dos Orgãos Sociais"
+            Text: |-
+                ="Membros dos Orgãos Sociais
+                (Brevemente)"
             Width: =288
             X: =14
             Y: =3
