@@ -613,9 +613,16 @@ ROCDetails As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =UpdateContext({
-                    localShowModal: true
-                })
+                =If(
+                    colabFormMode = FormMode.View,
+                    UpdateContext({
+                        localShowModal: true
+                    }),
+                    UpdateContext({
+                        colabFormMode: FormMode.View
+                    })
+                )
+                
                 /*If(
                     ColabFormMode = FormMode.View,
                     If(

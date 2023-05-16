@@ -773,9 +773,15 @@ ColaboradoresDetails As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =UpdateContext({
-                    localShowModal: true
-                })
+                =If(
+                    ColabFormMode = FormMode.View,
+                    UpdateContext({
+                        localShowModal: true
+                    }),
+                    UpdateContext({
+                        ColabFormMode: FormMode.View
+                    })
+                )
                 /*If(
                     ColabFormMode = FormMode.View,
                     If(
