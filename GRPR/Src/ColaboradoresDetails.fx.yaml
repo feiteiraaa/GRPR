@@ -483,14 +483,17 @@ ColaboradoresDetails As screen:
                 ChevronBackground: =cores.amareloMontepio
                 ChevronHoverBackground: =ColorFade(cores.amareloMontepio, -20%)
                 DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["uipp_id"]
+                DisplayFields: =["uipp_tipodeenquadramento"]
                 DisplayMode: =Parent.DisplayMode
                 HoverFill: =cores.amareloMontepio
-                Items: =Choices([@Colaboradores_1].uipp_Legislacaoaplicada)
+                IsSearchable: =false
+                Items: |-
+                    =Choices([@Colaboradores_1].uipp_Legislacaoaplicada)
+                    //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedFill: =cores.cinzento
-                SearchFields: =["uipp_id"]
-                SearchItems: =Search(Choices([@Colaboradores_1].uipp_Legislacaoaplicada),DataCardValue1.SearchText,"uipp_id")
+                SearchFields: =["uipp_tipodeenquadramento"]
+                SearchItems: =[]
                 SelectionFill: =cores.amareloMontepio
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
