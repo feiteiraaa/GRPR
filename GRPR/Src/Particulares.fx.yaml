@@ -1,22 +1,31 @@
 Particulares As screen:
     OnVisible: |-
         =Concurrent(
-            UpdateContext({
-                //localFiltro: "Membros dos Orgãos Sociais"
-                localFiltro: "Colaboradores"
-            }),
-        
+            UpdateContext(
+                {//localFiltro: "Membros dos Orgãos Sociais"
+        localFiltro: "Colaboradores"}
+            ),
             ResetForm(ColaboradorForm_1),
             Reset(TextInput2),
-        
             Refresh(Colaboradores_1),
             Refresh(ROCS),
             Refresh(Membros_1)
         );
-        Set(varSortDir, SortOrder.Descending);
-        
-        
-        UpdateContext({showAttachExcel: false });
+        Set(
+            varSortDir,
+            SortOrder.Descending
+        );
+        UpdateContext({showAttachExcel: false});
+        ClearCollect(
+            familiaEmpresa,
+            Ungroup(
+                Table(
+                    {MyTable: Familiares},
+                    {MyTable: Empresas}
+                ),
+                "MyTable"
+            )
+        )
 
     LeftSectionComponent_2 As LeftSectionComponent:
         TabelaMenu: |-
@@ -433,7 +442,9 @@ Particulares As screen:
                 Height: =156
                 Items: |-
                     =//FirstN(CustomGallerySample, 2)
-                    Familiares
+                    //AddColumns(Filter(Familiares,'Parent ID'.ID=ThisItem.ID),"Designação",Filter([@Empresas],ThisRecord.'Membro ID'.ID=ThisItem.ID))
+                    //Filter(Familiares,'Parent ID'.ID=ThisItem.ID)
+                    Filter(Ungroup(Table({MyTables: Familiares},{MyTables: Empresas}), "MyTables"),uipp_ParentID.ID=ThisItem.ID Or uipp_MembroID.ID=ThisItem.ID)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -444,7 +455,10 @@ Particulares As screen:
 
                 Label8 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.Nome
+                    Text: |+
+                        =//First(Ungroup(Table({MyTables: ThisItem.uipp_nome},{MyTables: ThisItem.uipp_designacao}), "MyTables")).MyTables
+                        Concatenate(ThisItem.uipp_nome,ThisItem.uipp_designacao)
+                        
                     Width: =300
                     X: =35
                     Y: =4
@@ -452,7 +466,9 @@ Particulares As screen:
 
                 Label8_1 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.'Numero documento'
+                    Text: |-
+                        =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
+                        ThisItem.uipp_numerodocumento
                     Width: =242
                     X: =346
                     Y: =4
@@ -460,7 +476,9 @@ Particulares As screen:
 
                 Label8_2 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.'Grau de parentesco'.'Grau de parentesco'
+                    Text: |-
+                        =//Ungroup(Table({MyTables: ThisItem.uipp_Graudeparentesco.'Grau de parentesco'},{MyTables: ThisItem.}), "MyTables")
+                        ThisItem.uipp_Graudeparentesco.'Grau de parentesco'
                     Width: =341
                     X: =599
                     Y: =4
