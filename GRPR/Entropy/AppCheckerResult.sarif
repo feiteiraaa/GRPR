@@ -6182,6 +6182,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 183,
+                  "charOffset": 217,
+                  "snippet": {
+                    "text": "If(\n                    Checkbox1.Value = false,\n                    ThisRecord.Ativo = true,\n                    ThisRecord.Ativo = true Or ThisRecord.Ativo = false\n                )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Particulares",
+                "type": "Particulares.'Membros dos Orgaos Sociais'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Items",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 167,
+                  "charOffset": 753,
+                  "snippet": {
+                    "text": "If(\n                Checkbox1.Value = false,\n                ThisRecord.Ativo = true,\n                ThisRecord.Ativo = true Or ThisRecord.Ativo = false\n            )"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "Particulares",
+                "type": "Particulares.'Membros dos Orgaos Sociais'"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "If"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "LeftSectionComponent.MainContainerLeftSection.background.AccessibleLabel"
                 }
               ],

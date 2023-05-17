@@ -394,7 +394,51 @@ Particulares As screen:
             DelayItemLoading: =true
             Height: |
                 =472
-            Items: =Membros_1
+            Items: |-
+                =//Membros_1
+                If(
+                    localFiltro = "Membros dos Orgãos Sociais",
+                    Search(
+                        //AddColumns(
+                        SortByColumns(
+                            Filter(
+                                Membros_1,
+                            //ThisRecord.Ativo =
+                                If(
+                                    Checkbox1.Value = false,
+                                    ThisRecord.Ativo = true,
+                                    ThisRecord.Ativo = true Or ThisRecord.Ativo = false
+                                )
+                            ),
+                            varSortCol,
+                            varSortDir
+                        ),
+                            /*"CargoCategoria",
+                            'Cargo (Categoria)'
+                        ),*/
+                        TextInput2.Text,
+                        "uipp_nome"
+                        //"uipp_cargodescricao"
+                    ),
+                    Search(
+                        //AddColumns(
+                        Filter(
+                            Membros_1,
+                            //ThisRecord.Ativo =
+                            If(
+                                Checkbox1.Value = false,
+                                ThisRecord.Ativo = true,
+                                ThisRecord.Ativo = true Or ThisRecord.Ativo = false
+                            )
+                        ),
+                           /* "CargoCategoria",
+                            'Cargo (Categoria)'
+                        ),*/
+                        TextInput2.Text,
+                        "uipp_nome"
+                        //"uipp_cargodescricao"
+                    )
+                )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplateSize: =127
@@ -462,7 +506,7 @@ Particulares As screen:
 
                 Label8_2 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.uipp_nome
+                    Text: =ThisItem.uipp_Graudeparentesco.'Grau de parentesco'
                     Width: =341
                     X: =599
                     Y: =4
