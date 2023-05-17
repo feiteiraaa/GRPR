@@ -1,7 +1,7 @@
 Particulares As screen:
     OnVisible: |
         =Concurrent(
-            UpdateContext({localFiltro: "Membros dos Orgãos Sociais"}),
+            UpdateContext({localFiltro: "Membros dos Orgãos Sociais",localseta:false}),
             ResetForm(ColaboradorForm_1),
             Reset(TextInput2),
             Refresh(Colaboradores_1),
@@ -392,7 +392,8 @@ Particulares As screen:
 
         "'Membros dos Orgaos Sociais' As gallery.variableTemplateHeightGallery":
             DelayItemLoading: =true
-            Height: =472
+            Height: |
+                =472
             Items: =Membros_1
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
@@ -426,7 +427,7 @@ Particulares As screen:
 
             Gallery4 As gallery.variableTemplateHeightGallery:
                 DelayItemLoading: =true
-                Height: =156
+                Height: =90
                 Items: |-
                     =//FirstN(CustomGallerySample, 2)
                     //AddColumns(Filter(Familiares,'Parent ID'.ID=ThisItem.ID),"Designação",Filter([@Empresas],ThisRecord.'Membro ID'.ID=ThisItem.ID))
@@ -436,6 +437,7 @@ Particulares As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =45
+                Visible: =localseta
                 Width: =951
                 Y: =37
                 ZIndex: =5
@@ -491,8 +493,11 @@ Particulares As screen:
 
             "Icon3 As icon.'3DPrinting'":
                 Height: =25
-                Icon: =Icon.ChevronDown
-                OnSelect: =Select(Parent)
+                Icon: |-
+                    =//Icon.ChevronDown
+                    If(localseta,Icon.ChevronUp,Icon.ChevronDown)
+                OnSelect: |-
+                    =UpdateContext({localseta:!localseta})
                 Width: =25
                 X: =929
                 ZIndex: =7
@@ -698,6 +703,7 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
+        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
         Width: =20
         X: |-
             =//Nome_Column1.X +490
@@ -963,6 +969,7 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
+        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
         Width: =20
         X: |-
             =//'Tipo Documento_Column2'.X +490
@@ -1002,6 +1009,7 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
+        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
         Width: =20
         X: |-
             =//'Numero Documento_Column2'.X +490
