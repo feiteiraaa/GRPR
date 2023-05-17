@@ -527,7 +527,9 @@ Particulares As screen:
                 Height: =1
                 OnSelect: =Select(Parent)
                 Width: =951
-                Y: =317
+                Y: |-
+                    =//126
+                    If(localseta,126,50)
                 ZIndex: =6
 
             "Icon3 As icon.'3DPrinting'":
