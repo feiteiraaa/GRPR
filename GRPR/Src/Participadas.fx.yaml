@@ -2,3 +2,84 @@ Participadas As screen:
 
     LeftSectionComponent_3 As LeftSectionComponent:
 
+    "'Empresas Participadas' As dataTable.datatable":
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =500
+        Items: ='Empresas Participadas do Grupos'
+        Width: =980
+        X: =364
+        Y: =216
+        ZIndex: =2
+
+        Nome_Column3 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Nome"
+            FieldName: ="uipp_nome"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.Nome
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        "'Numero documento_Column1' As dataTableColumn.numberColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Numero documento"
+            FieldName: ="uipp_numerodocumento"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.'Numero documento'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        "'Participacao efetiva_Column1' As dataTableColumn.numberColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Participacao efetiva"
+            FieldName: ="uipp_participacaoefetiva"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.'Participacao efetiva'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =3
+
+        Controlo_Column1 As dataTableColumn.numberColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Controlo"
+            FieldName: ="uipp_controlo"
+            FieldVariantName: ="numberColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.Controlo
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Legislacao aplicada_Column3' As dataTableColumn.complexTypeColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Legislacao aplicada"
+            FieldName: ="uipp_Legislacaoaplicada"
+            FieldVariantName: ="complexTypeColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.'Legislacao aplicada'.Legislação
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+

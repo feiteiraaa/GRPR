@@ -412,7 +412,7 @@ ROCDetails As screen:
                 HoverFill: =cores.amareloMontepio
                 IsSearchable: =false
                 Items: |-
-                    =Choices([@ROCS].uipp_Legislacaoaplicada)
+                    =Choices([@ROCS].'Legislacao aplicada')
                     //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedFill: =cores.cinzento
