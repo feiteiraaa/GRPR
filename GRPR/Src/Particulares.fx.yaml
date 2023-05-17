@@ -429,10 +429,7 @@ Particulares As screen:
                 DelayItemLoading: =true
                 Height: =90
                 Items: |-
-                    =//FirstN(CustomGallerySample, 2)
-                    //AddColumns(Filter(Familiares,'Parent ID'.ID=ThisItem.ID),"Designação",Filter([@Empresas],ThisRecord.'Membro ID'.ID=ThisItem.ID))
-                    //Filter(Familiares,'Parent ID'.ID=ThisItem.ID)
-                    Filter(Ungroup(Table({MyTables: Familiares},{MyTables: Empresas}), "MyTables"),uipp_ParentID.ID=ThisItem.ID Or uipp_MembroID.ID=ThisItem.ID)
+                    =Filter(Ungroup(Table({MyTables: Familiares},{MyTables: Empresas}), "MyTables"),uipp_ParentID.ID=ThisItem.ID Or uipp_MembroID.ID=ThisItem.ID)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -465,9 +462,7 @@ Particulares As screen:
 
                 Label8_2 As label:
                     OnSelect: =Select(Parent)
-                    Text: |-
-                        =//Ungroup(Table({MyTables: ThisItem.uipp_Graudeparentesco.'Grau de parentesco'},{MyTables: ThisItem.}), "MyTables")
-                        ThisItem.uipp_Graudeparentesco.'Grau de parentesco'
+                    Text: =ThisItem.uipp_nome
                     Width: =341
                     X: =599
                     Y: =4
