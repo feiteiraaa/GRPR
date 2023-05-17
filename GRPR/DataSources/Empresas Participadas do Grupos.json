@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "uipp_empresasparticipadasdogrupo",
-    "MaxGetRowsCount": 500,
     "Name": "Empresas Participadas do Grupos",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Proprietário",
@@ -54,14 +53,6 @@
     },
     "PreferredName": "Empresas Participadas do Grupos",
     "Type": "NativeCDSDataSourceInfo"
-  },
-  {
-    "DisplayName": "Empresas Participadas do Grupos (Views)",
-    "Name": "_uipp_empresasparticipadasdogrupo_views",
-    "RelatedEntityName": "Empresas Participadas do Grupos",
-    "TrimmedViewName": true,
-    "Type": "ViewInfo",
-    "ViewInfoNameMapping": {}
   },
   {
     "DisplayName": "Estado (Empresas Participadas do Grupos)",

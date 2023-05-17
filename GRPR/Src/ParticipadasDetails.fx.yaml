@@ -125,6 +125,13 @@ ParticipadasDetails As screen:
             Y: =74
             ZIndex: =6
 
+    Form1 As form:
+        DataSource: ='Empresas Participadas do Grupos'
+        Width: =980
+        X: =365
+        Y: =181
+        ZIndex: =10
+
     "'Particualres Edit Save Btn_5' As group":
         Height: =5
         Width: =5
