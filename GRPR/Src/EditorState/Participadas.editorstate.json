@@ -841,7 +841,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Empresas Participadas",
-      "ParentIndex": 7,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1272,7 +1272,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_3",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1601,14 +1601,7 @@
         "FieldName",
         "Order",
         "FieldVariantName",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "FieldDisplayName",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "FieldDisplayName",
         "LayoutHeight",
         "X",
         "Y",
@@ -1701,14 +1694,7 @@
         "FieldName",
         "Order",
         "FieldVariantName",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "FieldDisplayName",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "FieldDisplayName",
         "LayoutHeight",
         "X",
         "Y",
@@ -1801,14 +1787,7 @@
         "FieldName",
         "Order",
         "FieldVariantName",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "FieldDisplayName",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "FieldDisplayName",
         "LayoutHeight",
         "X",
         "Y",
@@ -1901,14 +1880,7 @@
         "FieldName",
         "Order",
         "FieldVariantName",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "",
-          "InvariantPropertyName": "FieldDisplayName",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "FieldDisplayName",
         "LayoutHeight",
         "X",
         "Y",
