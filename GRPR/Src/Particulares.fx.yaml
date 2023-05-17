@@ -1,10 +1,7 @@
 Particulares As screen:
-    OnVisible: |-
+    OnVisible: |
         =Concurrent(
-            UpdateContext(
-                {//localFiltro: "Membros dos Orgãos Sociais"
-        localFiltro: "Colaboradores"}
-            ),
+            UpdateContext({localFiltro: "Membros dos Orgãos Sociais"}),
             ResetForm(ColaboradorForm_1),
             Reset(TextInput2),
             Refresh(Colaboradores_1),
@@ -16,16 +13,6 @@ Particulares As screen:
             SortOrder.Descending
         );
         UpdateContext({showAttachExcel: false});
-        ClearCollect(
-            familiaEmpresa,
-            Ungroup(
-                Table(
-                    {MyTable: Familiares},
-                    {MyTable: Empresas}
-                ),
-                "MyTable"
-            )
-        )
 
     LeftSectionComponent_2 As LeftSectionComponent:
         TabelaMenu: |-
@@ -487,7 +474,7 @@ Particulares As screen:
                 "Icon1 As icon.'3DPrinting'":
                     Color: =cores.amareloMontepio
                     Height: =25
-                    Icon: =Icon.People
+                    Icon: =If(!IsBlank(ThisItem.uipp_designacao),Icon.OfficeBuilding,Icon.People)
                     OnSelect: =Select(Parent)
                     Width: =25
                     X: =10
