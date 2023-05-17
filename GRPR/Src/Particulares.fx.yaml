@@ -397,7 +397,7 @@ Particulares As screen:
         "'Membros dos Orgaos Sociais' As gallery.variableTemplateHeightGallery":
             DelayItemLoading: =true
             Height: =472
-            Items: =CustomGallerySample
+            Items: =Membros_1
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplateSize: =127
@@ -409,21 +409,21 @@ Particulares As screen:
 
             "'Nome Membro' As label":
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.SampleHeading
+                Text: =ThisItem.Nome
                 Width: =336
                 X: =4
                 ZIndex: =1
 
             "'NIF Membro' As label":
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.SampleHeading
+                Text: =ThisItem.'Numero documento'
                 Width: =242
                 X: =346
                 ZIndex: =2
 
             "'Cargo e Relacao' As label":
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.SampleHeading
+                Text: =ThisItem.'Número de Sequência da Importação'
                 Width: =341
                 X: =598
                 ZIndex: =3
@@ -431,7 +431,9 @@ Particulares As screen:
             Gallery4 As gallery.variableTemplateHeightGallery:
                 DelayItemLoading: =true
                 Height: =156
-                Items: =FirstN(CustomGallerySample, 2)
+                Items: |-
+                    =//FirstN(CustomGallerySample, 2)
+                    Filter(Familiares,'Parent ID'=3)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -442,7 +444,7 @@ Particulares As screen:
 
                 Label8 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.SampleHeading
+                    Text: =ThisItem.Nome
                     Width: =300
                     X: =35
                     Y: =4
@@ -450,7 +452,7 @@ Particulares As screen:
 
                 Label8_1 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.SampleHeading
+                    Text: =ThisItem.'Numero documento'
                     Width: =242
                     X: =346
                     Y: =4
@@ -458,7 +460,7 @@ Particulares As screen:
 
                 Label8_2 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.SampleHeading
+                    Text: =ThisItem.'Grau de parentesco'.'Grau de parentesco'
                     Width: =341
                     X: =599
                     Y: =4
@@ -563,7 +565,6 @@ Particulares As screen:
         "'Top Section Gallery Text 1' As label":
             Align: =Align.Center
             Color: =If(localFiltro = "Membros dos Orgãos Sociais", RGBA(240, 200, 0, 1), RGBA(130, 130, 130, 1))
-            DisplayMode: =DisplayMode.Disabled
             FontWeight: =If(localFiltro = "Lista de Reportes", FontWeight.Bold, FontWeight.Semibold)
             Height: =45
             OnSelect: |-
@@ -578,9 +579,7 @@ Particulares As screen:
                     varSortDir,
                     SortOrder.Descending
                 )
-            Text: |-
-                ="Membros dos Orgãos Sociais
-                (Brevemente)"
+            Text: ="Membros dos Orgãos Sociais"
             Width: =288
             X: =14
             Y: =3

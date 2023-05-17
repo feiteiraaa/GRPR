@@ -189,11 +189,11 @@
       },
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "uipp_grupo",
-        "OptionSetReferenceEntityName": "ROCS"
+        "OptionSetReferenceEntityName": "Empresas Participadas do Grupos"
       },
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "uipp_grupo",
-        "OptionSetReferenceEntityName": "Empresas Participadas do Grupos"
+        "OptionSetReferenceEntityName": "ROCS"
       }
     },
     "OptionSetTypeKey": "PicklistType",
@@ -217,23 +217,23 @@
       },
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Empresas"
+        "OptionSetReferenceEntityName": "Empresas Participadas do Grupos"
       },
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Familiares"
+        "OptionSetReferenceEntityName": "Empresas"
       },
       "OptionSetReferenceItem3": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Membros_1"
+        "OptionSetReferenceEntityName": "Familiares"
       },
       "OptionSetReferenceItem4": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "ROCS"
+        "OptionSetReferenceEntityName": "Membros_1"
       },
       "OptionSetReferenceItem5": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Empresas Participadas do Grupos"
+        "OptionSetReferenceEntityName": "ROCS"
       }
     },
     "OptionSetTypeKey": "PicklistType",
