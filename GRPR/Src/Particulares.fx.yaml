@@ -433,7 +433,7 @@ Particulares As screen:
                 Height: =156
                 Items: |-
                     =//FirstN(CustomGallerySample, 2)
-                    Filter(Familiares,'Parent ID'=3)
+                    Familiares
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
@@ -469,7 +469,7 @@ Particulares As screen:
                 "Icon1 As icon.'3DPrinting'":
                     Color: =cores.amareloMontepio
                     Height: =25
-                    Icon: =Icon.OfficeBuilding
+                    Icon: =Icon.People
                     OnSelect: =Select(Parent)
                     Width: =25
                     X: =10
