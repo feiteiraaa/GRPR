@@ -488,7 +488,7 @@ ColaboradoresDetails As screen:
                 HoverFill: =cores.amareloMontepio
                 IsSearchable: =false
                 Items: |-
-                    =Choices([@Colaboradores_1].uipp_Legislacaoaplicada)
+                    =Choices([@Colaboradores_1].'Legislacao aplicada')
                     //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedFill: =cores.cinzento
