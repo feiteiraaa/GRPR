@@ -6,8 +6,10 @@ Participadas As screen:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
+        HeadingFill: =cores.cinzento
         Height: =500
         Items: ='Empresas Participadas do Grupos'
+        SelectedFill: =cores.amareloMontepio
         Width: =980
         X: =364
         Y: =216
@@ -82,4 +84,14 @@ Participadas As screen:
             X: =0
             Y: =0
             ZIndex: =5
+
+    Label1_3 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =15
+        Text: ="Empresas Participadas do Grupo"
+        Width: =529
+        X: =365
+        Y: =26
+        ZIndex: =3
 
