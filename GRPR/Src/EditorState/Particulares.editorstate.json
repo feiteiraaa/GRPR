@@ -4552,7 +4552,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IconCargo",
-      "ParentIndex": 18,
+      "ParentIndex": 20,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -4772,7 +4772,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IconNDoc",
-      "ParentIndex": 20,
+      "ParentIndex": 19,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5425,7 +5425,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "IconTipoDoc",
-      "ParentIndex": 19,
+      "ParentIndex": 18,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

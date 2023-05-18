@@ -10129,17 +10129,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails.Empresas Participadas"
+                  "fullyQualifiedName": "ParticipadasDetails._Empresas Participadas"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ParticipadasDetails.Empresas Participadas",
+                  "fullyQualifiedName": "ParticipadasDetails._Empresas Participadas",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Empresas Participadas",
+                "member": "_Empresas Participadas",
                 "module": "ParticipadasDetails",
                 "type": "ParticipadasDetails"
               }
