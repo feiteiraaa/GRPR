@@ -86,6 +86,10 @@
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "uipp_cargocategoria",
         "OptionSetReferenceEntityName": "Membros-Participadas"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "uipp_cargocategoria",
+        "OptionSetReferenceEntityName": "Empresas"
       }
     },
     "OptionSetTypeKey": "PicklistType",
