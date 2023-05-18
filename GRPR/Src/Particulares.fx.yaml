@@ -478,7 +478,7 @@ Particulares As screen:
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
                 TemplateSize: =45
-                Visible: =localseta
+                Visible: =localseta And ThisItem.IsSelected
                 Width: =951
                 Y: =37
                 ZIndex: =5
@@ -529,14 +529,14 @@ Particulares As screen:
                 Width: =951
                 Y: |-
                     =//126
-                    If(localseta,126,50)
+                    If(localseta And ThisItem.IsSelected,126,50)
                 ZIndex: =6
 
             "Icon3 As icon.'3DPrinting'":
                 Height: =25
                 Icon: |-
                     =//Icon.ChevronDown
-                    If(localseta,Icon.ChevronUp,Icon.ChevronDown)
+                    If(localseta And ThisItem.IsSelected,Icon.ChevronUp,Icon.ChevronDown)
                 OnSelect: |-
                     =UpdateContext({localseta:!localseta})
                 Width: =25
