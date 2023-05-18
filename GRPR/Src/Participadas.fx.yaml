@@ -9,8 +9,7 @@ Participadas As screen:
         HeadingFill: =cores.cinzento
         Height: =500
         Items: |-
-            =
-                Search(
+            = Search(
                     AddColumns(
                         SortByColumns(
                             Filter(
@@ -24,15 +23,14 @@ Participadas As screen:
                             varSortCol,
                             varSortDir
                         ),
-                        "tipoDocumento",
-                        Text('Tipo de documento'),
-                        "grupo",
-                        Text("uipp_Grupo")
+                        "numeroDocumento",
+                        Text('Numero documento'),
+                        "nome",
+                        Text(Nome)
                     ),
                     TextInput2_1.Text,
-                    "uipp_nome",
-                    "tipoDocumento",
-                    "grupo"
+                    "numeroDocumento",
+                    "nome"
                 )
         SelectedFill: =cores.amareloMontepio
         Width: =980
@@ -40,7 +38,7 @@ Participadas As screen:
         Y: =216
         ZIndex: =2
 
-        Nome_Column3 As dataTableColumn.textualColumn:
+        Nome As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Designação"
             FieldName: ="uipp_nome"
@@ -54,7 +52,7 @@ Participadas As screen:
             Y: =0
             ZIndex: =1
 
-        "'Numero documento_Column1' As dataTableColumn.numberColumn":
+        "'Numero documento' As dataTableColumn.numberColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="NIPC"
             FieldName: ="uipp_numerodocumento"
@@ -68,7 +66,7 @@ Participadas As screen:
             Y: =0
             ZIndex: =2
 
-        "'Participacao efetiva_Column1' As dataTableColumn.numberColumn":
+        "'Participacao efetiva' As dataTableColumn.numberColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Participação efetiva"
             FieldName: ="uipp_participacaoefetiva"
@@ -82,7 +80,7 @@ Participadas As screen:
             Y: =0
             ZIndex: =3
 
-        Controlo_Column1 As dataTableColumn.numberColumn:
+        Controlo As dataTableColumn.numberColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Controlo"
             FieldName: ="uipp_controlo"
@@ -96,7 +94,7 @@ Participadas As screen:
             Y: =0
             ZIndex: =4
 
-        "'Legislacao aplicada_Column3' As dataTableColumn.complexTypeColumn":
+        "'Legislacao aplicada' As dataTableColumn.complexTypeColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Legislação"
             FieldName: ="uipp_Legislacaoaplicada"
