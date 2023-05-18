@@ -10129,6 +10129,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ParticipadasDetails.Empresas Participadas"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ParticipadasDetails.Empresas Participadas",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Empresas Participadas",
+                "module": "ParticipadasDetails",
+                "type": "ParticipadasDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ParticipadasDetails.localShowModal"
                 }
               ],

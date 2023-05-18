@@ -45,6 +45,8 @@ Participadas As screen:
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {'Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =1
             Text: =ThisItem.Nome
             Width: =100
@@ -59,6 +61,8 @@ Participadas As screen:
             FieldVariantName: ="numberColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {'Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =2
             Text: =ThisItem.'Numero documento'
             Width: =100
@@ -74,6 +78,8 @@ Participadas As screen:
             FieldVariantName: ="numberColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {'Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =3
             Text: =ThisItem.'Participacao efetiva'
             Width: =237
@@ -88,6 +94,8 @@ Participadas As screen:
             FieldVariantName: ="numberColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {'Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =4
             Text: =ThisItem.Controlo
             Width: =100
@@ -96,15 +104,18 @@ Participadas As screen:
             ZIndex: =4
 
         "'Legislacao aplicada' As dataTableColumn.complexTypeColumn":
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Legislação"
             FieldName: ="uipp_Legislacaoaplicada"
             FieldVariantName: ="complexTypeColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {'Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =5
             Text: =ThisItem.'Legislacao aplicada'.Legislação
-            Width: =100
+            Width: =191
             X: =0
             Y: =0
             ZIndex: =5
@@ -211,7 +222,8 @@ Participadas As screen:
             Height: =39
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: =Navigate(ParticipadasDetails, ScreenTransition.None)
+            OnSelect: |-
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {ColabFormMode: FormMode.New})
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
