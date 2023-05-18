@@ -464,7 +464,7 @@ Particulares As screen:
 
             "'Cargo e Relacao' As label":
                 OnSelect: =Select(Parent)
-                Text: =ThisItem.'Número de Sequência da Importação'
+                Text: =//Filter('Membros-Familiares-Respetivas',ID_Membro.ID=ThisItem.ID 
                 Width: =341
                 X: =598
                 ZIndex: =3
@@ -472,7 +472,7 @@ Particulares As screen:
             Gallery4 As gallery.variableTemplateHeightGallery:
                 DelayItemLoading: =true
                 Height: =90
-                Items: |-
+                Items: |
                     =Filter(Ungroup(Table({MyTables: Familiares},{MyTables: Empresas}), "MyTables"),uipp_ParentID.ID=ThisItem.ID Or uipp_MembroID.ID=ThisItem.ID)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data

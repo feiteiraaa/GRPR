@@ -119,6 +119,28 @@ Participadas As screen:
         Y: =26
         ZIndex: =3
 
+    Icon7 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =20
+        Icon: =Icon.ChevronDown
+        OnSelect: |-
+            =Set(
+                varSortCol,
+                "uipp_nome"
+            );
+            Set(
+                varSortDir,
+                If(
+                    varSortDir = SortOrder.Ascending,
+                    SortOrder.Descending,
+                    SortOrder.Ascending
+                )
+            )
+        Width: =20
+        X: =521
+        Y: =228
+        ZIndex: =9
+
     ActionBar_1 As group:
         Height: =5
         Width: =5
@@ -196,28 +218,6 @@ Participadas As screen:
             X: =1165
             Y: =159
             ZIndex: =8
-
-    Icon7 As icon.ChevronDown:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =20
-        Icon: =Icon.ChevronDown
-        OnSelect: |-
-            =Set(
-                varSortCol,
-                "uipp_nome"
-            );
-            Set(
-                varSortDir,
-                If(
-                    varSortDir = SortOrder.Ascending,
-                    SortOrder.Descending,
-                    SortOrder.Ascending
-                )
-            )
-        Width: =20
-        X: =521
-        Y: =228
-        ZIndex: =9
 
     Icon7_1 As icon.ChevronDown:
         Color: =RGBA(255, 255, 255, 1)

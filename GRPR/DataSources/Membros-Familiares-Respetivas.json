@@ -1,0 +1,103 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "uipp_membrosfamiliaresrespetivases",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "uipp_membrosfamiliaresrespetivas",
+    "Name": "Membros-Familiares-Respetivas",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "createdby": "Criado Por",
+      "createdon": "Criado Em",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "importsequencenumber": "Número de Sequência da Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Modificado Em",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "overriddencreatedon": "Registo Criado Em",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "statecode": "Estado",
+      "statuscode": "Razão do Estado",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "uipp_cargocategoria": "Cargo (Categoria)",
+      "uipp_cargodescricao": "Cargo (Descrição)",
+      "uipp_ID_Empresa": "ID_Empresa",
+      "uipp_ID_Familiares": "ID_Familiares",
+      "uipp_ID_GrauParentesco": "ID_GrauParentesco",
+      "uipp_ID_Membro": "ID_Membro",
+      "uipp_membrosfamiliaresrespetivas_AsyncOperations": "Tarefas de Sistema",
+      "uipp_membrosfamiliaresrespetivas_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "uipp_membrosfamiliaresrespetivas_DuplicateBaseRecord": "Registos Duplicados (uipp_membrosfamiliaresrespetivas_DuplicateBaseRecord)",
+      "uipp_membrosfamiliaresrespetivas_DuplicateMatchingRecord": "Registos Duplicados (uipp_membrosfamiliaresrespetivas_DuplicateMatchingRecord)",
+      "uipp_membrosfamiliaresrespetivas_MailboxTrackingFolders": "Pastas de Monitorização Automática da Caixa de Correio",
+      "uipp_membrosfamiliaresrespetivas_PrincipalObjectAttributeAccesses": "Partilha de Campos",
+      "uipp_membrosfamiliaresrespetivas_ProcessSession": "Sessões de Processo",
+      "uipp_membrosfamiliaresrespetivas_SyncErrors": "Erros de Sincronização",
+      "uipp_membrosfamiliaresrespetivasid": "Membros-Familiares-Respetivas",
+      "uipp_name": "Name",
+      "uipp_participacao": "Participação",
+      "utcconversiontimezonecode": "Código de Fuso Horário da Conversão UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Membros-Familiares-Respetivas",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Membros-Familiares-Respetivas (Views)",
+    "Name": "_uipp_membrosfamiliaresrespetivas_views",
+    "RelatedEntityName": "Membros-Familiares-Respetivas",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "379ebb15-d22f-4763-85dc-df6a0dd853c8": "Membros-Familiares-Respetivas Advanced Find View",
+      "4931186e-f4e1-48db-8cfd-c3b653e039f6": "Membros-Familiares-Respetivas Associated View",
+      "5e541f3b-5587-436e-92b2-11d75b39f3cb": "Active Membros-Familiares-Respetivas",
+      "b84794c9-11c0-46a6-9624-f62cd4245088": "Membros-Familiares-Respetivas Lookup View",
+      "e6c412b7-e32d-49a7-99b4-bcbb0f0aa8f9": "Inactive Membros-Familiares-Respetivas"
+    }
+  },
+  {
+    "DisplayName": "Estado (Membros-Familiares-Respetivas)",
+    "Name": "uipp_membrosfamiliaresrespetivas_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo",
+      "1": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Membros-Familiares-Respetivas"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Membros-Familiares-Respetivas",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Membros-Familiares-Respetivas)",
+    "Name": "uipp_membrosfamiliaresrespetivas_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo",
+      "2": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Membros-Familiares-Respetivas"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Membros-Familiares-Respetivas",
+    "Type": "OptionSetInfo"
+  }
+]
