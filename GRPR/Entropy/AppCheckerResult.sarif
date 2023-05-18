@@ -9889,19 +9889,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.'Legislacao aplicada_DataCard4'.DataCardValue29.AccessibleLabel"
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.'Legislacao aplicada_DataCard4'.DataCardValue29.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.'Legislacao aplicada_DataCard4'.DataCardValue29.AccessibleLabel",
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.'Legislacao aplicada_DataCard4'.DataCardValue29.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ParticipadasDetails",
-                "type": "ParticipadasDetails.Form1.'Legislacao aplicada_DataCard4'.DataCardValue29"
+                "type": "ParticipadasDetails.FormParticipadas.'Legislacao aplicada_DataCard4'.DataCardValue29"
               }
             }
           ],
@@ -9919,19 +9919,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.Controlo_DataCard2.DataCardValue28.AccessibleLabel"
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.Controlo_DataCard2.DataCardValue28.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.Controlo_DataCard2.DataCardValue28.AccessibleLabel",
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.Controlo_DataCard2.DataCardValue28.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ParticipadasDetails",
-                "type": "ParticipadasDetails.Form1.Controlo_DataCard2.DataCardValue28"
+                "type": "ParticipadasDetails.FormParticipadas.Controlo_DataCard2.DataCardValue28"
               }
             }
           ],
@@ -9949,19 +9949,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.'Participacao efetiva_DataCard2'.DataCardValue27.AccessibleLabel"
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.'Participacao efetiva_DataCard2'.DataCardValue27.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.'Participacao efetiva_DataCard2'.DataCardValue27.AccessibleLabel",
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.'Participacao efetiva_DataCard2'.DataCardValue27.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ParticipadasDetails",
-                "type": "ParticipadasDetails.Form1.'Participacao efetiva_DataCard2'.DataCardValue27"
+                "type": "ParticipadasDetails.FormParticipadas.'Participacao efetiva_DataCard2'.DataCardValue27"
               }
             }
           ],
@@ -9979,19 +9979,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.'Numero documento_DataCard2'.DataCardValue10.AccessibleLabel"
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.'Numero documento_DataCard2'.DataCardValue10.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.'Numero documento_DataCard2'.DataCardValue10.AccessibleLabel",
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.'Numero documento_DataCard2'.DataCardValue10.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ParticipadasDetails",
-                "type": "ParticipadasDetails.Form1.'Numero documento_DataCard2'.DataCardValue10"
+                "type": "ParticipadasDetails.FormParticipadas.'Numero documento_DataCard2'.DataCardValue10"
               }
             }
           ],
@@ -10009,19 +10009,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.Nome_DataCard4.DataCardValue9.AccessibleLabel"
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.Nome_DataCard4.DataCardValue9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "ParticipadasDetails.Form1.Nome_DataCard4.DataCardValue9.AccessibleLabel",
+                  "fullyQualifiedName": "ParticipadasDetails.FormParticipadas.Nome_DataCard4.DataCardValue9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "ParticipadasDetails",
-                "type": "ParticipadasDetails.Form1.Nome_DataCard4.DataCardValue9"
+                "type": "ParticipadasDetails.FormParticipadas.Nome_DataCard4.DataCardValue9"
               }
             }
           ],

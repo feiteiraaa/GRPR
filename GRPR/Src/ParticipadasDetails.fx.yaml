@@ -108,7 +108,7 @@ ParticipadasDetails As screen:
                 =If(
                     ColabFormMode <> FormMode.View,
                     If(
-                        SubmitForm(ColaboradorForm_1),
+                        SubmitForm(FormParticipadas),
                         Back();
                         Notify("Registo de Colaborador criado com sucesso!", NotificationType.Success),
                         Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
@@ -125,7 +125,7 @@ ParticipadasDetails As screen:
             Y: =74
             ZIndex: =6
 
-    Form1 As form:
+    FormParticipadas As form:
         DataSource: ='Empresas Participadas do Grupos'
         Width: =969
         X: =365
