@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "Membros-Familiares-Respetivas",
   "InstanceUrl": "https://simactiond.crm4.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "uipp_membrosfamiliaresrespetivases",
-    "logicalName": "uipp_membrosfamiliaresrespetivas"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://simactiond.crm4.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('uipp_membrosfamiliaresrespetivas')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",

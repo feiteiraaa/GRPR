@@ -369,13 +369,6 @@
       "Values": {
         "Information": "dd95b6cc-2950-4f68-a4bf-ac15c4bc3824"
       }
-    },
-    {
-      "Kind": "default.cds_uipp_membrosfamiliaresrespetivas_forms",
-      "Namespace": "Membros-Familiares-Respetivas (Forms)",
-      "Values": {
-        "Information": "0815f527-0d01-4fc5-98d4-ec7073161222"
-      }
     }
   ]
 }

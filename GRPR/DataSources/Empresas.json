@@ -26,8 +26,6 @@
       "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
       "uipp_ativo": "Ativo",
       "uipp_bloqueado": "Bloqueado",
-      "uipp_cargocategoria": "Cargo (Categoria)",
-      "uipp_cargodescricao": "Cargo (Descricao)",
       "uipp_dataaprovacaoca": "Data aprovacao CA",
       "uipp_datadeinsercao": "Data de insercao",
       "uipp_datadesaida": "Data de saída",
@@ -46,7 +44,6 @@
       "uipp_Legislacaoaplicada": "Legislacao aplicada",
       "uipp_MembroID": "Membro ID",
       "uipp_numerodocumento": "Numero Documento",
-      "uipp_participacao": "Participacao",
       "uipp_tipodedocumento": "Tipo de documento",
       "utcconversiontimezonecode": "Código de Fuso Horário da Conversão UTC",
       "versionnumber": "Número da Versão"
