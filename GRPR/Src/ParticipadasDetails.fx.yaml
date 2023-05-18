@@ -132,72 +132,6 @@ ParticipadasDetails As screen:
         Y: =176
         ZIndex: =10
 
-        "'Legislacao aplicada_DataCard4' As typedDataCard.comboBoxEditCard":
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="uipp_Legislacaoaplicada"
-            Default: =ThisItem.'Legislacao aplicada'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@'Empresas Participadas do Grupos'],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =DataCardValue29.Selected
-            Width: =323
-            X: =1
-            Y: =1
-            ZIndex: =1
-
-            DataCardKey29 As label:
-                AutoHeight: =true
-                Height: =34
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue29 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["uipp_id"]
-                DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["uipp_id"]
-                SearchItems: =Search(Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada),DataCardValue29.SearchText,"uipp_id")
-                SelectMultiple: =false
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
-                ZIndex: =2
-
-            ErrorMessage29 As label:
-                AutoHeight: =true
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue29.Y + DataCardValue29.Height
-                ZIndex: =3
-
-            StarVisible29 As label:
-                Align: =Align.Center
-                Height: =DataCardKey29.Height
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey29.Y
-                ZIndex: =4
-
         Nome_DataCard4 As typedDataCard.textualEditCard:
             BorderStyle: =BorderStyle.Solid
             DataField: ="uipp_nome"
@@ -216,6 +150,7 @@ ParticipadasDetails As screen:
 
             DataCardKey9 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -225,7 +160,7 @@ ParticipadasDetails As screen:
                 ZIndex: =1
 
             DataCardValue9 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
@@ -283,6 +218,7 @@ ParticipadasDetails As screen:
 
             DataCardKey10 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -292,7 +228,7 @@ ParticipadasDetails As screen:
                 ZIndex: =1
 
             DataCardValue10 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
@@ -350,6 +286,7 @@ ParticipadasDetails As screen:
 
             DataCardKey11 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -359,7 +296,7 @@ ParticipadasDetails As screen:
                 ZIndex: =1
 
             DataCardValue27 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
@@ -417,6 +354,7 @@ ParticipadasDetails As screen:
 
             DataCardKey12 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -426,7 +364,7 @@ ParticipadasDetails As screen:
                 ZIndex: =1
 
             DataCardValue28 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
@@ -465,6 +403,75 @@ ParticipadasDetails As screen:
                 Width: =30
                 Wrap: =false
                 Y: =DataCardKey12.Y
+                ZIndex: =4
+
+        "'Legislacao aplicada_DataCard4' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="uipp_Legislacaoaplicada"
+            Default: =ThisItem.'Legislacao aplicada'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Empresas Participadas do Grupos'],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue29.Selected
+            Width: =323
+            X: =1
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey29 As label:
+                AutoHeight: =true
+                Color: =cores.cinzento
+                Height: =34
+                Text: =Parent.DisplayName
+                Width: =263
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue29 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                ChevronBackground: =cores.amareloMontepio
+                ChevronFill: =Color.White
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["uipp_id"]
+                DisplayMode: =Parent.DisplayMode
+                Items: =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["uipp_id"]
+                SearchItems: =Search(Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada),DataCardValue29.SearchText,"uipp_id")
+                SelectMultiple: =false
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey29.Y + DataCardKey29.Height + 5
+                ZIndex: =2
+
+            ErrorMessage29 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue29.Y + DataCardValue29.Height
+                ZIndex: =3
+
+            StarVisible29 As label:
+                Align: =Align.Center
+                Height: =DataCardKey29.Height
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey29.Y
                 ZIndex: =4
 
     "'Particualres Edit Save Btn_5' As group":
