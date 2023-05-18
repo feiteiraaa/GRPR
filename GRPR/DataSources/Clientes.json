@@ -221,6 +221,7 @@
       "msevtmgt_account_msevtmgt_sponsorship_Sponsor": "Patrocínios",
       "msevtmgt_hotelgroup": "Grupo hoteleiro",
       "msevtmgt_rentalcarprovider": "Fornecedor de aluguer de automóveis",
+      "msft_datastate": "msft_DataState",
       "mtp_account_appointment_clientelookup": "Appointments (mtp_account_appointment_clientelookup)",
       "mtp_account_email_clientelookup": "Mensagens de Correio Eletrónico (mtp_account_email_clientelookup)",
       "mtp_account_fax_clientelookup": "Visitas Clientes (mtp_account_fax_clientelookup)",
@@ -1205,6 +1206,30 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "msevtmgt_hotelgroup",
+    "RelatedEntityName": "Clientes",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "DataState",
+    "Name": "msft_datastate",
+    "OptionSetInfoNameMapping": {
+      "0": "Default",
+      "1": "Retain"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msft_datastate",
+        "OptionSetReferenceEntityName": "Clientes"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "msft_datastate",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msft_datastate",
     "RelatedEntityName": "Clientes",
     "Type": "OptionSetInfo"
   },
