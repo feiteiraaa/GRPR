@@ -44,7 +44,9 @@
       "uipp_Legislacaoaplicada": "Legislacao aplicada",
       "uipp_MembroID": "Membro ID",
       "uipp_numerodocumento": "Numero Documento",
+      "uipp_participacao": "Participacao",
       "uipp_tipodedocumento": "Tipo de documento",
+      "uipp_uipp_membrosfamiliaresrespetivas_ID_Empre": "Membros-Familiares-Respetivas",
       "utcconversiontimezonecode": "Código de Fuso Horário da Conversão UTC",
       "versionnumber": "Número da Versão"
     },

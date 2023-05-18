@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "uipp_membrosfamiliaresrespetivas",
+    "MaxGetRowsCount": 500,
     "Name": "Membros-Familiares-Respetivas",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Proprietário",

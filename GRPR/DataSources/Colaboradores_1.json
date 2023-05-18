@@ -85,6 +85,10 @@
       },
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "uipp_cargocategoria",
+        "OptionSetReferenceEntityName": "Membros-Familiares-Respetivas"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "uipp_cargocategoria",
         "OptionSetReferenceEntityName": "Membros-Participadas"
       }
     },

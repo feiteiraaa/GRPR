@@ -151,6 +151,13 @@
       }
     },
     {
+      "Kind": "default.cds_uipp_membrosfamiliaresrespetivas_forms",
+      "Namespace": "Membros-Familiares-Respetivas (Forms)",
+      "Values": {
+        "Information": "0815f527-0d01-4fc5-98d4-ec7073161222"
+      }
+    },
+    {
       "Kind": "default.cds_uipp_membrosparticipadas_forms",
       "Namespace": "Membros-Participadas (Forms)",
       "Values": {
