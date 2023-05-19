@@ -127,6 +127,7 @@ ParticipadasDetails As screen:
 
     FormParticipadas As form:
         DataSource: ='Empresas Participadas do Grupos'
+        DefaultMode: =ColabFormMode
         Width: =969
         X: =365
         Y: =176

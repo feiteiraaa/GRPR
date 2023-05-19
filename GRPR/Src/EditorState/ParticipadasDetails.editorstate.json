@@ -5677,7 +5677,14 @@
     "FormParticipadas": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "DefaultMode",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "FormMode.Edit",
+          "InvariantPropertyName": "DefaultMode",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Fill",
         "BorderColor",
         "BorderStyle",
