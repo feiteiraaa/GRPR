@@ -553,5 +553,8 @@ ParticipadasDetails As screen:
             ZIndex: =9
 
     ModalConfirmation_6 As ModalConfirmation:
+        Visible: |-
+            =false
+            //localShowModal
         ZIndex: =11
 
