@@ -552,3 +552,6 @@ ParticipadasDetails As screen:
             Y: =73
             ZIndex: =9
 
+    ModalConfirmation_6 As ModalConfirmation:
+        ZIndex: =11
+
