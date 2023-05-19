@@ -1,0 +1,444 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "activitypointers",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "activitypointer",
+    "Name": "Atividades_1",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "_regardingobjectid_value": "Relativo a",
+      "activity_campaignresponse": "Respostas à Campanha (activity_campaignresponse)",
+      "activity_pointer_activity_mime_attachment": "Anexos",
+      "activity_pointer_adx_alertsubscription": "Subscrições de Alerta",
+      "activity_pointer_adx_inviteredemption": "Resgates de Convites",
+      "activity_pointer_adx_portalcomment": "Comentários do Portal",
+      "activity_pointer_appointment": "Appointments",
+      "activity_pointer_ava_clientes_acompanhamento_atividade": "Clientes_Acompanhamento_Atividades",
+      "activity_pointer_BulkOperation": "Campanhas Rápidas",
+      "activity_pointer_campaignactivity": "Atividades de Campanha",
+      "activity_pointer_campaignresponse": "Respostas à Campanha (activity_pointer_campaignresponse)",
+      "activity_pointer_chat": "Chats do Teams",
+      "activity_pointer_email": "Mensagens de Correio Eletrónico",
+      "activity_pointer_fax": "Visitas Clientes",
+      "activity_pointer_incident_resolution": "Aprovações de Casos",
+      "activity_pointer_letter": "Cartas",
+      "activity_pointer_li_inmail": "inMails",
+      "activity_pointer_li_message": "Mensagens",
+      "activity_pointer_li_pointdrivepresentationviewed": "Conteúdo de Ligações Inteligentes Visualizado",
+      "activity_pointer_msdyn_ocliveworkitem": "Conversações",
+      "activity_pointer_msdyn_ocsession": "Sessões",
+      "activity_pointer_msdyn_surveyinvite": "Atividades do Inquérito",
+      "activity_pointer_msfp_alert": "Alerta do Customer Voice",
+      "activity_pointer_msfp_surveyinvite": "Convites para inquérito do Customer Voice",
+      "activity_pointer_msfp_surveyresponse": "Respostas a inquéritos do Customer Voice",
+      "activity_pointer_mtp_evento": "Tarefa Eventos",
+      "activity_pointer_opportunity_close": "Atividades de Fecho da Oportunidade",
+      "activity_pointer_order_close": "Atividades de Fecho da Encomenda",
+      "activity_pointer_phonecall": "Chamadas Telefónicas",
+      "activity_pointer_quote_close": "Atividades de Fecho da Proposta",
+      "activity_pointer_recurrencerule": "Regras de Periodicidade",
+      "activity_pointer_recurringappointmentmaster": "Presenciais Periódicos",
+      "activity_pointer_service_appointment": "Atividades de Serviço",
+      "activity_pointer_socialactivity": "Atividades de Rede Social",
+      "activity_pointer_task": "Tarefas Gerais",
+      "activityadditionalparams": "Parâmetros de Atividade Adicionais",
+      "activityid": "Atividade",
+      "ActivityPointer_AsyncOperations": "Tarefas de Sistema",
+      "ActivityPointer_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "activitypointer_connections1": "Ligações (activitypointer_connections1)",
+      "activitypointer_connections2": "Ligações (activitypointer_connections2)",
+      "activitypointer_FileAttachments": "FileAttachments",
+      "ActivityPointer_QueueItem": "Oportunidades da Pool",
+      "activitytypecode": "Tipo de Atividade",
+      "actualdurationminutes": "Duração Real",
+      "actualend": "Data Fim",
+      "actualstart": "Início Real",
+      "community": "Canal Social",
+      "createdby": "Criado Por",
+      "createdon": "Data de Criação",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "deliverylastattemptedon": "Date da Última Tentativa de Entrega",
+      "deliveryprioritycode": "Prioridade de Entrega",
+      "description": "Descrição",
+      "descriptionblobid": "ID do Ficheiro de Descrição",
+      "exchangeitemid": "ID de Item do Exchange",
+      "exchangerate": "Câmbio",
+      "exchangeweblink": "WebLink do Exchange",
+      "formattedscheduledend": "Data de Fim Formatada",
+      "formattedscheduledstart": "Data de Início Formatada",
+      "instancetypecode": "Tipo de Instância Periódica",
+      "isbilled": "É Faturado",
+      "ismapiprivate": "É Privado",
+      "isregularactivity": "É Atividade Normal",
+      "isworkflowcreated": "É Criado Por Fluxo de Trabalho",
+      "lastonholdtime": "Último Tempo Suspenso",
+      "leftvoicemail": "Saiu do Voice Mail",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Última Atualização",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "msdyn_readtracker_poly_activitypointer": "Monitorizadores de Leitura",
+      "msft_datastate": "msft_DataState",
+      "onholdtime": "Tempo Suspenso (Minutos)",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "postponeactivityprocessinguntil": "Atrasar processamento da atividade até",
+      "prioritycode": "Prioridade",
+      "processid": "Processo",
+      "scheduleddurationminutes": "Duração Agendada",
+      "scheduledend": "Dta Agendamento (scheduledend)",
+      "scheduledstart": "Dta Agendamento (scheduledstart)",
+      "sendermailboxid": "Caixa de Correio do Remetente",
+      "senton": "Data de Envio",
+      "seriesid": "ID da Série",
+      "serviceid": "Serviço",
+      "sla_activitypointer_sla": "SLA",
+      "slainvokedid_activitypointer_sla": "Último SLA aplicado",
+      "slakpiinstance_activitypointer": "Instâncias de KPI de SLA",
+      "sortdate": "Data de Ordenação",
+      "stageid": "(Preterido) Fase do Processo",
+      "statecode": "Estado da Atividade",
+      "statuscode": "Razão do Estado",
+      "subject": "Assunto",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "transactioncurrencyid": "Moeda",
+      "traversedpath": "(Preterido) Caminho Percorrido",
+      "utcconversiontimezonecode": "Código de Fuso Horário de Conversão UTC",
+      "versionnumber": "Número de Versão"
+    },
+    "PreferredName": "Atividades_1",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Atividades_1 (Views)",
+    "Name": "_activitypointer_views",
+    "RelatedEntityName": "Atividades_1",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "00000000-0000-0000-00aa-000000666100": "Vista Localização Avançada de Tarefas",
+      "00000000-0000-0000-00aa-000010001903": "Vista Associada de Tarefas Abertas",
+      "1d145a26-fdb7-45ae-b55a-7befa66e184f": "Atividade Seguinte",
+      "21e2b905-6fdb-470d-8517-ad69b4c01268": "Vista Associada de Tarefas Fechadas",
+      "257267da-dcfe-e411-80c3-00155d0f5123": "As minhas Tarefas Agendadas",
+      "2fcd7d4b-531d-4232-82c4-a491da528744": "Vista de Pesquisa de Tarefas",
+      "3b83eb0d-c627-ec11-b6e5-000d3ab63ac1": "Telefonemas agendados",
+      "47f4e494-fee0-483c-844c-5a9e35b1c565": "Vista Associada de Todas as Atividades de Planeamento",
+      "4f16df63-c427-ec11-b6e5-000d3ab63ac1": "Tarefas Gerais associadas a OC's abertas",
+      "514958c2-c627-ec11-b6e5-000d3ab63ac1": "Tarefas Gerais agendadas",
+      "591bb335-0c03-eb11-a813-000d3ad7ae70": "Carteira - Atividades/tarefas/eventos Fechados",
+      "620cdb5e-d7c9-e511-80d1-00155d20b011": "Vista da Linha Cronológica do Portal",
+      "6334aa6a-7e0b-e511-80c5-00155d0f522f": "Balcão - Atividades/tarefas/eventos para hoje",
+      "6b656631-ad0a-e511-80c5-00155d0f522f": "Todas as Atividades (Atividades/Tarefas/Eventos)",
+      "780007da-1ba6-ec11-983f-0022489eff48": "Atividades Agendadas - OC Marketplace",
+      "78d5a362-94ed-ed11-8849-000d3ad7efd9": "As minhas Atividades/tarefas/eventos em atraso ",
+      "7e337a75-7872-e511-80c9-00155d0f543a": "Tarefas/Eventos",
+      "7f15e2bb-305a-468f-9af7-be865755a984": "Vista Todas as Atividades Associadas",
+      "85e053f1-973a-e511-80c8-00155d0f5230": "As minhas Tarefas/Eventos",
+      "8db6a1a3-0c03-eb11-a813-000d3ad7ae70": "Carteira - Atividades/tarefas/eventos para hoje",
+      "924e0056-ebf8-408e-90c3-d3b6bdd676e7": "Última Atividade",
+      "94c20df3-1d5e-e511-80c8-00155d0f5230": "As minhas Atividades/Tarefas/Eventos Fechados",
+      "b1cf7bfc-bf27-ec11-b6e5-000d3ab63ac1": "Telefonemas p/ hoje ou em atraso",
+      "cb116b05-7e0b-e511-80c5-00155d0f522f": "Balcão - Atividades/tarefas/eventos Fechados",
+      "d010ab1b-7367-e511-80c8-00155d0f5230": "As minhas Atividades/Tarefas/Eventos para hoje",
+      "e7e3fc2b-b8ed-ed11-8849-000d3ad7efd9": "Balcão - Atividades/tarefas/eventos em atraso",
+      "f8d3a0d7-83ee-47b7-945c-c9463cbf380d": "Vista Associada de Tarefas de Planeamento Abertas"
+    }
+  },
+  {
+    "DisplayName": "Tipo de Atividade",
+    "Name": "activitypointer_activitytypecode",
+    "OptionSetInfoNameMapping": {
+      "10009": "10009",
+      "10151": "10151",
+      "10177": "10177",
+      "10180": "10180",
+      "10248": "10248",
+      "10406": "10406",
+      "10407": "10407",
+      "10414": "10414",
+      "10415": "10415",
+      "10416": "10416",
+      "10580": "10580",
+      "10807": "10807",
+      "10990": "10990",
+      "11303": "Conversation",
+      "11320": "Session",
+      "4201": "Appointment",
+      "4202": "Correio Eletrónico",
+      "4204": "Visita Cliente",
+      "4206": "Aprovação de Casos",
+      "4207": "Carta",
+      "4208": "Fecho da Oportunidade",
+      "4209": "Fecho da Encomenda",
+      "4210": "Chamada Telefónica",
+      "4211": "Fecho da Proposta",
+      "4212": "Tarefa Geral",
+      "4214": "Atividade de Serviço",
+      "4251": "Compromisso Periódico",
+      "4401": "Resposta à Campanha",
+      "4402": "Atividade de Campanha",
+      "4406": "Operação em Massa"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "activitytypecode",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "EntityNameType",
+    "RelatedColumnInvariantName": "activitytypecode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Prioridade de Entrega",
+    "Name": "activitypointer_deliveryprioritycode",
+    "OptionSetInfoNameMapping": {
+      "0": "Baixa",
+      "1": "Normal",
+      "2": "Alta"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "deliveryprioritycode",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "deliveryprioritycode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Tipo de Instância Periódica (Atividades_1)",
+    "Name": "activitypointer_instancetypecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Não Periódico",
+      "1": "Mestre Periódico",
+      "2": "Instância Periódica",
+      "3": "Exceção Periódica",
+      "4": "Exceção Futura Periódica"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "instancetypecode",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "instancetypecode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Faturado (Atividades_1)",
+    "Name": "activitypointer_isbilled",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isbilled",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isbilled",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Privado (Atividades_1)",
+    "Name": "activitypointer_ismapiprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ismapiprivate",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ismapiprivate",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Atividade Normal",
+    "Name": "activitypointer_isregularactivity",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isregularactivity",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isregularactivity",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "É Criado Por Fluxo de Trabalho (Atividades_1)",
+    "Name": "activitypointer_isworkflowcreated",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isworkflowcreated",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isworkflowcreated",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Saiu do Voice Mail (Atividades_1)",
+    "Name": "activitypointer_leftvoicemail",
+    "OptionSetInfoNameMapping": {
+      "0": "Não",
+      "1": "Sim"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "leftvoicemail",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "leftvoicemail",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Prioridade (Atividades_1)",
+    "Name": "activitypointer_prioritycode",
+    "OptionSetInfoNameMapping": {
+      "0": "00 - Baixa",
+      "1": "10 - Normal",
+      "2": "20 - Alta"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "prioritycode",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "prioritycode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Estado da Atividade (Atividades_1)",
+    "Name": "activitypointer_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Aberto",
+      "1": "Concluído",
+      "2": "Cancelado",
+      "3": "Agendado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Atividades_1)",
+    "Name": "activitypointer_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Aberto",
+      "2": "Concluído",
+      "3": "Cancelado",
+      "4": "Agendado"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Canal Social",
+    "Name": "socialprofile_community",
+    "OptionSetInfoNameMapping": {
+      "0": "Outro",
+      "1": "Facebook",
+      "10": "GroupMe",
+      "11": "Kik",
+      "12": "Telegram",
+      "13": "Skype",
+      "14": "Slack",
+      "15": "WhatsApp",
+      "16": "Apple Messages For Business",
+      "17": "Google's Business Messages",
+      "2": "Twitter",
+      "3": "Line",
+      "4": "WeChat",
+      "5": "Cortana",
+      "6": "Direct Line",
+      "7": "Microsoft Teams",
+      "8": "Canal do Direct Line",
+      "9": "E-mail"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "community",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "community",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  }
+]

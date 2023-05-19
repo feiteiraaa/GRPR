@@ -438,10 +438,11 @@ ParticipadasDetails As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["uipp_id"]
                 DisplayMode: =Parent.DisplayMode
+                IsSearchable: =false
                 Items: =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 SearchFields: =["uipp_id"]
-                SearchItems: =Search(Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada),DataCardValue29.SearchText,"uipp_id")
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
