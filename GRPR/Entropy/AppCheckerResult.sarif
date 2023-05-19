@@ -10309,36 +10309,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ParticipadasDetails._EmpresasParticipadas"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ParticipadasDetails._EmpresasParticipadas",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "_EmpresasParticipadas",
-                "module": "ParticipadasDetails",
-                "type": "ParticipadasDetails"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "ParticipadasDetails.localShowModal"
                 }
               ],
