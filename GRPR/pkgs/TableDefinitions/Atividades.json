@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "Atividades",
   "InstanceUrl": "https://simactiond.crm4.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "uipp_atividades",
-    "logicalName": "uipp_atividade"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://simactiond.crm4.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('uipp_atividade')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",

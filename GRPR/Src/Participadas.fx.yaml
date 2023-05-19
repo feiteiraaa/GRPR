@@ -46,7 +46,7 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =1
             Text: =ThisItem.Nome
             Width: =100

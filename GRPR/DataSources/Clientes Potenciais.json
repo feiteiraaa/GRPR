@@ -1658,10 +1658,6 @@
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "msft_datastate",
         "OptionSetReferenceEntityName": "Clientes"
-      },
-      "OptionSetReferenceItem2": {
-        "OptionSetReferenceColumnName": "msft_datastate",
-        "OptionSetReferenceEntityName": "Atividades_1"
       }
     },
     "OptionSetTypeKey": "PicklistType",
