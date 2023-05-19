@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "activitypointer",
+    "MaxGetRowsCount": 500,
     "Name": "Atividades_1",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Proprietário",
@@ -402,6 +403,34 @@
     },
     "OptionSetTypeKey": "StatusType",
     "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Atividades_1",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "DataState",
+    "Name": "msft_datastate",
+    "OptionSetInfoNameMapping": {
+      "0": "Default",
+      "1": "Retain"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "msft_datastate",
+        "OptionSetReferenceEntityName": "Atividades_1"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "msft_datastate",
+        "OptionSetReferenceEntityName": "Clientes Potenciais"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "msft_datastate",
+        "OptionSetReferenceEntityName": "Clientes"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "msft_datastate",
     "RelatedEntityName": "Atividades_1",
     "Type": "OptionSetInfo"
   },

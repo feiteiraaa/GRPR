@@ -8,6 +8,20 @@
       }
     },
     {
+      "Kind": "default.cds_uipp_atividade_forms",
+      "Namespace": "Atividades (Forms)",
+      "Values": {
+        "Information": "37e74310-f336-429a-b95a-aa9bec90548b"
+      }
+    },
+    {
+      "Kind": "default.cds_activitypointer_forms",
+      "Namespace": "Atividades_1 (Forms)",
+      "Values": {
+        "Dashboard de Atividades": "a4640db1-4962-4e79-92c6-690e627924d7"
+      }
+    },
+    {
       "Kind": "default.cds_contact_forms",
       "Namespace": "Clientes Potenciais (Forms)",
       "Values": {
