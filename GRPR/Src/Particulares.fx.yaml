@@ -472,8 +472,27 @@ Particulares As screen:
             Gallery4 As gallery.variableTemplateHeightGallery:
                 DelayItemLoading: =true
                 Height: =90
-                Items: |
-                    =Filter(Ungroup(Table({MyTables: Familiares},{MyTables: Empresas}), "MyTables"),uipp_ParentID.ID=ThisItem.ID Or uipp_MembroID.ID=ThisItem.ID)
+                Items: |-
+                    =/*Filter(
+                        Ungroup(
+                            Table(
+                                {MyTables: Familiares},
+                                {MyTables: Empresas}
+                            ),
+                            "MyTables"
+                        ),
+                        uipp_ParentID.ID = ThisItem.ID Or uipp_MembroID.ID = ThisItem.ID
+                    )*/
+                    Filter(
+                        Ungroup(
+                            Table(
+                                {MyTables: 'Membros-Participadas'},
+                                {MyTables: 'Membros-Familiares-Respetivas'}
+                            ),
+                            "MyTables"
+                        ),
+                        ThisItem.ID=uipp_ID_Membro.ID Or ThisItem.ID=uipp_ChildID.ID
+                    )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplatePadding: =0
