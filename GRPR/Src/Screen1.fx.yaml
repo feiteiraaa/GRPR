@@ -1,139 +1,69 @@
 Screen1 As screen:
+    OnVisible: |-
+        =ClearCollect(
+            Allinfo,
+            Filter(
+                Ungroup(
+                    Table(
+                        {MyTables: 'Membros-Participadas'},
+                        {MyTables: 'Membros-Familiares-Respetivas'}
+                    ),
+                    "MyTables"
+                ),
+                "0" = uipp_ID_Membro.ID Or "0" = uipp_ChildID.ID
+            )
+        )
 
     DataTable1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =500
-        Items: =familiaEmpresa
-        Width: =1045
+        Height: =342
+        Items: =Allinfo
+        Width: =903
         X: =40
         Y: =40
         ZIndex: =1
 
-        uipp_FamiliarID_Column1 As dataTableColumn.textualColumn:
+        uipp_cargocategoria_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_FamiliarID"
-            FieldName: ="uipp_FamiliarID"
+            FieldDisplayName: ="uipp_cargocategoria"
+            FieldName: ="uipp_cargocategoria"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =1
-            Text: =ThisItem.uipp_FamiliarID.Nome
+            Text: =ThisItem.uipp_cargocategoria
             Width: =100
             X: =0
             Y: =0
             ZIndex: =1
 
-        uipp_designacao_Column1 As dataTableColumn.textualColumn:
+        uipp_cargodescricao_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_designacao"
-            FieldName: ="uipp_designacao"
+            FieldDisplayName: ="uipp_cargodescricao"
+            FieldName: ="uipp_cargodescricao"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =2
-            Text: =ThisItem.uipp_designacao
+            Text: =ThisItem.uipp_cargodescricao
             Width: =100
             X: =0
             Y: =0
             ZIndex: =2
 
-        uipp_Graudeparentesco_Column1 As dataTableColumn.textualColumn:
+        uipp_participacao_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_Graudeparentesco"
-            FieldName: ="uipp_Graudeparentesco"
+            FieldDisplayName: ="uipp_participacao"
+            FieldName: ="uipp_participacao"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =3
-            Text: =ThisItem.uipp_Graudeparentesco.'Grau de parentesco'
+            Text: =ThisItem.uipp_participacao
             Width: =100
             X: =0
             Y: =0
             ZIndex: =3
-
-        uipp_nome_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_nome"
-            FieldName: ="uipp_nome"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.uipp_nome
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
-        uipp_ParentID_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_ParentID"
-            FieldName: ="uipp_ParentID"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.uipp_ParentID.Nome
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =5
-
-        uipp_tipodedocumento_Column2 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_tipodedocumento"
-            FieldName: ="uipp_tipodedocumento"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =6
-            Text: =ThisItem.uipp_tipodedocumento
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
-
-        uipp_numerodocumento_Column2 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_numerodocumento"
-            FieldName: ="uipp_numerodocumento"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: =ThisItem.uipp_numerodocumento
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =7
-
-        uipp_Legislacaoaplicada_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_Legislacaoaplicada"
-            FieldName: ="uipp_Legislacaoaplicada"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.uipp_Legislacaoaplicada.'Tipo de enquadramento'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =8
-
-        uipp_MembroID_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="uipp_MembroID"
-            FieldName: ="uipp_MembroID"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =11
-            Text: =ThisItem.uipp_MembroID.Nome
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =11
 
