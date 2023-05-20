@@ -507,7 +507,20 @@ Particulares As screen:
                     OnSelect: =Select(Parent)
                     Text: |+
                         =//First(Ungroup(Table({MyTables: ThisItem.uipp_nome},{MyTables: ThisItem.uipp_designacao}), "MyTables")).MyTables
-                        Concatenate(ThisItem.uipp_nome,ThisItem.uipp_designacao)
+                        Concatenate(
+                            LookUp(
+                                Empresas,
+                                ID = ThisItem.uipp_ID_Empresa.ID
+                            ).Designacao,
+                            LookUp(
+                                'Empresas Participadas do Grupos',
+                                ID = ThisItem.uipp_ParentID.ID
+                            ).Nome,
+                            LookUp(
+                                Familiares,
+                                ID = ThisItem.uipp_ID_Familiares.ID
+                            ).Nome
+                        )
                         
                     Width: =300
                     X: =35
@@ -518,7 +531,20 @@ Particulares As screen:
                     OnSelect: =Select(Parent)
                     Text: |-
                         =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
-                        LookUp(Empresas,ID=ThisItem.uipp_ID_Empresa.ID).Designacao
+                        Concatenate(
+                            LookUp(
+                                Empresas,
+                                ID = ThisItem.uipp_ID_Empresa.ID
+                            ).'Numero Documento',
+                            LookUp(
+                                'Empresas Participadas do Grupos',
+                                ID = ThisItem.uipp_ParentID.ID
+                            ).'Numero documento',
+                            LookUp(
+                                Familiares,
+                                ID = ThisItem.uipp_ID_Familiares.ID
+                            ).'Numero documento'
+                        )
                     Width: =242
                     X: =346
                     Y: =4
