@@ -561,7 +561,7 @@ Particulares As screen:
                 "Icon1 As icon.'3DPrinting'":
                     Color: =cores.amareloMontepio
                     Height: =25
-                    Icon: =If(!IsBlank(ThisItem.uipp_designacao),Icon.OfficeBuilding,Icon.People)
+                    Icon: =If(IsBlank(ThisItem.uipp_ID_Familiares.ID),Icon.OfficeBuilding,Icon.People)
                     OnSelect: =Select(Parent)
                     Width: =25
                     X: =10
