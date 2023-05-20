@@ -464,7 +464,8 @@ Particulares As screen:
 
             "'Cargo e Relacao' As label":
                 OnSelect: =Select(Parent)
-                Text: =//Filter('Membros-Familiares-Respetivas',ID_Membro.ID=ThisItem.ID 
+                Text: |
+                    =//Filter('Membros-Familiares-Respetivas',ID_Membro.ID=ThisItem.ID 
                 Width: =341
                 X: =598
                 ZIndex: =3
@@ -517,7 +518,7 @@ Particulares As screen:
                     OnSelect: =Select(Parent)
                     Text: |-
                         =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
-                        ThisItem.uipp_numerodocumento
+                        LookUp(Empresas,ID=ThisItem.uipp_ID_Empresa.ID).Designacao
                     Width: =242
                     X: =346
                     Y: =4
@@ -525,7 +526,7 @@ Particulares As screen:
 
                 Label8_2 As label:
                     OnSelect: =Select(Parent)
-                    Text: =ThisItem.uipp_Graudeparentesco.'Grau de parentesco'
+                    Text: =Concatenate(ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco',ThisItem.uipp_participacao)
                     Width: =341
                     X: =599
                     Y: =4

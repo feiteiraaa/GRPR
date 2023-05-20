@@ -18,9 +18,9 @@ Screen1 As screen:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =342
+        Height: =376
         Items: =Allinfo
-        Width: =903
+        Width: =959
         X: =40
         Y: =40
         ZIndex: =1
@@ -66,4 +66,88 @@ Screen1 As screen:
             X: =0
             Y: =0
             ZIndex: =3
+
+        uipp_ID_GrauParentesco_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ID_GrauParentesco"
+            FieldName: ="uipp_ID_GrauParentesco"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        uipp_ChildID_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ChildID"
+            FieldName: ="uipp_ChildID"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =5
+            Text: =ThisItem.uipp_ChildID.ID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        uipp_ID_Empresa_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ID_Empresa"
+            FieldName: ="uipp_ID_Empresa"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =6
+            Text: =ThisItem.uipp_ID_Empresa.ID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        uipp_ID_Familiares_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ID_Familiares"
+            FieldName: ="uipp_ID_Familiares"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =7
+            Text: =ThisItem.uipp_ID_Familiares.ID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        uipp_ID_Membro_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ID_Membro"
+            FieldName: ="uipp_ID_Membro"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.uipp_ID_Membro.ID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
+
+        uipp_ParentID_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ParentID"
+            FieldName: ="uipp_ParentID"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =9
+            Text: =ThisItem.uipp_ParentID.ID
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =9
 
