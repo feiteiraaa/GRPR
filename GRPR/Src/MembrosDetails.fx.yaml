@@ -1074,3 +1074,12 @@ MembrosDetails As screen:
                 Y: =5
                 ZIndex: =4
 
+    Label1_10 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Text: =LookUp(Membros_1,ID=_Membro).Nome
+        Width: =529
+        X: =365
+        Y: =26
+        ZIndex: =5
+
