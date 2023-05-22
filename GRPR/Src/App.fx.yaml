@@ -42,7 +42,8 @@ App As appinfo:
                     rosa: ColorFade(
                         Color.Red,
                         0.9
-                    )
+                    ),
+                    azulTitulo: RGBA(50, 86, 160, 1)
                 }
             ),
             Set(
@@ -50,7 +51,7 @@ App As appinfo:
                 If(
                     Or(
                         "gvfeiteira" in User().Email,
-                        "ldsales" in User().Email,
+                        "ldales" in User().Email,
                         "cnpedroso" in User().Email,
                         "pvveras" in User().Email
                     ),

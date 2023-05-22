@@ -1,39 +1,4 @@
 {
-  "0e65f7c0-1458-4542-9552-1ca32c61127e": {
-    "connectionRef": {
-      "apiTier": "Premium",
-      "bypassConsent": true,
-      "displayName": "Microsoft Dataverse",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1628/1.0.1628.3245/commondataserviceforapps/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "96749b81-1c1e-4cc9-8771-a4e95804d377"
-    ],
-    "id": "0e65f7c0-1458-4542-9552-1ca32c61127e"
-  },
-  "16b9ec8c-4a5c-486f-a0a9-b6d25d160a98": {
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "OneDrive for Business",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1546/1.0.1546.2665/onedriveforbusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_onedriveforbusiness",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {},
-    "dataSources": [],
-    "dependencies": {},
-    "dependents": [
-      "96749b81-1c1e-4cc9-8771-a4e95804d377"
-    ],
-    "id": "16b9ec8c-4a5c-486f-a0a9-b6d25d160a98"
-  },
   "1e123ecc-1326-48cc-95f2-c45bbd1e0267": {
     "connectionRef": {
       "apiTier": "Standard",
@@ -51,61 +16,53 @@
     "dependents": [],
     "id": "1e123ecc-1326-48cc-95f2-c45bbd1e0267"
   },
-  "8c8ac251-30cc-4a7c-b86c-3210ab221ed9": {
+  "46144b29-bbdb-4a73-9c2b-bfb6c4c7576d": {
     "connectionRef": {
-      "apiTier": "Standard",
       "displayName": "Excel Online (Business)",
-      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/releases/ase-v3/1.0.1622.3202/excelonlinebusiness/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness",
-      "parameterHints": {},
-      "parameterHintsV2": {}
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1632/1.0.1632.3274/excelonlinebusiness/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_excelonlinebusiness"
     },
     "datasets": {},
     "dataSources": [],
     "dependencies": {},
     "dependents": [
-      "96749b81-1c1e-4cc9-8771-a4e95804d377"
+      "f8ab50b3-8447-42cd-b80a-84aaef7eeb16"
     ],
-    "id": "8c8ac251-30cc-4a7c-b86c-3210ab221ed9"
+    "id": "46144b29-bbdb-4a73-9c2b-bfb6c4c7576d"
   },
-  "96749b81-1c1e-4cc9-8771-a4e95804d377": {
+  "b71dc50a-0496-499e-b476-6b1ed08460ce": {
     "connectionRef": {
-      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1627/1.0.1627.3238/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "f8ab50b3-8447-42cd-b80a-84aaef7eeb16"
+    ],
+    "id": "b71dc50a-0496-499e-b476-6b1ed08460ce"
+  },
+  "f8ab50b3-8447-42cd-b80a-84aaef7eeb16": {
+    "connectionRef": {
       "displayName": "Logic flows",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1615/1.0.1615.3163/logicflows/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
       "parameterHints": {
-        "0e65f7c0-1458-4542-9552-1ca32c61127e": {
-          "value": "shared_commondataserviceforapps"
-        },
-        "16b9ec8c-4a5c-486f-a0a9-b6d25d160a98": {
-          "value": "shared_onedriveforbusiness"
-        },
-        "8c8ac251-30cc-4a7c-b86c-3210ab221ed9": {
-          "value": "shared_excelonlinebusiness"
-        },
         "workflowEntityId": {
           "value": "d2bc14b9-0af3-ed11-8849-000d3a64981b"
         },
         "workflowName": {
-          "value": "f557b29f-8165-4fc1-8b12-2430660e6870"
+          "value": "7e025938-85ea-134c-9a75-181db25f08bb"
         }
       },
       "parameterHintsV2": {
-        "shared_commondataserviceforapps": {
-          "value": "0e65f7c0-1458-4542-9552-1ca32c61127e"
-        },
-        "shared_excelonlinebusiness": {
-          "value": "8c8ac251-30cc-4a7c-b86c-3210ab221ed9"
-        },
-        "shared_onedriveforbusiness": {
-          "value": "16b9ec8c-4a5c-486f-a0a9-b6d25d160a98"
-        },
         "workflowEntityId": {
           "value": "d2bc14b9-0af3-ed11-8849-000d3a64981b"
         },
         "workflowName": {
-          "value": "f557b29f-8165-4fc1-8b12-2430660e6870"
+          "value": "7e025938-85ea-134c-9a75-181db25f08bb"
         }
       }
     },
@@ -114,11 +71,25 @@
       "ColaboradoresImportarExcel"
     ],
     "dependencies": {
-      "shared_commondataserviceforapps": "0e65f7c0-1458-4542-9552-1ca32c61127e",
-      "shared_excelonlinebusiness": "8c8ac251-30cc-4a7c-b86c-3210ab221ed9",
-      "shared_onedriveforbusiness": "16b9ec8c-4a5c-486f-a0a9-b6d25d160a98"
+      "shared_commondataserviceforapps_1": "fc915a8a-6a62-459c-89db-b336ed01064e",
+      "shared_excelonlinebusiness_1": "46144b29-bbdb-4a73-9c2b-bfb6c4c7576d",
+      "shared_sharepointonline": "b71dc50a-0496-499e-b476-6b1ed08460ce"
     },
     "dependents": [],
-    "id": "96749b81-1c1e-4cc9-8771-a4e95804d377"
+    "id": "f8ab50b3-8447-42cd-b80a-84aaef7eeb16"
+  },
+  "fc915a8a-6a62-459c-89db-b336ed01064e": {
+    "connectionRef": {
+      "displayName": "Microsoft Dataverse",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1628/1.0.1628.3245/commondataserviceforapps/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_commondataserviceforapps"
+    },
+    "datasets": {},
+    "dataSources": [],
+    "dependencies": {},
+    "dependents": [
+      "f8ab50b3-8447-42cd-b80a-84aaef7eeb16"
+    ],
+    "id": "fc915a8a-6a62-459c-89db-b336ed01064e"
   }
 }
