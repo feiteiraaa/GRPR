@@ -1,5 +1,5 @@
 Particulares As screen:
-    OnVisible: |
+    OnVisible: |-
         =Concurrent(
             UpdateContext({localFiltro: "Membros dos Orgãos Sociais",localseta:false}),
             ResetForm(ColaboradorForm_1),
@@ -13,6 +13,9 @@ Particulares As screen:
             SortOrder.Descending
         );
         UpdateContext({showAttachExcel: false});
+        ClearCollect(CollectMembros, Membros_1);
+        ClearCollect(CollectRoc, ROCS);
+        ClearCollect(CollectColabora, Colaboradores_1)
 
     LeftSectionComponent_2 As LeftSectionComponent:
         TabelaMenu: |-
@@ -81,7 +84,7 @@ Particulares As screen:
                     AddColumns(
                         SortByColumns(
                             Filter(
-                                ROCS,
+                                CollectRoc,
                                 If(
                                     Checkbox1.Value = false,
                                     ThisRecord.Ativo = true,
@@ -105,7 +108,7 @@ Particulares As screen:
                     AddColumns(
                         
                             Filter(
-                                ROCS,
+                                CollectRoc,
                                 If(
                                     Checkbox1.Value = false,
                                     ThisRecord.Ativo = true,
@@ -231,7 +234,7 @@ Particulares As screen:
                     AddColumns(
                         SortByColumns(
                             Filter(
-                                Colaboradores_1,
+                                CollectColabora,
                         //ThisRecord.Ativo =
                                 If(
                                     Checkbox1.Value = false,
@@ -253,7 +256,7 @@ Particulares As screen:
                     AddColumns(
                       
                             Filter(
-                                Colaboradores_1,
+                                CollectColabora,
                         //ThisRecord.Ativo =
                                 If(
                                     Checkbox1.Value = false,
@@ -402,7 +405,7 @@ Particulares As screen:
                         //AddColumns(
                         SortByColumns(
                             Filter(
-                                Membros_1,
+                                CollectMembros,
                             //ThisRecord.Ativo =
                                 If(
                                     Checkbox1.Value = false,
@@ -423,7 +426,7 @@ Particulares As screen:
                     Search(
                         //AddColumns(
                         Filter(
-                            Membros_1,
+                            CollectMembros,
                             //ThisRecord.Ativo =
                             If(
                                 Checkbox1.Value = false,
