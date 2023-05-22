@@ -2,12 +2,35 @@ MembrosDetails As screen:
     OnVisible: |-
         =UpdateContext({localShowModal: false});
         ClearCollect(
-            FamiliaresEmpresas,
+            Participada,
             {
-                Familiares: 1,
-                Respetivas: 2,
-                Participadas: Filter('Membros-Participadas','Child ID'.ID=_Membro)
+                ID: 1,
+                Nome: "",
+                TipoDocumento: "",
+                NumeroDocumento: 4,
+                CargoCategoria: "",
+                CargoDescricao: "",
+                Participacao: 4.0
             }
+        );
+        ClearCollect(
+            ligacaoParticipada,
+            Filter(
+                'Membros-Participadas',
+                'Child ID'.ID = _Membro
+            )//.uipp_ParentID
+        );
+        ClearCollect(
+            ligacaoParticipadar,
+            AddColumns(
+                'Membros-Participadas',
+                "Designacao",
+                //LookUp(
+                Filter(
+                    'Empresas Participadas do Grupos',
+                    ID = 'Membros-Participadas'[@'Parent ID'].ID
+                ).Nome
+            )
         )
 
     LeftSectionComponent_12 As LeftSectionComponent:
@@ -732,9 +755,8 @@ MembrosDetails As screen:
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
                 Height: =330
-                Items: |-
-                    =//'Empresas Participadas do Grupos'
-                    Filter('Membros-Participadas','Child ID'.ID=_Membro)
+                Items: |
+                    =Participada
                 SelectedFill: =cores.amareloMontepio
                 Width: ='Empresas Grupo Content'.Width
                 X: =10
@@ -748,8 +770,8 @@ MembrosDetails As screen:
                     FieldVariantName: ="complexOptionSetColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =6
-                    Text: =ThisItem.'Cargo (Categoria)'
+                    Order: =9
+                    Text: =ThisItem.uipp_cargocategoria
                     Width: =100
                     X: =0
                     Y: =0
@@ -762,7 +784,7 @@ MembrosDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =7
+                    Order: =10
                     Text: =ThisItem.uipp_cargodescricao
                     Width: =100
                     X: =0
@@ -776,50 +798,50 @@ MembrosDetails As screen:
                     FieldVariantName: ="numberColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =8
-                    Text: =ThisItem.Participacao
+                    Order: =11
+                    Text: =ThisItem.uipp_participacao
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =15
 
-                Nome_Column3 As dataTableColumn.textualColumn:
+                uipp_nome_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Nome"
+                    FieldDisplayName: ="uipp_nome"
                     FieldName: ="uipp_nome"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =3
-                    Text: =LookUp('Empresas Participadas do Grupos',ID=ThisRecord.ID).Nome
+                    Order: =6
+                    Text: =LookUp('Empresas Participadas do Grupos',ThisItem.ID=ThisRecord.ID).Nome
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =16
 
-                "'Numero documento_Column1' As dataTableColumn.numberColumn":
+                uipp_tipodedocumento_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Numero documento"
-                    FieldName: ="uipp_numerodocumento"
-                    FieldVariantName: ="numberColumn"
+                    FieldDisplayName: ="uipp_tipodedocumento"
+                    FieldName: ="uipp_tipodedocumento"
+                    FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =5
-                    Text: =LookUp('Empresas Participadas do Grupos',ID=ThisRecord.ID).'Numero documento'
+                    Order: =7
+                    Text: =LookUp('Empresas Participadas do Grupos',ThisItem.ID=ThisRecord.ID).'Tipo de documento'
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =17
 
-                "'Tipo de documento_Column1' As dataTableColumn.complexOptionSetColumn":
+                uipp_numerodocumento_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Tipo de documento"
-                    FieldName: ="uipp_tipodedocumento"
-                    FieldVariantName: ="complexOptionSetColumn"
+                    FieldDisplayName: ="uipp_numerodocumento"
+                    FieldName: ="uipp_numerodocumento"
+                    FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =4
-                    Text: =LookUp('Empresas Participadas do Grupos',ID=ThisRecord.ID).'Tipo de documento'
+                    Order: =8
+                    Text: =LookUp('Empresas Participadas do Grupos',ThisItem.ID=ThisRecord.ID).'Numero documento'
                     Width: =100
                     X: =0
                     Y: =0
