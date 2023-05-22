@@ -63,16 +63,6 @@ MembrosDetails As screen:
         Y: =74
         ZIndex: =2
 
-    Label1_9 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =48
-        Size: =15
-        Text: =LookUp(Membros_1, _Membro = ThisRecord.ID).Nome
-        Width: =409
-        X: =365
-        Y: =26
-        ZIndex: =3
-
     "'Mid Section_Membros' As groupContainer.manualLayoutContainer":
         Height: =615
         Width: =978
