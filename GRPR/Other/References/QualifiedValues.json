@@ -137,6 +137,13 @@
       }
     },
     {
+      "Kind": "default.cds_uipp_ficheirosauxiliares_forms",
+      "Namespace": "Ficheiros auxiliares (Forms)",
+      "Values": {
+        "Information": "8772f079-b6f5-45ec-84cb-ec31c9981d22"
+      }
+    },
+    {
       "Kind": "default.cds_uipp_legislacao_forms",
       "Namespace": "Legislaçãos (Forms)",
       "Values": {

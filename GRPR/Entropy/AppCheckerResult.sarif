@@ -12625,6 +12625,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.Ficheiros auxiliares"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.Ficheiros auxiliares",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Ficheiros auxiliares",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-NotOfflineEnabledTable",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Legislaçãos"
                 }
               ],
