@@ -28,6 +28,7 @@ LeftSectionComponent As CanvasComponent:
                 Navigate: Particulares,
                 VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
             },
+            //If( 0 = 1,
             {
                 selected: false,
                 icon: Icon.OfficeBuilding,
@@ -35,20 +36,22 @@ LeftSectionComponent As CanvasComponent:
                 Navigate: Participadas,
                 VisivelPara: Or(godMode, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta)
             },
+            If( 0 = 1,
             {
                 selected: false,
                 icon: Icon.Information,
                 text: "Atividade",
                 Navigate: Atividade,
                 VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DCRF_Editor, DCRF_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
-            },
+            }),
+            If( 0 = 1,
             {
                 selected: false,
                 icon: Icon.Notebook,
                 text: "Listagens",
                 Navigate: Listagens,
                 VisivelPara: Or(godMode, DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
-            },
+            }),
             {
                 selected: false,
                 icon: Icon.Settings,

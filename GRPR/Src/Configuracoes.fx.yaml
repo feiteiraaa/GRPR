@@ -2,8 +2,6 @@ Configuracoes As screen:
     OnVisible: |
         =UpdateContext({localShowData: false, localShowLeg:false, localShowEliminacao:false,localShowRelacao:false,localShowPrazo:false,localShowNewForm:false});
 
-    LeftSectionComponent_6 As LeftSectionComponent:
-
     "'Mid Section' As groupContainer.manualLayoutContainer":
         Height: =615
         Width: =978
@@ -2082,6 +2080,9 @@ Configuracoes As screen:
     ModalConfirmation_1 As ModalConfirmation:
         Visible: =ModalConfirmation_1 = 1
         ZIndex: =5
+
+    LeftSectionComponent_16 As LeftSectionComponent:
+        ZIndex: =10
 
     elim_group As group:
         Height: =5
