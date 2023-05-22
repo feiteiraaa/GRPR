@@ -28,14 +28,14 @@ LeftSectionComponent As CanvasComponent:
                 Navigate: Particulares,
                 VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
             },
-            //If( 0 = 1,
+            If( 0 = 1,
             {
                 selected: false,
                 icon: Icon.OfficeBuilding,
                 text: "Empresas participadas do grupo",
                 Navigate: Participadas,
                 VisivelPara: Or(godMode, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta)
-            },
+            }),
             If( 0 = 1,
             {
                 selected: false,

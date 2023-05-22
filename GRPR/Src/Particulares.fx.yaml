@@ -1211,12 +1211,24 @@ Particulares As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
                 =Concurrent(
-                    ColaboradoresImportarExcel.Run({
+                    /*ColaboradoresImportarExcel.Run({
                         file:{
                             contentBytes: First('Attach Control'.Attachments).Value,
                             name: First('Attach Control'.Attachments).Name
                         }
-                    }),
+                    }),*/
+                
+                    Patch(
+                        'Ficheiros auxiliares',
+                        Defaults('Ficheiros auxiliares'),
+                        {
+                            file:{
+                                FileName: First('Attach Control'.Attachments).Name,
+                                Value: First('Attach Control'.Attachments).Value
+                            },
+                            Name: "Colaboradores " & Text(Now(),DateTimeFormat.ShortDateTime24, "pt-PT")
+                        }
+                    );
                 
                     UpdateContext({
                         showAttachExcel: false

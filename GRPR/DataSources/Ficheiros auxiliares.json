@@ -1,0 +1,84 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "uipp_ficheirosauxiliareses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "uipp_ficheirosauxiliares",
+    "Name": "Ficheiros auxiliares",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Proprietário",
+      "createdby": "Criado Por",
+      "createdon": "Criado Em",
+      "createdonbehalfby": "Criado Por (Delegado)",
+      "importsequencenumber": "Número de Sequência da Importação",
+      "modifiedby": "Modificado Por",
+      "modifiedon": "Modificado Em",
+      "modifiedonbehalfby": "Modificado Por (Delegado)",
+      "overriddencreatedon": "Registo Criado Em",
+      "owningbusinessunit": "Unidade de Negócio Proprietária",
+      "owningteam": "Equipa Proprietária",
+      "owninguser": "Utilizador Proprietário",
+      "statecode": "Estado",
+      "statuscode": "Razão do Estado",
+      "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
+      "uipp_ficheirosauxiliares_AsyncOperations": "Tarefas de Sistema",
+      "uipp_ficheirosauxiliares_BulkDeleteFailures": "Falhas de Eliminação em Massa",
+      "uipp_ficheirosauxiliares_DuplicateBaseRecord": "Registos Duplicados (uipp_ficheirosauxiliares_DuplicateBaseRecord)",
+      "uipp_ficheirosauxiliares_DuplicateMatchingRecord": "Registos Duplicados (uipp_ficheirosauxiliares_DuplicateMatchingRecord)",
+      "uipp_ficheirosauxiliares_FileAttachments": "FileAttachments",
+      "uipp_ficheirosauxiliares_MailboxTrackingFolders": "Pastas de Monitorização Automática da Caixa de Correio",
+      "uipp_ficheirosauxiliares_PrincipalObjectAttributeAccesses": "Partilha de Campos",
+      "uipp_ficheirosauxiliares_ProcessSession": "Sessões de Processo",
+      "uipp_ficheirosauxiliares_SyncErrors": "Erros de Sincronização",
+      "uipp_ficheirosauxiliaresid": "Ficheiros auxiliares",
+      "uipp_file": "file",
+      "uipp_name": "Name",
+      "utcconversiontimezonecode": "Código de Fuso Horário da Conversão UTC",
+      "versionnumber": "Número da Versão"
+    },
+    "PreferredName": "Ficheiros auxiliares",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Estado (Ficheiros auxiliares)",
+    "Name": "uipp_ficheirosauxiliares_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Ativo",
+      "1": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Ficheiros auxiliares"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Ficheiros auxiliares",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Razão do Estado (Ficheiros auxiliares)",
+    "Name": "uipp_ficheirosauxiliares_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Ativo",
+      "2": "Inativo"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Ficheiros auxiliares"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Ficheiros auxiliares",
+    "Type": "OptionSetInfo"
+  }
+]
