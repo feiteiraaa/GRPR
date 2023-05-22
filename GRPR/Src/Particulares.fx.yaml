@@ -432,7 +432,7 @@ Particulares As screen:
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
-                =Navigate(MembrosDetails, ScreenTransition.None, {_Colaborador: 'Membros dos Orgaos Sociais'.Selected.ID})
+                =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais'.Selected.ID})
             TemplateSize: =127
             Visible: =localFiltro = "Membros dos Orgãos Sociais"
             Width: =980
@@ -478,6 +478,8 @@ Particulares As screen:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: |-
+                    =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais'.Selected.ID})
                 TemplatePadding: =0
                 TemplateSize: =45
                 Visible: =localseta And ThisItem.IsSelected

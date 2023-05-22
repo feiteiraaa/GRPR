@@ -11207,17 +11207,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosDetails._Colaborador"
+                  "fullyQualifiedName": "MembrosDetails._Membro"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosDetails._Colaborador",
+                  "fullyQualifiedName": "MembrosDetails._Membro",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_Colaborador",
+                "member": "_Membro",
                 "module": "MembrosDetails",
                 "type": "MembrosDetails"
               }
