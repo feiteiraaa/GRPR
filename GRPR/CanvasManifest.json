@@ -96,7 +96,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 17,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -130,6 +130,7 @@
   "ScreenOrder": [
     "Inicio",
     "Particulares",
+    "MembrosDetails",
     "ColaboradoresDetails",
     "ROCDetails",
     "Participadas",
@@ -138,7 +139,6 @@
     "Listagens",
     "Configuracoes",
     "Developer",
-    "MembrosDetails",
     "Screen1"
   ]
 }

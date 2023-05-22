@@ -96,34 +96,6 @@ Atividade As screen:
             Y: =0
             ZIndex: =3
 
-        Data_Column1 As dataTableColumn.dateTimeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Data"
-            FieldName: ="uipp_data"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =Text(ThisItem.Data,DateTimeFormat.LongDateTime)
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
-        Titulo_Column1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Titulo"
-            FieldName: ="uipp_titulo"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =3
-            Text: =ThisItem.Titulo
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =5
-
         Atividade_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Atividade"

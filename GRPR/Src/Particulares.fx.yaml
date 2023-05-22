@@ -398,15 +398,12 @@ Particulares As screen:
             Height: |
                 =472
             Items: |-
-                =//Membros_1
-                If(
+                =If(
                     localFiltro = "Membros dos Orgãos Sociais",
                     Search(
-                        //AddColumns(
                         SortByColumns(
                             Filter(
                                 CollectMembros,
-                            //ThisRecord.Ativo =
                                 If(
                                     Checkbox1.Value = false,
                                     ThisRecord.Ativo = true,
@@ -416,34 +413,26 @@ Particulares As screen:
                             varSortCol,
                             varSortDir
                         ),
-                            /*"CargoCategoria",
-                            'Cargo (Categoria)'
-                        ),*/
                         TextInput2.Text,
                         "uipp_nome"
-                        //"uipp_cargodescricao"
                     ),
                     Search(
-                        //AddColumns(
                         Filter(
                             CollectMembros,
-                            //ThisRecord.Ativo =
                             If(
                                 Checkbox1.Value = false,
                                 ThisRecord.Ativo = true,
                                 ThisRecord.Ativo = true Or ThisRecord.Ativo = false
                             )
                         ),
-                           /* "CargoCategoria",
-                            'Cargo (Categoria)'
-                        ),*/
                         TextInput2.Text,
                         "uipp_nome"
-                        //"uipp_cargodescricao"
                     )
                 )
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
+            OnSelect: |-
+                =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais'.Selected.ID})
             TemplateSize: =127
             Visible: =localFiltro = "Membros dos Orgãos Sociais"
             Width: =980
@@ -489,6 +478,8 @@ Particulares As screen:
                     )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: |-
+                    =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais'.Selected.ID})
                 TemplatePadding: =0
                 TemplateSize: =45
                 Visible: =localseta And ThisItem.IsSelected
@@ -499,8 +490,7 @@ Particulares As screen:
                 "'Nome e Designacao' As label":
                     OnSelect: =Select(Parent)
                     Text: |+
-                        =//First(Ungroup(Table({MyTables: ThisItem.uipp_nome},{MyTables: ThisItem.uipp_designacao}), "MyTables")).MyTables
-                        Concatenate(
+                        =Concatenate(
                             LookUp(
                                 Empresas,
                                 ID = ThisItem.uipp_ID_Empresa.ID
@@ -783,7 +773,9 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
-        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
+        Visible: |-
+            =//localFiltro<>"Membros dos Orgãos Sociais"
+            true
         Width: =20
         X: |-
             =//Nome_Column1.X +490
@@ -791,7 +783,9 @@ Particulares As screen:
                 localFiltro = "Colaboradores",
                 Nome_Column1.X + 490,
                 localFiltro = "ROC",
-                Nome_Column2.X + 520
+                Nome_Column2.X + 520,
+                localFiltro = "Membros dos Orgãos Sociais",
+                Nome_Column2.X + 650
             )
         Y: =Nome_Column1.Y + 212
         ZIndex: =16
@@ -1089,7 +1083,9 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
-        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
+        Visible: |-
+            =//localFiltro<>"Membros dos Orgãos Sociais"
+            true
         Width: =20
         X: |-
             =//'Numero Documento_Column2'.X +490
@@ -1097,7 +1093,9 @@ Particulares As screen:
                 localFiltro = "Colaboradores",
                 'Numero Documento_Column2'.X +490,
                 localFiltro = "ROC",
-                uipp_numerodocumento_Column1.X + 520
+                uipp_numerodocumento_Column1.X + 520,
+                localFiltro = "Membros dos Orgãos Sociais",
+                900
             )
         Y: ='Numero Documento_Column2'.Y + 212
         ZIndex: =20
