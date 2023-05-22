@@ -166,6 +166,8 @@ ParticipadasDetails As screen:
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
+                HoverBorderColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
                 MaxLength: =Parent.MaxLength
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
@@ -235,6 +237,8 @@ ParticipadasDetails As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
+                HoverBorderColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -303,6 +307,8 @@ ParticipadasDetails As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
+                HoverBorderColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -371,6 +377,8 @@ ParticipadasDetails As screen:
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
                 Format: =TextFormat.Number
+                HoverBorderColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
                 PaddingLeft: =5
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
@@ -411,7 +419,9 @@ ParticipadasDetails As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="uipp_Legislacaoaplicada"
             Default: =ThisItem.'Legislacao aplicada'
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: |-
+                =Parent.DisplayMode
+                //If(DRI=true, DisplayMode.Edit, DisplayMode.Disabled)
             DisplayName: =DataSourceInfo([@'Empresas Participadas do Grupos'],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
@@ -440,6 +450,7 @@ ParticipadasDetails As screen:
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["uipp_id"]
                 DisplayMode: =Parent.DisplayMode
+                HoverFill: =RGBA(0, 0, 0, 0)
                 IsSearchable: =false
                 Items: =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
