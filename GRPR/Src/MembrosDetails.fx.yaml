@@ -1,6 +1,6 @@
 MembrosDetails As screen:
-    OnVisible: |-
-        =UpdateContext({localShowModal: false});
+    OnVisible: |
+        =UpdateContext({localShowModal: false,localShowData: false, localShowLeg:false, localShowEliminacao:false,localShowRelacao:false,localShowPrazo:false,localShowNewForm:false});
         ClearCollect(
             ligacaoParticipada,
             Filter(
@@ -23,7 +23,7 @@ MembrosDetails As screen:
             ligacaoRespetiva0,
             Filter(
                 'Membros-Familiares-Respetivas',
-                ID_Membro.ID = _Membro 
+                ID_Membro.ID = _Membro
             )
         );
         ClearCollect(
@@ -33,7 +33,6 @@ MembrosDetails As screen:
                 IsBlank(ID_Familiares.ID)
             )
         );
-        
         ClearCollect(
             ligacaoRespetivas,
             AddColumns(
@@ -45,6 +44,59 @@ MembrosDetails As screen:
                 ).Designacao
             )
         );
+        ClearCollect(
+            ligacaoFamiliar0,
+            Filter(
+                'Membros-Familiares-Respetivas',
+                ID_Membro.ID = _Membro
+            )
+        );
+        ClearCollect(
+            ligacaoFamiliar,
+            Filter(
+                ligacaoFamiliar0,
+                IsBlank(ID_Empresa.ID)
+            )
+        );
+        ClearCollect(
+            ligacaoFamiliares,
+            AddColumns(
+                ligacaoFamiliar,
+                "NomeF",
+                LookUp(
+                    Familiares,
+                    ID = ligacaoFamiliar[@ID_Familiares].ID
+                ).Nome,
+                "NumDoc",
+                LookUp(
+                    Familiares,
+                    ID = ligacaoFamiliar[@ID_Familiares].ID
+                ).'Numero documento'
+            )
+        );
+        /*ClearCollect(
+            ligacaoFamiliarResp,
+            Filter(
+                ligacaoRespetiva0,
+                !IsBlank(ID_Familiares.ID)
+            )
+        );
+        ClearCollect(
+            ligacaoFamiliaresResp,
+            AddColumns(
+                ligacaoFamiliarResp,
+                "NomeR",
+                LookUp(
+                    Empresas,
+                    ID = ligacaoFamiliarResp[@ID_Empresa].ID
+                ).Designacao,
+                "NumDoc",
+                LookUp(
+                    Empresas,
+                    ID = ligacaoFamiliarResp[@ID_Empresa].ID
+                ).'Numero Documento'
+            )
+        );*/
 
     BackBtn_5 As BackBtn:
         X: =365
@@ -997,11 +1049,11 @@ MembrosDetails As screen:
                 "'Membros dos Orgaos Sociais_1' As gallery.variableTemplateHeightGallery":
                     DelayItemLoading: =true
                     Height: ='Familiares Content'.Height
-                    Items: =Familiares
+                    Items: =ligacaoFamiliares
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     OnSelect: |-
-                        =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas_1.Selected})
+                        =//Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas_1.Selected})
                     TemplateSize: =127
                     Width: =Parent.Width * 0.95
                     X: =24
@@ -1010,22 +1062,23 @@ MembrosDetails As screen:
 
                     "'Nome Membro_1' As label":
                         OnSelect: =Select(Parent)
-                        Text: =ThisItem.Nome
+                        Text: =ThisItem.NomeF
                         Width: =336
                         X: =4
                         ZIndex: =1
 
                     "'NIF Membro_1' As label":
                         OnSelect: =Select(Parent)
-                        Text: =ThisItem.'Numero documento'
+                        Text: =ThisItem.NumDoc
                         Width: =242
                         X: =346
                         ZIndex: =2
 
                     "'Cargo e Relacao_1' As label":
                         OnSelect: =Select(Parent)
-                        Text: |
+                        Text: |-
                             =//Filter('Membros-Familiares-Respetivas',ID_Membro.ID=ThisItem.ID 
+                            ThisItem.ID_GrauParentesco.'Grau de parentesco'
                         Width: =341
                         X: =598
                         ZIndex: =3
@@ -1035,19 +1088,13 @@ MembrosDetails As screen:
                         Height: =90
                         Items: |-
                             =Filter(
-                                Ungroup(
-                                    Table(
-                                        {MyTables: 'Membros-Participadas'},
-                                        {MyTables: 'Membros-Familiares-Respetivas'}
-                                    ),
-                                    "MyTables"
-                                ),
-                                ThisItem.ID=uipp_ID_Membro.ID Or ThisItem.ID=uipp_ChildID.ID
+                                'Membros-Familiares-Respetivas',
+                                ThisItem.ID_Familiares.ID = ID_Familiares.ID And IsBlank(ID_GrauParentesco.ID)
                             )
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
                         OnSelect: |-
-                            =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID})
+                            =//Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID})
                         TemplatePadding: =0
                         TemplateSize: =45
                         Visible: =localseta And ThisItem.IsSelected
@@ -1057,22 +1104,7 @@ MembrosDetails As screen:
 
                         "'Nome e Designacao_1' As label":
                             OnSelect: =Select(Parent)
-                            Text: |+
-                                =Concatenate(
-                                    LookUp(
-                                        Empresas,
-                                        ID = ThisItem.uipp_ID_Empresa.ID
-                                    ).Designacao,
-                                    LookUp(
-                                        'Empresas Participadas do Grupos',
-                                        ID = ThisItem.uipp_ParentID.ID
-                                    ).Nome,
-                                    LookUp(
-                                        Familiares,
-                                        ID = ThisItem.uipp_ID_Familiares.ID
-                                    ).Nome
-                                )
-                                
+                            Text: =LookUp(Empresas,ID=ThisItem.ID_Empresa.ID).Designacao
                             Width: =300
                             X: =35
                             Y: =4
@@ -1082,20 +1114,7 @@ MembrosDetails As screen:
                             OnSelect: =Select(Parent)
                             Text: |-
                                 =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
-                                Concatenate(
-                                    LookUp(
-                                        Empresas,
-                                        ID = ThisItem.uipp_ID_Empresa.ID
-                                    ).'Numero Documento',
-                                    LookUp(
-                                        'Empresas Participadas do Grupos',
-                                        ID = ThisItem.uipp_ParentID.ID
-                                    ).'Numero documento',
-                                    LookUp(
-                                        Familiares,
-                                        ID = ThisItem.uipp_ID_Familiares.ID
-                                    ).'Numero documento'
-                                )
+                                LookUp(Empresas,ID=ThisItem.ID_Empresa.ID).'Numero Documento'
                             Width: =242
                             X: =346
                             Y: =4
@@ -1103,7 +1122,7 @@ MembrosDetails As screen:
 
                         "'Cargo e Relacao2_1' As label":
                             OnSelect: =Select(Parent)
-                            Text: =Concatenate(ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco',ThisItem.uipp_participacao)
+                            Text: =ThisItem.Participação
                             Width: =341
                             X: =599
                             Y: =4
@@ -1112,7 +1131,7 @@ MembrosDetails As screen:
                         "IconPessoaEmpresa_1 As icon.'3DPrinting'":
                             Color: =cores.amareloMontepio
                             Height: =25
-                            Icon: =If(IsBlank(ThisItem.uipp_ID_Familiares.ID),Icon.OfficeBuilding,Icon.People)
+                            Icon: =Icon.OfficeBuilding
                             OnSelect: =Select(Parent)
                             Width: =25
                             X: =10
