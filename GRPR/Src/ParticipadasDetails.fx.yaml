@@ -517,6 +517,9 @@ ParticipadasDetails As screen:
         Visible: =localShowModal
         ZIndex: =11
 
+    LeftSectionComponent_14 As LeftSectionComponent:
+        ZIndex: =16
+
     elim_components As group:
         Height: =5
         Width: =5
@@ -644,7 +647,4 @@ ParticipadasDetails As screen:
             X: =726
             Y: =445
             ZIndex: =15
-
-    LeftSectionComponent_14 As LeftSectionComponent:
-        ZIndex: =16
 

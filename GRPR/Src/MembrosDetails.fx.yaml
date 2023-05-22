@@ -987,6 +987,190 @@ MembrosDetails As screen:
             Y: =Familiares1.Y + Familiares1.Height
             ZIndex: =7
 
+            Membros_2 As group:
+                Height: =5
+                Width: =5
+                X: =-357
+                Y: =40
+                ZIndex: =2
+
+                "'Membros dos Orgaos Sociais_1' As gallery.variableTemplateHeightGallery":
+                    DelayItemLoading: =true
+                    Height: ='Familiares Content'.Height
+                    Items: =Familiares
+                    Layout: =Layout.Vertical
+                    LoadingSpinner: =LoadingSpinner.Data
+                    OnSelect: |-
+                        =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas_1.Selected})
+                    TemplateSize: =127
+                    Width: =Parent.Width * 0.95
+                    X: =24
+                    Y: =Container1_1.Height
+                    ZIndex: =1
+
+                    "'Nome Membro_1' As label":
+                        OnSelect: =Select(Parent)
+                        Text: =ThisItem.Nome
+                        Width: =336
+                        X: =4
+                        ZIndex: =1
+
+                    "'NIF Membro_1' As label":
+                        OnSelect: =Select(Parent)
+                        Text: =ThisItem.'Numero documento'
+                        Width: =242
+                        X: =346
+                        ZIndex: =2
+
+                    "'Cargo e Relacao_1' As label":
+                        OnSelect: =Select(Parent)
+                        Text: |
+                            =//Filter('Membros-Familiares-Respetivas',ID_Membro.ID=ThisItem.ID 
+                        Width: =341
+                        X: =598
+                        ZIndex: =3
+
+                    GalleryFamiliaresEmpresas_1 As gallery.variableTemplateHeightGallery:
+                        DelayItemLoading: =true
+                        Height: =90
+                        Items: |-
+                            =Filter(
+                                Ungroup(
+                                    Table(
+                                        {MyTables: 'Membros-Participadas'},
+                                        {MyTables: 'Membros-Familiares-Respetivas'}
+                                    ),
+                                    "MyTables"
+                                ),
+                                ThisItem.ID=uipp_ID_Membro.ID Or ThisItem.ID=uipp_ChildID.ID
+                            )
+                        Layout: =Layout.Vertical
+                        LoadingSpinner: =LoadingSpinner.Data
+                        OnSelect: |-
+                            =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID})
+                        TemplatePadding: =0
+                        TemplateSize: =45
+                        Visible: =localseta And ThisItem.IsSelected
+                        Width: =951
+                        Y: =37
+                        ZIndex: =5
+
+                        "'Nome e Designacao_1' As label":
+                            OnSelect: =Select(Parent)
+                            Text: |+
+                                =Concatenate(
+                                    LookUp(
+                                        Empresas,
+                                        ID = ThisItem.uipp_ID_Empresa.ID
+                                    ).Designacao,
+                                    LookUp(
+                                        'Empresas Participadas do Grupos',
+                                        ID = ThisItem.uipp_ParentID.ID
+                                    ).Nome,
+                                    LookUp(
+                                        Familiares,
+                                        ID = ThisItem.uipp_ID_Familiares.ID
+                                    ).Nome
+                                )
+                                
+                            Width: =300
+                            X: =35
+                            Y: =4
+                            ZIndex: =1
+
+                        "'NIF Familiares e Empresas_1' As label":
+                            OnSelect: =Select(Parent)
+                            Text: |-
+                                =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
+                                Concatenate(
+                                    LookUp(
+                                        Empresas,
+                                        ID = ThisItem.uipp_ID_Empresa.ID
+                                    ).'Numero Documento',
+                                    LookUp(
+                                        'Empresas Participadas do Grupos',
+                                        ID = ThisItem.uipp_ParentID.ID
+                                    ).'Numero documento',
+                                    LookUp(
+                                        Familiares,
+                                        ID = ThisItem.uipp_ID_Familiares.ID
+                                    ).'Numero documento'
+                                )
+                            Width: =242
+                            X: =346
+                            Y: =4
+                            ZIndex: =2
+
+                        "'Cargo e Relacao2_1' As label":
+                            OnSelect: =Select(Parent)
+                            Text: =Concatenate(ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco',ThisItem.uipp_participacao)
+                            Width: =341
+                            X: =599
+                            Y: =4
+                            ZIndex: =3
+
+                        "IconPessoaEmpresa_1 As icon.'3DPrinting'":
+                            Color: =cores.amareloMontepio
+                            Height: =25
+                            Icon: =If(IsBlank(ThisItem.uipp_ID_Familiares.ID),Icon.OfficeBuilding,Icon.People)
+                            OnSelect: =Select(Parent)
+                            Width: =25
+                            X: =10
+                            Y: =11
+                            ZIndex: =4
+
+                    Rectangle3_1 As rectangle:
+                        Fill: =RGBA(128, 128, 128, 1)
+                        Height: =1
+                        OnSelect: =Select(Parent)
+                        Width: =Parent.Width
+                        Y: |-
+                            =//126
+                            If(localseta And ThisItem.IsSelected,126,50)
+                        ZIndex: =6
+
+                    "Icon3_1 As icon.'3DPrinting'":
+                        Height: =25
+                        Icon: |-
+                            =//Icon.ChevronDown
+                            If(localseta And ThisItem.IsSelected,Icon.ChevronUp,Icon.ChevronDown)
+                        OnSelect: |-
+                            =UpdateContext({localseta:!localseta})
+                        Width: =25
+                        X: =894.0999999999999
+                        ZIndex: =7
+
+                Container1_1 As groupContainer.manualLayoutContainer:
+                    Fill: =RGBA(70, 70, 70, 1)
+                    Height: =34
+                    Width: =Parent.Width * 0.95
+                    X: =24
+                    ZIndex: =3
+
+                    Label6_3 As label:
+                        Color: =RGBA(255, 255, 255, 1)
+                        Height: =34
+                        Text: ="Nome / Designação"
+                        Width: =338
+                        X: =4
+                        ZIndex: =1
+
+                    Label6_4 As label:
+                        Color: =RGBA(255, 255, 255, 1)
+                        Height: =34
+                        Text: ="NIF / NIPC"
+                        Width: =240
+                        X: =342
+                        ZIndex: =2
+
+                    Label6_5 As label:
+                        Color: =RGBA(255, 255, 255, 1)
+                        Height: =34
+                        Text: ="Cargo e % Participação / Relação Familiar"
+                        Width: =346
+                        X: =583
+                        ZIndex: =3
+
         Familiares1 As groupContainer.manualLayoutContainer:
             Height: =50
             Width: =Parent.Width
