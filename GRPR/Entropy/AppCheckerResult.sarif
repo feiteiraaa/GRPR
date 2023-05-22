@@ -6654,6 +6654,54 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 9
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -11233,19 +11281,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Atividade.TextInput2_2.AccessibleLabel"
+                  "fullyQualifiedName": "Atividade.InputPesquisar.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Atividade.TextInput2_2.AccessibleLabel",
+                  "fullyQualifiedName": "Atividade.InputPesquisar.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Atividade",
-                "type": "Atividade.TextInput2_2"
+                "type": "Atividade.InputPesquisar"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Atividade.DatePicker1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Atividade.DatePicker1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Atividade",
+                "type": "Atividade.DatePicker1_1"
               }
             }
           ],

@@ -53,21 +53,17 @@ Atividade As screen:
                     VisivelPara: true
                 }
             )
-        ZIndex: =2
-
-    TopSectionComponent_2 As TopSectionComponent:
-        X: =342
-        ZIndex: =3
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
         Height: =48
-        Size: =15
+        Size: |
+            =20
         Text: ="Atividade"
         Width: =409
-        X: =365
-        Y: =26
-        ZIndex: =5
+        X: =364
+        Y: =41
+        ZIndex: =3
 
     AtividadeTable As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -81,7 +77,7 @@ Atividade As screen:
         Width: =980
         X: =357
         Y: =200
-        ZIndex: =6
+        ZIndex: =4
 
         "'Criado Por_Column1' As dataTableColumn.complexTypeColumn":
             DisplayMode: =DisplayMode.Edit
@@ -126,24 +122,28 @@ Atividade As screen:
             Y: =0
             ZIndex: =7
 
-    Group2 As group:
+    Group7 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =20
+        ZIndex: =25
+
+        TopSectionComponent_2 As TopSectionComponent:
+            X: =342
+            ZIndex: =2
 
         BtnExportar As DynamicBtn:
             BtnOnSelect: =
             BtnText: ="Exportar"
             ButtonIcon: =Icon.Download
-            Height: =38
-            Width: =160
+            Height: =41
+            Width: =167
             X: =1177
-            Y: =152
-            ZIndex: =12
+            Y: =135
+            ZIndex: =5
 
-        TextInput2_2 As text:
+        InputPesquisar As text:
             BorderColor: =ColorFade(cores.cinzento, 80%)
             BorderThickness: =1
             Clear: =true
@@ -152,28 +152,28 @@ Atividade As screen:
                 cores.cinzento
             Default: =
             Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =45
+            Height: =46
             HintText: ="Pesquisar"
             HoverBorderColor: =RGBA(128, 128, 128, 1)
             HoverFill: =
             PaddingLeft: =40
             Tooltip: =
             Width: =327
-            X: =357
-            Y: =149
-            ZIndex: =13
+            X: =364
+            Y: =129
+            ZIndex: =6
 
         "Icon1_3 As icon.'3DPrinting'":
             Color: |-
                 =///RGBA(0, 18, 107, 1)
                 cores.amareloMontepio
-            Height: =29
+            Height: =34
             Icon: =Icon.Search
             OnSelect: =//Select(Parent)
             Width: =26
-            X: =367
-            Y: =158
-            ZIndex: =14
+            X: =375
+            Y: =135
+            ZIndex: =7
 
         Button2_26 As button:
             BorderColor: =RGBA(0,0,0, 0)
@@ -182,7 +182,7 @@ Atividade As screen:
             DisabledColor: =RGBA(0,0,0, 0)
             DisabledFill: =RGBA(0,0,0, 0)
             Fill: =RGBA(0,0,0, 0)
-            Height: =BtnExportar.Height
+            Height: =46
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
@@ -190,17 +190,66 @@ Atividade As screen:
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            Width: =BtnExportar.Width
-            X: =BtnExportar.X
-            Y: =BtnExportar.Y
-            ZIndex: =17
+            X: =1184
+            Y: =130
+            ZIndex: =8
 
         DatePicker1 As datepicker:
+            BorderColor: =ColorFade(cores.cinzento, 80%)
             BorderThickness: |
                 =1
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =45
             IconBackground: =cores.amareloMontepio
-            Width: =176
-            X: =703
-            Y: =149
-            ZIndex: =19
+            PaddingTop: =5
+            Width: =150
+            X: =705
+            Y: =130
+            ZIndex: =9
+
+        DatePicker1_1 As datepicker:
+            BorderColor: =ColorFade(cores.cinzento, 80%)
+            BorderThickness: |
+                =1
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =47
+            IconBackground: =cores.amareloMontepio
+            PaddingTop: =5
+            Width: =141
+            X: =904
+            Y: =129
+            ZIndex: =10
+
+        Label11 As label:
+            FontWeight: =FontWeight.Semibold
+            Height: =29
+            PaddingBottom: =
+            PaddingRight: =
+            PaddingTop: =
+            Text: ="Datas"
+            X: =705
+            Y: =100
+            ZIndex: =11
+
+        Label11_1 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =47
+            PaddingBottom: =
+            PaddingTop: =
+            Text: ="a"
+            Width: =49
+            X: =855
+            Y: =126
+            ZIndex: =12
+
+        Icon1 As icon.Filter:
+            Color: =ColorFade(cores.cinzento, 90%)
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =52
+            Icon: =Icon.Filter
+            Width: =45
+            X: =1088
+            Y: =129
+            ZIndex: =14
 
