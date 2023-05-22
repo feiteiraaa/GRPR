@@ -1,6 +1,6 @@
 MembrosDetails As screen:
     OnVisible: |
-        =UpdateContext({localShowModal: false});
+        =UpdateContext({localShowModal: false,localShowData: false, localShowLeg:false, localShowEliminacao:false,localShowRelacao:false,localShowPrazo:false,localShowNewForm:false});
         ClearCollect(
             ligacaoParticipada,
             Filter(

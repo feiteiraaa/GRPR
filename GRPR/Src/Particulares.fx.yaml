@@ -15,7 +15,8 @@ Particulares As screen:
         UpdateContext({showAttachExcel: false});
         ClearCollect(CollectMembros, Membros_1);
         ClearCollect(CollectRoc, ROCS);
-        ClearCollect(CollectColabora, Colaboradores_1)
+        ClearCollect(CollectColabora, Colaboradores_1);
+        Reset(Checkbox1)
 
     ROC As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
