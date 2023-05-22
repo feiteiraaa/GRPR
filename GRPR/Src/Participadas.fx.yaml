@@ -114,7 +114,7 @@ Participadas As screen:
             OnSelect: |-
                 =Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
             Order: =5
-            Text: =ThisItem.'Legislacao aplicada'.Legislação
+            Text: =ThisItem.'Legislacao aplicada'.'Tipo de enquadramento'
             Visible: =DRI
             Width: =191
             X: =0

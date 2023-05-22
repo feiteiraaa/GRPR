@@ -447,6 +447,7 @@ ParticipadasDetails As screen:
                 BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 ChevronBackground: =cores.amareloMontepio
                 ChevronFill: =Color.White
+                ChevronHoverBackground: =cores.amareloMontepio
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["uipp_id"]
                 DisplayMode: =Parent.DisplayMode
@@ -454,8 +455,11 @@ ParticipadasDetails As screen:
                 IsSearchable: =false
                 Items: =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedFill: =cores.amareloMontepio
                 SearchFields: =["uipp_id"]
                 SearchItems: =[]
+                SelectionColor: =cores.cinzento
+                SelectionFill: =cores.amareloMontepio
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
