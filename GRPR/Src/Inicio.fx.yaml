@@ -129,7 +129,6 @@ Inicio As screen:
         Visible: =godMode
         Width: =203
         X: =1163
-        Y: =28
         ZIndex: =7
 
     Label1_7 As label:
@@ -187,4 +186,118 @@ Inicio As screen:
 
     LeftSectionComponent_1 As LeftSectionComponent:
         ZIndex: =10
+
+    FimPeriodoKPI As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        Label8 As label:
+            Align: =Align.Center
+            Color: =cores.azulTitulo
+            Fill: =ColorFade(cores.cinzento, 90%)
+            FontWeight: =FontWeight.Semibold
+            Height: =63
+            Text: ="Fim do próximo periodo"
+            Width: =191
+            X: =1138
+            Y: =138
+            ZIndex: =11
+
+        Label8_1 As label:
+            Align: =Align.Center
+            Fill: =ColorFade(cores.cinzento, 90%)
+            FontWeight: =FontWeight.Bold
+            Height: =50
+            Size: =18
+            Text: =DateDiff(Label8_3.Text, Text(Now(),DateTimeFormat.ShortDate))
+            Width: =191
+            X: =1138
+            Y: =201
+            ZIndex: =12
+
+        Label8_2 As label:
+            Align: =Align.Center
+            Fill: =ColorFade(cores.cinzento, 90%)
+            FontWeight: =FontWeight.Lighter
+            Height: =50
+            Size: =12
+            Text: ="dias restantes"
+            Width: =191
+            X: =1138
+            Y: =237
+            ZIndex: =13
+
+        Label8_3 As label:
+            Align: =Align.Center
+            Fill: =ColorFade(cores.cinzento, 90%)
+            FontWeight: =FontWeight.Semibold
+            Height: =50
+            Size: =15
+            Text: |-
+                =With(
+                    LookUp(
+                        Sort(Sort('Datas Referências', Mes, SortOrder.Ascending), Dia, SortOrder.Ascending),
+                        Mes >= Month(Now())
+                        And
+                        If(
+                            Mes = Month(Now()),
+                            Dia >= Day(Now()),
+                            true
+                        )
+                    ),
+                    Text(Date(Year(Now()), Mes, Dia), DateTimeFormat.ShortDate, "pt-PT")
+                )
+            Width: =191
+            X: =1138
+            Y: =277
+            ZIndex: =14
+
+    DownloadListagem As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =20
+
+        Label8_7 As label:
+            Align: =Align.Center
+            Color: =cores.azulTitulo
+            Fill: =ColorFade(cores.cinzento, 90%)
+            FontWeight: =FontWeight.Semibold
+            Height: =56
+            Text: ="Listagem ativa"
+            Width: =191
+            X: =1138
+            Y: =401
+            ZIndex: =15
+
+        Label8_4 As label:
+            Align: =Align.Center
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =96
+            Text: |-
+                ="Submetido a " &LookUp(
+                    Sort(
+                        Listagens_1,
+                        'Criado Em',
+                        SortOrder.Descending
+                    ),
+                    !IsBlank(ThisRecord.'Data de aprovacao CA')
+                ).'Criado Em'
+            Width: =191
+            X: =1138
+            Y: =521
+            ZIndex: =18
+
+        Icon9 As icon.Download:
+            Color: =cores.amareloMontepio
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Icon: =Icon.Download
+            Width: =191
+            X: =1138
+            Y: =457
+            ZIndex: =19
 
