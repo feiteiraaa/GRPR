@@ -425,7 +425,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "BackBtn_5",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -503,7 +503,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cargo (Categoria)_Column2",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -596,7 +596,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Cargo (Descricao)_Column1",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14669,7 +14669,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_10",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15273,7 +15273,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Mid Section_Membros",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16333,7 +16333,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Participacao_Column1",
-      "ParentIndex": 5,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19083,7 +19083,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_nome_Column1",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19183,7 +19183,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_numerodocumento_Column2",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19283,7 +19283,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_tipodedocumento_Column2",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

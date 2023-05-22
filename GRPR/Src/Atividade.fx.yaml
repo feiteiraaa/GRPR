@@ -244,10 +244,14 @@ Atividade As screen:
             ZIndex: =12
 
         Icon1 As icon.Filter:
-            Color: =ColorFade(cores.cinzento, 90%)
+            Color: =cores.amareloMontepio
             Fill: =ColorFade(cores.cinzento, 90%)
             Height: =52
             Icon: =Icon.Filter
+            PaddingBottom: =8
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =8
             Width: =45
             X: =1088
             Y: =129
