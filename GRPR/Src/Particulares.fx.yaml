@@ -473,21 +473,11 @@ Particulares As screen:
                 X: =598
                 ZIndex: =3
 
-            Gallery4 As gallery.variableTemplateHeightGallery:
+            GalleryFamiliaresEmpresas As gallery.variableTemplateHeightGallery:
                 DelayItemLoading: =true
                 Height: =90
                 Items: |-
-                    =/*Filter(
-                        Ungroup(
-                            Table(
-                                {MyTables: Familiares},
-                                {MyTables: Empresas}
-                            ),
-                            "MyTables"
-                        ),
-                        uipp_ParentID.ID = ThisItem.ID Or uipp_MembroID.ID = ThisItem.ID
-                    )*/
-                    Filter(
+                    =Filter(
                         Ungroup(
                             Table(
                                 {MyTables: 'Membros-Participadas'},
@@ -506,7 +496,7 @@ Particulares As screen:
                 Y: =37
                 ZIndex: =5
 
-                Label8 As label:
+                "'Nome e Designacao' As label":
                     OnSelect: =Select(Parent)
                     Text: |+
                         =//First(Ungroup(Table({MyTables: ThisItem.uipp_nome},{MyTables: ThisItem.uipp_designacao}), "MyTables")).MyTables
@@ -530,7 +520,7 @@ Particulares As screen:
                     Y: =4
                     ZIndex: =1
 
-                Label8_1 As label:
+                "'NIF Familiares e Empresas' As label":
                     OnSelect: =Select(Parent)
                     Text: |-
                         =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
@@ -553,7 +543,7 @@ Particulares As screen:
                     Y: =4
                     ZIndex: =2
 
-                Label8_2 As label:
+                "'Cargo e Relacao2' As label":
                     OnSelect: =Select(Parent)
                     Text: =Concatenate(ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco',ThisItem.uipp_participacao)
                     Width: =341
@@ -561,7 +551,7 @@ Particulares As screen:
                     Y: =4
                     ZIndex: =3
 
-                "Icon1 As icon.'3DPrinting'":
+                "IconPessoaEmpresa As icon.'3DPrinting'":
                     Color: =cores.amareloMontepio
                     Height: =25
                     Icon: =If(IsBlank(ThisItem.uipp_ID_Familiares.ID),Icon.OfficeBuilding,Icon.People)

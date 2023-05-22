@@ -8642,19 +8642,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Gallery4.AccessibleLabel"
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.GalleryFamiliaresEmpresas.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Gallery4.AccessibleLabel",
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.GalleryFamiliaresEmpresas.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Particulares",
-                "type": "Particulares.'Membros dos Orgaos Sociais'.Gallery4"
+                "type": "Particulares.'Membros dos Orgaos Sociais'.GalleryFamiliaresEmpresas"
               }
             }
           ],
@@ -8672,19 +8672,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Gallery4.TabIndex"
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.GalleryFamiliaresEmpresas.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.Gallery4.TabIndex",
+                  "fullyQualifiedName": "Particulares.'Membros dos Orgaos Sociais'.GalleryFamiliaresEmpresas.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Particulares",
-                "type": "Particulares.'Membros dos Orgaos Sociais'.Gallery4"
+                "type": "Particulares.'Membros dos Orgaos Sociais'.GalleryFamiliaresEmpresas"
               }
             }
           ],
