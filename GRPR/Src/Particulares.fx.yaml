@@ -773,7 +773,9 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
-        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
+        Visible: |-
+            =//localFiltro<>"Membros dos Orgãos Sociais"
+            true
         Width: =20
         X: |-
             =//Nome_Column1.X +490
@@ -781,7 +783,9 @@ Particulares As screen:
                 localFiltro = "Colaboradores",
                 Nome_Column1.X + 490,
                 localFiltro = "ROC",
-                Nome_Column2.X + 520
+                Nome_Column2.X + 520,
+                localFiltro = "Membros dos Orgãos Sociais",
+                Nome_Column2.X + 650
             )
         Y: =Nome_Column1.Y + 212
         ZIndex: =16
