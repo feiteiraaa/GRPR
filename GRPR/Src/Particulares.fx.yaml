@@ -1083,7 +1083,9 @@ Particulares As screen:
                     SortOrder.Ascending
                 )
             )
-        Visible: =localFiltro<>"Membros dos Orgãos Sociais"
+        Visible: |-
+            =//localFiltro<>"Membros dos Orgãos Sociais"
+            true
         Width: =20
         X: |-
             =//'Numero Documento_Column2'.X +490
@@ -1091,7 +1093,9 @@ Particulares As screen:
                 localFiltro = "Colaboradores",
                 'Numero Documento_Column2'.X +490,
                 localFiltro = "ROC",
-                uipp_numerodocumento_Column1.X + 520
+                uipp_numerodocumento_Column1.X + 520,
+                localFiltro = "Membros dos Orgãos Sociais",
+                900
             )
         Y: ='Numero Documento_Column2'.Y + 212
         ZIndex: =20
