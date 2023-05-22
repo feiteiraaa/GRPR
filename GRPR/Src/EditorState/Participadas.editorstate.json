@@ -2287,7 +2287,7 @@
       "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
-    "LeftSectionComponent_3": {
+    "LeftSectionComponent_13": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Fill",
@@ -2329,7 +2329,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "Table(\r\n    {\r\n        selected: true,\r\n        icon: Icon.Home,\r\n        text: \"Inicio\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: true\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.CalendarBlank,\r\n        text: \"Horas\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: true\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.TrendingUpwards,\r\n        text: \"Métricas (Em breve)\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: true\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Settings,\r\n        text: \"Backoffice\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: LeftSectionComponent_3.VisibleConfigApp\r\n    }\r\n)",
+          "AutoRuleBindingString": "Table(\r\n    {\r\n        selected: true,\r\n        icon: Icon.Home,\r\n        text: \"Inicio\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: true\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.CalendarBlank,\r\n        text: \"Horas\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: true\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.TrendingUpwards,\r\n        text: \"Métricas (Em breve)\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: true\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Settings,\r\n        text: \"Backoffice\",\r\n        Navigate: App.ActiveScreen,\r\n        VisivelPara: LeftSectionComponent_13.VisibleConfigApp\r\n    }\r\n)",
           "InvariantPropertyName": "TabelaMenu",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
@@ -2350,7 +2350,7 @@
         "Description": ""
       },
       "MetaDataIDKey": "",
-      "Name": "LeftSectionComponent_3",
+      "Name": "LeftSectionComponent_13",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

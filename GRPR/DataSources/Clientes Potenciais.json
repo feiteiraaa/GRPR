@@ -1643,30 +1643,6 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "DataState",
-    "Name": "msft_datastate",
-    "OptionSetInfoNameMapping": {
-      "0": "Default",
-      "1": "Retain"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": true,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "msft_datastate",
-        "OptionSetReferenceEntityName": "Clientes Potenciais"
-      },
-      "OptionSetReferenceItem1": {
-        "OptionSetReferenceColumnName": "msft_datastate",
-        "OptionSetReferenceEntityName": "Clientes"
-      }
-    },
-    "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "msft_datastate",
-    "RelatedEntityName": "Clientes Potenciais",
-    "Type": "OptionSetInfo"
-  },
-  {
     "DisplayName": "Não monitorizar (Clientes Potenciais)",
     "Name": "msgdpr_contact_msgdpr_donottrack",
     "OptionSetInfoNameMapping": {
