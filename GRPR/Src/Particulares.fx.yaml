@@ -397,7 +397,7 @@ Particulares As screen:
             DelayItemLoading: =true
             Height: |
                 =472
-            Items: |+
+            Items: |-
                 =If(
                     localFiltro = "Membros dos Orgãos Sociais",
                     Search(
@@ -429,7 +429,6 @@ Particulares As screen:
                         "uipp_nome"
                     )
                 )
-                
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplateSize: =127
@@ -487,8 +486,7 @@ Particulares As screen:
                 "'Nome e Designacao' As label":
                     OnSelect: =Select(Parent)
                     Text: |+
-                        =//First(Ungroup(Table({MyTables: ThisItem.uipp_nome},{MyTables: ThisItem.uipp_designacao}), "MyTables")).MyTables
-                        Concatenate(
+                        =Concatenate(
                             LookUp(
                                 Empresas,
                                 ID = ThisItem.uipp_ID_Empresa.ID
