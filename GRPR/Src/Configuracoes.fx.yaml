@@ -2,8 +2,6 @@ Configuracoes As screen:
     OnVisible: |
         =UpdateContext({localShowData: false, localShowLeg:false, localShowEliminacao:false,localShowRelacao:false,localShowPrazo:false,localShowNewForm:false});
 
-    LeftSectionComponent_6 As LeftSectionComponent:
-
     "'Mid Section' As groupContainer.manualLayoutContainer":
         Height: =615
         Width: =978
@@ -2202,4 +2200,7 @@ Configuracoes As screen:
             X: =496
             Y: =445
             ZIndex: =9
+
+    LeftSectionComponent_16 As LeftSectionComponent:
+        ZIndex: =10
 

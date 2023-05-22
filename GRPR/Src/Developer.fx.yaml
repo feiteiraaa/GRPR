@@ -1,7 +1,5 @@
 Developer As screen:
 
-    LeftSectionComponent_7 As LeftSectionComponent:
-
     Label2 As label:
         Text: ="cor do botão"
         X: =375
@@ -34,4 +32,7 @@ Developer As screen:
         X: =978
         Y: =93
         ZIndex: =6
+
+    LeftSectionComponent_17 As LeftSectionComponent:
+        ZIndex: =7
 

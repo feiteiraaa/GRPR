@@ -151,3 +151,7 @@ Screen1 As screen:
             Y: =0
             ZIndex: =9
 
+    LeftSectionComponent_4 As LeftSectionComponent:
+        X: =1024
+        ZIndex: =2
+
