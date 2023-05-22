@@ -50,7 +50,7 @@ App As appinfo:
                 If(
                     Or(
                         "gvfeiteira" in User().Email,
-                        "ldales" in User().Email,
+                        "ldsales" in User().Email,
                         "cnpedroso" in User().Email,
                         "pvveras" in User().Email
                     ),
