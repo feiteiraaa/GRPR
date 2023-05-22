@@ -59,44 +59,56 @@ Atividade As screen:
         X: =342
         ZIndex: =3
 
-    DataTable3 As dataTable.datatable:
+    Label1_9 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =15
+        Text: ="Atividade"
+        Width: =409
+        X: =365
+        Y: =26
+        ZIndex: =5
+
+    AtividadeTable As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
-        Height: =570
+        HeadingFill: =cores.cinzento
+        Height: =500
         Items: =Atividades
-        Width: =958
-        X: =376
-        Y: =160
-        ZIndex: =4
+        SelectedFill: =cores.amareloMontepio
+        Width: =980
+        X: =364
+        Y: =216
+        ZIndex: =6
 
-        ID_Column2 As dataTableColumn.textualColumn:
+        "'Criado Por_Column1' As dataTableColumn.complexTypeColumn":
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="ID"
-            FieldName: ="uipp_id"
-            FieldVariantName: ="textualColumn"
+            FieldDisplayName: ="Criado Por"
+            FieldName: ="createdby"
+            FieldVariantName: ="complexTypeColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =1
-            Text: =ThisItem.ID
+            Order: =5
+            Text: =ThisItem.'Criado Por'.systemuserid
             Width: =100
-            X: =0
+            X: =168
             Y: =0
-            ZIndex: =1
+            ZIndex: =3
 
-        "'Criado Em_Column2' As dataTableColumn.dateTimeColumn":
+        Data_Column1 As dataTableColumn.dateTimeColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Criado Em"
-            FieldName: ="createdon"
+            FieldDisplayName: ="Data"
+            FieldName: ="uipp_data"
             FieldVariantName: ="dateTimeColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            Order: =2
-            Text: =Text(ThisItem.'Criado Em',DateTimeFormat.LongDateTime)
+            Order: =4
+            Text: =Text(ThisItem.Data,DateTimeFormat.LongDateTime)
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =2
+            ZIndex: =4
 
         Titulo_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -110,59 +122,31 @@ Atividade As screen:
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =3
-
-        "'Razão do Estado_Column1' As dataTableColumn.complexOptionSetColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Razão do Estado"
-            FieldName: ="statuscode"
-            FieldVariantName: ="complexOptionSetColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =4
-            Text: =ThisItem.'Razão do Estado'
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
-        "'Número da Versão_Column1' As dataTableColumn.numberColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Número da Versão"
-            FieldName: ="versionnumber"
-            FieldVariantName: ="numberColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =5
-            Text: =ThisItem.'Número da Versão'
-            Width: =100
-            X: =0
-            Y: =0
             ZIndex: =5
 
-        Data_Column1 As dataTableColumn.dateTimeColumn:
+        Atividade_Column1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Data"
-            FieldName: ="uipp_data"
-            FieldVariantName: ="dateTimeColumn"
+            FieldDisplayName: ="Atividade"
+            FieldName: ="uipp_atividadeid"
+            FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =6
-            Text: =Text(ThisItem.Data,DateTimeFormat.LongDateTime)
+            Text: =ThisItem.Atividade
             Width: =100
             X: =0
             Y: =0
             ZIndex: =6
 
-        Item_Column1 As dataTableColumn.textualColumn:
+        "'Lista da atividade_Column1' As dataTableColumn.complexOptionSetColumn":
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Item"
-            FieldName: ="uipp_item"
-            FieldVariantName: ="textualColumn"
+            FieldDisplayName: ="Lista da atividade"
+            FieldName: ="uipp_listadaatividade"
+            FieldVariantName: ="complexOptionSetColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             Order: =7
-            Text: =ThisItem.Item
+            Text: =ThisItem.'Lista da atividade'
             Width: =100
             X: =0
             Y: =0
