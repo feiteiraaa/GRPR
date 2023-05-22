@@ -397,16 +397,13 @@ Particulares As screen:
             DelayItemLoading: =true
             Height: |
                 =472
-            Items: |-
-                =//Membros_1
-                If(
+            Items: |+
+                =If(
                     localFiltro = "Membros dos Orgãos Sociais",
                     Search(
-                        //AddColumns(
                         SortByColumns(
                             Filter(
                                 CollectMembros,
-                            //ThisRecord.Ativo =
                                 If(
                                     Checkbox1.Value = false,
                                     ThisRecord.Ativo = true,
@@ -416,32 +413,23 @@ Particulares As screen:
                             varSortCol,
                             varSortDir
                         ),
-                            /*"CargoCategoria",
-                            'Cargo (Categoria)'
-                        ),*/
                         TextInput2.Text,
                         "uipp_nome"
-                        //"uipp_cargodescricao"
                     ),
                     Search(
-                        //AddColumns(
                         Filter(
                             CollectMembros,
-                            //ThisRecord.Ativo =
                             If(
                                 Checkbox1.Value = false,
                                 ThisRecord.Ativo = true,
                                 ThisRecord.Ativo = true Or ThisRecord.Ativo = false
                             )
                         ),
-                           /* "CargoCategoria",
-                            'Cargo (Categoria)'
-                        ),*/
                         TextInput2.Text,
                         "uipp_nome"
-                        //"uipp_cargodescricao"
                     )
                 )
+                
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             TemplateSize: =127
