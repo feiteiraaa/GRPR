@@ -1089,7 +1089,7 @@ MembrosDetails As screen:
                         Items: |-
                             =Filter(
                                 'Membros-Familiares-Respetivas',
-                                ThisItem.ID_Familiares.ID = ID_Familiares.ID
+                                ThisItem.ID_Familiares.ID = ID_Familiares.ID And IsBlank(ID_GrauParentesco.ID)
                             )
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
