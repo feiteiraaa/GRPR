@@ -1,8 +1,14 @@
 MembrosDetails As screen:
     OnVisible: |-
-        =UpdateContext({
-            localShowModal: false
-        })
+        =UpdateContext({localShowModal: false});
+        ClearCollect(
+            FamiliaresEmpresas,
+            {
+                Familiares: 1,
+                Respetivas: 2,
+                Participadas: Filter('Membros-Participadas','Child ID'.ID=_Membro)
+            }
+        )
 
     LeftSectionComponent_12 As LeftSectionComponent:
         TabelaMenu: |-
@@ -726,7 +732,9 @@ MembrosDetails As screen:
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
                 Height: =330
-                Items: ='Empresas Participadas do Grupos'
+                Items: |-
+                    =//'Empresas Participadas do Grupos'
+                    Filter('Membros-Participadas','Child ID'.ID=_Membro)
                 SelectedFill: =cores.amareloMontepio
                 Width: ='Empresas Grupo Content'.Width
                 X: =10
@@ -755,7 +763,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =7
-                    Text: =ThisItem.'Cargo (Descricao)'
+                    Text: =ThisItem.uipp_cargodescricao
                     Width: =100
                     X: =0
                     Y: =0
@@ -783,7 +791,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =3
-                    Text: =ThisItem.Nome
+                    Text: =LookUp('Empresas Participadas do Grupos',ID=ThisRecord.ID).Nome
                     Width: =100
                     X: =0
                     Y: =0
@@ -797,7 +805,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =5
-                    Text: =ThisItem.'Numero documento'
+                    Text: =LookUp('Empresas Participadas do Grupos',ID=ThisRecord.ID).'Numero documento'
                     Width: =100
                     X: =0
                     Y: =0
@@ -811,7 +819,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =4
-                    Text: =ThisItem.'Tipo de documento'
+                    Text: =LookUp('Empresas Participadas do Grupos',ID=ThisRecord.ID).'Tipo de documento'
                     Width: =100
                     X: =0
                     Y: =0
@@ -1077,7 +1085,9 @@ MembrosDetails As screen:
     Label1_10 As label:
         FontWeight: =FontWeight.Bold
         Height: =48
-        Text: =LookUp(Membros_1,ID=_Membro).Nome
+        Text: |-
+            =//LookUp(Membros_1,ID=_Membro).Nome
+            "Membros de Órgãos Sociais"
         Width: =529
         X: =365
         Y: =26

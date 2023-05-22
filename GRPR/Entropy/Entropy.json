@@ -566,7 +566,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/22/2023 13:21:56",
+  "HeaderLastSavedDateTimeUTC": "05/22/2023 13:52:37",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "0e65f7c0-1458-4542-9552-1ca32c61127e": "\"/providers/microsoft.powerapps/apis/shared_commondataserviceforapps/connections/shared-commondataser-1e2891bf-0dbc-49ad-9954-136572f223dd\"",
@@ -805,6 +805,7 @@
     "Familiares\\uipp_familiares_statuscode": 178,
     "Familiares\\uipp_familiares_uipp_ativo": 176,
     "Familiares\\uipp_familiares_uipp_bloqueado": 175,
+    "FamiliaresEmpresas": 286,
     "Legislaçãos": 272,
     "Legislaçãos\\default.cds_uipp_legislacao_views": 249,
     "Legislaçãos\\uipp_legislacao_statecode": 180,
