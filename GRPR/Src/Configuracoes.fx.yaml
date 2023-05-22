@@ -2081,9 +2081,6 @@ Configuracoes As screen:
         Visible: =ModalConfirmation_1 = 1
         ZIndex: =5
 
-    LeftSectionComponent_16 As LeftSectionComponent:
-        ZIndex: =10
-
     elim_group As group:
         Height: =5
         Width: =5
@@ -2203,4 +2200,7 @@ Configuracoes As screen:
             X: =496
             Y: =445
             ZIndex: =9
+
+    LeftSectionComponent_16 As LeftSectionComponent:
+        ZIndex: =10
 

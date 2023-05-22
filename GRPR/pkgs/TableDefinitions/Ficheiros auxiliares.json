@@ -2,10 +2,6 @@
   "DatasetName": "default.cds",
   "EntityName": "Ficheiros auxiliares",
   "InstanceUrl": "https://simactiond.crm4.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "uipp_ficheirosauxiliareses",
-    "logicalName": "uipp_ficheirosauxiliares"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://simactiond.crm4.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('uipp_ficheirosauxiliares')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",

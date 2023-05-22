@@ -402,11 +402,6 @@
       "Values": {
         "Information": "dd95b6cc-2950-4f68-a4bf-ac15c4bc3824"
       }
-    },
-    {
-      "Kind": "default.cds_uipp_ficheirosauxiliares_forms",
-      "Namespace": "Ficheiros auxiliares (Forms)",
-      "Values": {}
     }
   ]
 }
