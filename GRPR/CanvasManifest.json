@@ -130,6 +130,7 @@
   "ScreenOrder": [
     "Inicio",
     "Particulares",
+    "MembrosDetails",
     "ColaboradoresDetails",
     "ROCDetails",
     "Participadas",
@@ -138,7 +139,6 @@
     "Listagens",
     "Configuracoes",
     "Developer",
-    "MembrosDetails",
     "Screen1"
   ]
 }
