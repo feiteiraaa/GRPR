@@ -15,13 +15,6 @@
       }
     },
     {
-      "Kind": "default.cds_activitypointer_forms",
-      "Namespace": "Atividades_1 (Forms)",
-      "Values": {
-        "Dashboard de Atividades": "a4640db1-4962-4e79-92c6-690e627924d7"
-      }
-    },
-    {
       "Kind": "default.cds_contact_forms",
       "Namespace": "Clientes Potenciais (Forms)",
       "Values": {
@@ -144,6 +137,13 @@
       }
     },
     {
+      "Kind": "default.cds_uipp_ficheirosauxiliares_forms",
+      "Namespace": "Ficheiros auxiliares (Forms)",
+      "Values": {
+        "Information": "8772f079-b6f5-45ec-84cb-ec31c9981d22"
+      }
+    },
+    {
       "Kind": "default.cds_uipp_legislacao_forms",
       "Namespace": "Legislaçãos (Forms)",
       "Values": {
@@ -216,6 +216,13 @@
         "User - Admin": "d87b5f59-2175-491c-abf3-090279b1db5b",
         "Utilizador": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
         "Utilizador da Aplicação": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8"
+      }
+    },
+    {
+      "Kind": "default.cds_activitypointer_forms",
+      "Namespace": "Atividades_1 (Forms)",
+      "Values": {
+        "Dashboard de Atividades": "a4640db1-4962-4e79-92c6-690e627924d7"
       }
     },
     {
