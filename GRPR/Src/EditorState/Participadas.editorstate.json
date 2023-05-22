@@ -2422,7 +2422,14 @@
         "Height",
         "DisplayMode",
         "ZIndex",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ThisItem.'Legislacao aplicada'.Legislação",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "OnSelect",
         "AutoWidth",
         {
