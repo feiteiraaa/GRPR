@@ -482,7 +482,7 @@ Particulares As screen:
 
                 "'Cargo e Relacao2' As label":
                     OnSelect: =Select(Parent)
-                    Text: =Concatenate(ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco',ThisItem.uipp_participacao&" %")
+                    Text: =Concatenate(ThisItem.uipp_ID_GrauParentesco.'Grau de parentesco', ThisItem.uipp_participacao&" %")
                     Width: =341
                     X: =599
                     Y: =4

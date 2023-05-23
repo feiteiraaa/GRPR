@@ -119,7 +119,7 @@ MembrosDetails As screen:
         Height: =615
         Width: =978
         X: =368
-        Y: =130
+        Y: =Label13.Y +35
         ZIndex: =4
 
         "'Informacao Content' As groupContainer.manualLayoutContainer":
@@ -1694,6 +1694,15 @@ MembrosDetails As screen:
 
     LeftSectionComponent_12 As LeftSectionComponent:
         ZIndex: =6
+
+    Label13 As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: =LookUp(Membros_1,ID=_Membro).Nome
+        Width: =300
+        X: =365
+        Y: =124
+        ZIndex: =9
 
     EliminarMembro As group:
         Height: =5
