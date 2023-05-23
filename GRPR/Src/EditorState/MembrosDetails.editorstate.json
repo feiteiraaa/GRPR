@@ -824,7 +824,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "BackBtn_5",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1039,7 +1039,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cancel_btn_6",
-      "ParentIndex": 4,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7227,7 +7227,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_13",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7381,7 +7381,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_14",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7689,7 +7689,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_16",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7997,7 +7997,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_18",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8151,7 +8151,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_19",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8305,7 +8305,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_20",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8459,7 +8459,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_21",
-      "ParentIndex": 1,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8613,7 +8613,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_22",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8774,7 +8774,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_23",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8997,7 +8997,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_2",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9693,7 +9693,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_4",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10041,7 +10041,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_5",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10491,7 +10491,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_1",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10839,7 +10839,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_2",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11187,7 +11187,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_3",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11883,7 +11883,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_6",
-      "ParentIndex": 5,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22201,7 +22201,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "Informacao",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22538,7 +22538,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_10",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22836,7 +22836,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -23914,7 +23914,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "LeftSectionComponent_12",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24510,7 +24510,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Mid Section_Membros",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
