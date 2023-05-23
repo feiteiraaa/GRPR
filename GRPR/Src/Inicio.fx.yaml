@@ -1,9 +1,41 @@
 Inicio As screen:
     OnVisible: =
 
+    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        DelayItemLoading: =true
+        Fill: =ColorFade(cores.cinzento, 90%)
+        Height: =171
+        Items: =Aprovacaos
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: |+
+            =Gallery2.Width/4
+            
+        Width: =Gallery2.Width
+        X: =365
+        Y: =580
+        ZIndex: =1
+
+        "Icon10_1 As icon.'3DPrinting'":
+            Color: =cores.cinzento
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Width: =40
+            X: =67
+            Y: =64
+            ZIndex: =1
+
+        Label14_1 As label:
+            Align: =Align.Center
+            Height: =47
+            Text: =ThisItem.Tabela
+            X: =12
+            Y: =111
+            ZIndex: =2
+
     TopSectionComponent_1 As TopSectionComponent:
         X: =342
-        ZIndex: =3
+        ZIndex: =2
 
     Label1 As label:
         FontWeight: =FontWeight.Bold
@@ -13,7 +45,7 @@ Inicio As screen:
         Width: =692
         X: =365
         Y: =26
-        ZIndex: =4
+        ZIndex: =3
 
     Gallery2 As gallery.variableTemplateHeightGallery:
         BorderColor: =RGBA(128, 128, 128, 1)
@@ -46,7 +78,7 @@ Inicio As screen:
         Width: =692
         X: =365
         Y: =138
-        ZIndex: =5
+        ZIndex: =4
 
         Rectangle1_1 As rectangle:
             Fill: |-
@@ -96,7 +128,7 @@ Inicio As screen:
         Width: =270
         X: =354
         Y: =98
-        ZIndex: =6
+        ZIndex: =5
 
     Label7 As label:
         Height: =299
@@ -129,7 +161,7 @@ Inicio As screen:
         Visible: =godMode
         Width: =203
         X: =1163
-        ZIndex: =7
+        ZIndex: =6
 
     Label1_7 As label:
         Color: =cores.cinzento
@@ -175,17 +207,17 @@ Inicio As screen:
         Width: =194
         X: =365
         Y: =65
-        ZIndex: =8
+        ZIndex: =7
 
     Label10 As label:
         Text: =appVersion
         Width: =51
         X: =1315
         Y: =728
-        ZIndex: =9
+        ZIndex: =8
 
     LeftSectionComponent_1 As LeftSectionComponent:
-        ZIndex: =10
+        ZIndex: =9
 
     FimPeriodoKPI As group:
         Height: =5
@@ -204,7 +236,7 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =138
-            ZIndex: =11
+            ZIndex: =10
 
         Label8_1 As label:
             Align: =Align.Center
@@ -216,7 +248,7 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =201
-            ZIndex: =12
+            ZIndex: =11
 
         Label8_2 As label:
             Align: =Align.Center
@@ -228,7 +260,7 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =237
-            ZIndex: =13
+            ZIndex: =12
 
         Label8_3 As label:
             Align: =Align.Center
@@ -253,7 +285,17 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =277
-            ZIndex: =14
+            ZIndex: =13
+
+    Label12 As label:
+        Align: =Align.Center
+        Color: =cores.azulTitulo
+        FontWeight: =FontWeight.Semibold
+        Text: ="Fim de periodo a decorrer"
+        Width: =235
+        X: =594
+        Y: =587
+        ZIndex: =17
 
     DownloadListagem As group:
         Height: =5
@@ -272,7 +314,7 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =359
-            ZIndex: =15
+            ZIndex: =14
 
         Label8_4 As label:
             Align: =Align.Center
@@ -290,7 +332,7 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =479
-            ZIndex: =18
+            ZIndex: =15
 
         Icon9 As icon.Download:
             Color: =cores.amareloMontepio
@@ -299,46 +341,5 @@ Inicio As screen:
             Width: =191
             X: =1138
             Y: =415
-            ZIndex: =19
-
-    Label12 As label:
-        Align: =Align.Center
-        Color: =cores.azulTitulo
-        FontWeight: =FontWeight.Semibold
-        Text: ="Fim de periodo a decorrer"
-        Width: =235
-        X: =594
-        Y: =580
-        ZIndex: =21
-
-    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
-        DelayItemLoading: =true
-        Fill: =ColorFade(cores.cinzento, 90%)
-        Height: =154
-        Items: =Aprovacaos
-        LoadingSpinner: =LoadingSpinner.Data
-        TemplatePadding: =0
-        TemplateSize: |+
-            =Gallery2.Width/4
-            
-        Width: =Gallery2.Width
-        X: =365
-        Y: =614
-        ZIndex: =26
-
-        "Icon10_1 As icon.'3DPrinting'":
-            Color: =cores.cinzento
-            Height: =40
-            Icon: =Icon.CheckBadge
-            Width: =40
-            X: =67
-            Y: =29
-            ZIndex: =1
-
-        Label14_1 As label:
-            Align: =Align.Center
-            Text: =ThisItem.Tabela
-            X: =12
-            Y: =83
-            ZIndex: =2
+            ZIndex: =16
 

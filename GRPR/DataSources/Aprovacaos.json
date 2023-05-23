@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "uipp_aprovacao",
+    "MaxGetRowsCount": 500,
     "Name": "Aprovacaos",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Proprietário",
