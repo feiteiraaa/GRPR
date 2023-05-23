@@ -255,14 +255,6 @@ Inicio As screen:
             Y: =277
             ZIndex: =14
 
-    Rectangle4 As rectangle:
-        Fill: =ColorFade(cores.cinzento, 90%)
-        Height: =147
-        Width: =692
-        X: =365
-        Y: =587
-        ZIndex: =20
-
     DownloadListagem As group:
         Height: =5
         Width: =5
@@ -316,53 +308,37 @@ Inicio As screen:
         Text: ="Fim de periodo a decorrer"
         Width: =235
         X: =594
-        Y: =587
+        Y: =580
         ZIndex: =21
 
-    "Icon10 As icon.'3DPrinting'":
-        Height: =40
-        Icon: =Icon.CheckBadge
-        Width: =40
-        X: =441
-        Y: =638
-        ZIndex: =22
-
-    "Icon10_1 As icon.'3DPrinting'":
-        Height: =40
-        Icon: =Icon.CheckBadge
-        Width: =40
-        X: =688
-        Y: =638
-        ZIndex: =23
-
-    "Icon10_2 As icon.'3DPrinting'":
-        Height: =40
-        Icon: =Icon.CancelBadge
-        Width: =40
-        X: =923
-        Y: =638
-        ZIndex: =24
-
-    Label14 As label:
-        Align: =Align.Center
-        Text: ="Colaboradores"
-        X: =386
-        Y: =681
-        ZIndex: =25
-
-    Label14_1 As label:
-        Align: =Align.Center
-        Text: ="Entidades Participadas"
-        Width: =200
-        X: =608
-        Y: =681
+    "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+        DelayItemLoading: =true
+        Fill: =ColorFade(cores.cinzento, 90%)
+        Height: =154
+        Items: =Aprovacaos
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplatePadding: =0
+        TemplateSize: |+
+            =Gallery2.Width/4
+            
+        Width: =Gallery2.Width
+        X: =365
+        Y: =614
         ZIndex: =26
 
-    Label14_2 As label:
-        Align: =Align.Center
-        Text: ="Entidades Participadas"
-        Width: =200
-        X: =845
-        Y: =681
-        ZIndex: =27
+        "Icon10_1 As icon.'3DPrinting'":
+            Color: =cores.cinzento
+            Height: =40
+            Icon: =Icon.CheckBadge
+            Width: =40
+            X: =67
+            Y: =29
+            ZIndex: =1
+
+        Label14_1 As label:
+            Align: =Align.Center
+            Text: =ThisItem.Tabela
+            X: =12
+            Y: =83
+            ZIndex: =2
 

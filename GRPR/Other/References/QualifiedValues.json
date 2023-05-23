@@ -409,6 +409,13 @@
       "Values": {
         "Information": "dd95b6cc-2950-4f68-a4bf-ac15c4bc3824"
       }
+    },
+    {
+      "Kind": "default.cds_uipp_aprovacao_forms",
+      "Namespace": "Aprovacaos (Forms)",
+      "Values": {
+        "Information": "a10858ff-b782-4ff9-8b96-92e39c030996"
+      }
     }
   ]
 }
