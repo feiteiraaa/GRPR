@@ -255,6 +255,14 @@ Inicio As screen:
             Y: =277
             ZIndex: =14
 
+    Rectangle4 As rectangle:
+        Fill: =ColorFade(cores.cinzento, 90%)
+        Height: =147
+        Width: =692
+        X: =365
+        Y: =587
+        ZIndex: =20
+
     DownloadListagem As group:
         Height: =5
         Width: =5
@@ -300,4 +308,38 @@ Inicio As screen:
             X: =1138
             Y: =415
             ZIndex: =19
+
+    Label12 As label:
+        Align: =Align.Center
+        Color: =cores.azulTitulo
+        FontWeight: =FontWeight.Semibold
+        Text: ="Fim de periodo a decorrer"
+        Width: =235
+        X: =594
+        Y: =587
+        ZIndex: =21
+
+    "Icon10 As icon.'3DPrinting'":
+        Height: =50
+        Icon: =Icon.CheckBadge
+        Width: =40
+        X: =416
+        Y: =638
+        ZIndex: =22
+
+    "Icon10_1 As icon.'3DPrinting'":
+        Height: =50
+        Icon: =Icon.CheckBadge
+        Width: =50
+        X: =686
+        Y: =638
+        ZIndex: =23
+
+    "Icon10_2 As icon.'3DPrinting'":
+        Height: =50
+        Icon: =Icon.CancelBadge
+        Width: =50
+        X: =937
+        Y: =652
+        ZIndex: =24
 
