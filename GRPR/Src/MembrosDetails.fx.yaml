@@ -1698,7 +1698,21 @@ MembrosDetails As screen:
     Label13 As label:
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
-        Text: =LookUp(Membros_1,ID=_Membro).Nome
+        Text: |-
+            =If(
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Ativo,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome & " (Eliminado)"
+            )
         Width: =300
         X: =365
         Y: =124
