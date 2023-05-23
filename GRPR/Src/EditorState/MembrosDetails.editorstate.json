@@ -824,7 +824,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "BackBtn_5",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1039,7 +1039,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cancel_btn_6",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7227,7 +7227,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_13",
-      "ParentIndex": 4,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7381,7 +7381,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_14",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8774,7 +8774,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_23",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8997,7 +8997,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_2",
-      "ParentIndex": 2,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10252,7 +10252,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EditarMembrosInfo",
-      "ParentIndex": 3,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10491,7 +10491,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_1",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12094,7 +12094,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EliminarMembro",
-      "ParentIndex": 6,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22538,7 +22538,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_10",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22836,7 +22836,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label13",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -24510,7 +24510,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Mid Section_Membros",
-      "ParentIndex": 3,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
