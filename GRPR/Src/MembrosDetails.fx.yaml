@@ -120,9 +120,11 @@ MembrosDetails As screen:
             Informacao As form:
                 DataSource: =Membros_1
                 DefaultMode: =FormMode.View
-                Height: =300
+                Height: =Parent.Height-DynamicBtn_14.Height
                 Item: =LookUp(Membros_1, _Membro = ThisRecord.ID)
-                X: =40
+                Width: =Parent.Width*0.95
+                X: =24
+                Y: =50
                 ZIndex: =1
 
                 Nome_DataCard1 As typedDataCard.textualEditCard:
@@ -694,6 +696,46 @@ MembrosDetails As screen:
                         Wrap: =false
                         Y: =DataCardKey30.Y
                         ZIndex: =7
+
+            EditarMembrosInfo As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =4
+
+                DynamicBtn_14 As DynamicBtn:
+                    BtnText: ="Editar"
+                    ButtonIcon: =Icon.Edit
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
+                    ZIndex: =2
+
+                edit_btn_2 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =/*If(
+                            localShowFimPeriodoForm,
+                            UpdateContext({localShowFimPeriodoForm: false}),
+                            UpdateContext({ModalConfirmation_1:1})
+                        )*/
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_14.X
+                    Y: =DynamicBtn_14.Y
+                    ZIndex: =3
 
         Infomacao As groupContainer.manualLayoutContainer:
             Height: =50
@@ -1328,4 +1370,44 @@ MembrosDetails As screen:
 
     LeftSectionComponent_12 As LeftSectionComponent:
         ZIndex: =6
+
+    EliminarMembro As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =9
+
+        DynamicBtn_13 As DynamicBtn:
+            BtnText: ="Eliminar"
+            ButtonIcon: =Icon.Trash
+            Height: =40
+            Visible: =true
+            Width: =160
+            X: =1186
+            Y: =74
+            ZIndex: =7
+
+        elim_btn_1 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |-
+                =/*If(
+                    localShowFimPeriodoForm,
+                    UpdateContext({localShowFimPeriodoForm: false}),
+                    UpdateContext({ModalConfirmation_1:1})
+                )*/
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            X: =1186
+            Y: =74
+            ZIndex: =8
 
