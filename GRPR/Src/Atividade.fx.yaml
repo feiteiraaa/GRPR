@@ -35,7 +35,7 @@ Atividade As screen:
             Order: =8
             Text: =ThisItem.'Criado Por'.'Nome Completo'
             Width: =100
-            X: =168
+            X: =656
             Y: =0
             ZIndex: =3
 
@@ -198,7 +198,8 @@ Atividade As screen:
         ZIndex: =25
 
         TopSectionComponent_2 As TopSectionComponent:
-            X: =342
+            X: =313
+            Y: =29
             ZIndex: =2
 
         BtnExportar As DynamicBtn:
@@ -206,9 +207,10 @@ Atividade As screen:
             BtnText: ="Exportar"
             ButtonIcon: =Icon.Download
             Height: =41
-            Width: =167
-            X: =1177
-            Y: =135
+            Width: =160
+            X: =1185
+            Y: |
+                =130
             ZIndex: =5
 
         InputPesquisar As text:
@@ -220,7 +222,6 @@ Atividade As screen:
                 cores.cinzento
             Default: =
             Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =46
             HintText: ="Pesquisar"
             HoverBorderColor: =RGBA(128, 128, 128, 1)
             HoverFill: =
@@ -228,7 +229,8 @@ Atividade As screen:
             Tooltip: =
             Width: =327
             X: =364
-            Y: =129
+            Y: |
+                =130
             ZIndex: =6
 
         "Icon1_3 As icon.'3DPrinting'":
@@ -250,7 +252,7 @@ Atividade As screen:
             DisabledColor: =RGBA(0,0,0, 0)
             DisabledFill: =RGBA(0,0,0, 0)
             Fill: =RGBA(0,0,0, 0)
-            Height: =46
+            Height: =BtnExportar.Height
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
@@ -258,8 +260,9 @@ Atividade As screen:
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            X: =1184
-            Y: =130
+            Width: =BtnExportar.Width
+            X: =BtnExportar.X
+            Y: =BtnExportar.Y
             ZIndex: =8
 
         DatePicker1 As datepicker:
@@ -267,7 +270,6 @@ Atividade As screen:
             BorderThickness: |
                 =1
             Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =45
             IconBackground: =cores.amareloMontepio
             PaddingTop: =5
             Width: =150
@@ -280,12 +282,13 @@ Atividade As screen:
             BorderThickness: |
                 =1
             Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =47
+            Height: |
+                =40
             IconBackground: =cores.amareloMontepio
             PaddingTop: =5
             Width: =141
             X: =904
-            Y: =129
+            Y: =130
             ZIndex: =10
 
         Label11 As label:
@@ -308,13 +311,14 @@ Atividade As screen:
             Text: ="a"
             Width: =49
             X: =855
-            Y: =126
+            Y: |
+                =130
             ZIndex: =12
 
         Icon1 As icon.Filter:
             Color: =cores.amareloMontepio
             Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =52
+            Height: =40
             Icon: =Icon.Filter
             PaddingBottom: =8
             PaddingLeft: =8
@@ -322,6 +326,6 @@ Atividade As screen:
             PaddingTop: =8
             Width: =45
             X: =1088
-            Y: =129
+            Y: =130
             ZIndex: =14
 

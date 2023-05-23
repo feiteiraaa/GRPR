@@ -7458,7 +7458,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "LeftSectionComponent_14",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -7780,7 +7780,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "ModalConfirmation_6",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
