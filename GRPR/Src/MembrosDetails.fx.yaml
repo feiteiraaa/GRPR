@@ -807,14 +807,14 @@ MembrosDetails As screen:
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
-                Height: =330
+                Height: =Parent.Height-60
                 Items: |-
                     =ligacaoParticipadas
                     //'Membros-Participadas'
                 SelectedFill: =cores.amareloMontepio
                 Width: =Parent.Width * 0.95
                 X: =24
-                Y: =50
+                Y: =DynamicBtn_15.Y+50
                 ZIndex: =2
 
                 "'Cargo (Categoria)_Column2' As dataTableColumn.complexOptionSetColumn":
@@ -876,6 +876,15 @@ MembrosDetails As screen:
                     Y: =0
                     ZIndex: =19
 
+            DynamicBtn_16 As DynamicBtn:
+                BtnText: ="Associar"
+                Height: =40
+                Visible: =true
+                Width: =160
+                X: =Parent.X+800
+                Y: =7
+                ZIndex: =5
+
             EliminarMembrosPart As group:
                 Height: =5
                 Width: =5
@@ -889,7 +898,7 @@ MembrosDetails As screen:
                     Height: =40
                     Visible: =true
                     Width: =160
-                    X: =Parent.X+800
+                    X: =Parent.X+600
                     Y: =7
                     ZIndex: =3
 
@@ -915,6 +924,29 @@ MembrosDetails As screen:
                     X: =DynamicBtn_15.X
                     Y: =DynamicBtn_15.Y
                     ZIndex: =4
+
+            ass_btn_3 As button:
+                BorderColor: =RGBA(0,0,0, 0)
+                Color: =RGBA(0,0,0, 0)
+                DisabledBorderColor: =RGBA(0,0,0, 0)
+                DisabledColor: =RGBA(0,0,0, 0)
+                DisabledFill: =RGBA(0,0,0, 0)
+                Fill: =RGBA(0,0,0, 0)
+                Height: =39
+                HoverColor: =RGBA(0,0,0, 0)
+                HoverFill: =RGBA(0,0,0, 0)
+                OnSelect: |-
+                    =/*If(
+                        localShowFimPeriodoForm,
+                        UpdateContext({localShowFimPeriodoForm: false}),
+                        UpdateContext({ModalConfirmation_1:1})
+                    )*/
+                PressedColor: =RGBA(0,0,0, 0)
+                PressedFill: =RGBA(0,0,0, 0)
+                Text: =""
+                X: =DynamicBtn_16.X
+                Y: =DynamicBtn_16.Y
+                ZIndex: =6
 
         "'Empresas Grupo' As groupContainer.manualLayoutContainer":
             Height: =50
@@ -1410,6 +1442,13 @@ MembrosDetails As screen:
 
     LeftSectionComponent_12 As LeftSectionComponent:
         ZIndex: =6
+
+    EliminarMembrosPart_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =33
+        ZIndex: =7
 
     EliminarMembro As group:
         Height: =5
