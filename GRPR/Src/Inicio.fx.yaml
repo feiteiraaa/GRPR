@@ -19,7 +19,7 @@ Inicio As screen:
         "Icon10_1 As icon.'3DPrinting'":
             Color: =cores.cinzento
             Height: =40
-            Icon: =Icon.CheckBadge
+            Icon: =If(ThisItem.Aprovado = true, Icon.CheckBadge, Icon.CancelBadge)
             Width: =40
             X: =67
             Y: =64
