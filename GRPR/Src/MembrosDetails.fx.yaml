@@ -116,10 +116,10 @@ MembrosDetails As screen:
         ZIndex: =2
 
     "'Mid Section_Membros' As groupContainer.manualLayoutContainer":
-        Height: =615
+        Height: =580
         Width: =978
         X: =368
-        Y: =130
+        Y: =Label13.Y +50
         ZIndex: =4
 
         "'Informacao Content' As groupContainer.manualLayoutContainer":
@@ -1734,4 +1734,27 @@ MembrosDetails As screen:
             X: =1186
             Y: =74
             ZIndex: =8
+
+    Label13 As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: |-
+            =If(
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Ativo,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome & " (Eliminado)"
+            )
+        Width: =300
+        X: =365
+        Y: =124
+        ZIndex: =9
 
