@@ -1,6 +1,16 @@
 MembrosDetails As screen:
     OnVisible: |
-        =UpdateContext({localShowModal: false,localShowData: false, localShowLeg:false, localShowEliminacao:false,localShowRelacao:false,localShowPrazo:false,localShowNewForm:false});
+        =UpdateContext(
+            {
+                localShowModal: false,
+                localShowData: false,
+                localShowLeg: false,
+                localShowEliminacao: false,
+                localShowRelacao: false,
+                localShowPrazo: false,
+                localShowNewForm: false
+            }
+        );
         ClearCollect(
             ligacaoParticipada,
             Filter(
@@ -77,10 +87,12 @@ MembrosDetails As screen:
         /*ClearCollect(
             ligacaoFamiliarResp,
             Filter(
-                ligacaoRespetiva0,
-                !IsBlank(ID_Familiares.ID)
+                'Membros-Familiares-Respetivas',
+                //IsBlank(ID_GrauParentesco.ID)
+                !IsBlank(Participação)
             )
-        );
+        );*/
+        /*
         ClearCollect(
             ligacaoFamiliaresResp,
             AddColumns(
