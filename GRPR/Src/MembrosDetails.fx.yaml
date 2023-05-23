@@ -116,10 +116,10 @@ MembrosDetails As screen:
         ZIndex: =2
 
     "'Mid Section_Membros' As groupContainer.manualLayoutContainer":
-        Height: =615
+        Height: =580
         Width: =978
         X: =368
-        Y: =Label13.Y +35
+        Y: =Label13.Y +50
         ZIndex: =4
 
         "'Informacao Content' As groupContainer.manualLayoutContainer":
