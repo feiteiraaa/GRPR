@@ -1,5 +1,5 @@
 MembrosDetails As screen:
-    OnVisible: |
+    OnVisible: |+
         =UpdateContext(
             {
                 localShowModal: false,
@@ -84,31 +84,7 @@ MembrosDetails As screen:
                 ).'Numero documento'
             )
         );
-        /*ClearCollect(
-            ligacaoFamiliarResp,
-            Filter(
-                'Membros-Familiares-Respetivas',
-                //IsBlank(ID_GrauParentesco.ID)
-                !IsBlank(Participação)
-            )
-        );*/
-        /*
-        ClearCollect(
-            ligacaoFamiliaresResp,
-            AddColumns(
-                ligacaoFamiliarResp,
-                "NomeR",
-                LookUp(
-                    Empresas,
-                    ID = ligacaoFamiliarResp[@ID_Empresa].ID
-                ).Designacao,
-                "NumDoc",
-                LookUp(
-                    Empresas,
-                    ID = ligacaoFamiliarResp[@ID_Empresa].ID
-                ).'Numero Documento'
-            )
-        );*/
+        
 
     BackBtn_5 As BackBtn:
         X: =365
@@ -131,7 +107,7 @@ MembrosDetails As screen:
 
             Informacao As form:
                 DataSource: =Membros_1
-                DefaultMode: =FormMode.View
+                DefaultMode: =If(localShowNewForm,FormMode.Edit ,FormMode.View)
                 Height: =Parent.Height-DynamicBtn_14.Height
                 Item: =LookUp(Membros_1, _Membro = ThisRecord.ID)
                 Width: =Parent.Width*0.95
@@ -717,8 +693,8 @@ MembrosDetails As screen:
                 ZIndex: =4
 
                 DynamicBtn_14 As DynamicBtn:
-                    BtnText: ="Editar"
-                    ButtonIcon: =Icon.Edit
+                    BtnText: =If(localShowNewForm, "Guardar" ,"Editar")
+                    ButtonIcon: =If(localShowNewForm,Icon.Save ,Icon.Edit)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -737,10 +713,25 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
+                        =UpdateContext({localShowNewForm: !localShowNewForm})
+                        /*If(
+                            localShowLegForm,
+                            If(
+                                SubmitForm('Form Legislacao'),
+                            
+                                Notify("O registo foi submetido com sucesso!",NotificationType.Success);
+                                ResetForm(DataReferenciaForm);
+                                UpdateContext({
+                                    localShowLeg: false,
+                                    localShowLegForm: !localShowLegForm
+                                }),
+                        
+                                Notify("Por favor, tente novamente.")
+                            ),
+                            UpdateContext({
+                                localShowLegForm: !localShowLegForm,
+                                localFormMode: FormMode.New
+                            })
                         )*/
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
@@ -748,6 +739,43 @@ MembrosDetails As screen:
                     X: =DynamicBtn_14.X
                     Y: =DynamicBtn_14.Y
                     ZIndex: =3
+
+            CancelMembroInfo As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =6
+
+                DynamicBtn_23 As DynamicBtn:
+                    BtnText: ="Cancelar"
+                    ButtonIcon: =Icon.Cancel
+                    Height: =40
+                    Visible: =localShowNewForm
+                    Width: =160
+                    X: =Parent.X+600
+                    Y: =7
+                    ZIndex: =4
+
+                cancel_btn_6 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =UpdateContext({localShowNewForm: false})
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    Visible: =localShowNewForm
+                    X: =DynamicBtn_23.X
+                    Y: =DynamicBtn_23.Y
+                    ZIndex: =5
 
         Infomacao As groupContainer.manualLayoutContainer:
             Height: =50
@@ -896,8 +924,8 @@ MembrosDetails As screen:
                 ZIndex: =5
 
                 DynamicBtn_15 As DynamicBtn:
-                    BtnText: ="Eliminar"
-                    ButtonIcon: =Icon.Trash
+                    BtnText: ="Dissociar"
+                    ButtonIcon: =Icon.HorizontalLine
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -1695,29 +1723,6 @@ MembrosDetails As screen:
     LeftSectionComponent_12 As LeftSectionComponent:
         ZIndex: =6
 
-    Label13 As label:
-        AutoHeight: =true
-        FontWeight: =FontWeight.Semibold
-        Text: |-
-            =If(
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Ativo,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome & " (Eliminado)"
-            )
-        Width: =300
-        X: =365
-        Y: =124
-        ZIndex: =9
-
     EliminarMembro As group:
         Height: =5
         Width: =5
@@ -1757,4 +1762,27 @@ MembrosDetails As screen:
             X: =1186
             Y: =74
             ZIndex: =8
+
+    Label13 As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: |-
+            =If(
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Ativo,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome & " (Eliminado)"
+            )
+        Width: =300
+        X: =365
+        Y: =124
+        ZIndex: =9
 

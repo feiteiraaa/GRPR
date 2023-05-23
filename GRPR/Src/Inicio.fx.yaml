@@ -255,14 +255,6 @@ Inicio As screen:
             Y: =277
             ZIndex: =14
 
-    Rectangle4 As rectangle:
-        Fill: =ColorFade(cores.cinzento, 90%)
-        Height: =147
-        Width: =692
-        X: =365
-        Y: =587
-        ZIndex: =20
-
     DownloadListagem As group:
         Height: =5
         Width: =5
@@ -308,6 +300,14 @@ Inicio As screen:
             X: =1138
             Y: =415
             ZIndex: =19
+
+    Rectangle4 As rectangle:
+        Fill: =ColorFade(cores.cinzento, 90%)
+        Height: =147
+        Width: =692
+        X: =365
+        Y: =587
+        ZIndex: =20
 
     Label12 As label:
         Align: =Align.Center
