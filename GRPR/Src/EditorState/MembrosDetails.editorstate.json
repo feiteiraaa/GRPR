@@ -8997,7 +8997,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_2",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10252,7 +10252,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "EditarMembrosInfo",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
