@@ -219,6 +219,7 @@
     "DynamicBtn_19": 626,
     "DynamicBtn_2": 269,
     "DynamicBtn_20": 628,
+    "DynamicBtn_21": 630,
     "DynamicBtn_3": 74,
     "DynamicBtn_4": 267,
     "DynamicBtn_5": 181,
@@ -229,7 +230,9 @@
     "edit_btn_2": 556,
     "edit_btn_3": 629,
     "edit_btn_4": 624,
+    "edit_btn_5": 631,
     "EditarMembrosInfo": 557,
+    "EditMembrosFami": 633,
     "elim_btn": 330,
     "elim_btn_1": 611,
     "elim_btn_2": 614,
@@ -474,7 +477,7 @@
     "Membros": 171,
     "Membros dos Orgaos Sociais": 154,
     "Membros dos Orgaos Sociais_1": 590,
-    "Membros_2": 603,
+    "Membros_Familiares": 603,
     "MembrosDetails": 502,
     "MenuGallery": 20,
     "Mes_Column1": 335,
@@ -492,6 +495,7 @@
     "ModalConfirmation_6": 67,
     "ModalDelete": 317,
     "ModalDelete_1": 221,
+    "NewMembrosFami": 632,
     "NIF Familiares e Empresas": 163,
     "NIF Familiares e Empresas_1": 599,
     "NIF Membro": 157,
@@ -639,7 +643,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/23/2023 11:56:34",
+  "HeaderLastSavedDateTimeUTC": "05/23/2023 12:00:26",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1035,6 +1039,10 @@
       "DynamicBtn_14": 0,
       "edit_btn_2": 1
     },
+    "EditMembrosFami": {
+      "DynamicBtn_20": 1,
+      "edit_btn_3": 0
+    },
     "elim_components": {
       "cancelar_btn": 0,
       "confirm_btn": 1,
@@ -1102,7 +1110,7 @@
       "Container1": 1,
       "Membros dos Orgaos Sociais": 0
     },
-    "Membros_2": {
+    "Membros_Familiares": {
       "Container1_1": 1,
       "Membros dos Orgaos Sociais_1": 0
     },
@@ -1115,6 +1123,10 @@
       "Button2_19": 1,
       "Button2_21": 2,
       "ModalConfirmation_5": 0
+    },
+    "NewMembrosFami": {
+      "DynamicBtn_21": 0,
+      "edit_btn_5": 1
     },
     "Particualres Edit Save Btn_2": {
       "Button2_2": 1,
@@ -1378,6 +1390,7 @@
     "DynamicBtn_19": {},
     "DynamicBtn_2": {},
     "DynamicBtn_20": {},
+    "DynamicBtn_21": {},
     "DynamicBtn_3": {},
     "DynamicBtn_4": {},
     "DynamicBtn_5": {},
@@ -1388,7 +1401,9 @@
     "edit_btn_2": {},
     "edit_btn_3": {},
     "edit_btn_4": {},
+    "edit_btn_5": {},
     "EditarMembrosInfo": {},
+    "EditMembrosFami": {},
     "elim_btn": {},
     "elim_btn_1": {},
     "elim_btn_2": {},
@@ -1633,7 +1648,7 @@
     "Membros": {},
     "Membros dos Orgaos Sociais": {},
     "Membros dos Orgaos Sociais_1": {},
-    "Membros_2": {},
+    "Membros_Familiares": {},
     "MembrosDetails": {},
     "MenuGallery": {},
     "Mes_Column1": {},
@@ -1651,6 +1666,7 @@
     "ModalConfirmation_6": {},
     "ModalDelete": {},
     "ModalDelete_1": {},
+    "NewMembrosFami": {},
     "NIF Familiares e Empresas": {},
     "NIF Familiares e Empresas_1": {},
     "NIF Membro": {},
@@ -2009,6 +2025,7 @@
     "DynamicBtn_19": 319,
     "DynamicBtn_2": 81,
     "DynamicBtn_20": 337,
+    "DynamicBtn_21": 337,
     "DynamicBtn_3": 452,
     "DynamicBtn_4": 79,
     "DynamicBtn_5": 559,
@@ -2019,7 +2036,9 @@
     "edit_btn_2": 338,
     "edit_btn_3": 338,
     "edit_btn_4": 320,
+    "edit_btn_5": 338,
     "EditarMembrosInfo": 339,
+    "EditMembrosFami": 0,
     "elim_btn": 155,
     "elim_btn_1": 320,
     "elim_btn_2": 320,
@@ -2264,7 +2283,7 @@
     "Membros": 516,
     "Membros dos Orgaos Sociais": 511,
     "Membros dos Orgaos Sociais_1": 404,
-    "Membros_2": 405,
+    "Membros_Familiares": 405,
     "MembrosDetails": 314,
     "MenuGallery": 9,
     "Mes_Column1": 163,
@@ -2282,6 +2301,7 @@
     "ModalConfirmation_6": 445,
     "ModalDelete": 89,
     "ModalDelete_1": 569,
+    "NewMembrosFami": 0,
     "NIF Familiares e Empresas": 551,
     "NIF Familiares e Empresas_1": 418,
     "NIF Membro": 544,
@@ -2439,9 +2459,9 @@
     "ControlCount": {
       "202c7b9df8a3490fac9a819b5cf8e1b9": 13,
       "64255e77132e4778a9d6598e5ede5bf5": 1,
-      "88985e4b12794b9786dc42a4eee25302": 31,
+      "88985e4b12794b9786dc42a4eee25302": 32,
       "attachments": 1,
-      "button": 48,
+      "button": 49,
       "c4a5d19b54264f7ba92ef2f2fdd8b339": 5,
       "checkbox": 3,
       "circle": 10,

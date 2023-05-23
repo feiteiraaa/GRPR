@@ -1272,7 +1272,7 @@ MembrosDetails As screen:
             Y: =Familiares1.Y + Familiares1.Height
             ZIndex: =7
 
-            Membros_2 As group:
+            Membros_Familiares As group:
                 Height: =5
                 Width: =5
                 X: =-357
@@ -1424,38 +1424,84 @@ MembrosDetails As screen:
                         X: =583
                         ZIndex: =3
 
-            DynamicBtn_20 As DynamicBtn:
-                BtnText: ="Editar"
-                ButtonIcon: =Icon.Edit
-                Height: =40
-                Visible: =true
-                Width: =160
-                X: =Parent.X+800
-                Y: =7
-                ZIndex: =4
+            NewMembrosFami As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =8
 
-            edit_btn_3 As button:
-                BorderColor: =RGBA(0,0,0, 0)
-                Color: =RGBA(0,0,0, 0)
-                DisabledBorderColor: =RGBA(0,0,0, 0)
-                DisabledColor: =RGBA(0,0,0, 0)
-                DisabledFill: =RGBA(0,0,0, 0)
-                Fill: =RGBA(0,0,0, 0)
-                Height: =39
-                HoverColor: =RGBA(0,0,0, 0)
-                HoverFill: =RGBA(0,0,0, 0)
-                OnSelect: |-
-                    =/*If(
-                        localShowFimPeriodoForm,
-                        UpdateContext({localShowFimPeriodoForm: false}),
-                        UpdateContext({ModalConfirmation_1:1})
-                    )*/
-                PressedColor: =RGBA(0,0,0, 0)
-                PressedFill: =RGBA(0,0,0, 0)
-                Text: =""
-                X: =DynamicBtn_20.X
-                Y: =DynamicBtn_20.Y
-                ZIndex: =5
+                DynamicBtn_21 As DynamicBtn:
+                    BtnText: ="Novo"
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
+                    ZIndex: =6
+
+                edit_btn_5 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =/*If(
+                            localShowFimPeriodoForm,
+                            UpdateContext({localShowFimPeriodoForm: false}),
+                            UpdateContext({ModalConfirmation_1:1})
+                        )*/
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_21.X
+                    Y: =DynamicBtn_21.Y
+                    ZIndex: =7
+
+            EditMembrosFami As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =8
+
+                DynamicBtn_20 As DynamicBtn:
+                    BtnText: ="Editar"
+                    ButtonIcon: =Icon.Edit
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+600
+                    Y: =7
+                    ZIndex: =4
+
+                edit_btn_3 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =/*If(
+                            localShowFimPeriodoForm,
+                            UpdateContext({localShowFimPeriodoForm: false}),
+                            UpdateContext({ModalConfirmation_1:1})
+                        )*/
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_20.X
+                    Y: =DynamicBtn_20.Y
+                    ZIndex: =5
 
         Familiares1 As groupContainer.manualLayoutContainer:
             Height: =50
