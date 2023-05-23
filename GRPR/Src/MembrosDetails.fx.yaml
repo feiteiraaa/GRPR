@@ -1290,7 +1290,7 @@ MembrosDetails As screen:
                     TemplateSize: =127
                     Width: =Parent.Width * 0.95
                     X: =24
-                    Y: =Container1_1.Height
+                    Y: =Container1_1.Y +30
                     ZIndex: =1
 
                     "'Nome Membro_1' As label":
@@ -1397,6 +1397,7 @@ MembrosDetails As screen:
                     Height: =34
                     Width: =Parent.Width * 0.95
                     X: =24
+                    Y: =DynamicBtn_20.Y+50
                     ZIndex: =3
 
                     Label6_3 As label:
@@ -1422,6 +1423,39 @@ MembrosDetails As screen:
                         Width: =346
                         X: =583
                         ZIndex: =3
+
+            DynamicBtn_20 As DynamicBtn:
+                BtnText: ="Editar"
+                ButtonIcon: =Icon.Edit
+                Height: =40
+                Visible: =true
+                Width: =160
+                X: =Parent.X+800
+                Y: =7
+                ZIndex: =4
+
+            edit_btn_3 As button:
+                BorderColor: =RGBA(0,0,0, 0)
+                Color: =RGBA(0,0,0, 0)
+                DisabledBorderColor: =RGBA(0,0,0, 0)
+                DisabledColor: =RGBA(0,0,0, 0)
+                DisabledFill: =RGBA(0,0,0, 0)
+                Fill: =RGBA(0,0,0, 0)
+                Height: =39
+                HoverColor: =RGBA(0,0,0, 0)
+                HoverFill: =RGBA(0,0,0, 0)
+                OnSelect: |-
+                    =/*If(
+                        localShowFimPeriodoForm,
+                        UpdateContext({localShowFimPeriodoForm: false}),
+                        UpdateContext({ModalConfirmation_1:1})
+                    )*/
+                PressedColor: =RGBA(0,0,0, 0)
+                PressedFill: =RGBA(0,0,0, 0)
+                Text: =""
+                X: =DynamicBtn_20.X
+                Y: =DynamicBtn_20.Y
+                ZIndex: =5
 
         Familiares1 As groupContainer.manualLayoutContainer:
             Height: =50
