@@ -1335,6 +1335,7 @@ MembrosDetails As screen:
                             =Filter(
                                 'Membros-Familiares-Respetivas',
                                 ThisItem.ID_Familiares.ID = ID_Familiares.ID And IsBlank(ID_GrauParentesco.ID)
+                                //And ID_GrauParentesco.ID = Blank()
                             )
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
