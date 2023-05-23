@@ -1,6 +1,6 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
+    OnStart: |+
         =Concurrent(
             Set(appVersion, "0.3"),
             With(
@@ -236,7 +236,8 @@ App As appinfo:
         Set(
             varSortDir,
             SortOrder.Descending
-        )
+        );
+        
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false
