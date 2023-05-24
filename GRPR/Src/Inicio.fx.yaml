@@ -201,6 +201,23 @@ Inicio As screen:
             FontWeight: =FontWeight.Semibold
             Height: =63
             Text: ="Fim do próximo periodo"
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DCRF_Editor,
+                    DCRF_Validador,
+                    DGP_Editor,
+                    DGP_Validador,
+                    GCONT_Editor,
+                    GCONT_Validador,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
+                )
             Width: =191
             X: =1138
             Y: =138
@@ -213,6 +230,23 @@ Inicio As screen:
             Height: =50
             Size: =18
             Text: =DateDiff(Label8_3.Text, Text(Now(),DateTimeFormat.ShortDate))
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DCRF_Editor,
+                    DCRF_Validador,
+                    DGP_Editor,
+                    DGP_Validador,
+                    GCONT_Editor,
+                    GCONT_Validador,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
+                )
             Width: =191
             X: =1138
             Y: =201
@@ -225,6 +259,23 @@ Inicio As screen:
             Height: =50
             Size: =12
             Text: ="dias restantes"
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DCRF_Editor,
+                    DCRF_Validador,
+                    DGP_Editor,
+                    DGP_Validador,
+                    GCONT_Editor,
+                    GCONT_Validador,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
+                )
             Width: =191
             X: =1138
             Y: =237
@@ -249,6 +300,23 @@ Inicio As screen:
                         )
                     ),
                     Text(Date(Year(Now()), Mes, Dia), DateTimeFormat.ShortDate, "pt-PT")
+                )
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DCRF_Editor,
+                    DCRF_Validador,
+                    DGP_Editor,
+                    DGP_Validador,
+                    GCONT_Editor,
+                    GCONT_Validador,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
                 )
             Width: =191
             X: =1138
@@ -293,7 +361,12 @@ Inicio As screen:
             "Icon10_1 As icon.'3DPrinting'":
                 Color: =cores.cinzento
                 Height: =40
-                Icon: =If(ThisItem.Aprovado = true, Icon.CheckBadge, Icon.CancelBadge)
+                Icon: |-
+                    =If(
+                        ThisItem.Aprovado = true,
+                        Icon.CheckBadge,
+                        Icon.CancelBadge
+                    )
                 Width: =40
                 X: =67
                 Y: =64
@@ -344,6 +417,7 @@ Inicio As screen:
             FontWeight: =FontWeight.Semibold
             Height: =56
             Text: ="Listagem ativa"
+            Visible: =Or(godMode, DRI, DGC_Editor, DGC_Validador)
             Width: =191
             X: =1138
             Y: =359
@@ -362,6 +436,7 @@ Inicio As screen:
                     ),
                     !IsBlank(ThisRecord.'Data de aprovacao CA')
                 ).'Criado Em'
+            Visible: =Or(godMode, DRI, DGC_Editor, DGC_Validador)
             Width: =191
             X: =1138
             Y: =479
@@ -371,6 +446,7 @@ Inicio As screen:
             Color: =cores.amareloMontepio
             Fill: =ColorFade(cores.cinzento, 90%)
             Icon: =Icon.Download
+            Visible: =Or(godMode, DRI, DGC_Editor, DGC_Validador)
             Width: =191
             X: =1138
             Y: =415
