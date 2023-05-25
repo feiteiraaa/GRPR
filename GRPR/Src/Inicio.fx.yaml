@@ -331,6 +331,27 @@ Inicio As screen:
             Y: =277
             ZIndex: =13
 
+    Rectangle4 As rectangle:
+        Fill: =ColorFade(cores.cinzento, 90%)
+        Height: =171
+        Visible: |-
+            =Or(
+                godMode,
+                DRI,
+                DGC_Editor,
+                DGC_Validador,
+                DCRF_Editor,
+                DCRF_Validador,
+                DGP_Editor,
+                DGP_Validador,
+                GCONT_Editor,
+                GCONT_Validador
+            )
+        Width: =692
+        X: =365
+        Y: =580
+        ZIndex: =18
+
     FimPeriodoDecorrer As group:
         Height: =5
         Width: =5
@@ -351,15 +372,7 @@ Inicio As screen:
             Visible: |-
                 =Or(
                     godMode,
-                    DRI,
-                    DGC_Editor,
-                    DGC_Validador,
-                    DCRF_Editor,
-                    DCRF_Validador,
-                    DGP_Editor,
-                    DGP_Validador,
-                    GCONT_Editor,
-                    GCONT_Validador
+                    DRI
                 )
             Width: =Gallery2.Width
             X: =365
@@ -415,6 +428,26 @@ Inicio As screen:
             X: =594
             Y: =587
             ZIndex: =17
+
+    Label14 As label:
+        Align: =Align.Center
+        Color: =cores.azulTitulo
+        FontWeight: =FontWeight.Semibold
+        Text: ="Fim de periodo a decorrer"
+        Width: =230
+        X: =596
+        Y: =587
+        ZIndex: =19
+
+    Label15 As label:
+        FontWeight: =FontWeight.Semibold
+        Height: =88
+        Text: ="Por favor valide que toda a informação está correta relativamente ás partes relacionadas até fim do prazo"
+        VerticalAlign: =VerticalAlign.Top
+        Width: =597
+        X: =413
+        Y: =660
+        ZIndex: =20
 
     DownloadListagem As group:
         Height: =5
@@ -506,4 +539,11 @@ Inicio As screen:
             X: =1138
             Y: =415
             ZIndex: =16
+
+    Label16 As label:
+        Text: ="Text"
+        Width: =Label14.Width
+        X: =596
+        Y: =620
+        ZIndex: =21
 
