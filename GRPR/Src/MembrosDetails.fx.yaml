@@ -133,6 +133,8 @@ MembrosDetails As screen:
 
                     DataCardKey3 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -200,6 +202,8 @@ MembrosDetails As screen:
 
                     DataCardKey4 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -267,8 +271,12 @@ MembrosDetails As screen:
 
                     DataCardKey5 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Número do documento"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -334,8 +342,12 @@ MembrosDetails As screen:
 
                     DataCardKey6 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Data de inserção"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -392,7 +404,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_dataaprovacaoca"
                     Default: =ThisItem.'Data aprovacao CA'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_dataaprovacaoca")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -406,8 +418,12 @@ MembrosDetails As screen:
 
                     DataCardKey7 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Data de Aprovação em CA"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -519,8 +535,12 @@ MembrosDetails As screen:
 
                     DataCardKey8 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Legislação aplicada"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -575,7 +595,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_datadesaida"
                     Default: =ThisItem.'Data de saida'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_datadesaida")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -589,8 +609,12 @@ MembrosDetails As screen:
 
                     DataCardKey30 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Data de saída"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -716,21 +740,29 @@ MembrosDetails As screen:
                         =If(
                             localShowNewForm,
                             If(
-                                SubmitForm(Informacao),
-                            
-                                Notify("O registo foi submetido com sucesso!",NotificationType.Success);
-                                ResetForm(Informacao);
-                                UpdateContext({
-                                    localShowData: false,
-                                    localShowNewForm: !localShowNewForm
-                                }),
-                        
-                                Notify("Por favor, tente novamente.")
+                                Len(DataCardValue5.Text) = 9,
+                                If(
+                                    SubmitForm(Informacao),
+                                    Notify(
+                                        "O registo foi submetido com sucesso!",
+                                        NotificationType.Success
+                                    );
+                                    ResetForm(Informacao);
+                                    UpdateContext(
+                                        {
+                                            localShowData: false,
+                                            localShowNewForm: !localShowNewForm
+                                        }
+                                    ),
+                                    Notify("Por favor, tente novamente.",NotificationType.Error)
+                                ),
+                                Notify("Por favor, preencha o número do documento corretamente.",NotificationType.Error)
                             ),
-                            UpdateContext({
-                                localShowNewForm: !localShowNewForm
+                            UpdateContext(
+                                {localShowNewForm: !localShowNewForm
                                 //localFormMode: FormMode.New
-                            })
+                        }
+                            )
                         )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
@@ -908,6 +940,8 @@ MembrosDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
                     Order: =6
                     Text: =ThisItem.Designacao
                     Width: =478
