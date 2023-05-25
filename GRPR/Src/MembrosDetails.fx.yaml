@@ -396,7 +396,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_dataaprovacaoca"
                     Default: =ThisItem.'Data aprovacao CA'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_dataaprovacaoca")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -583,7 +583,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_datadesaida"
                     Default: =ThisItem.'Data de saida'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_datadesaida")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
