@@ -401,14 +401,16 @@ ParticipadasDetails As screen:
                 ChevronFill: =Color.White
                 ChevronHoverBackground: =cores.amareloMontepio
                 DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["uipp_id"]
+                DisplayFields: =["uipp_tipodeenquadramento"]
                 DisplayMode: =Parent.DisplayMode
                 HoverFill: =RGBA(0, 0, 0, 0)
                 IsSearchable: =false
-                Items: =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
+                Items: |-
+                    =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
+                    //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedFill: =cores.amareloMontepio
-                SearchFields: =["uipp_id"]
+                SearchFields: =["uipp_tipodeenquadramento"]
                 SearchItems: =[]
                 SelectionColor: =cores.cinzento
                 SelectionFill: =cores.amareloMontepio
