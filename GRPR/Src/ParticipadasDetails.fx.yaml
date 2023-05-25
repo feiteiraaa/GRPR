@@ -75,6 +75,7 @@ ParticipadasDetails As screen:
         DataSource: ='Empresas Participadas do Grupos'
         DefaultMode: =ColabFormMode
         Item: =LookUp('Empresas Participadas do Grupos', _EmpresasParticipadas = ThisRecord.ID)
+        NumberOfColumns: =1
         Width: =969
         X: =365
         Y: =176
@@ -91,7 +92,7 @@ ParticipadasDetails As screen:
             MaxLength: =DataSourceInfo([@'Empresas Participadas do Grupos'], DataSourceInfo.MaxLength, "uipp_nome")
             Required: =false
             Update: =DataCardValue9.Text
-            Width: =323
+            Width: =969
             X: =0
             Y: =0
             ZIndex: =1
@@ -99,6 +100,7 @@ ParticipadasDetails As screen:
             DataCardKey9 As label:
                 AutoHeight: =true
                 Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -161,14 +163,15 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue10.Text)
-            Width: =323
-            X: =1
-            Y: =0
+            Width: =969
+            X: =0
+            Y: =1
             ZIndex: =1
 
             DataCardKey10 As label:
                 AutoHeight: =true
                 Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -231,14 +234,15 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue27.Text)
-            Width: =323
-            X: =2
-            Y: =0
+            Width: =969
+            X: =0
+            Y: =2
             ZIndex: =1
 
             DataCardKey11 As label:
                 AutoHeight: =true
                 Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -301,14 +305,15 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue28.Text)
-            Width: =323
+            Width: =969
             X: =0
-            Y: =1
+            Y: =3
             ZIndex: =1
 
             DataCardKey12 As label:
                 AutoHeight: =true
                 Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -373,14 +378,15 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue29.Selected
-            Width: =323
-            X: =1
-            Y: =1
+            Width: =969
+            X: =0
+            Y: =4
             ZIndex: =1
 
             DataCardKey29 As label:
                 AutoHeight: =true
                 Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =263

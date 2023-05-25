@@ -133,6 +133,8 @@ MembrosDetails As screen:
 
                     DataCardKey3 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -200,6 +202,8 @@ MembrosDetails As screen:
 
                     DataCardKey4 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -267,6 +271,8 @@ MembrosDetails As screen:
 
                     DataCardKey5 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: |-
                             =//Parent.DisplayName
@@ -336,6 +342,8 @@ MembrosDetails As screen:
 
                     DataCardKey6 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: |-
                             =//Parent.DisplayName
@@ -410,6 +418,8 @@ MembrosDetails As screen:
 
                     DataCardKey7 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: |-
                             =//Parent.DisplayName
@@ -525,6 +535,8 @@ MembrosDetails As screen:
 
                     DataCardKey8 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: |-
                             =//Parent.DisplayName
@@ -597,6 +609,8 @@ MembrosDetails As screen:
 
                     DataCardKey30 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: |-
                             =//Parent.DisplayName
