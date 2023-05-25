@@ -713,26 +713,25 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =UpdateContext({localShowNewForm: !localShowNewForm})
-                        /*If(
-                            localShowLegForm,
+                        =If(
+                            localShowNewForm,
                             If(
-                                SubmitForm('Form Legislacao'),
+                                SubmitForm(Informacao),
                             
                                 Notify("O registo foi submetido com sucesso!",NotificationType.Success);
-                                ResetForm(DataReferenciaForm);
+                                ResetForm(Informacao);
                                 UpdateContext({
-                                    localShowLeg: false,
-                                    localShowLegForm: !localShowLegForm
+                                    localShowData: false,
+                                    localShowNewForm: !localShowNewForm
                                 }),
                         
                                 Notify("Por favor, tente novamente.")
                             ),
                             UpdateContext({
-                                localShowLegForm: !localShowLegForm,
-                                localFormMode: FormMode.New
+                                localShowNewForm: !localShowNewForm
+                                //localFormMode: FormMode.New
                             })
-                        )*/
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
