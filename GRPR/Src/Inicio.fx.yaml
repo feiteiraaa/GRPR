@@ -367,7 +367,12 @@ Inicio As screen:
             ZIndex: =1
 
             "Icon10_1 As icon.'3DPrinting'":
-                Color: =cores.cinzento
+                Color: |-
+                    =If(
+                        ThisItem.Aprovado = true,
+                        Color.Green,
+                        cores.cinzento
+                    )
                 Height: =40
                 Icon: |-
                     =If(
