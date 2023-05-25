@@ -740,9 +740,9 @@ MembrosDetails As screen:
                                             localShowNewForm: !localShowNewForm
                                         }
                                     ),
-                                    Notify("Por favor, tente novamente.")
+                                    Notify("Por favor, tente novamente.",NotificationType.Error)
                                 ),
-                                Notify("Por favor, preencha o número do documento corretamente.")
+                                Notify("Por favor, preencha o número do documento corretamente.",NotificationType.Error)
                             ),
                             UpdateContext(
                                 {localShowNewForm: !localShowNewForm
