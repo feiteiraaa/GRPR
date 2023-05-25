@@ -570,7 +570,8 @@ Inicio As screen:
             ZIndex: =20
 
         Label16 As label:
-            Text: ="Date"
+            Text: |
+                ="Date " & DateDiff(Text(Now(),"yyyy-mm-dd","pt-PT"),Text(DateTimeValue(Label8_3.Text),"yyyy-mm-dd","pt-PT")) & " restantes"
             Visible: |-
                 =Or(
                     godMode,
