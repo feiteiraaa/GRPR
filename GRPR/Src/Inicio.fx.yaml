@@ -417,7 +417,21 @@ Inicio As screen:
             FontWeight: =FontWeight.Semibold
             Height: =56
             Text: ="Listagem ativa"
-            Visible: =Or(godMode, DRI, DGC_Editor, DGC_Validador)
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DGC_Editor,
+                    DCRF_Editor,
+                    DGP_Editor,
+                    GCONT_Editor,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
+                )
             Width: =191
             X: =1138
             Y: =359
@@ -436,7 +450,21 @@ Inicio As screen:
                     ),
                     !IsBlank(ThisRecord.'Data de aprovacao CA')
                 ).'Criado Em'
-            Visible: =Or(godMode, DRI, DGC_Editor, DGC_Validador)
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DGC_Editor,
+                    DCRF_Editor,
+                    DGP_Editor,
+                    GCONT_Editor,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
+                )
             Width: =191
             X: =1138
             Y: =479
@@ -446,7 +474,21 @@ Inicio As screen:
             Color: =cores.amareloMontepio
             Fill: =ColorFade(cores.cinzento, 90%)
             Icon: =Icon.Download
-            Visible: =Or(godMode, DRI, DGC_Editor, DGC_Validador)
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador,
+                    DGC_Editor,
+                    DCRF_Editor,
+                    DGP_Editor,
+                    GCONT_Editor,
+                    DCOMP_Consulta,
+                    DAI_Consulta,
+                    DMK_Consulta,
+                    CCOMP_Consulta
+                )
             Width: =191
             X: =1138
             Y: =415
