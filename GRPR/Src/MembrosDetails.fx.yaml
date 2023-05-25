@@ -321,7 +321,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_datadeinsercao"
                     Default: =ThisItem.'Data de insercao'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_datadeinsercao")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -506,7 +506,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_Legislacaoaplicada"
                     Default: =ThisItem.'Legislacao aplicada'
-                    DisplayMode: =Parent.DisplayMode
+                    DisplayMode: =If(DRI And localShowNewForm,DisplayMode.Edit,DisplayMode.View)
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
