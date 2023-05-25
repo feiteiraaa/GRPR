@@ -726,21 +726,29 @@ MembrosDetails As screen:
                         =If(
                             localShowNewForm,
                             If(
-                                SubmitForm(Informacao),
-                            
-                                Notify("O registo foi submetido com sucesso!",NotificationType.Success);
-                                ResetForm(Informacao);
-                                UpdateContext({
-                                    localShowData: false,
-                                    localShowNewForm: !localShowNewForm
-                                }),
-                        
-                                Notify("Por favor, tente novamente.")
+                                Len(DataCardValue5.Text) = 9,
+                                If(
+                                    SubmitForm(Informacao),
+                                    Notify(
+                                        "O registo foi submetido com sucesso!",
+                                        NotificationType.Success
+                                    );
+                                    ResetForm(Informacao);
+                                    UpdateContext(
+                                        {
+                                            localShowData: false,
+                                            localShowNewForm: !localShowNewForm
+                                        }
+                                    ),
+                                    Notify("Por favor, tente novamente.")
+                                ),
+                                Notify("Por favor, preencha o número do documento corretamente.")
                             ),
-                            UpdateContext({
-                                localShowNewForm: !localShowNewForm
+                            UpdateContext(
+                                {localShowNewForm: !localShowNewForm
                                 //localFormMode: FormMode.New
-                            })
+                        }
+                            )
                         )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
