@@ -268,7 +268,9 @@ MembrosDetails As screen:
                     DataCardKey5 As label:
                         AutoHeight: =true
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Número do documento"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -335,7 +337,9 @@ MembrosDetails As screen:
                     DataCardKey6 As label:
                         AutoHeight: =true
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Data de inserção"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -407,7 +411,9 @@ MembrosDetails As screen:
                     DataCardKey7 As label:
                         AutoHeight: =true
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Data de Aprovação em CA"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -520,7 +526,9 @@ MembrosDetails As screen:
                     DataCardKey8 As label:
                         AutoHeight: =true
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Legislação aplicada"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -590,7 +598,9 @@ MembrosDetails As screen:
                     DataCardKey30 As label:
                         AutoHeight: =true
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Data de saída"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
