@@ -585,16 +585,14 @@ Inicio As screen:
                         "pt-PT"
                     )
                 ) & " " & "dias " & 
-                    
+                DateDiff(
+                    Text(Time(Value(24), Value(0), Value(0)), DateTimeFormat.LongTime),
                     Text(
-                    DateDiff(
                         Now(),
-                        DateAdd(
-                            Today(),"hh:mm:ss")
-                
-                    
-                    /*DateDiff(Text(Now(),"hh:mm:ss","pt-PT"),
-                    Text(DateTimeValue(Label8_3.Text), "hh:mm:ss","pt-PT")) & "restantes"*/
+                        "hh:mm:ss",
+                        "pt-PT"
+                    ), TimeUnit.Hours
+                ) & "h " & "restantes"
             Visible: |-
                 =Or(
                     godMode,
@@ -606,8 +604,8 @@ Inicio As screen:
                     GCONT_Editor,
                     GCONT_Validador
                 )
-            Width: =Label14.Width
-            X: =596
+            Width: =232
+            X: =595
             Y: =620
             ZIndex: =21
 
