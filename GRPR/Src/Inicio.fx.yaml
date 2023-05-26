@@ -587,7 +587,7 @@ Inicio As screen:
                     )
                 ) & "d " & 
                 DateDiff(
-                    Text(Time(Value(24), Value(0), Value(0)), DateTimeFormat.LongTime),
+                    Text(Time(Value(12), Value(0), Value(0)), DateTimeFormat.LongTime),
                     Text(
                         Now(),
                         "hh:mm:ss",
