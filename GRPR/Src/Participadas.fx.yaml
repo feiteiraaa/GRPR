@@ -44,7 +44,26 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                =If(
+                    _Associar,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        _Membro:_m,
+                        _Allitems:_a
+                        
+                        }
+                    ),
+                    Navigate(
+                        ParticipadasDetails,
+                        ScreenTransition.None,
+                        {
+                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            ColabFormMode: FormMode.View
+                        }
+                    )
+                )
             Order: =1
             Text: =ThisItem.Nome
             Width: =100
@@ -60,7 +79,27 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                If(
+                    _Associar,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        _Membro:_m,
+                        _Allitems:_a
+                        
+                        }
+                    ),
+                    Navigate(
+                        ParticipadasDetails,
+                        ScreenTransition.None,
+                        {
+                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            ColabFormMode: FormMode.View
+                        }
+                    )
+                )
             Order: =2
             Text: =ThisItem.'Numero documento'
             Width: =100
@@ -77,7 +116,27 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                If(
+                    _Associar,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        _Membro:_m,
+                        _Allitems:_a
+                        
+                        }
+                    ),
+                    Navigate(
+                        ParticipadasDetails,
+                        ScreenTransition.None,
+                        {
+                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            ColabFormMode: FormMode.View
+                        }
+                    )
+                )
             Order: =3
             Text: =ThisItem.'Participacao efetiva'
             Width: =237
@@ -93,7 +152,27 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                If(
+                    _Associar,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        _Membro:_m,
+                        _Allitems:_a
+                        
+                        }
+                    ),
+                    Navigate(
+                        ParticipadasDetails,
+                        ScreenTransition.None,
+                        {
+                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            ColabFormMode: FormMode.View
+                        }
+                    )
+                )
             Order: =4
             Text: =ThisItem.Controlo
             Width: =100
@@ -110,7 +189,27 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
+                If(
+                    _Associar,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        _Membro:_m,
+                        _Allitems:_a
+                        
+                        }
+                    ),
+                    Navigate(
+                        ParticipadasDetails,
+                        ScreenTransition.None,
+                        {
+                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            ColabFormMode: FormMode.View
+                        }
+                    )
+                )
             Order: =5
             Text: =ThisItem.'Legislacao aplicada'.'Tipo de enquadramento'
             Visible: =DRI
@@ -206,7 +305,7 @@ Participadas As screen:
         ParticularesAdd_8 As DynamicBtn:
             BtnOnSelect: =
             BtnText: ="Novo"
-            Visible: =true
+            Visible: =If(_Associar,false,true)
             X: =1166
             Y: =156
             ZIndex: =7
@@ -226,6 +325,7 @@ Participadas As screen:
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
+            Visible: =If(_Associar,false,true)
             X: =1165
             Y: =159
             ZIndex: =8
