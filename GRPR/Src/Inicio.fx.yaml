@@ -519,6 +519,7 @@ Inicio As screen:
                     DGC_Editor,
                     DGC_Validador,
                     DCRF_Editor,
+                    DCRF_Validador,
                     DGP_Editor,
                     DGP_Validador,
                     GCONT_Editor,
@@ -540,6 +541,7 @@ Inicio As screen:
                     DGC_Editor,
                     DGC_Validador,
                     DCRF_Editor,
+                    DCRF_Validador,
                     DGP_Editor,
                     DGP_Validador,
                     GCONT_Editor,
@@ -561,6 +563,7 @@ Inicio As screen:
                     DGC_Editor,
                     DGC_Validador,
                     DCRF_Editor,
+                    DCRF_Validador,
                     DGP_Editor,
                     DGP_Validador,
                     GCONT_Editor,
@@ -587,7 +590,7 @@ Inicio As screen:
                     )
                 ) & "d " & 
                 DateDiff(
-                    Text(Time(Value(24), Value(0), Value(0)), DateTimeFormat.LongTime),
+                    Text(Time(Value(12), Value(0), Value(0)), DateTimeFormat.LongTime),
                     Text(
                         Now(),
                         "hh:mm:ss",
@@ -600,6 +603,7 @@ Inicio As screen:
                     DGC_Editor,
                     DGC_Validador,
                     DCRF_Editor,
+                    DCRF_Validador,
                     DGP_Editor,
                     DGP_Validador,
                     GCONT_Editor,
