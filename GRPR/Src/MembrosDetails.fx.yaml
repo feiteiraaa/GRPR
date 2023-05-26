@@ -1036,7 +1036,9 @@ MembrosDetails As screen:
 
                     DataCardValue33 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultSelectedItems: =Parent.Default
+                        DefaultSelectedItems: |-
+                            =//Parent.Default
+                            LookUp('Empresas Participadas do Grupos',ID=_AssociateParticipadas)
                         DisplayFields: =["uipp_name"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Participadas'].uipp_ParentID)
@@ -1102,7 +1104,9 @@ MembrosDetails As screen:
 
                     DataCardValue32 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultSelectedItems: =Parent.Default
+                        DefaultSelectedItems: |-
+                            =//Parent.Default
+                            LookUp(Membros_1,ID=_Membro)
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Participadas'].uipp_ChildID)
@@ -1416,7 +1420,7 @@ MembrosDetails As screen:
                 Visible: =_Associated
                 Width: =DynamicBtn_15.X-30
                 X: =24
-                Y: =DynamicBtn_16.Y+20
+                Y: =DynamicBtn_16.Y+15
                 ZIndex: =9
 
         "'Empresas Grupo' As groupContainer.manualLayoutContainer":
