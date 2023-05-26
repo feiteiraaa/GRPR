@@ -13193,6 +13193,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "MembrosDetails._Associar"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails._Associar",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_Associar",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MembrosDetails._AssociateParticipadas"
                 }
               ],
