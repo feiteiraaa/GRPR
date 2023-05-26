@@ -6,14 +6,14 @@ Respetivas As screen:
             "uipp_designacao"
         );
 
-    "'Empresas Participadas_1' As dataTable.datatable":
+    EmpresasRespetivas1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
         HeadingFill: =cores.cinzento
         Height: =500
         Items: |-
-            = Search(
+            = /*Search(
                     AddColumns(
                         SortByColumns(
                             Filter(
@@ -35,157 +35,75 @@ Respetivas As screen:
                     TextInput2_2.Text,
                     "numeroDocumento",
                     "nome"
-                )
+                )*/
+                Empresas
         SelectedFill: =cores.amareloMontepio
         Width: =980
         X: =364
         Y: =216
         ZIndex: =2
 
-        Nome_1 As dataTableColumn.textualColumn:
+        Designacao_Column3 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Designação"
-            FieldName: ="uipp_nome"
+            FieldDisplayName: ="Designacao"
+            FieldName: ="uipp_designacao"
             FieldVariantName: ="textualColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            OnSelect: |-
-                =If(
-                    _Associar,
-                    Navigate(
-                        MembrosDetails,
-                        ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                        _Associated:true
-                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                        }
-                    ),
-                    Navigate(
-                        ParticipadasDetails,
-                        ScreenTransition.None,
-                        {
-                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                            ColabFormMode: FormMode.View
-                        }
-                    )
-                )
-            Order: =1
+            Order: =3
             Text: =ThisItem.Designacao
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =1
+            ZIndex: =3
 
-        "'Numero documento_1' As dataTableColumn.numberColumn":
+        "'Tipo de documento_Column1' As dataTableColumn.complexOptionSetColumn":
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="NIPC"
+            FieldDisplayName: ="Tipo de documento"
+            FieldName: ="uipp_tipodedocumento"
+            FieldVariantName: ="complexOptionSetColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.'Tipo de documento'
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+        "'Numero Documento_Column1' As dataTableColumn.numberColumn":
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Numero Documento"
             FieldName: ="uipp_numerodocumento"
             FieldVariantName: ="numberColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            OnSelect: |-
-                =If(
-                    _Associar,
-                    Navigate(
-                        MembrosDetails,
-                        ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                        _Associated:true
-                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                        }
-                    ),
-                    Navigate(
-                        ParticipadasDetails,
-                        ScreenTransition.None,
-                        {
-                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                            ColabFormMode: FormMode.View
-                        }
-                    )
-                )
-            Order: =2
+            Order: =5
             Text: =ThisItem.'Numero Documento'
             Width: =100
             X: =0
             Y: =0
-            ZIndex: =2
+            ZIndex: =5
 
-        "'Participacao efetiva_1' As dataTableColumn.numberColumn":
-            AutoWidth: =false
+        "'Legislacao aplicada_Column3' As dataTableColumn.complexTypeColumn":
             DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Participação efetiva"
-            FieldName: ="uipp_participacaoefetiva"
-            FieldVariantName: ="numberColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            OnSelect: |-
-                =If(
-                    _Associar,
-                    Navigate(
-                        MembrosDetails,
-                        ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                        _Associated:true
-                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                        }
-                    ),
-                    Navigate(
-                        ParticipadasDetails,
-                        ScreenTransition.None,
-                        {
-                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                            ColabFormMode: FormMode.View
-                        }
-                    )
-                )
-            Order: =3
-            Text: =
-            Width: =237
-            X: =0
-            Y: =0
-            ZIndex: =3
-
-        "'Legislacao aplicada_1' As dataTableColumn.complexTypeColumn":
-            AutoWidth: =false
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Legislação"
+            FieldDisplayName: ="Legislacao aplicada"
             FieldName: ="uipp_Legislacaoaplicada"
             FieldVariantName: ="complexTypeColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
-            OnSelect: |-
-                =If(
-                    _Associar,
-                    Navigate(
-                        MembrosDetails,
-                        ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                        _Associated:true
-                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                        }
-                    ),
-                    Navigate(
-                        ParticipadasDetails,
-                        ScreenTransition.None,
-                        {
-                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
-                            ColabFormMode: FormMode.View
-                        }
-                    )
-                )
-            Order: =5
+            Order: =6
             Text: =ThisItem.'Legislacao aplicada'.'Tipo de enquadramento'
-            Visible: =DRI
-            Width: =191
+            Width: =100
             X: =0
             Y: =0
-            ZIndex: =5
+            ZIndex: =6
 
     Label1_10 As label:
         FontWeight: =FontWeight.Bold
         Height: =48
         Size: =15
-        Text: ="Empresas Participadas do Grupo"
+        Text: ="Empresas Respectivas"
         Width: =529
         X: =365
         Y: =26
@@ -268,7 +186,7 @@ Respetivas As screen:
         ParticularesAdd_10 As DynamicBtn:
             BtnOnSelect: =
             BtnText: ="Novo"
-            Visible: =If(_Associar,false,true)
+            Visible: =true
             X: =1166
             Y: =156
             ZIndex: =7
@@ -284,11 +202,10 @@ Respetivas As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =Navigate(ParticipadasDetails, ScreenTransition.None, {ColabFormMode: FormMode.New})
+                =//Navigate(ParticipadasDetails, ScreenTransition.None, {ColabFormMode: FormMode.New})
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            Visible: =If(_Associar,false,true)
             X: =1165
             Y: =159
             ZIndex: =8
