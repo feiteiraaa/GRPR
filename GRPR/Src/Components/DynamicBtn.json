@@ -687,7 +687,7 @@
       },
       "BtnText"
     ],
-    "LastModifiedTimestamp": "638206960240665358",
+    "LastModifiedTimestamp": "638206926170966136",
     "Name": "DynamicBtn",
     "Rules": [
       {
@@ -822,7 +822,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638206960240665358",
+  "LastModifiedTimestamp": "638206926170966136",
   "Name": "88985e4b12794b9786dc42a4eee25302",
   "OverridableProperties": {},
   "Version": "638192527436691467"

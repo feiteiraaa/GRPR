@@ -584,7 +584,7 @@ Inicio As screen:
                         "yyyy-mm-dd",
                         "pt-PT"
                     )
-                ) & " " & "dias " & 
+                ) & "d " & 
                 DateDiff(
                     Text(Time(Value(24), Value(0), Value(0)), DateTimeFormat.LongTime),
                     Text(

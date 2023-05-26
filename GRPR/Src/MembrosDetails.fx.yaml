@@ -997,6 +997,49 @@ MembrosDetails As screen:
                     Y: =DynamicBtn_15.Y
                     ZIndex: =4
 
+            AssociarMembrosPart As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =7
+
+                DynamicBtn_16 As DynamicBtn:
+                    BtnText: ="Associar"
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
+                    ZIndex: =5
+
+                ass_btn_3 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =/*If(
+                            localShowFimPeriodoForm,
+                            UpdateContext({localShowFimPeriodoForm: false}),
+                            UpdateContext({ModalConfirmation_1:1})
+                        )*/
+                        //Navigate(Participadas, ScreenTransition.None, {_Associar: true, _m:_Membro,_a:_Allitems})
+                        Notify("Por favor, selecione na tabela a empresa particidade do grupo ao qual deseja associar o membro.",NotificationType.Information);
+                        
+                        Navigate(Participadas, ScreenTransition.None, {_Associar: true})
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_16.X
+                    Y: =DynamicBtn_16.Y
+                    ZIndex: =6
+
             EmpresasParticipadas As form:
                 DataSource: ='Membros-Participadas'
                 DefaultMode: =FormMode.New
@@ -1290,49 +1333,6 @@ MembrosDetails As screen:
                         Wrap: =false
                         Y: =DataCardKey34.Y
                         ZIndex: =4
-
-            AssociarMembrosPart As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =7
-
-                DynamicBtn_16 As DynamicBtn:
-                    BtnText: ="Associar"
-                    Height: =40
-                    Visible: =true
-                    Width: =160
-                    X: =Parent.X+800
-                    Y: =7
-                    ZIndex: =5
-
-                ass_btn_3 As button:
-                    BorderColor: =RGBA(0,0,0, 0)
-                    Color: =RGBA(0,0,0, 0)
-                    DisabledBorderColor: =RGBA(0,0,0, 0)
-                    DisabledColor: =RGBA(0,0,0, 0)
-                    DisabledFill: =RGBA(0,0,0, 0)
-                    Fill: =RGBA(0,0,0, 0)
-                    Height: =39
-                    HoverColor: =RGBA(0,0,0, 0)
-                    HoverFill: =RGBA(0,0,0, 0)
-                    OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
-                        )*/
-                        //Navigate(Participadas, ScreenTransition.None, {_Associar: true, _m:_Membro,_a:_Allitems})
-                        Notify("Por favor, selecione na tabela a empresa particidade do grupo ao qual deseja associar o membro.",NotificationType.Information);
-                        
-                        Navigate(Participadas, ScreenTransition.None, {_Associar: true})
-                    PressedColor: =RGBA(0,0,0, 0)
-                    PressedFill: =RGBA(0,0,0, 0)
-                    Text: =""
-                    X: =DynamicBtn_16.X
-                    Y: =DynamicBtn_16.Y
-                    ZIndex: =6
 
         "'Empresas Grupo' As groupContainer.manualLayoutContainer":
             Height: =50
