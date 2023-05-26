@@ -2235,6 +2235,13 @@ MembrosDetails As screen:
                 {
                     selected: false,
                     icon: Icon.OfficeBuilding,
+                    text: "Empresas respetivas",
+                    Navigate: Respetivas,
+                    VisivelPara: godMode//Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
+                },
+                {
+                    selected: false,
+                    icon: Icon.OfficeBuilding,
                     text: "Empresas participadas do grupo",
                     Navigate: Participadas, // _Associar:false,
                     VisivelPara: Or(godMode, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta)

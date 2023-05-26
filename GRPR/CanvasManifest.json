@@ -96,7 +96,7 @@
       "zeroalltabindexes": false
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 12,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -130,11 +130,11 @@
   "ScreenOrder": [
     "Inicio",
     "Particulares",
+    "Respetivas",
     "MembrosDetails",
     "ColaboradoresDetails",
     "ROCDetails",
     "Participadas",
-    "Respetivas",
     "ParticipadasDetails",
     "Atividade",
     "Listagens",

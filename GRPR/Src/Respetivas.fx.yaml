@@ -1,8 +1,10 @@
 Respetivas As screen:
-    OnHidden: |-
-        = UpdateContext({ _Associar:false})
+    OnHidden: =
     OnVisible: |-
-        =//UpdateContext({_Associar:false})
+        =Set(
+            varSortCol,
+            "uipp_designacao"
+        );
 
     "'Empresas Participadas_1' As dataTable.datatable":
         BorderStyle: =BorderStyle.Solid
