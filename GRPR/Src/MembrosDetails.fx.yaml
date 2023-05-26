@@ -2263,6 +2263,29 @@ MembrosDetails As screen:
             )
         ZIndex: =6
 
+    LabelMembroName As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Semibold
+        Text: |-
+            =If(
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Ativo,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome,
+                LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome & " (Eliminado)"
+            )
+        Width: =300
+        X: =365
+        Y: =124
+        ZIndex: =9
+
     EliminarMembro As group:
         Height: =5
         Width: =5
@@ -2302,29 +2325,6 @@ MembrosDetails As screen:
             X: =1186
             Y: =74
             ZIndex: =8
-
-    LabelMembroName As label:
-        AutoHeight: =true
-        FontWeight: =FontWeight.Semibold
-        Text: |-
-            =If(
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Ativo,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome & " (Eliminado)"
-            )
-        Width: =300
-        X: =365
-        Y: =124
-        ZIndex: =9
 
     ModalConfirmation_7 As ModalConfirmation:
         ModalText: ="Tem certeza de que deseja dissociar a empresa "& 'empresas do grupo'.Selected.Designacao &" do membro "& LabelMembroName.Text& " ?"
