@@ -186,30 +186,22 @@ Respetivas As screen:
         HeadingFill: =cores.cinzento
         Height: =500
         Items: |-
-            = /*Search(
-                    AddColumns(
-                        SortByColumns(
+            =Search(
+                    
                             Filter(
                                 Empresas,
                                 If(
-                                    Checkbox1_3.Value = false,
+                                    Checkbox1_4.Value = false,
                                     ThisRecord.Ativo = true,
                                     ThisRecord.Ativo = true Or ThisRecord.Ativo = false
                                 )
-                            ),
-                            varSortCol,
-                            varSortDir
+                         
                         ),
-                        "numeroDocumento",
-                        Text('Numero Documento'),
-                        "nome",
-                        Text(Designacao)
-                    ),
-                    TextInput2_2.Text,
-                    "numeroDocumento",
-                    "nome"
-                )*/
-                Empresas
+            
+                    TextInput2_3.Text,
+                    "uipp_designacao"
+                )
+            //Empresas
         SelectedFill: =cores.amareloMontepio
         Width: =980
         X: =364
