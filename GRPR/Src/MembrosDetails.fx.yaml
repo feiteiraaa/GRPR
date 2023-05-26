@@ -2385,7 +2385,10 @@ MembrosDetails As screen:
                     Remove(
                         'Membros-Participadas',
                         'empresas do grupo'.Selected
-                    )
+                    );
+                    UpdateContext({
+                            localShowModal: false
+                        })
                 )
             PaddingLeft: =50
             PressedColor: =Color.Black
