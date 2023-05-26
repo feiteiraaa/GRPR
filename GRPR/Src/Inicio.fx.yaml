@@ -582,11 +582,17 @@ Inicio As screen:
                         "yyyy-mm-dd",
                         "pt-PT"
                     )
-                ) & " " & "dias " & Text(
-                    Now(),
-                    "hh:mm:ss",
-                    "pt-PT"
-                ) & " restantes"
+                ) & " " & "dias " & 
+                    
+                    Text(
+                    DateDiff(
+                        Now(),
+                        DateAdd(
+                            Today(),"hh:mm:ss")
+                
+                    
+                    /*DateDiff(Text(Now(),"hh:mm:ss","pt-PT"),
+                    Text(DateTimeValue(Label8_3.Text), "hh:mm:ss","pt-PT")) & "restantes"*/
             Visible: |-
                 =Or(
                     godMode,
