@@ -576,7 +576,7 @@ ParticipadasDetails As screen:
                     If(
                         Patch(
                             'Empresas Participadas do Grupos',
-                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = '_Empresas Participadas'),
+                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = _EmpresasParticipadas),
                             {
                                 Ativo: false,
                                 Bloqueado: true,
@@ -618,7 +618,7 @@ ParticipadasDetails As screen:
                     If(
                         Patch(
                             'Empresas Participadas do Grupos',
-                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = '_Empresas Participadas'),
+                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = _EmpresasParticipadas),
                             {
                                 Ativo: false,
                                 Bloqueado: true,

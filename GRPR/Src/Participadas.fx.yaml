@@ -50,6 +50,7 @@ Participadas As screen:
                         MembrosDetails,
                         ScreenTransition.None,
                         {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         _Membro:_m,
                         _Allitems:_a,
                         _Associar:false
@@ -80,13 +81,13 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
-                If(
+                =If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
                         {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         _Membro:_m,
                         _Allitems:_a,
                         _Associar:false
@@ -118,13 +119,13 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
-                If(
+                =If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
                         {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         _Membro:_m,
                         _Allitems:_a,
                         _Associar:false
@@ -155,13 +156,13 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
-                If(
+                =If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
                         {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         _Membro:_m,
                         _Allitems:_a,
                         _Associar:false
@@ -193,13 +194,13 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =//Navigate(ParticipadasDetails, ScreenTransition.None, {'_Empresas Participadas': 'Empresas Participadas'.Selected.ID, ColabFormMode: FormMode.View})
-                If(
+                =If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
                         {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         _Membro:_m,
                         _Allitems:_a,
                         _Associar:false
