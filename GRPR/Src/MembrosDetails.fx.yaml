@@ -1019,6 +1019,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue33.Selected
+                    Visible: =false
                     Width: =464
                     X: =0
                     Y: =2
@@ -1087,6 +1088,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue32.Selected
+                    Visible: =false
                     Width: =464
                     X: =0
                     Y: =2
@@ -1155,7 +1157,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =true
                     Update: =DataCardValue7.Selected.Value
-                    Width: =400
+                    Width: =464
                     X: =0
                     Y: =0
                     ZIndex: =1
@@ -1223,7 +1225,7 @@ MembrosDetails As screen:
                     MaxLength: =DataSourceInfo([@'Membros-Participadas'], DataSourceInfo.MaxLength, "uipp_cargodescricao")
                     Required: =false
                     Update: =DataCardValue8.Text
-                    Width: =400
+                    Width: =464
                     X: =1
                     Y: =0
                     ZIndex: =1
@@ -1290,7 +1292,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =true
                     Update: =Value(DataCardValue31.Text)
-                    Width: =400
+                    Width: =464
                     X: =0
                     Y: =1
                     ZIndex: =1
