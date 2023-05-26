@@ -28,6 +28,13 @@ LeftSectionComponent As CanvasComponent:
                 Navigate: Particulares,
                 VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
             },
+                {
+                selected: false,
+                icon: Icon.OfficeBuilding,
+                text: "Empresas respetivas",
+                Navigate: Respetivas,
+                VisivelPara: godMode//Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
+            },
             {
                 selected: false,
                 icon: Icon.OfficeBuilding,

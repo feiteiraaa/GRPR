@@ -1,10 +1,10 @@
-Participadas As screen:
+Respetivas As screen:
     OnHidden: |-
         = UpdateContext({ _Associar:false})
     OnVisible: |-
         =//UpdateContext({_Associar:false})
 
-    "'Empresas Participadas' As dataTable.datatable":
+    "'Empresas Participadas_1' As dataTable.datatable":
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
         Fill: =RGBA(0, 0, 0, 0)
@@ -15,9 +15,9 @@ Participadas As screen:
                     AddColumns(
                         SortByColumns(
                             Filter(
-                                'Empresas Participadas do Grupos',
+                                Empresas,
                                 If(
-                                    Checkbox1_2.Value = false,
+                                    Checkbox1_3.Value = false,
                                     ThisRecord.Ativo = true,
                                     ThisRecord.Ativo = true Or ThisRecord.Ativo = false
                                 )
@@ -26,11 +26,11 @@ Participadas As screen:
                             varSortDir
                         ),
                         "numeroDocumento",
-                        Text('Numero documento'),
+                        Text('Numero Documento'),
                         "nome",
-                        Text(Nome)
+                        Text(Designacao)
                     ),
-                    TextInput2_1.Text,
+                    TextInput2_2.Text,
                     "numeroDocumento",
                     "nome"
                 )
@@ -40,7 +40,7 @@ Participadas As screen:
         Y: =216
         ZIndex: =2
 
-        Nome As dataTableColumn.textualColumn:
+        Nome_1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Designação"
             FieldName: ="uipp_nome"
@@ -53,7 +53,7 @@ Participadas As screen:
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
                         _Associated:true
                         //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         }
@@ -62,19 +62,19 @@ Participadas As screen:
                         ParticipadasDetails,
                         ScreenTransition.None,
                         {
-                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
                             ColabFormMode: FormMode.View
                         }
                     )
                 )
             Order: =1
-            Text: =ThisItem.Nome
+            Text: =ThisItem.Designacao
             Width: =100
             X: =0
             Y: =0
             ZIndex: =1
 
-        "'Numero documento' As dataTableColumn.numberColumn":
+        "'Numero documento_1' As dataTableColumn.numberColumn":
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="NIPC"
             FieldName: ="uipp_numerodocumento"
@@ -87,7 +87,7 @@ Participadas As screen:
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
                         _Associated:true
                         //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         }
@@ -96,19 +96,19 @@ Participadas As screen:
                         ParticipadasDetails,
                         ScreenTransition.None,
                         {
-                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
                             ColabFormMode: FormMode.View
                         }
                     )
                 )
             Order: =2
-            Text: =ThisItem.'Numero documento'
+            Text: =ThisItem.'Numero Documento'
             Width: =100
             X: =0
             Y: =0
             ZIndex: =2
 
-        "'Participacao efetiva' As dataTableColumn.numberColumn":
+        "'Participacao efetiva_1' As dataTableColumn.numberColumn":
             AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Participação efetiva"
@@ -122,7 +122,7 @@ Participadas As screen:
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
                         _Associated:true
                         //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         }
@@ -131,53 +131,19 @@ Participadas As screen:
                         ParticipadasDetails,
                         ScreenTransition.None,
                         {
-                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
                             ColabFormMode: FormMode.View
                         }
                     )
                 )
             Order: =3
-            Text: =ThisItem.'Participacao efetiva'
+            Text: =
             Width: =237
             X: =0
             Y: =0
             ZIndex: =3
 
-        Controlo As dataTableColumn.numberColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Controlo"
-            FieldName: ="uipp_controlo"
-            FieldVariantName: ="numberColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            OnSelect: |-
-                =If(
-                    _Associar,
-                    Navigate(
-                        MembrosDetails,
-                        ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
-                        _Associated:true
-                        //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                        }
-                    ),
-                    Navigate(
-                        ParticipadasDetails,
-                        ScreenTransition.None,
-                        {
-                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                            ColabFormMode: FormMode.View
-                        }
-                    )
-                )
-            Order: =4
-            Text: =ThisItem.Controlo
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =4
-
-        "'Legislacao aplicada' As dataTableColumn.complexTypeColumn":
+        "'Legislacao aplicada_1' As dataTableColumn.complexTypeColumn":
             AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Legislação"
@@ -191,7 +157,7 @@ Participadas As screen:
                     Navigate(
                         MembrosDetails,
                         ScreenTransition.None,
-                        {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        {_AssociateParticipadas: 'Empresas Participadas_1'.Selected.ID,
                         _Associated:true
                         //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
                         }
@@ -200,7 +166,7 @@ Participadas As screen:
                         ParticipadasDetails,
                         ScreenTransition.None,
                         {
-                            _EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
+                            _EmpresasParticipadas: 'Empresas Participadas_1'.Selected.ID,
                             ColabFormMode: FormMode.View
                         }
                     )
@@ -213,7 +179,7 @@ Participadas As screen:
             Y: =0
             ZIndex: =5
 
-    Label1_3 As label:
+    Label1_10 As label:
         FontWeight: =FontWeight.Bold
         Height: =48
         Size: =15
@@ -223,14 +189,14 @@ Participadas As screen:
         Y: =26
         ZIndex: =3
 
-    Icon7 As icon.ChevronDown:
+    Icon7_4 As icon.ChevronDown:
         Color: =RGBA(255, 255, 255, 1)
         Height: =20
         Icon: =Icon.ChevronDown
         OnSelect: |-
             =Set(
                 varSortCol,
-                "uipp_nome"
+                "uipp_designacao"
             );
             Set(
                 varSortDir,
@@ -245,14 +211,14 @@ Participadas As screen:
         Y: =228
         ZIndex: =9
 
-    ActionBar_1 As group:
+    ActionBar_2 As group:
         Height: =5
         Width: =5
         X: =20
         Y: =20
         ZIndex: =9
 
-        TextInput2_1 As text:
+        TextInput2_2 As text:
             BorderColor: =ColorFade(cores.cinzento, 80%)
             BorderThickness: =1
             Clear: =true
@@ -271,7 +237,7 @@ Participadas As screen:
             Y: =156
             ZIndex: =4
 
-        "Icon1_2 As icon.'3DPrinting'":
+        "Icon1_4 As icon.'3DPrinting'":
             Color: |-
                 =///RGBA(0, 18, 107, 1)
                 cores.amareloMontepio
@@ -283,7 +249,7 @@ Participadas As screen:
             Y: =164
             ZIndex: =5
 
-        Checkbox1_2 As checkbox:
+        Checkbox1_3 As checkbox:
             BorderColor: =RGBA(0, 0, 0, 1)
             CheckboxBackgroundFill: =ColorFade(cores.cinzento, 90%)
             CheckboxBorderColor: =ColorFade(cores.cinzento, 80%)
@@ -297,7 +263,7 @@ Participadas As screen:
             Y: =156
             ZIndex: =6
 
-        ParticularesAdd_8 As DynamicBtn:
+        ParticularesAdd_10 As DynamicBtn:
             BtnOnSelect: =
             BtnText: ="Novo"
             Visible: =If(_Associar,false,true)
@@ -305,7 +271,7 @@ Participadas As screen:
             Y: =156
             ZIndex: =7
 
-        Button2_1 As button:
+        Button2_27 As button:
             BorderColor: =RGBA(0,0,0, 0)
             Color: =RGBA(0,0,0, 0)
             DisabledBorderColor: =RGBA(0,0,0, 0)
@@ -325,7 +291,7 @@ Participadas As screen:
             Y: =159
             ZIndex: =8
 
-    Icon7_1 As icon.ChevronDown:
+    Icon7_5 As icon.ChevronDown:
         Color: =RGBA(255, 255, 255, 1)
         Height: =20
         Icon: =Icon.ChevronDown
@@ -347,7 +313,7 @@ Participadas As screen:
         Y: =228
         ZIndex: =10
 
-    Icon7_2 As icon.ChevronDown:
+    Icon7_6 As icon.ChevronDown:
         Color: =RGBA(255, 255, 255, 1)
         Height: =20
         Icon: =Icon.ChevronDown
@@ -369,7 +335,7 @@ Participadas As screen:
         Y: =228
         ZIndex: =11
 
-    Icon7_3 As icon.ChevronDown:
+    Icon7_7 As icon.ChevronDown:
         Color: =RGBA(255, 255, 255, 1)
         Height: =20
         Icon: =Icon.ChevronDown
@@ -391,6 +357,65 @@ Participadas As screen:
         Y: =228
         ZIndex: =12
 
-    LeftSectionComponent_13 As LeftSectionComponent:
+    LeftSectionComponent_18 As LeftSectionComponent:
+        TabelaMenu: |-
+            =Table(
+                {
+                    selected: true,
+                    icon: Icon.Home,
+                    text: "Inicio",
+                    Navigate: Inicio,
+                    VisivelPara: true
+                },
+                {
+                    selected: false,
+                    icon: Icon.Bug,
+                    text: "Developer",
+                    Navigate: Developer,
+                    VisivelPara: godMode
+                },
+                {
+                    selected: false,
+                    icon: Icon.People,
+                    text: "Particulares e empresas respetivas",
+                    Navigate: Particulares,
+                    VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
+                },
+                    {
+                    selected: false,
+                    icon: Icon.OfficeBuilding,
+                    text: "Empresas respetivas",
+                    Navigate: Respetivas,
+                    VisivelPara: godMode//Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
+                },
+                {
+                    selected: false,
+                    icon: Icon.OfficeBuilding,
+                    text: "Empresas participadas do grupo",
+                    Navigate: Respetivas,// _Associar:false,
+                    VisivelPara: Or(godMode, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta)
+                },
+                {
+                    selected: false,
+                    icon: Icon.Information,
+                    text: "Atividade",
+                    Navigate: Atividade,
+                    VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DCRF_Editor, DCRF_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
+                },
+                {
+                    selected: false,
+                    icon: Icon.Notebook,
+                    text: "Listagens",
+                    Navigate: Listagens,
+                    VisivelPara: Or(godMode, DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
+                },
+                {
+                    selected: false,
+                    icon: Icon.Settings,
+                    text: "Configurações",
+                    Navigate: Configuracoes,
+                    VisivelPara: Or(godMode, DRI)
+                }
+            )
         ZIndex: =13
 
