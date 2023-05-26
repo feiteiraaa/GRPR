@@ -572,6 +572,7 @@ Inicio As screen:
             ZIndex: =20
 
         Label16 As label:
+            Align: =Align.Center
             Text: |-
                 =DateDiff(
                     Text(
