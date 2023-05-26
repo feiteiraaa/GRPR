@@ -1048,6 +1048,12 @@ MembrosDetails As screen:
                                 Notify(
                                     "Por favor, tente novamente.",
                                     NotificationType.Error
+                                );
+                                UpdateContext(
+                                    {
+                                        _Associated: false,
+                                        localShowLeg: false
+                                    }
                                 )
                             ),
                             Notify(
@@ -1440,7 +1446,7 @@ MembrosDetails As screen:
                     BtnText: ="Detalhes"
                     ButtonIcon: =Icon.DocumentWithContent
                     Height: =40
-                    Visible: =!_Associated
+                    Visible: ='empresas do grupo'.Visible
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1461,7 +1467,7 @@ MembrosDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    Visible: =!_Associated
+                    Visible: ='empresas do grupo'.Visible
                     X: =DynamicBtn_24.X
                     Y: =DynamicBtn_24.Y
                     ZIndex: =7
@@ -1519,7 +1525,18 @@ MembrosDetails As screen:
                 Height: ='Info Circle_6'.Height
                 Icon: =If(localShowLeg, Icon.HorizontalLine, Icon.Add)
                 OnSelect: |
-                    =UpdateContext({localShowLeg: !localShowLeg,localShowData:false,localShowPrazo:false,localShowRelacao:false,localShowEliminacao:false,localShowNewForm:false,localShowEditForm:false})
+                    =UpdateContext(
+                        {
+                            localShowLeg: !localShowLeg,
+                            localShowData: false,
+                            localShowPrazo: false,
+                            localShowRelacao: false,
+                            localShowEliminacao: false,
+                            localShowNewForm: false,
+                            localShowEditForm: false,
+                            _Associated: false
+                        }
+                    );
                 Width: ='Info Circle_6'.Width
                 X: =Parent.Width - (30 + 'Info Circle_6'.Width)
                 Y: =5
