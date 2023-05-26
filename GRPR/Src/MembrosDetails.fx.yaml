@@ -96,7 +96,7 @@ MembrosDetails As screen:
         Height: =580
         Width: =978
         X: =368
-        Y: =Label13.Y +50
+        Y: =LabelMembroName.Y +50
         ZIndex: =4
 
         "'Informacao Content' As groupContainer.manualLayoutContainer":
@@ -888,7 +888,7 @@ MembrosDetails As screen:
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_15.Y+50
-                ZIndex: =2
+                ZIndex: =1
 
                 "'Cargo (Categoria)_Column2' As dataTableColumn.complexOptionSetColumn":
                     AutoWidth: =false
@@ -899,7 +899,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
                     Order: =12
                     Text: =ThisItem.'Cargo (Categoria)'
                     Width: =151
@@ -915,7 +915,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
                     Order: =13
                     Text: =ThisItem.'Cargo (Descricao)'
                     Width: =184
@@ -932,7 +932,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
                     Order: =14
                     Text: =ThisItem.uipp_participacao
                     Width: =123
@@ -949,7 +949,7 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
                     Order: =6
                     Text: =ThisItem.Designacao
                     Width: =478
@@ -972,7 +972,7 @@ MembrosDetails As screen:
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
-                    ZIndex: =3
+                    ZIndex: =2
 
                 elim_btn_2 As button:
                     BorderColor: =RGBA(0,0,0, 0)
@@ -985,18 +985,87 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =UpdateContext(
-                            {
-                                _Associated: false,
-                                localShowLeg: false
-                            }
+                        =If(
+                            _Associated,
+                            UpdateContext(
+                                {
+                                    _Associated: false,
+                                    localShowLeg: false
+                                }
+                            ),
+                            UpdateContext({localShowModal: true})
                         )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     X: =DynamicBtn_15.X
                     Y: =DynamicBtn_15.Y
+                    ZIndex: =3
+
+            AssociarMembrosPart As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =7
+
+                DynamicBtn_16 As DynamicBtn:
+                    BtnText: =If(_Associated,"Guardar","Associar")
+                    ButtonIcon: =If(_Associated,Icon.Save,Icon.Add)
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
                     ZIndex: =4
+
+                ass_btn_3 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =If(
+                            _Associated,
+                            If(
+                                SubmitForm(EmpresasParticipadas),
+                                Notify(
+                                    "O registo foi submetido com sucesso!",
+                                    NotificationType.Success
+                                );
+                                ResetForm(EmpresasParticipadas);
+                                UpdateContext(
+                                    {
+                                        _Associated: false,
+                                        localShowLeg: false
+                                    }
+                                ),
+                                Notify(
+                                    "Por favor, tente novamente.",
+                                    NotificationType.Error
+                                )
+                            ),
+                            Notify(
+                                "Por favor, selecione na tabela a 'Empresa Participada do Grupo' ao qual deseja associar o membro "&LabelMembroName.Text&".",
+                                NotificationType.Information
+                            );
+                            Navigate(
+                                Participadas,
+                                ScreenTransition.None,
+                                {_Associar: true}
+                            )
+                        )
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_16.X
+                    Y: =DynamicBtn_16.Y
+                    ZIndex: =5
 
             EmpresasParticipadas As form:
                 DataSource: ='Membros-Participadas'
@@ -1006,8 +1075,8 @@ MembrosDetails As screen:
                 Visible: =_Associated
                 Width: =Parent.Width * 0.95
                 X: =24
-                Y: =DynamicBtn_15.Y+50
-                ZIndex: =7
+                Y: =DynamicBtn_15.Y+80
+                ZIndex: =8
 
                 "'Parent ID_DataCard1' As typedDataCard.comboBoxEditCard":
                     BorderStyle: =BorderStyle.Solid
@@ -1349,24 +1418,35 @@ MembrosDetails As screen:
                         Y: =DataCardKey34.Y
                         ZIndex: =4
 
-            AssociarMembrosPart As group:
+            LabelDesignacao As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =DynamicBtn_16.Height
+                Text: |-
+                    ="Designação: " & LookUp('Empresas Participadas do Grupos',ID=_AssociateParticipadas).Nome
+                Visible: =_Associated
+                Width: =700
+                X: =24
+                Y: =DynamicBtn_16.Height + 15
+                ZIndex: =9
+
+            DetalhesMembrosPart As group:
                 Height: =5
                 Width: =5
                 X: =40
                 Y: =40
-                ZIndex: =7
+                ZIndex: =12
 
-                DynamicBtn_16 As DynamicBtn:
-                    BtnText: =If(_Associated,"Guardar","Associar")
-                    ButtonIcon: =If(_Associated,Icon.Save,Icon.Add)
+                DynamicBtn_24 As DynamicBtn:
+                    BtnText: ="Detalhes"
+                    ButtonIcon: =Icon.DocumentWithContent
                     Height: =40
-                    Visible: =true
+                    Visible: =!_Associated
                     Width: =160
-                    X: =Parent.X+800
+                    X: =Parent.X+400
                     Y: =7
-                    ZIndex: =5
+                    ZIndex: =6
 
-                ass_btn_3 As button:
+                elim_btn_5 As button:
                     BorderColor: =RGBA(0,0,0, 0)
                     Color: =RGBA(0,0,0, 0)
                     DisabledBorderColor: =RGBA(0,0,0, 0)
@@ -1377,53 +1457,14 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =If(
-                            _Associated,
-                            If(
-                                SubmitForm(EmpresasParticipadas),
-                                Notify(
-                                    "O registo foi submetido com sucesso!",
-                                    NotificationType.Success
-                                );
-                                ResetForm(EmpresasParticipadas);
-                                UpdateContext(
-                                    {
-                                        _Associated: false,
-                                        localShowLeg: false
-                                    }
-                                ),
-                                Notify(
-                                    "Por favor, tente novamente.",
-                                    NotificationType.Error
-                                )
-                            ),
-                            Notify(
-                                "Por favor, selecione na tabela a 'Empresa Participada do Grupo' ao qual deseja associar o membro "&Label13.Text&".",
-                                NotificationType.Information
-                            );
-                            Navigate(
-                                Participadas,
-                                ScreenTransition.None,
-                                {_Associar: true}
-                            )
-                        )
+                        =Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    X: =DynamicBtn_16.X
-                    Y: =DynamicBtn_16.Y
-                    ZIndex: =6
-
-            Label17 As label:
-                FontWeight: =FontWeight.Semibold
-                Height: =DynamicBtn_16.Height
-                Text: |-
-                    ="Designação: " & LookUp('Empresas Participadas do Grupos',ID=_AssociateParticipadas).Nome
-                Visible: =_Associated
-                Width: =DynamicBtn_15.X-30
-                X: =24
-                Y: =DynamicBtn_16.Y+15
-                ZIndex: =9
+                    Visible: =!_Associated
+                    X: =DynamicBtn_24.X
+                    Y: =DynamicBtn_24.Y
+                    ZIndex: =7
 
         "'Empresas Grupo' As groupContainer.manualLayoutContainer":
             Height: =50
@@ -2139,7 +2180,7 @@ MembrosDetails As screen:
                 Y: =5
                 ZIndex: =4
 
-    Label1_10 As label:
+    LabelMembros As label:
         FontWeight: =FontWeight.Bold
         Height: =48
         Text: |-
@@ -2205,7 +2246,7 @@ MembrosDetails As screen:
             )
         ZIndex: =6
 
-    Label13 As label:
+    LabelMembroName As label:
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
         Text: |-
@@ -2267,4 +2308,136 @@ MembrosDetails As screen:
             X: =1186
             Y: =74
             ZIndex: =8
+
+    ModalConfirmation_7 As ModalConfirmation:
+        Visible: =localShowModal
+        ZIndex: =10
+
+    elim_components_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        cancelar_btn_1 As button:
+            Align: =Align.Left
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            Fill: =cores.rosa
+            FontWeight: =FontWeight.Normal
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =cores.rosa
+            OnSelect: |-
+                =UpdateContext({
+                    localShowModal: false
+                })
+            PaddingLeft: =50
+            PressedColor: =Color.Black
+            PressedFill: =cores.rosa
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: ="CANCELAR"
+            Visible: =localShowModal
+            Width: =165
+            X: =717
+            Y: =440
+            ZIndex: =11
+
+        confirm_btn_1 As button:
+            Align: =Align.Left
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FontWeight: =FontWeight.Normal
+            HoverBorderColor: =
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =ColorFade(RGBA(70, 70, 70, 1),80%)
+            OnSelect: |
+                =/*If(
+                    ColabFormMode = FormMode.View,
+                    If(
+                        Patch(
+                            'Empresas Participadas do Grupos',
+                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = _EmpresasParticipadas),
+                            {
+                                Ativo: false,
+                                Bloqueado: true,
+                                'Data de saida': Now()
+                            }
+                        ).Ativo = false,
+                        Back();
+                        Notify("Registo de Empresas Participadas do grupo Eliminado com sucesso!", NotificationType.Success);
+                        UpdateContext({
+                            localShowModal: false
+                        }),
+                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
+                    ),
+                    UpdateContext({
+                        ColabFormMode: FormMode.View
+                    })
+                )*/
+            PaddingLeft: =50
+            PressedColor: =Color.Black
+            PressedFill: =ColorFade(RGBA(70, 70, 70, 1),90%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: ="Confirmar"
+            Visible: =localShowModal
+            Width: =165
+            X: =486
+            Y: =440
+            ZIndex: =12
+
+        Icon8_2 As icon.Check:
+            Color: =cores.amareloMontepio
+            Height: =30
+            Icon: =Icon.Check
+            OnSelect: |-
+                =/*If(
+                    ColabFormMode = FormMode.View,
+                    If(
+                        Patch(
+                            'Empresas Participadas do Grupos',
+                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = _EmpresasParticipadas),
+                            {
+                                Ativo: false,
+                                Bloqueado: true,
+                                'Data de saida': Now()
+                            }
+                        ).Ativo = false,
+                        Back();
+                        Notify("Registo de Empresas Participadas do grupo Eliminado com sucesso!", NotificationType.Success);
+                        UpdateContext({
+                            localShowModal: false
+                        }),
+                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
+                    ),
+                    UpdateContext({
+                        ColabFormMode: FormMode.View
+                    })
+                )*/
+            Visible: =localShowModal
+            Width: =30
+            X: =496
+            Y: =445
+            ZIndex: =13
+
+        Icon8_3 As icon.Check:
+            Color: =cores.amareloMontepio
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({
+                    localShowModal: false
+                })
+            Visible: =localShowModal
+            Width: =30
+            X: =726
+            Y: =445
+            ZIndex: =14
 
