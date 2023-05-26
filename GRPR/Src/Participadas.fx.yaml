@@ -1,4 +1,8 @@
 Participadas As screen:
+    OnHidden: |-
+        = UpdateContext({ _Associar:false})
+    OnVisible: |-
+        =//UpdateContext({_Associar:false})
 
     "'Empresas Participadas' As dataTable.datatable":
         BorderStyle: =BorderStyle.Solid

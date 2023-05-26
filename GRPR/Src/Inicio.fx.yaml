@@ -1,5 +1,6 @@
 Inicio As screen:
-    OnVisible: =
+    OnVisible: |-
+        = UpdateContext({ _Associar:false})
 
     TopSectionComponent_1 As TopSectionComponent:
         X: =342

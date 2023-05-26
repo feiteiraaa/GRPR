@@ -2,6 +2,7 @@ MembrosDetails As screen:
     OnVisible: |+
         =UpdateContext(
             {
+                _Associar:false,
                 localShowModal: false,
                 localShowData: false,
                 localShowLeg: false,

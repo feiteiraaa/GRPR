@@ -13061,6 +13061,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Inicio._Associar"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Inicio._Associar",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_Associar",
+                "module": "Inicio",
+                "type": "Inicio"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MembrosDetails.ColabFormMode"
                 }
               ],
