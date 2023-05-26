@@ -965,8 +965,8 @@ MembrosDetails As screen:
                 ZIndex: =5
 
                 DynamicBtn_15 As DynamicBtn:
-                    BtnText: ="Dissociar"
-                    ButtonIcon: =Icon.HorizontalLine
+                    BtnText: =If(_Associated,"Cancelar","Dissociar")
+                    ButtonIcon: =If(_Associated,Icon.Cancel,Icon.HorizontalLine)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -985,11 +985,12 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
-                        )*/
+                        =UpdateContext(
+                            {
+                                _Associated: false,
+                                localShowLeg: false
+                            }
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -1002,6 +1003,7 @@ MembrosDetails As screen:
                 DefaultMode: =FormMode.New
                 Height: =Parent.Height-60
                 NumberOfColumns: =2
+                Visible: =_Associated
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_15.Y+50
@@ -1299,7 +1301,8 @@ MembrosDetails As screen:
                 ZIndex: =7
 
                 DynamicBtn_16 As DynamicBtn:
-                    BtnText: ="Associar"
+                    BtnText: =If(_Associated,"Guardar","Associar")
+                    ButtonIcon: =If(_Associated,Icon.Save,Icon.Add)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -1318,15 +1321,36 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
-                        )*/
-                        //Navigate(Participadas, ScreenTransition.None, {_Associar: true, _m:_Membro,_a:_Allitems})
-                        Notify("Por favor, selecione na tabela a empresa particidade do grupo ao qual deseja associar o membro.",NotificationType.Information);
-                        
-                        Navigate(Participadas, ScreenTransition.None, {_Associar: true})
+                        =If(
+                            _Associated,
+                            If(
+                                SubmitForm(EmpresasParticipadas),
+                                Notify(
+                                    "O registo foi submetido com sucesso!",
+                                    NotificationType.Success
+                                );
+                                ResetForm(EmpresasParticipadas);
+                                UpdateContext(
+                                    {
+                                        _Associated: false,
+                                        localShowLeg: false
+                                    }
+                                ),
+                                Notify(
+                                    "Por favor, tente novamente.",
+                                    NotificationType.Error
+                                )
+                            ),
+                            Notify(
+                                "Por favor, selecione na tabela a 'Empresa Participada do Grupo' ao qual deseja associar o membro "&Label13.Text&".",
+                                NotificationType.Information
+                            );
+                            Navigate(
+                                Participadas,
+                                ScreenTransition.None,
+                                {_Associar: true}
+                            )
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
