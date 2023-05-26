@@ -5,7 +5,7 @@ MembrosDetails As screen:
                 _Associar:false,
                 localShowModal: false,
                 localShowData: false,
-                localShowLeg: false,
+                localShowLeg: If(_Associated,true,false),
                 localShowEliminacao: false,
                 localShowRelacao: false,
                 localShowPrazo: false,
@@ -869,7 +869,7 @@ MembrosDetails As screen:
 
         "'Empresas Grupo Content' As groupContainer.manualLayoutContainer":
             Height: =330
-            Visible: =localShowLeg
+            Visible: =localShowLeg //Or _Associated
             Width: =Parent.Width
             Y: ='Empresas Grupo'.Y + 'Empresas Grupo'.Height
             ZIndex: =3
@@ -1029,6 +1029,8 @@ MembrosDetails As screen:
                             UpdateContext({ModalConfirmation_1:1})
                         )*/
                         //Navigate(Participadas, ScreenTransition.None, {_Associar: true, _m:_Membro,_a:_Allitems})
+                        Notify("Por favor, selecione na tabela a empresa particidade do grupo ao qual deseja associar o membro.",NotificationType.Information);
+                        
                         Navigate(Participadas, ScreenTransition.None, {_Associar: true})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)

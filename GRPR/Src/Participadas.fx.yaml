@@ -52,14 +52,11 @@ Participadas As screen:
                     _Associar,
                     Navigate(
                         MembrosDetails,
-                        ScreenTransition.None/*,
+                        ScreenTransition.None,
                         {_AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                        _Associated:true
                         //_EmpresasParticipadas: 'Empresas Participadas'.Selected.ID,
-                        _Membro:_m,
-                        _Allitems:_a,
-                        _Associar:false
-                        
-                        }*/
+                        }
                     ),
                     Navigate(
                         ParticipadasDetails,
