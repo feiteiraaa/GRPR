@@ -1028,7 +1028,8 @@ MembrosDetails As screen:
                             UpdateContext({localShowFimPeriodoForm: false}),
                             UpdateContext({ModalConfirmation_1:1})
                         )*/
-                        Navigate(Participadas, ScreenTransition.None, {_Associar: true, _m:_Membro,_a:_Allitems})
+                        //Navigate(Participadas, ScreenTransition.None, {_Associar: true, _m:_Membro,_a:_Allitems})
+                        Navigate(Participadas, ScreenTransition.None, {_Associar: true})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""

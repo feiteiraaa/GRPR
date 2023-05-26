@@ -48,7 +48,7 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =If(
+                =/*If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
@@ -60,7 +60,7 @@ Participadas As screen:
                         _Associar:false
                         
                         }
-                    ),
+                    ),*/
                     Navigate(
                         ParticipadasDetails,
                         ScreenTransition.None,
@@ -69,7 +69,7 @@ Participadas As screen:
                             ColabFormMode: FormMode.View
                         }
                     )
-                )
+                //)
             Order: =1
             Text: =ThisItem.Nome
             Width: =100
@@ -85,7 +85,7 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =If(
+                =/*If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
@@ -97,7 +97,7 @@ Participadas As screen:
                         _Associar:false
                         
                         }
-                    ),
+                    ),*/
                     Navigate(
                         ParticipadasDetails,
                         ScreenTransition.None,
@@ -106,7 +106,7 @@ Participadas As screen:
                             ColabFormMode: FormMode.View
                         }
                     )
-                )
+                //)
             Order: =2
             Text: =ThisItem.'Numero documento'
             Width: =100
@@ -123,7 +123,7 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =If(
+                =/*If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
@@ -135,7 +135,7 @@ Participadas As screen:
                         _Associar:false
                         
                         }
-                    ),
+                    ),*/
                     Navigate(
                         ParticipadasDetails,
                         ScreenTransition.None,
@@ -144,7 +144,7 @@ Participadas As screen:
                             ColabFormMode: FormMode.View
                         }
                     )
-                )
+                //)
             Order: =3
             Text: =ThisItem.'Participacao efetiva'
             Width: =237
@@ -160,7 +160,7 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =If(
+                =/*If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
@@ -172,7 +172,7 @@ Participadas As screen:
                         _Associar:false
                         
                         }
-                    ),
+                    ),*/
                     Navigate(
                         ParticipadasDetails,
                         ScreenTransition.None,
@@ -181,7 +181,7 @@ Participadas As screen:
                             ColabFormMode: FormMode.View
                         }
                     )
-                )
+                //)
             Order: =4
             Text: =ThisItem.Controlo
             Width: =100
@@ -198,7 +198,7 @@ Participadas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =If(
+                =/*If(
                     _Associar,
                     Navigate(
                         MembrosDetails,
@@ -210,7 +210,7 @@ Participadas As screen:
                         _Associar:false
                         
                         }
-                    ),
+                    ),*/
                     Navigate(
                         ParticipadasDetails,
                         ScreenTransition.None,
@@ -219,7 +219,7 @@ Participadas As screen:
                             ColabFormMode: FormMode.View
                         }
                     )
-                )
+                //)
             Order: =5
             Text: =ThisItem.'Legislacao aplicada'.'Tipo de enquadramento'
             Visible: =DRI
