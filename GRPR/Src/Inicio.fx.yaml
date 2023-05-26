@@ -592,7 +592,7 @@ Inicio As screen:
                         "hh:mm:ss",
                         "pt-PT"
                     ), TimeUnit.Hours
-                ) & "h " & "restantes"
+                ) & "h "  & "restantes"
             Visible: |-
                 =Or(
                     godMode,
