@@ -1,6 +1,7 @@
 Respetivas As screen:
     OnVisible: |-
-        =UpdateContext({localFormRespetivas:false})
+        =UpdateContext({localFormRespetivas:false});
+        ClearCollect(CollecRespectivas, Empresas);
 
     LeftSectionComponent_3 As LeftSectionComponent:
 
@@ -195,7 +196,7 @@ Respetivas As screen:
             =Search(
                     
                             Filter(
-                                Empresas,
+                                CollecRespectivas,
                                 If(
                                     Checkbox1_4.Value = false,
                                     ThisRecord.Ativo = true,
