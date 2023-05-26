@@ -130,10 +130,10 @@
   "ScreenOrder": [
     "Inicio",
     "Particulares",
-    "Respetivas",
     "MembrosDetails",
     "ColaboradoresDetails",
     "ROCDetails",
+    "Respetivas",
     "Participadas",
     "ParticipadasDetails",
     "Atividade",
