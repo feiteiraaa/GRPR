@@ -8046,6 +8046,114 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
+            },
+            {
+              "associatedRule": {
+                "id": "app-InefficientDelayLoading",
+                "index": 10
+              },
+              "descriptor": {
+                "id": "app-InefficientDelayLoading"
+              },
+              "message": {
+                "text": "Error occurred running rule app-InefficientDelayLoading."
+              }
             }
           ]
         }
@@ -12905,66 +13013,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Categoria)_DataCard1'.DataCardValue7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Categoria)_DataCard1'.DataCardValue7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Categoria)_DataCard1'.DataCardValue7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Descricao)_DataCard1'.DataCardValue8.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Descricao)_DataCard1'.DataCardValue8.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Descricao)_DataCard1'.DataCardValue8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Parent ID_DataCard1'.DataCardValue33.AccessibleLabel"
                 }
               ],
@@ -13008,6 +13056,66 @@
                 "member": "AccessibleLabel",
                 "module": "MembrosDetails",
                 "type": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Child ID_DataCard1'.DataCardValue32"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Categoria)_DataCard1'.DataCardValue7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Categoria)_DataCard1'.DataCardValue7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Categoria)_DataCard1'.DataCardValue7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Descricao)_DataCard1'.DataCardValue8.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Descricao)_DataCard1'.DataCardValue8.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.'Mid Section_Membros'.'Empresas Grupo Content'.EmpresasParticipadas.'Cargo (Descricao)_DataCard1'.DataCardValue8"
               }
             }
           ],
@@ -13218,6 +13326,126 @@
                 "member": "TabIndex",
                 "module": "MembrosDetails",
                 "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.GalleryFamiliaresEmpresas_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.Icon8_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_2.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_2.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.Icon8_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.Icon8_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.Icon8_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.Icon8_3"
               }
             }
           ],
@@ -13725,36 +13953,6 @@
               },
               "properties": {
                 "member": "localShowEditForm",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MembrosDetails.localShowModal"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosDetails.localShowModal",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "localShowModal",
                 "module": "MembrosDetails",
                 "type": "MembrosDetails"
               }
@@ -14501,7 +14699,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"MembrosDetails\" is 312, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"MembrosDetails\" is 321, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
