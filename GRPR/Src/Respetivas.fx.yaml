@@ -603,12 +603,15 @@ Respetivas As screen:
             DataCardValue34 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultSelectedItems: =Parent.Default
-                DisplayFields: =["uipp_id"]
+                DisplayFields: =["uipp_tipodeenquadramento"]
                 DisplayMode: =Parent.DisplayMode
-                Items: =Choices([@Empresas].uipp_Legislacaoaplicada)
+                IsSearchable: =false
+                Items: |-
+                    =Choices([@Empresas].uipp_Legislacaoaplicada)
+                    //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                SearchFields: =["uipp_id"]
-                SearchItems: =Search(Choices([@Empresas].uipp_Legislacaoaplicada),DataCardValue34.SearchText,"uipp_id")
+                SearchFields: =["uipp_tipodeenquadramento"]
+                SearchItems: =[]
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
