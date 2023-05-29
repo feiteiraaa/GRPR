@@ -1567,16 +1567,7 @@ MembrosDetails As screen:
                     Y: =DynamicBtn_17.Y
                     ZIndex: =4
 
-            DynamicBtn_19 As DynamicBtn:
-                BtnText: ="Novo"
-                Height: =40
-                Visible: =true
-                Width: =160
-                X: =Parent.X+800
-                Y: =7
-                ZIndex: =7
-
-            Group4 As group:
+            EditMembrosResp As group:
                 Height: =5
                 Width: =5
                 X: =40
@@ -1616,32 +1607,53 @@ MembrosDetails As screen:
                     Y: =DynamicBtn_18.Y
                     ZIndex: =6
 
-            elim_btn_4 As button:
-                BorderColor: =RGBA(0,0,0, 0)
-                Color: =RGBA(0,0,0, 0)
-                DisabledBorderColor: =RGBA(0,0,0, 0)
-                DisabledColor: =RGBA(0,0,0, 0)
-                DisabledFill: =RGBA(0,0,0, 0)
-                Fill: =RGBA(0,0,0, 0)
-                Height: =39
-                HoverColor: =RGBA(0,0,0, 0)
-                HoverFill: =RGBA(0,0,0, 0)
-                OnSelect: |-
-                    =Navigate(
-                        Respetivas,
-                        ScreenTransition.None,
-                        {_AssociarR: true}
-                    );
-                    Notify(
-                            "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro "&LabelMembroName.Text&" ou clique em '+Novo' para criar uma nova empresa.",
-                            NotificationType.Information
-                        )
-                PressedColor: =RGBA(0,0,0, 0)
-                PressedFill: =RGBA(0,0,0, 0)
-                Text: =""
-                X: =DynamicBtn_19.X
-                Y: =DynamicBtn_19.Y
-                ZIndex: =8
+            FormRespetivas As form:
+                Height: =310
+                X: =40
+                ZIndex: =9
+
+            NewMembrosResp As group:
+                Height: =5
+                Width: =5
+                X: =60
+                Y: =60
+                ZIndex: =10
+
+                DynamicBtn_19 As DynamicBtn:
+                    BtnText: ="Novo"
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
+                    ZIndex: =7
+
+                elim_btn_4 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =Navigate(
+                            Respetivas,
+                            ScreenTransition.None,
+                            {_AssociarR: true}
+                        );
+                        Notify(
+                                "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro "&LabelMembroName.Text&" ou clique em '+Novo' para criar uma nova empresa.",
+                                NotificationType.Information
+                            )
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_19.X
+                    Y: =DynamicBtn_19.Y
+                    ZIndex: =8
 
         "'Empresas Respetivas' As groupContainer.manualLayoutContainer":
             Height: =50

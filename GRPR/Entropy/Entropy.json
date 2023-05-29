@@ -281,6 +281,7 @@
     "edit_btn_5": 669,
     "EditarMembrosInfo": 605,
     "EditMembrosFami": 689,
+    "EditMembrosResp": 662,
     "elim_btn": 281,
     "elim_btn_1": 536,
     "elim_btn_2": 636,
@@ -366,6 +367,7 @@
     "Form Prazo": 386,
     "Form Relacao": 371,
     "FormParticipadas": 708,
+    "FormRespetivas": 741,
     "Gallery1": 515,
     "Gallery2": 502,
     "GalleryBottomEdge": 40,
@@ -385,7 +387,6 @@
     "GalleryTopEdge": 34,
     "Grau de parentesco_Column1": 378,
     "Grau de parentesco_DataCard1": 372,
-    "Group4": 662,
     "Group7": 191,
     "Grupo_DataCard1_1": 219,
     "Grupo_DataCard2": 123,
@@ -584,6 +585,7 @@
     "ModalDelete": 248,
     "ModalDelete_1": 152,
     "NewMembrosFami": 688,
+    "NewMembrosResp": 742,
     "NIF Familiares e Empresas": 457,
     "NIF Familiares e Empresas_1": 684,
     "NIF Membro": 451,
@@ -751,7 +753,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/29/2023 10:51:31",
+  "HeaderLastSavedDateTimeUTC": "05/29/2023 10:53:50",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1172,6 +1174,10 @@
       "DynamicBtn_20": 0,
       "edit_btn_3": 1
     },
+    "EditMembrosResp": {
+      "DynamicBtn_18": 0,
+      "edit_btn_4": 1
+    },
     "elim_components": {
       "cancelar_btn": 0,
       "confirm_btn": 1,
@@ -1227,10 +1233,6 @@
       "Label8_2": 2,
       "Label8_3": 3
     },
-    "Group4": {
-      "DynamicBtn_18": 0,
-      "edit_btn_4": 1
-    },
     "Group7": {
       "BtnExportar": 1,
       "Button2_26": 4,
@@ -1276,6 +1278,10 @@
     "NewMembrosFami": {
       "DynamicBtn_21": 0,
       "edit_btn_5": 1
+    },
+    "NewMembrosResp": {
+      "DynamicBtn_19": 0,
+      "elim_btn_4": 1
     },
     "Particualres Edit Save Btn_2": {
       "Button2_2": 1,
@@ -1600,6 +1606,7 @@
     "edit_btn_5": {},
     "EditarMembrosInfo": {},
     "EditMembrosFami": {},
+    "EditMembrosResp": {},
     "elim_btn": {},
     "elim_btn_1": {},
     "elim_btn_2": {},
@@ -1685,6 +1692,7 @@
     "Form Prazo": {},
     "Form Relacao": {},
     "FormParticipadas": {},
+    "FormRespetivas": {},
     "Gallery1": {},
     "Gallery2": {},
     "GalleryBottomEdge": {},
@@ -1704,7 +1712,6 @@
     "GalleryTopEdge": {},
     "Grau de parentesco_Column1": {},
     "Grau de parentesco_DataCard1": {},
-    "Group4": {},
     "Group7": {},
     "Grupo_DataCard1_1": {},
     "Grupo_DataCard2": {},
@@ -1903,6 +1910,7 @@
     "ModalDelete": {},
     "ModalDelete_1": {},
     "NewMembrosFami": {},
+    "NewMembrosResp": {},
     "NIF Familiares e Empresas": {},
     "NIF Familiares e Empresas_1": {},
     "NIF Membro": {},
@@ -2343,6 +2351,7 @@
     "edit_btn_5": 477,
     "EditarMembrosInfo": 375,
     "EditMembrosFami": 482,
+    "EditMembrosResp": 467,
     "elim_btn": 171,
     "elim_btn_1": 330,
     "elim_btn_2": 421,
@@ -2428,6 +2437,7 @@
     "Form Prazo": 272,
     "Form Relacao": 258,
     "FormParticipadas": 527,
+    "FormRespetivas": 0,
     "Gallery1": 304,
     "Gallery2": 296,
     "GalleryBottomEdge": 25,
@@ -2447,7 +2457,6 @@
     "GalleryTopEdge": 19,
     "Grau de parentesco_Column1": 267,
     "Grau de parentesco_DataCard1": 262,
-    "Group4": 467,
     "Group7": 64,
     "Grupo_DataCard1_1": 93,
     "Grupo_DataCard2": 713,
@@ -2646,6 +2655,7 @@
     "ModalDelete": 89,
     "ModalDelete_1": 711,
     "NewMembrosFami": 481,
+    "NewMembrosResp": 0,
     "NIF Familiares e Empresas": 625,
     "NIF Familiares e Empresas_1": 496,
     "NIF Membro": 619,
