@@ -56,7 +56,7 @@ ParticipadasDetails As screen:
                     If(
                         SubmitForm(FormParticipadas),
                         Back();
-                        Notify("Registo de Colaborador criado com sucesso!", NotificationType.Success),
+                        Notify("Registo criado com sucesso!", NotificationType.Success),
                         Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
                     ),
                     UpdateContext({
