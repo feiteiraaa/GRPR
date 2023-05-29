@@ -1589,8 +1589,8 @@ MembrosDetails As screen:
                 ZIndex: =7
 
                 DynamicBtn_18 As DynamicBtn:
-                    BtnText: ="Editar"
-                    ButtonIcon: =Icon.Edit
+                    BtnText: =If(_AssociatedR,"Cancelar","Editar")
+                    ButtonIcon: =If(_AssociatedR,Icon.Cancel,Icon.Edit)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -1609,11 +1609,15 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
-                        )*/
+                        =If(
+                            _AssociatedR,
+                            UpdateContext(
+                                {
+                                    _AssociatedR: false,
+                                    localShowEliminacao: false
+                                }
+                            )
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -1640,7 +1644,7 @@ MembrosDetails As screen:
                     DisplayName: =DataSourceInfo([@'Membros-Familiares-Respetivas'],DataSourceInfo.DisplayName,"uipp_cargocategoria")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    Required: =false
+                    Required: =true
                     Update: =DataCardValue36.Selected.Value
                     Width: =464
                     X: =0
@@ -1844,7 +1848,7 @@ MembrosDetails As screen:
                     DisplayName: =DataSourceInfo([@'Membros-Familiares-Respetivas'],DataSourceInfo.DisplayName,"uipp_participacao")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    Required: =false
+                    Required: =true
                     Update: =Value(DataCardValue40.Text)
                     Width: =464
                     X: =0
@@ -1854,7 +1858,9 @@ MembrosDetails As screen:
                     DataCardKey46 As label:
                         AutoHeight: =true
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Participação (%)"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -1991,7 +1997,8 @@ MembrosDetails As screen:
                 ZIndex: =10
 
                 DynamicBtn_19 As DynamicBtn:
-                    BtnText: ="Novo"
+                    BtnText: =If(_AssociatedR,"Guardar","Novo")
+                    ButtonIcon: =If(_AssociatedR,Icon.Save,Icon.Add)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -2010,15 +2017,42 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =Navigate(
-                            Respetivas,
-                            ScreenTransition.None,
-                            {_AssociarR: true}
-                        );
-                        Notify(
-                                "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro "&LabelMembroName.Text&" ou clique em '+Novo' para criar uma nova empresa.",
+                        =If(
+                            _AssociatedR,
+                            If(
+                                SubmitForm(FormRespetivas),
+                                Notify(
+                                    "O registo foi submetido com sucesso!",
+                                    NotificationType.Success
+                                );
+                                ResetForm(FormRespetivas);
+                                UpdateContext(
+                                    {
+                                        _AssociatedR: false,
+                                        localShowEliminacao: false
+                                    }
+                                ),
+                                Notify(
+                                    "Por favor, tente novamente.",
+                                    NotificationType.Error
+                                );
+                                UpdateContext(
+                                    {
+                                        _AssociatedR: false,
+                                        localShowEliminacao: false
+                                    }
+                                )
+                            ),
+                            Notify(
+                                "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro " & LabelMembroName.Text & " ou clique em '+Novo' para criar uma nova empresa.",
                                 NotificationType.Information
+                            );
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {_AssociarR: true}
                             )
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
