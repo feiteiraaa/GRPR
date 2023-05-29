@@ -2803,21 +2803,33 @@ MembrosDetails As screen:
                                 ID_Empresa.ID = 'empresas respetivas'.Selected.ID
                             )
                         ),
-                         If(
-                        Patch(
-                            Empresas,
-                            LookUp(Empresas, ThisRecord.ID ='empresas respetivas'.Selected.ID),
-                            {
-                                Ativo: false,
-                                Bloqueado: true,
-                                'Data de saida': Now()
-                            }
-                        ).Ativo = false,
-                        Back();
-                        Notify("Registo de Empresas Respectivas foi eliminado com sucesso!", NotificationType.Success),
-                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
-                    ),
-                    Notify("Registo de Empresas Respectivas foi eliminado com sucesso, mas permanece ativo por estar associado a outro registo", NotificationType.Success)
+                        If(
+                            Patch(
+                                Empresas,
+                                LookUp(
+                                    Empresas,
+                                    ThisRecord.ID = 'empresas respetivas'.Selected.ID
+                                ),
+                                {
+                                    Ativo: false,
+                                    Bloqueado: true,
+                                    'Data de saída': Now()
+                                }
+                            ).Ativo = false,
+                            //Back();
+                            Notify(
+                                "Empresa Respectiva foi eliminada com sucesso!",
+                                NotificationType.Success
+                            ),
+                            Notify(
+                                "Por favor, tente novamente ou contacte o administrador da solução!",
+                                NotificationType.Error
+                            )
+                        ),
+                        Notify(
+                            "Empresa Respectiva foi eliminada com sucesso, mas permanece ativa por estar associada a outro registo",
+                            NotificationType.Success
+                        )
                     )
                 );
                 UpdateContext({localShowModal: false});
