@@ -3,10 +3,11 @@ MembrosDetails As screen:
         =UpdateContext(
             {
                 _Associar:false,
+                _AssociarR:false,
                 localShowModal: false,
                 localShowData: false,
                 localShowLeg: If(_Associated,true,false),
-                localShowEliminacao: false,
+                localShowEliminacao: If(_AssociatedR,true,false),
                 localShowRelacao: false,
                 localShowPrazo: false,
                 localShowNewForm: false
@@ -1694,8 +1695,19 @@ MembrosDetails As screen:
                 Color: =If(localShowEliminacao, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
                 Height: ='Info Circle_7'.Height
                 Icon: =If(localShowEliminacao, Icon.HorizontalLine, Icon.Add)
-                OnSelect: |
-                    =UpdateContext({localShowEliminacao: !localShowEliminacao,localShowData:false,localShowLeg:false,localShowPrazo:false,localShowRelacao:false,localShowNewForm:false,localShowEditForm:false})
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            localShowEliminacao: !localShowEliminacao,
+                            localShowData: false,
+                            localShowLeg: false,
+                            localShowPrazo: false,
+                            localShowRelacao: false,
+                            localShowNewForm: false,
+                            localShowEditForm: false,
+                            _AssociateR: false
+                        }
+                    )
                 Width: ='Info Circle_7'.Width
                 X: =Parent.Width - (30 + 'Info Circle_7'.Width)
                 Y: =5

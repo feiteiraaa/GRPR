@@ -224,7 +224,18 @@ Respetivas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =UpdateContext({localFormRespetivas:true})
+                =If(
+                    _AssociarR,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {
+                            _AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                            _AssociatedR: true
+                        }
+                    ),
+                    UpdateContext({localFormRespetivas: true})
+                )
             Order: =3
             Text: =ThisItem.Designacao
             Width: =100

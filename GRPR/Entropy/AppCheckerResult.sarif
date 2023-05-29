@@ -14831,36 +14831,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Respetivas._AssociarR"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Respetivas._AssociarR",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "_AssociarR",
-                "module": "Respetivas",
-                "type": "Respetivas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Configuracoes.localShowArq"
                 }
               ],
@@ -15111,6 +15081,66 @@
               },
               "properties": {
                 "member": "_Associar",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails._AssociarR"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails._AssociarR",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_AssociarR",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails._AssociateR"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails._AssociateR",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_AssociateR",
                 "module": "MembrosDetails",
                 "type": "MembrosDetails"
               }
