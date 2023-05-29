@@ -225,19 +225,19 @@
       },
       "OptionSetReferenceItem2": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Empresas"
+        "OptionSetReferenceEntityName": "Familiares"
       },
       "OptionSetReferenceItem3": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Familiares"
+        "OptionSetReferenceEntityName": "Membros_1"
       },
       "OptionSetReferenceItem4": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "Membros_1"
+        "OptionSetReferenceEntityName": "ROCS"
       },
       "OptionSetReferenceItem5": {
         "OptionSetReferenceColumnName": "uipp_tipodedocumento",
-        "OptionSetReferenceEntityName": "ROCS"
+        "OptionSetReferenceEntityName": "Empresas"
       }
     },
     "OptionSetTypeKey": "PicklistType",
