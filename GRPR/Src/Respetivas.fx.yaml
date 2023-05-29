@@ -309,7 +309,9 @@ Respetivas As screen:
             DataCardKey33 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: |-
+                    =//Parent.DisplayName
+                    "Data de aprovação em CA"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -526,7 +528,9 @@ Respetivas As screen:
             DataCardKey39 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: |-
+                    =//Parent.DisplayName
+                    "Designação"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -593,7 +597,9 @@ Respetivas As screen:
             DataCardKey40 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: |-
+                    =//Parent.DisplayName
+                    "Legislação aplicada"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -662,7 +668,9 @@ Respetivas As screen:
             DataCardKey41 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: |-
+                    =//Parent.DisplayName
+                    "Número do documento"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -729,7 +737,9 @@ Respetivas As screen:
             DataCardKey42 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: |-
+                    =//Parent.DisplayName
+                    "Participação (%)"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -796,7 +806,9 @@ Respetivas As screen:
             DataCardKey43 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: |-
+                    =//Parent.DisplayName
+                    "Tipo de documento"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
