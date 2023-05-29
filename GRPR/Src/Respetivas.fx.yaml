@@ -872,14 +872,14 @@ Respetivas As screen:
                     "Eliminar",
                     "Cancelar"
                 )*/
-                "Eliminar"
+                "Cancelar"
             ButtonIcon: |-
                 =/*If(
                     ColabFormMode = FormMode.View,
                     Icon.Trash,
                     Icon.Cancel
                 )*/
-                Icon.Trash
+                Icon.Cancel
             Height: =40
             Visible: |-
                 =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
@@ -909,6 +909,9 @@ Respetivas As screen:
                         ColabFormMode: FormMode.View
                     })
                 )*/
+                 UpdateContext({
+                        localFormRespetivasNew: false
+                    })
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
@@ -928,18 +931,17 @@ Respetivas As screen:
 
         DynamicBtn_25 As DynamicBtn:
             BtnText: |-
-                =/*If(
-                    ColabFormMode <> FormMode.View,
+                =If(
+                    localFormRespetivasNew,
                     "Guardar",
                     "Edit"
-                )*/
-                "Editar"
+                )
             ButtonIcon: |-
-                =/*If(
-                    ColabFormMode <> FormMode.View,
+                =If(
+                    localFormRespetivasNew,
                     Icon.Save,
                     Icon.Edit
-                )*/
+                )
             Visible: |-
                 =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
                 localFormRespetivas Or localFormRespetivasNew
@@ -957,19 +959,19 @@ Respetivas As screen:
             Height: =39
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |-
-                =/*If(
-                    ColabFormMode <> FormMode.View,
+            OnSelect: |
+                =If(
+                    localFormRespetivasNew,
                     If(
-                        SubmitForm(FormParticipadas),
-                        Back();
-                        Notify("Registo de Colaborador criado com sucesso!", NotificationType.Success),
+                        SubmitForm(EmpresasRespetivas),
+                        //Back();
+                        Notify("Registo criado com sucesso!", NotificationType.Success),
                         Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
-                    ),
+                    );
                     UpdateContext({
-                        ColabFormMode: FormMode.Edit
+                        localFormRespetivasNew: false
                     })
-                )*/
+                )
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
