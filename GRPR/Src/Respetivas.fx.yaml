@@ -236,7 +236,8 @@ Respetivas As screen:
                         ScreenTransition.None,
                         {
                             _AssociateRespetivas: EmpresasRespetivas1_1.Selected.ID,
-                            _AssociatedR: true
+                            _AssociatedR: true,
+                            _AssociarR:false
                         }
                     ),
                     UpdateContext({localFormRespetivas: true})
@@ -256,7 +257,19 @@ Respetivas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =UpdateContext({localFormRespetivas:true})
+                =If(
+                    _AssociarR,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {
+                            _AssociateRespetivas: EmpresasRespetivas1_1.Selected.ID,
+                            _AssociatedR: true,
+                            _AssociarR:false
+                        }
+                    ),
+                    UpdateContext({localFormRespetivas: true})
+                )
             Order: =4
             Text: =ThisItem.'Tipo de documento'
             Width: =100
@@ -272,7 +285,19 @@ Respetivas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =UpdateContext({localFormRespetivas:true})
+                =If(
+                    _AssociarR,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {
+                            _AssociateRespetivas: EmpresasRespetivas1_1.Selected.ID,
+                            _AssociatedR: true,
+                            _AssociarR:false
+                        }
+                    ),
+                    UpdateContext({localFormRespetivas: true})
+                )
             Order: =5
             Text: =ThisItem.'Numero Documento'
             Width: =100
@@ -288,7 +313,19 @@ Respetivas As screen:
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
             OnSelect: |-
-                =UpdateContext({localFormRespetivas:true})
+                =If(
+                    _AssociarR,
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None,
+                        {
+                            _AssociateRespetivas: EmpresasRespetivas1_1.Selected.ID,
+                            _AssociatedR: true,
+                            _AssociarR:false
+                        }
+                    ),
+                    UpdateContext({localFormRespetivas: true})
+                )
             Order: =6
             Text: =ThisItem.'Legislacao aplicada'.'Tipo de enquadramento'
             Width: =100
