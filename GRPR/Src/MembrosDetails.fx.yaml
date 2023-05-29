@@ -1,13 +1,21 @@
 MembrosDetails As screen:
-    OnVisible: |
+    OnVisible: |-
         =UpdateContext(
             {
-                _Associar:false,
-                _AssociarR:false,
+                _Associar: false,
+                _AssociarR: false,
                 localShowModal: false,
                 localShowData: false,
-                localShowLeg: If(_Associated,true,false),
-                localShowEliminacao: If(_AssociatedR,true,false),
+                localShowLeg: If(
+                    _Associated,
+                    true,
+                    false
+                ),
+                localShowEliminacao: If(
+                    _AssociatedR,
+                    true,
+                    false
+                ),
                 localShowRelacao: false,
                 localShowPrazo: false,
                 localShowNewForm: false
@@ -86,7 +94,7 @@ MembrosDetails As screen:
                 ).'Numero documento'
             )
         );
-        Refresh( 'Membros-Familiares-Respetivas');
+        Refresh('Membros-Familiares-Respetivas');
         Refresh('Membros-Participadas')
 
     BackBtn_5 As BackBtn:
