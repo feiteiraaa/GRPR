@@ -298,7 +298,14 @@ Respetivas As screen:
 
     EmpresasRespetivas As form:
         DataSource: =Empresas
-        DefaultMode: =If(localFormRespetivasNew,FormMode.New,FormMode.View)
+        DefaultMode: |-
+            =If(
+                localFormRespetivasNew,
+                FormMode.New,
+                localFormRespetivasEdit,
+                FormMode.Edit,
+                FormMode.View
+            )
         Item: =EmpresasRespetivas1_1.Selected
         NumberOfColumns: =2
         Visible: =localFormRespetivas Or localFormRespetivasNew
@@ -942,13 +949,13 @@ Respetivas As screen:
         DynamicBtn_25 As DynamicBtn:
             BtnText: |-
                 =If(
-                    localFormRespetivasNew,
+                    localFormRespetivasNew Or localFormRespetivasEdit,
                     "Guardar",
                     "Edit"
                 )
             ButtonIcon: |-
                 =If(
-                    localFormRespetivasNew,
+                    localFormRespetivasNew Or localFormRespetivasEdit,
                     Icon.Save,
                     Icon.Edit
                 )
@@ -986,16 +993,17 @@ Respetivas As screen:
                                 ScreenTransition.None,
                                 {
                                     _AssociateRespetivas: EmpresasRespetivas.LastSubmit.ID,
-                                    _AssociatedR: true
+                                    _AssociatedR: true,
+                                    _AssociarR: false
                                 }
-                            ),
-                            UpdateContext({localFormRespetivas: true})
+                            )
                         ),
                         Notify(
                             "Por favor, tente novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
-                    );
+                    ),
+                    UpdateContext({localFormRespetivasEdit: true})
                     
                 );
                 UpdateContext({localFormRespetivasNew: false})

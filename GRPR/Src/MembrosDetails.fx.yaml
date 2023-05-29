@@ -1625,7 +1625,8 @@ MembrosDetails As screen:
                                 {
                                     _AssociatedR: false,
                                     localShowEliminacao: false,
-                                    localShowEditForm:false
+                                    localShowEditForm:false,
+                                    _AssociarR:false
                                 }
                             ),
                             UpdateContext(
@@ -2060,7 +2061,8 @@ MembrosDetails As screen:
                                     {
                                         _AssociatedR: false,
                                         localShowEliminacao: false,
-                                        localShowEditForm: false
+                                        localShowEditForm: false,
+                                        _AssociarR:false
                                     }
                                 );
                                 Navigate(
@@ -2075,7 +2077,8 @@ MembrosDetails As screen:
                                     {
                                         _AssociatedR: false,
                                         localShowEliminacao: false,
-                                        localShowEditForm: false
+                                        localShowEditForm: false,
+                                        _AssociarR:false
                                     }
                                 )
                             ),
