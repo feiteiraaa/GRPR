@@ -2755,6 +2755,12 @@ MembrosDetails As screen:
         Visible: =localShowModal
         ZIndex: =10
 
+    Label13 As label:
+        Text: =_AssociarR
+        X: =689
+        Y: =74
+        ZIndex: =15
+
     elim_components_1 As group:
         Height: =5
         Width: =5
