@@ -284,6 +284,7 @@ Respetivas As screen:
         DataSource: =Empresas
         DefaultMode: =FormMode.View
         Item: =EmpresasRespetivas1_1.Selected
+        NumberOfColumns: =2
         Visible: =localFormRespetivas
         Width: =980
         X: =364
@@ -301,9 +302,9 @@ Respetivas As screen:
             Required: =false
             Update: =DateValue4.SelectedDate
             Visible: =!IsBlank(ThisItem.'Data aprovacao CA')
-            Width: =326
-            X: =2
-            Y: =1
+            Width: =490
+            X: =1
+            Y: =3
             ZIndex: =1
 
             DataCardKey33 As label:
@@ -377,13 +378,15 @@ Respetivas As screen:
             Height: =50
             Required: =false
             Update: =DateValue5.SelectedDate
-            Width: =326
-            X: =0
+            Width: =490
+            X: =1
             Y: =2
             ZIndex: =1
 
             DataCardKey37 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
@@ -454,9 +457,9 @@ Respetivas As screen:
             Required: =false
             Update: =DateValue6.SelectedDate
             Visible: =!IsBlank(ThisItem.'Data de saída')
-            Width: =326
-            X: =1
-            Y: =2
+            Width: =490
+            X: =0
+            Y: =3
             ZIndex: =1
 
             DataCardKey38 As label:
@@ -529,13 +532,15 @@ Respetivas As screen:
             MaxLength: =DataSourceInfo([@Empresas], DataSourceInfo.MaxLength, "uipp_designacao")
             Required: =false
             Update: =DataCardValue30.Text
-            Width: =326
+            Width: =490
             X: =0
             Y: =0
             ZIndex: =1
 
             DataCardKey39 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
@@ -598,13 +603,15 @@ Respetivas As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue34.Selected
-            Width: =326
+            Width: =490
             X: =0
-            Y: =1
+            Y: =2
             ZIndex: =1
 
             DataCardKey40 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
@@ -669,13 +676,15 @@ Respetivas As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue35.Text)
-            Width: =326
-            X: =2
-            Y: =0
+            Width: =490
+            X: =0
+            Y: =1
             ZIndex: =1
 
             DataCardKey41 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
@@ -738,13 +747,15 @@ Respetivas As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue36.Text)
-            Width: =326
+            Width: =490
             X: =1
             Y: =1
             ZIndex: =1
 
             DataCardKey42 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
@@ -807,13 +818,15 @@ Respetivas As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue37.Selected.Value
-            Width: =326
+            Width: =490
             X: =1
             Y: =0
             ZIndex: =1
 
             DataCardKey43 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
