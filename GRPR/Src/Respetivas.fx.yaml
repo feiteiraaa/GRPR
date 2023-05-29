@@ -969,19 +969,36 @@ Respetivas As screen:
             Height: =39
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |
+            OnSelect: |-
                 =If(
                     localFormRespetivasNew,
                     If(
                         SubmitForm(EmpresasRespetivas),
                         //Back();
-                        Notify("Registo criado com sucesso!", NotificationType.Success),
-                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
+                        Notify(
+                            "Registo criado com sucesso!",
+                            NotificationType.Success
+                        );
+                        If(
+                            _AssociarR,
+                            Navigate(
+                                MembrosDetails,
+                                ScreenTransition.None,
+                                {
+                                    _AssociateRespetivas: EmpresasRespetivas.LastSubmit.ID,
+                                    _AssociatedR: true
+                                }
+                            ),
+                            UpdateContext({localFormRespetivas: true})
+                        ),
+                        Notify(
+                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
                     );
-                    UpdateContext({
-                        localFormRespetivasNew: false
-                    })
-                )
+                    
+                );
+                UpdateContext({localFormRespetivasNew: false})
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
