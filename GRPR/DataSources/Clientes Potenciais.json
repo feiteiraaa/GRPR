@@ -305,7 +305,7 @@
       "msdyn_contact_msdyn_surveyinvite_ContactId": "Atividades do Inquérito (msdyn_contact_msdyn_surveyinvite_ContactId)",
       "msdyn_contact_msdyn_surveyresponse_Contact": "Respostas a Inquéritos",
       "msdyn_contactkpiid": "KPI",
-      "msdyn_decisioninfluencetag": "Decision influence labels",
+      "msdyn_decisioninfluencetag": "Etiquetas de influência da decisão",
       "msdyn_disablewebtracking": "Desativar Monitorização da Web",
       "msdyn_gdproptout": "Opção Ativa de Não Participação no GDPR",
       "msdyn_isassistantinorgchart": "É Assistente",
@@ -1291,7 +1291,7 @@
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Decision influence labels (Clientes Potenciais)",
+    "DisplayName": "Etiquetas de influência da decisão (Clientes Potenciais)",
     "Name": "contact_msdyn_decisioninfluencetag",
     "OptionSetInfoNameMapping": {
       "0": "Decisor",

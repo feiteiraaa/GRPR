@@ -406,7 +406,7 @@ ParticipadasDetails As screen:
                 HoverFill: =RGBA(0, 0, 0, 0)
                 IsSearchable: =false
                 Items: |-
-                    =Choices([@'Empresas Participadas do Grupos'].uipp_Legislacaoaplicada)
+                    =Choices([@'Empresas Participadas do Grupos'].'Legislacao aplicada')
                     //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PressedFill: =cores.amareloMontepio
