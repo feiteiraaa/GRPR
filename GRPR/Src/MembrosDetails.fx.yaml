@@ -765,8 +765,20 @@ MembrosDetails As screen:
                 Color: =If(localShowData, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
                 Height: ='Info Circle_5'.Height
                 Icon: =If(localShowData, Icon.HorizontalLine, Icon.Add)
-                OnSelect: |
-                    =UpdateContext({localShowData: !localShowData, localShowLeg:false,localShowPrazo:false,localShowRelacao:false,localShowEliminacao:false,localShowNewForm:false,localShowEditForm:false})
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            localShowData: !localShowData,
+                            localShowLeg: false,
+                            localShowPrazo: false,
+                            localShowRelacao: false,
+                            localShowEliminacao: false,
+                            localShowNewForm: false,
+                            localShowEditForm: false,
+                            _Associated: false,
+                            _AssociatedR: false
+                        }
+                    )
                 Width: ='Info Circle_5'.Width
                 X: =Parent.Width - (30 + 'Info Circle_5'.Width)
                 Y: =5
@@ -1439,7 +1451,8 @@ MembrosDetails As screen:
                             localShowEliminacao: false,
                             localShowNewForm: false,
                             localShowEditForm: false,
-                            _Associated: false
+                            _Associated: false,
+                            _AssociatedR: false
                         }
                     );
                 Width: ='Info Circle_6'.Width
@@ -1925,7 +1938,8 @@ MembrosDetails As screen:
                             localShowRelacao: false,
                             localShowNewForm: false,
                             localShowEditForm: false,
-                            _AssociateR: false
+                            _Associated: false,
+                            _AssociatedR: false
                         }
                     )
                 Width: ='Info Circle_7'.Width
@@ -2264,8 +2278,20 @@ MembrosDetails As screen:
                 Color: =If(localShowRelacao, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
                 Height: ='Info Circle_8'.Height
                 Icon: =If(localShowRelacao, Icon.HorizontalLine, Icon.Add)
-                OnSelect: |
-                    =UpdateContext({localShowRelacao: !localShowRelacao,localShowData:false,localShowLeg:false,localShowPrazo:false,localShowEliminacao:false,localShowNewForm:false,localShowEditForm:false})
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            localShowRelacao: !localShowRelacao,
+                            localShowData: false,
+                            localShowLeg: false,
+                            localShowPrazo: false,
+                            localShowEliminacao: false,
+                            localShowNewForm: false,
+                            localShowEditForm: false,
+                            _Associated: false,
+                            _AssociatedR: false
+                        }
+                    )
                 Width: ='Info Circle_8'.Width
                 X: =Parent.Width - (30 + 'Info Circle_8'.Width)
                 Y: =5
@@ -2330,8 +2356,20 @@ MembrosDetails As screen:
                 Color: =If(localShowPrazo, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
                 Height: ='Info Circle_9'.Height
                 Icon: =If(localShowPrazo, Icon.HorizontalLine, Icon.Add)
-                OnSelect: |
-                    =UpdateContext({localShowPrazo: !localShowPrazo,localShowData:false,localShowLeg:false,localShowEliminacao:false,localShowRelacao:false,localShowNewForm:false,localShowEditForm:false})
+                OnSelect: |-
+                    =UpdateContext(
+                        {
+                            localShowPrazo: !localShowPrazo,
+                            localShowData: false,
+                            localShowLeg: false,
+                            localShowEliminacao: false,
+                            localShowRelacao: false,
+                            localShowNewForm: false,
+                            localShowEditForm: false,
+                            _Associated: false,
+                            _AssociatedR: false
+                        }
+                    )
                 Width: ='Info Circle_9'.Width
                 X: =Parent.Width - (30 + 'Info Circle_9'.Width)
                 Y: =5
