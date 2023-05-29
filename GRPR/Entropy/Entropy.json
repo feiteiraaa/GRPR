@@ -404,6 +404,8 @@
     "GalleryTopEdge": 22,
     "Grau de parentesco_Column1": 507,
     "Grau de parentesco_DataCard1": 501,
+    "Group1": 770,
+    "Group2": 771,
     "Group7": 320,
     "Grupo_DataCard1_1": 348,
     "Grupo_DataCard2": 252,
@@ -779,7 +781,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "05/29/2023 18:32:05",
+  "HeaderLastSavedDateTimeUTC": "05/29/2023 18:37:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1258,6 +1260,14 @@
       "Label8_1": 1,
       "Label8_2": 2,
       "Label8_3": 3
+    },
+    "Group1": {
+      "Button2_29": 1,
+      "DynamicBtn_26": 0
+    },
+    "Group2": {
+      "Button2_27": 0,
+      "DynamicBtn_25": 1
     },
     "Group7": {
       "BtnExportar": 1,
@@ -1755,6 +1765,8 @@
     "GalleryTopEdge": {},
     "Grau de parentesco_Column1": {},
     "Grau de parentesco_DataCard1": {},
+    "Group1": {},
+    "Group2": {},
     "Group7": {},
     "Grupo_DataCard1_1": {},
     "Grupo_DataCard2": {},
@@ -2526,6 +2538,8 @@
     "GalleryTopEdge": 725,
     "Grau de parentesco_Column1": 673,
     "Grau de parentesco_DataCard1": 667,
+    "Group1": 0,
+    "Group2": 0,
     "Group7": 518,
     "Grupo_DataCard1_1": 324,
     "Grupo_DataCard2": 369,

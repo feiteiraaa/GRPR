@@ -858,110 +858,125 @@ Respetivas As screen:
         Y: =79
         ZIndex: =16
 
-    DynamicBtn_25 As DynamicBtn:
-        BtnText: |-
-            =/*If(
-                ColabFormMode <> FormMode.View,
-                "Guardar",
-                "Edit"
-            )*/
-            "Editar"
-        ButtonIcon: |-
-            =/*If(
-                ColabFormMode <> FormMode.View,
-                Icon.Save,
-                Icon.Edit
-            )*/
-        Visible: |-
-            =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-            localFormRespetivas Or localFormRespetivasNew
-        X: =1174
-        Y: =74
-        ZIndex: =17
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
 
-    Button2_27 As button:
-        BorderColor: =RGBA(0,0,0, 0)
-        Color: =RGBA(0,0,0, 0)
-        DisabledBorderColor: =RGBA(0,0,0, 0)
-        DisabledColor: =RGBA(0,0,0, 0)
-        DisabledFill: =RGBA(0,0,0, 0)
-        Fill: =RGBA(0,0,0, 0)
-        Height: =39
-        HoverColor: =RGBA(0,0,0, 0)
-        HoverFill: =RGBA(0,0,0, 0)
-        OnSelect: |-
-            =/*If(
-                ColabFormMode <> FormMode.View,
-                If(
-                    SubmitForm(FormParticipadas),
-                    Back();
-                    Notify("Registo de Colaborador criado com sucesso!", NotificationType.Success),
-                    Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
-                ),
-                UpdateContext({
-                    ColabFormMode: FormMode.Edit
-                })
-            )*/
-        PressedColor: =RGBA(0,0,0, 0)
-        PressedFill: =RGBA(0,0,0, 0)
-        Text: =""
-        Visible: |-
-            =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-            localFormRespetivas Or localFormRespetivasNew
-        X: =DynamicBtn_25.X
-        Y: =DynamicBtn_25.Y
-        ZIndex: =18
+        DynamicBtn_26 As DynamicBtn:
+            BtnText: |-
+                =/*If(
+                    ColabFormMode = FormMode.View,
+                    "Eliminar",
+                    "Cancelar"
+                )*/
+                "Eliminar"
+            ButtonIcon: |-
+                =/*If(
+                    ColabFormMode = FormMode.View,
+                    Icon.Trash,
+                    Icon.Cancel
+                )*/
+                Icon.Trash
+            Height: =40
+            Visible: |-
+                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
+                EmpresasRespetivas.DisplayMode <> DisplayMode.View
+            Width: =160
+            X: =1001
+            Y: =74
+            ZIndex: =19
 
-    DynamicBtn_26 As DynamicBtn:
-        BtnText: |-
-            =/*If(
-                ColabFormMode = FormMode.View,
-                "Eliminar",
-                "Cancelar"
-            )*/
-            "Eliminar"
-        ButtonIcon: |-
-            =/*If(
-                ColabFormMode = FormMode.View,
-                Icon.Trash,
-                Icon.Cancel
-            )*/
-        Height: =40
-        Visible: |-
-            =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-            localFormRespetivas Or localFormRespetivasNew
-        Width: =160
-        X: =1001
-        Y: =74
-        ZIndex: =19
+        Button2_29 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |-
+                =/*If(
+                    ColabFormMode = FormMode.View,
+                    UpdateContext({
+                        localShowModal: true
+                    }),
+                    UpdateContext({
+                        ColabFormMode: FormMode.View
+                    })
+                )*/
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: |-
+                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
+                EmpresasRespetivas.DisplayMode <> DisplayMode.View
+            X: =1000
+            Y: =73
+            ZIndex: =20
 
-    Button2_29 As button:
-        BorderColor: =RGBA(0,0,0, 0)
-        Color: =RGBA(0,0,0, 0)
-        DisabledBorderColor: =RGBA(0,0,0, 0)
-        DisabledColor: =RGBA(0,0,0, 0)
-        DisabledFill: =RGBA(0,0,0, 0)
-        Fill: =RGBA(0,0,0, 0)
-        Height: =39
-        HoverColor: =RGBA(0,0,0, 0)
-        HoverFill: =RGBA(0,0,0, 0)
-        OnSelect: |-
-            =/*If(
-                ColabFormMode = FormMode.View,
-                UpdateContext({
-                    localShowModal: true
-                }),
-                UpdateContext({
-                    ColabFormMode: FormMode.View
-                })
-            )*/
-        PressedColor: =RGBA(0,0,0, 0)
-        PressedFill: =RGBA(0,0,0, 0)
-        Text: =""
-        Visible: |-
-            =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-            localFormRespetivas Or localFormRespetivasNew
-        X: =1000
-        Y: =73
-        ZIndex: =20
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        DynamicBtn_25 As DynamicBtn:
+            BtnText: |-
+                =/*If(
+                    ColabFormMode <> FormMode.View,
+                    "Guardar",
+                    "Edit"
+                )*/
+                "Editar"
+            ButtonIcon: |-
+                =/*If(
+                    ColabFormMode <> FormMode.View,
+                    Icon.Save,
+                    Icon.Edit
+                )*/
+            Visible: |-
+                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
+                localFormRespetivas Or localFormRespetivasNew
+            X: =1174
+            Y: =74
+            ZIndex: =17
+
+        Button2_27 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |-
+                =/*If(
+                    ColabFormMode <> FormMode.View,
+                    If(
+                        SubmitForm(FormParticipadas),
+                        Back();
+                        Notify("Registo de Colaborador criado com sucesso!", NotificationType.Success),
+                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
+                    ),
+                    UpdateContext({
+                        ColabFormMode: FormMode.Edit
+                    })
+                )*/
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: |-
+                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
+                localFormRespetivas Or localFormRespetivasNew
+            X: =DynamicBtn_25.X
+            Y: =DynamicBtn_25.Y
+            ZIndex: =18
 
