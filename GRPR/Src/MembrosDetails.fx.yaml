@@ -1568,7 +1568,7 @@ MembrosDetails As screen:
                     BtnText: ="Eliminar"
                     ButtonIcon: =Icon.Trash
                     Height: =40
-                    Visible: =true
+                    Visible: =!_AssociarR And !localShowEditForm
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1593,6 +1593,7 @@ MembrosDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =!_AssociarR And !localShowEditForm
                     X: =DynamicBtn_17.X
                     Y: =DynamicBtn_17.Y
                     ZIndex: =4
@@ -1605,8 +1606,8 @@ MembrosDetails As screen:
                 ZIndex: =7
 
                 DynamicBtn_18 As DynamicBtn:
-                    BtnText: =If(_AssociatedR,"Cancelar","Editar")
-                    ButtonIcon: =If(_AssociatedR,Icon.Cancel,Icon.Edit)
+                    BtnText: =If(_AssociatedR Or localShowEditForm,"Cancelar","Editar")
+                    ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Cancel,Icon.Edit)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -2032,8 +2033,8 @@ MembrosDetails As screen:
                 ZIndex: =10
 
                 DynamicBtn_19 As DynamicBtn:
-                    BtnText: =If(_AssociatedR,"Guardar","Novo")
-                    ButtonIcon: =If(_AssociatedR,Icon.Save,Icon.Add)
+                    BtnText: =If(_AssociatedR Or localShowEditForm,"Guardar","Novo")
+                    ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Save,Icon.Add)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -2064,7 +2065,8 @@ MembrosDetails As screen:
                                 UpdateContext(
                                     {
                                         _AssociatedR: false,
-                                        localShowEliminacao: false
+                                        localShowEliminacao: false,
+                                        localShowEditForm:false
                                     }
                                 ),
                                 Notify(
@@ -2074,7 +2076,8 @@ MembrosDetails As screen:
                                 UpdateContext(
                                     {
                                         _AssociatedR: false,
-                                        localShowEliminacao: false
+                                        localShowEliminacao: false,
+                                        localShowEditForm:false
                                     }
                                 )
                             ),
