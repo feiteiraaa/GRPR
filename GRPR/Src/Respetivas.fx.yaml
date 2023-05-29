@@ -604,6 +604,7 @@ Respetivas As screen:
             Height: =50
             Required: =false
             Update: =DateValue5.SelectedDate
+            Visible: =true//!localFormRespetivasNew
             Width: =490
             X: =0
             Y: =2
@@ -625,13 +626,19 @@ Respetivas As screen:
 
             DateValue5 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DefaultDate: =ThisItem.'Data de insercao'
+                DefaultDate: |-
+                    =//ThisItem.'Data de insercao'
+                    /*Text(
+                        Now(),
+                        "dd/mm/yyyy",
+                        "pt-PT"
+                    )*/Now()
                 DisplayMode: =Parent.DisplayMode
                 EndYear: =Year(Today())+100
                 Format: |-
                     =Text(
                         Parent.Default,
-                        "dd-mm-yyyy",
+                        "dd/mm/yyyy",
                         "pt-PT"
                     )
                 InputTextPlaceholder: |-
