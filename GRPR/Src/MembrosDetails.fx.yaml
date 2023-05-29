@@ -1582,11 +1582,7 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
-                        )*/
+                        =UpdateContext({localShowModal: true})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -2736,7 +2732,13 @@ MembrosDetails As screen:
             ZIndex: =8
 
     ModalConfirmation_7 As ModalConfirmation:
-        ModalText: ="Tem certeza de que deseja dissociar a empresa "& 'empresas do grupo'.Selected.Designacao &" do membro "& LabelMembroName.Text& " ?"
+        ModalText: |-
+            =If(
+                localShowLeg,    
+                "Tem certeza de que deseja dissociar a empresa "& 'empresas do grupo'.Selected.Designacao &" do membro "& LabelMembroName.Text& " ?",
+                localShowEliminacao,
+                "Tem certeza de que deseja eliminar a empresa "& 'empresas respetivas'.Selected.Designacao &" do membro "& LabelMembroName.Text& " ?"
+            )
         Visible: =localShowModal
         ZIndex: =10
 
@@ -2811,11 +2813,14 @@ MembrosDetails As screen:
                     Remove(
                         'Membros-Participadas',
                         'empresas do grupo'.Selected
-                    );
-                    UpdateContext({
-                            localShowModal: false
-                        })
-                )
+                    ),
+                    localShowEliminacao,
+                    Remove(
+                        'Membros-Familiares-Respetivas',
+                        'empresas respetivas'.Selected
+                    )
+                );
+                UpdateContext({localShowModal: false})
             PaddingLeft: =50
             PressedColor: =Color.Black
             PressedFill: =ColorFade(RGBA(70, 70, 70, 1),90%)
