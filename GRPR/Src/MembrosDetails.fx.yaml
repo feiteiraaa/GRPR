@@ -2785,30 +2785,7 @@ MembrosDetails As screen:
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =ColorFade(RGBA(70, 70, 70, 1),80%)
             OnSelect: |-
-                =/*If(
-                    ColabFormMode = FormMode.View,
-                    If(
-                        Patch(
-                            'Empresas Participadas do Grupos',
-                            LookUp('Empresas Participadas do Grupos', ThisRecord.ID = _EmpresasParticipadas),
-                            {
-                                Ativo: false,
-                                Bloqueado: true,
-                                'Data de saida': Now()
-                            }
-                        ).Ativo = false,
-                        Back();
-                        Notify("Registo de Empresas Participadas do grupo Eliminado com sucesso!", NotificationType.Success);
-                        UpdateContext({
-                            localShowModal: false
-                        }),
-                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
-                    ),
-                    UpdateContext({
-                        ColabFormMode: FormMode.View
-                    })
-                )*/
-                If(
+                =If(
                     localShowLeg,
                     Remove(
                         'Membros-Participadas',
@@ -2818,9 +2795,36 @@ MembrosDetails As screen:
                     Remove(
                         'Membros-Familiares-Respetivas',
                         'empresas respetivas'.Selected
+                    );
+                    If(
+                        IsBlank(
+                            Filter(
+                                'Membros-Familiares-Respetivas',
+                                ID_Empresa.ID = 'empresas respetivas'.Selected.ID
+                            )
+                        ),
+                         If(
+                        Patch(
+                            Empresas,
+                            LookUp(Empresas, ThisRecord.ID ='empresas respetivas'.Selected.ID),
+                            {
+                                Ativo: false,
+                                Bloqueado: true,
+                                'Data de saida': Now()
+                            }
+                        ).Ativo = false,
+                        Back();
+                        Notify("Registo de Empresas Respectivas foi eliminado com sucesso!", NotificationType.Success),
+                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
+                    ),
+                    Notify("Registo de Empresas Respectivas foi eliminado com sucesso, mas permanece ativo por estar associado a outro registo", NotificationType.Success)
                     )
                 );
-                UpdateContext({localShowModal: false})
+                UpdateContext({localShowModal: false});
+                Navigate(
+                    Particulares,
+                    ScreenTransition.None
+                )
             PaddingLeft: =50
             PressedColor: =Color.Black
             PressedFill: =ColorFade(RGBA(70, 70, 70, 1),90%)
