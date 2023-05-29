@@ -927,7 +927,8 @@ Respetivas As screen:
                     })
                 )*/
                  UpdateContext({
-                        localFormRespetivasNew: false
+                        localFormRespetivasNew: false,
+                        localFormRespetivasEdit: false
                     })
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
@@ -978,7 +979,7 @@ Respetivas As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
                 =If(
-                    localFormRespetivasNew,
+                    localFormRespetivasNew Or localFormRespetivasEdit,
                     If(
                         SubmitForm(EmpresasRespetivas),
                         //Back();
@@ -1002,9 +1003,9 @@ Respetivas As screen:
                             "Por favor, tente novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
-                    ),
+                    );
+                    UpdateContext({localFormRespetivasEdit: false}),
                     UpdateContext({localFormRespetivasEdit: true})
-                    
                 );
                 UpdateContext({localFormRespetivasNew: false})
             PressedColor: =RGBA(0,0,0, 0)
