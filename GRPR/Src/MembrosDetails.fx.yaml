@@ -1,5 +1,5 @@
 MembrosDetails As screen:
-    OnVisible: |+
+    OnVisible: |
         =UpdateContext(
             {
                 _Associar:false,
@@ -86,7 +86,8 @@ MembrosDetails As screen:
                 ).'Numero documento'
             )
         );
-        
+        Refresh( 'Membros-Familiares-Respetivas');
+        Refresh('Membros-Participadas')
 
     BackBtn_5 As BackBtn:
         X: =365
@@ -2055,7 +2056,7 @@ MembrosDetails As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =If(
-                            _AssociatedR,
+                            _AssociatedR Or localShowEditForm,
                             If(
                                 SubmitForm(FormRespetivas),
                                 Notify(
@@ -2067,7 +2068,7 @@ MembrosDetails As screen:
                                     {
                                         _AssociatedR: false,
                                         localShowEliminacao: false,
-                                        localShowEditForm:false
+                                        localShowEditForm: false
                                     }
                                 ),
                                 Notify(
@@ -2078,7 +2079,7 @@ MembrosDetails As screen:
                                     {
                                         _AssociatedR: false,
                                         localShowEliminacao: false,
-                                        localShowEditForm:false
+                                        localShowEditForm: false
                                     }
                                 )
                             ),
