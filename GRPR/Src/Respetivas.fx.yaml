@@ -206,8 +206,7 @@ Respetivas As screen:
                         ),
             
                     TextInput2_3.Text,
-                    "uipp_designacao"//,
-                    //"uipp_numerodocumento"
+                    "uipp_designacao"
                 )
             //Empresas
         SelectedFill: =cores.amareloMontepio
