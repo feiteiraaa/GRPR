@@ -28,7 +28,8 @@ Inicio As screen:
                     {
                         records:
                         //substituir pelos dados das notificações
-                        CustomGallerySample
+                        //CustomGallerySample
+                        Atividades
                     },
                     ForAll(
                         Sequence(CountRows(records)),
@@ -76,7 +77,9 @@ Inicio As screen:
             Height: =53
             OnSelect: =Select(Parent)
             PaddingRight: =0
-            Text: =ThisItem.SampleHeading
+            Text: |-
+                ="Atividades"
+                //ThisItem.ID
             ZIndex: =2
 
         Label3_4 As label:
@@ -84,7 +87,7 @@ Inicio As screen:
             Height: =53
             OnSelect: =Select(Parent)
             PaddingRight: =0
-            Text: =ThisItem.SampleHeading
+            Text: =ThisItem.Titulo
             Width: =376
             X: =150
             ZIndex: =3
@@ -93,7 +96,7 @@ Inicio As screen:
             Color: =RGBA(77, 77, 77, 1)
             Height: =53
             OnSelect: =Select(Parent)
-            Text: =ThisItem.SampleHeading
+            Text: =ThisItem.Data
             Width: =166
             X: =526
             ZIndex: =4
