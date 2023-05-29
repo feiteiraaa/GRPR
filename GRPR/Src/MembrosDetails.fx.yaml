@@ -1473,9 +1473,11 @@ MembrosDetails As screen:
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
                 Height: =Parent.Height-60
-                Items: =ligacaoRespetivas
+                Items: |-
+                    =ligacaoRespetivas
+                    //'Membros-Familiares-Respetivas'
                 SelectedFill: =cores.amareloMontepio
-                Visible: =!_AssociatedR
+                Visible: =!_AssociatedR And !localShowEditForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_17.Y+50
@@ -1540,6 +1542,20 @@ MembrosDetails As screen:
                     X: =0
                     Y: =0
                     ZIndex: =23
+
+                ID_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ID"
+                    FieldName: ="uipp_id"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.ID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =24
 
             EliminarMembrosResp As group:
                 Height: =5
@@ -1616,6 +1632,12 @@ MembrosDetails As screen:
                                     _AssociatedR: false,
                                     localShowEliminacao: false
                                 }
+                            ),
+                            UpdateContext(
+                                {
+                                    localShowEditForm: true
+                                    
+                                }
                             )
                         )
                     PressedColor: =RGBA(0,0,0, 0)
@@ -1627,10 +1649,23 @@ MembrosDetails As screen:
 
             FormRespetivas As form:
                 DataSource: ='Membros-Familiares-Respetivas'
-                DefaultMode: =FormMode.New
+                DefaultMode: |-
+                    =If(
+                        localShowEditForm,
+                        FormMode.Edit,
+                        FormMode.New
+                    )
                 Height: =Parent.Height-90
+                Item: |-
+                    =If(
+                        localShowEditForm,
+                        LookUp(
+                            'Membros-Familiares-Respetivas',
+                            ID = 'empresas respetivas'.Selected.ID
+                        )
+                    )
                 NumberOfColumns: =2
-                Visible: =_AssociatedR
+                Visible: =_AssociatedR Or  localShowEditForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_17.Y+80
