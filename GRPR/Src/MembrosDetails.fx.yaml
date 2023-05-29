@@ -1627,11 +1627,12 @@ MembrosDetails As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =If(
-                            _AssociatedR,
+                            _AssociatedR Or localShowEditForm,
                             UpdateContext(
                                 {
                                     _AssociatedR: false,
-                                    localShowEliminacao: false
+                                    localShowEliminacao: false,
+                                    localShowEditForm:false
                                 }
                             ),
                             UpdateContext(
