@@ -76,6 +76,7 @@ Inicio As screen:
             Color: =RGBA(77, 77, 77, 1)
             Height: =53
             OnSelect: =Select(Parent)
+            PaddingLeft: =20
             PaddingRight: =0
             Text: |-
                 ="Atividades"
