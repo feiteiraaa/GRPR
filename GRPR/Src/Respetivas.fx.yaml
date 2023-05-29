@@ -230,7 +230,7 @@ Respetivas As screen:
                         MembrosDetails,
                         ScreenTransition.None,
                         {
-                            _AssociateParticipadas: 'Empresas Participadas'.Selected.ID,
+                            _AssociateRespetivas: EmpresasRespetivas1_1.Selected.ID,
                             _AssociatedR: true
                         }
                     ),

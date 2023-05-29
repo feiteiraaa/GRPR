@@ -1623,6 +1623,7 @@ MembrosDetails As screen:
 
             FormRespetivas As form:
                 DataSource: ='Membros-Familiares-Respetivas'
+                DefaultMode: =FormMode.New
                 Height: =Parent.Height-90
                 NumberOfColumns: =2
                 Visible: =_AssociatedR
@@ -1832,6 +1833,17 @@ MembrosDetails As screen:
                         Wrap: =false
                         Y: =DataCardKey46.Y
                         ZIndex: =4
+
+            LabelDesignacao_1 As label:
+                FontWeight: =FontWeight.Semibold
+                Height: =DynamicBtn_16.Height
+                Text: |-
+                    ="Designação: " & LookUp(Empresas,ID=_AssociateRespetivas).Designacao
+                Visible: =_AssociatedR
+                Width: =700
+                X: =40
+                Y: =DynamicBtn_16.Height + 15
+                ZIndex: =10
 
             NewMembrosResp As group:
                 Height: =5
