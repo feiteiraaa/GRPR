@@ -1626,11 +1626,15 @@ MembrosDetails As screen:
                 HoverColor: =RGBA(0,0,0, 0)
                 HoverFill: =RGBA(0,0,0, 0)
                 OnSelect: |-
-                    =/*If(
-                        localShowFimPeriodoForm,
-                        UpdateContext({localShowFimPeriodoForm: false}),
-                        UpdateContext({ModalConfirmation_1:1})
-                    )*/
+                    =Navigate(
+                        Respetivas,
+                        ScreenTransition.None,
+                        {_AssociarR: true}
+                    );
+                    Notify(
+                            "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro "&LabelMembroName.Text&" ou clique em '+Novo' para criar uma nova empresa.",
+                            NotificationType.Information
+                        )
                 PressedColor: =RGBA(0,0,0, 0)
                 PressedFill: =RGBA(0,0,0, 0)
                 Text: =""

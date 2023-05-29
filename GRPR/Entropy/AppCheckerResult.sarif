@@ -14831,6 +14831,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Respetivas._AssociarR"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Respetivas._AssociarR",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_AssociarR",
+                "module": "Respetivas",
+                "type": "Respetivas"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Configuracoes.localShowArq"
                 }
               ],
