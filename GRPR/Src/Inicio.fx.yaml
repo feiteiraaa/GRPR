@@ -23,13 +23,17 @@ Inicio As screen:
         DelayItemLoading: =true
         Fill: =RGBA(219, 219, 219, 1)
         Height: =431
-        Items: |-
-            =/*With(
+        Items: |
+            =With(
                     {
                         records:
-                        //substituir pelos dados das notificações
-                        //CustomGallerySample
-                        Atividades
+                        Ungroup(
+                            Table(
+                            {Atividades: Atividades},
+                            {Atividades: Listagens_1}
+                    ),
+                    "Atividades"
+                    )
                     },
                     ForAll(
                         Sequence(CountRows(records)),
@@ -40,15 +44,7 @@ Inicio As screen:
                             {rowNumber: Value}
                         )
                     )
-                )*/
-            
-            Ungroup(
-                Table(
-                    {Atividades: Atividades},
-                    {Atividades: Listagens_1}
-                    ),
-                    "Atividades"
-                    )
+                )
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -64,7 +60,7 @@ Inicio As screen:
             )
         Width: =692
         X: =365
-        Y: =138
+        Y: =136
         ZIndex: =4
 
         Rectangle1_1 As rectangle:
@@ -123,8 +119,8 @@ Inicio As screen:
         Size: =15
         Text: ="Notificações (brevemente)"
         Width: =270
-        X: =354
-        Y: =98
+        X: =365
+        Y: =93
         ZIndex: =5
 
     Label7 As label:
