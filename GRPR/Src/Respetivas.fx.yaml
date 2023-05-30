@@ -1,8 +1,8 @@
 Respetivas As screen:
     OnHidden: |-
-        =UpdateContext({_AssociarR:false})
+        =UpdateContext({_AssociarR:false,localFormRespetivas:false})
     OnVisible: |-
-        =UpdateContext({localFormRespetivas:false,localFormRespetivasNew:false});
+        =UpdateContext({localFormRespetivasNew:false});
         ClearCollect(CollecRespectivas, Empresas);
 
     LeftSectionComponent_3 As LeftSectionComponent:

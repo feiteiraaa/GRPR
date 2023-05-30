@@ -1502,6 +1502,8 @@ MembrosDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected,localFormRespetivas: true})
                     Order: =1
                     Text: =ThisItem.Designacao
                     Width: =478
