@@ -101,7 +101,8 @@ MembrosDetails As screen:
             )
         );
         Refresh('Membros-Familiares-Respetivas');
-        Refresh('Membros-Participadas')
+        Refresh('Membros-Participadas');
+        Set(DRI,true)
 
     BackBtn_5 As BackBtn:
         X: =365
@@ -131,7 +132,7 @@ MembrosDetails As screen:
                         IsBlank(_Membro),
                         ColabFormMode,
                         FormMode.View
-                    ) //Or ColabFormMode
+                    )
                 Height: =Parent.Height-DynamicBtn_14.Height
                 Item: =LookUp(Membros_1, _Membro = ThisRecord.ID)
                 Width: =Parent.Width*0.95
@@ -499,7 +500,7 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_Legislacaoaplicada"
                     Default: =ThisItem.'Legislacao aplicada'
-                    DisplayMode: =If(DRI And localShowNewForm,DisplayMode.Edit,DisplayMode.View)
+                    DisplayMode: =If(DRI And (localShowNewForm Or IsBlank(_Membro)) ,DisplayMode.Edit,DisplayMode.View)
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50

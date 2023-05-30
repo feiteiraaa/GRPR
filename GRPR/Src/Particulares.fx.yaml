@@ -515,6 +515,12 @@ Particulares As screen:
                     If(localseta And ThisItem.IsSelected,Icon.ChevronUp,Icon.ChevronDown)
                 OnSelect: |-
                     =UpdateContext({localseta:!localseta})
+                Visible: |-
+                    =If(
+                        CountRows(GalleryFamiliaresEmpresas.AllItems) > 0,
+                        true,
+                        false
+                    )
                 Width: =25
                 X: =929
                 ZIndex: =7
