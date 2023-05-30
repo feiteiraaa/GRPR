@@ -359,6 +359,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DateValue1.SelectedDate
+                    Visible: =ColabFormMode<>FormMode.New
                     Width: =266
                     X: =0
                     Y: =1
