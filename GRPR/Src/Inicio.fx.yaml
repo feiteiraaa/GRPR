@@ -599,13 +599,15 @@ Inicio As screen:
                     )
                 ) & "d " & 
                 DateDiff(
-                    Text(Time(Value(12), Value(0), Value(0)), DateTimeFormat.LongTime),
                     Text(
                         Now(),
                         "hh:mm:ss",
                         "pt-PT"
-                    ), TimeUnit.Hours
-                ) & "h "  & "restantes"
+                    ), 
+                    Text(
+                        DateTimeValue(Label8_3.Text)),
+                        TimeUnit.Hours
+                ) & "h " & "restantes"
             Visible: |-
                 =Or(
                     godMode,
