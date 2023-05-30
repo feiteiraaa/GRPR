@@ -1020,7 +1020,8 @@ MembrosDetails As screen:
                                         _Associated: false,
                                         localShowLeg: false
                                     }
-                                ),
+                                );
+                                Navigate(Particulares),
                                 Notify(
                                     "Por favor, tente novamente.",
                                     NotificationType.Error
@@ -1033,7 +1034,7 @@ MembrosDetails As screen:
                                 )
                             ),
                             Notify(
-                                "Por favor, selecione na tabela a 'Empresa Participada do Grupo' ao qual deseja associar o membro "&LabelMembroName.Text&".",
+                                "Por favor, selecione na tabela a 'Empresa Participada do Grupo' ao qual deseja associar o membro " & LabelMembroName.Text & ".",
                                 NotificationType.Information
                             );
                             Navigate(
