@@ -691,7 +691,11 @@ MembrosDetails As screen:
                                 //localFormMode: FormMode.New
                         }
                             )
-                        )
+                        );
+                        /*If(
+                            IsBlank(_Membro),
+                            UpdateContext({_Membro:Informacao.LastSubmit})
+                        )*/
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -1441,6 +1445,7 @@ MembrosDetails As screen:
 
         "'Empresas Grupo' As groupContainer.manualLayoutContainer":
             Height: =50
+            Visible: =!IsBlank(_Membro)
             Width: =Parent.Width
             Y: =If(localShowData, 'Informacao Content'.Y + 'Informacao Content'.Height, 'Informacao Content'.Y)
             ZIndex: =4
@@ -2163,6 +2168,7 @@ MembrosDetails As screen:
 
         "'Empresas Respetivas' As groupContainer.manualLayoutContainer":
             Height: =50
+            Visible: =!IsBlank(_Membro)
             Width: =Parent.Width
             Y: =If(localShowLeg, 'Empresas Grupo Content'.Y + 'Empresas Grupo Content'.Height, 'Empresas Grupo Content'.Y)
             ZIndex: =6
@@ -2513,6 +2519,7 @@ MembrosDetails As screen:
 
         Familiares1 As groupContainer.manualLayoutContainer:
             Height: =50
+            Visible: =!IsBlank(_Membro)
             Width: =Parent.Width
             Y: =If(localShowEliminacao, 'Empresas Respetivas Content'.Y + 'Empresas Respetivas Content'.Height, 'Empresas Respetivas Content'.Y)
             ZIndex: =8
@@ -2591,6 +2598,7 @@ MembrosDetails As screen:
 
         "'Atividades Info' As groupContainer.manualLayoutContainer":
             Height: =50
+            Visible: =!IsBlank(_Membro)
             Width: =Parent.Width
             Y: =If(localShowRelacao, 'Familiares Content'.Y + 'Familiares Content'.Height, 'Familiares Content'.Y)
             ZIndex: =10
