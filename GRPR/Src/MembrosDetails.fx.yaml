@@ -5,7 +5,11 @@ MembrosDetails As screen:
                 _Associar: false,
                 _AssociarR: false,
                 localShowModal: false,
-                localShowData: false,
+                localShowData: If(
+                    IsBlank(_Membro),
+                    true,
+                    false
+                ),
                 localShowLeg: If(
                     _Associated,
                     true,
