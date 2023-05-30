@@ -1017,7 +1017,7 @@ Respetivas As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =If(
+                =/*If(
                     localFormRespetivasNew Or localFormRespetivasEdit,
                     If(
                         SubmitForm(EmpresasRespetivas),
@@ -1044,6 +1044,43 @@ Respetivas As screen:
                         )
                     );
                     UpdateContext({localFormRespetivasEdit: false}),
+                    UpdateContext({localFormRespetivasEdit: true})
+                );
+                UpdateContext({localFormRespetivasNew: false})*/
+                If(
+                    localFormRespetivasNew Or localFormRespetivasEdit,
+                    If(
+                        Len(DataCardValue35.Text) = 9,
+                        If(
+                            SubmitForm(EmpresasRespetivas),
+                        //Back();
+                            Notify(
+                                "Registo criado com sucesso!",
+                                NotificationType.Success
+                            );
+                            If(
+                                _AssociarR,
+                                Navigate(
+                                    MembrosDetails,
+                                    ScreenTransition.None,
+                                    {
+                                        _AssociateRespetivas: EmpresasRespetivas.LastSubmit.ID,
+                                        _AssociatedR: true,
+                                        _AssociarR: false
+                                    }
+                                )
+                            ),
+                            Notify(
+                                "Por favor, tente novamente ou contacte o administrador da solução!",
+                                NotificationType.Error
+                            )
+                        );
+                        UpdateContext({localFormRespetivasEdit: false}),
+                        Notify(
+                            "Por favor, preencha o número do documento corretamente.",
+                            NotificationType.Error
+                        )
+                    ),
                     UpdateContext({localFormRespetivasEdit: true})
                 );
                 UpdateContext({localFormRespetivasNew: false})
