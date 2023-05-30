@@ -45,11 +45,10 @@ Inicio As screen:
             Ungroup(
                 Table(
                     {Atividades: Atividades},
-                    {Listagens: Listagens_1}
+                    {Atividades: Listagens_1}
                     ),
                     "Atividades"
                     )
-                    
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
         ShowScrollbar: =false
@@ -88,7 +87,11 @@ Inicio As screen:
             PaddingLeft: =20
             PaddingRight: =0
             Size: =12
-            Text: =ThisItem.uipp_titulo
+            Text: |-
+                =If(IsBlank(
+                    ThisItem.uipp_titulo),
+                    "Listagens", "Atividades"
+                 )
             Width: =133
             ZIndex: =2
 
