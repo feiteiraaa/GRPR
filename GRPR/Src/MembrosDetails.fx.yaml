@@ -667,7 +667,7 @@ MembrosDetails As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =If(
-                            localShowNewForm,
+                            localShowNewForm Or Informacao.Mode = FormMode.New,
                             If(
                                 Len(DataCardValue5.Text) = 9,
                                 If(
@@ -683,9 +683,15 @@ MembrosDetails As screen:
                                             localShowNewForm: !localShowNewForm
                                         }
                                     ),
-                                    Notify("Por favor, tente novamente.",NotificationType.Error)
+                                    Notify(
+                                        "Por favor, tente novamente.",
+                                        NotificationType.Error
+                                    )
                                 ),
-                                Notify("Por favor, preencha o número do documento corretamente.",NotificationType.Error)
+                                Notify(
+                                    "Por favor, preencha o número do documento corretamente.",
+                                    NotificationType.Error
+                                )
                             ),
                             UpdateContext(
                                 {localShowNewForm: !localShowNewForm
@@ -693,10 +699,13 @@ MembrosDetails As screen:
                         }
                             )
                         );
-                        /*If(
-                            IsBlank(_Membro),
-                            UpdateContext({_Membro:Informacao.LastSubmit})
-                        )*/
+                        If(
+                            Informacao.Mode = FormMode.New,
+                            Navigate(
+                                Particulares,
+                                ScreenTransition.None
+                            )
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
