@@ -5,7 +5,11 @@ MembrosDetails As screen:
                 _Associar: false,
                 _AssociarR: false,
                 localShowModal: false,
-                localShowData: false,
+                localShowData: If(
+                    IsBlank(_Membro),
+                    true,
+                    false
+                ),
                 localShowLeg: If(
                     _Associated,
                     true,
@@ -120,7 +124,14 @@ MembrosDetails As screen:
 
             Informacao As form:
                 DataSource: =Membros_1
-                DefaultMode: =If(localShowNewForm,FormMode.Edit ,FormMode.View)
+                DefaultMode: |-
+                    =If(
+                        localShowNewForm,
+                        FormMode.Edit,
+                        IsBlank(_Membro),
+                        ColabFormMode,
+                        FormMode.View
+                    ) //Or ColabFormMode
                 Height: =Parent.Height-DynamicBtn_14.Height
                 Item: =LookUp(Membros_1, _Membro = ThisRecord.ID)
                 Width: =Parent.Width*0.95
@@ -634,8 +645,8 @@ MembrosDetails As screen:
                 ZIndex: =4
 
                 DynamicBtn_14 As DynamicBtn:
-                    BtnText: =If(localShowNewForm, "Guardar" ,"Editar")
-                    ButtonIcon: =If(localShowNewForm,Icon.Save ,Icon.Edit)
+                    BtnText: =If(localShowNewForm Or IsBlank(_Membro), "Guardar" ,"Editar")
+                    ButtonIcon: =If(localShowNewForm Or IsBlank(_Membro),Icon.Save ,Icon.Edit)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -699,7 +710,7 @@ MembrosDetails As screen:
                     BtnText: ="Cancelar"
                     ButtonIcon: =Icon.Cancel
                     Height: =40
-                    Visible: =localShowNewForm
+                    Visible: =localShowNewForm Or IsBlank(_Membro)
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -716,11 +727,18 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =UpdateContext({localShowNewForm: false})
+                        =UpdateContext({localShowNewForm: false});
+                        If(
+                            IsBlank(_Membro),
+                            Navigate(
+                                Particulares,
+                                ScreenTransition.None
+                            )
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    Visible: =localShowNewForm
+                    Visible: =localShowNewForm Or IsBlank(_Membro)
                     X: =DynamicBtn_23.X
                     Y: =DynamicBtn_23.Y
                     ZIndex: =5
@@ -2691,6 +2709,7 @@ MembrosDetails As screen:
                     ID = _Membro
                 ).Nome & " (Eliminado)"
             )
+        Visible: =!IsBlank(_Membro)
         Width: =300
         X: =365
         Y: =124
@@ -2707,7 +2726,7 @@ MembrosDetails As screen:
             BtnText: ="Eliminar"
             ButtonIcon: =Icon.Trash
             Height: =40
-            Visible: =true
+            Visible: =!IsBlank(_Membro)
             Width: =160
             X: =1186
             Y: =74
@@ -2740,6 +2759,7 @@ MembrosDetails As screen:
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
+            Visible: =!IsBlank(_Membro)
             X: =1186
             Y: =74
             ZIndex: =8
