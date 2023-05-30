@@ -935,7 +935,7 @@ MembrosDetails As screen:
                     Height: =40
                     Visible: |-
                         =If(
-                            CountRows(ligacaoParticipadas) = 0,
+                            CountRows(ligacaoParticipadas) = 0 And !_Associated,
                             false,
                             true
                         )
@@ -970,7 +970,7 @@ MembrosDetails As screen:
                     Text: =""
                     Visible: |-
                         =If(
-                            CountRows(ligacaoParticipadas) = 0,
+                            CountRows(ligacaoParticipadas) = 0 And !_Associated,
                             false,
                             true
                         )
@@ -1630,7 +1630,7 @@ MembrosDetails As screen:
                     Height: =40
                     Visible: |-
                         =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
-                            CountRows(ligacaoParticipadas) = 0,
+                            CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
                         )
@@ -1656,7 +1656,7 @@ MembrosDetails As screen:
                     Text: =""
                     Visible: |-
                         =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
-                            CountRows(ligacaoParticipadas) = 0,
+                            CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
                         )
@@ -1677,7 +1677,7 @@ MembrosDetails As screen:
                     Height: =40
                     Visible: |-
                         =If(
-                            CountRows(ligacaoParticipadas) = 0,
+                            CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
                         )
@@ -1719,7 +1719,7 @@ MembrosDetails As screen:
                     Text: =""
                     Visible: |-
                         =If(
-                            CountRows(ligacaoParticipadas) = 0,
+                            CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
                         )
