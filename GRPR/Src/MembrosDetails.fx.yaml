@@ -665,7 +665,7 @@ MembrosDetails As screen:
                     Height: =39
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
-                    OnSelect: |-
+                    OnSelect: |
                         =If(
                             localShowNewForm Or Informacao.Mode = FormMode.New,
                             If(
@@ -675,6 +675,13 @@ MembrosDetails As screen:
                                     Notify(
                                         "O registo foi submetido com sucesso!",
                                         NotificationType.Success
+                                    );
+                                    If(
+                                        Informacao.Mode = FormMode.New,
+                                        Navigate(
+                                            Particulares,
+                                            ScreenTransition.None
+                                        )
                                     );
                                     ResetForm(Informacao);
                                     UpdateContext(
@@ -699,13 +706,6 @@ MembrosDetails As screen:
                         }
                             )
                         );
-                        If(
-                            Informacao.Mode = FormMode.New,
-                            Navigate(
-                                Particulares,
-                                ScreenTransition.None
-                            )
-                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
