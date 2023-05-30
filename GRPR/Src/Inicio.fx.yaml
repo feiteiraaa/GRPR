@@ -599,14 +599,14 @@ Inicio As screen:
                     )
                 ) & "d " & 
                 DateDiff(
-                    Text(
-                        Now(),
-                        "hh:mm:ss",
-                        "pt-PT"
-                    ), 
-                    Text(
-                        DateTimeValue(Label8_3.Text)),
-                        TimeUnit.Hours
+                    Now(),
+                    DateValue(
+                        Text(
+                            DateAdd(Now(), 1, TimeUnit.Days),
+                            "yyyy-mm-dd"
+                        ) & " 12:00 AM"
+                    ),
+                    TimeUnit.Hours
                 ) & "h " & "restantes"
             Visible: |-
                 =Or(
