@@ -379,7 +379,7 @@ Particulares As screen:
             Layout: =Layout.Vertical
             LoadingSpinner: =LoadingSpinner.Data
             OnSelect: |-
-                =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas.Selected,_Associated:false})
+                =Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas.Selected,_Associated:false,_AssociatedR:false})
             TemplateSize: =127
             Visible: =localFiltro = "Membros dos Orgãos Sociais"
             Width: =980
@@ -860,7 +860,7 @@ Particulares As screen:
                     "ROC",
                     Navigate(ROCDetails, ScreenTransition.None, {ColabFormMode: FormMode.New}),
                     "Membros dos Orgãos Sociais",
-                    Navigate(MembrosDetails, ScreenTransition.None, {ColabFormMode: FormMode.New})
+                    Navigate(MembrosDetails, ScreenTransition.None, {ColabFormMode: FormMode.New,_Membro:Blank()})
                 )
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)

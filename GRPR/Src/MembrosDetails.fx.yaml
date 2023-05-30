@@ -120,7 +120,14 @@ MembrosDetails As screen:
 
             Informacao As form:
                 DataSource: =Membros_1
-                DefaultMode: =If(localShowNewForm,FormMode.Edit ,FormMode.View)
+                DefaultMode: |-
+                    =If(
+                        localShowNewForm,
+                        FormMode.Edit,
+                        IsBlank(_Membro),
+                        ColabFormMode,
+                        FormMode.View
+                    ) //Or ColabFormMode
                 Height: =Parent.Height-DynamicBtn_14.Height
                 Item: =LookUp(Membros_1, _Membro = ThisRecord.ID)
                 Width: =Parent.Width*0.95
@@ -2691,6 +2698,7 @@ MembrosDetails As screen:
                     ID = _Membro
                 ).Nome & " (Eliminado)"
             )
+        Visible: =!IsBlank(_Membro)
         Width: =300
         X: =365
         Y: =124
