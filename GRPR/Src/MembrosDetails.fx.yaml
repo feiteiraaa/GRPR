@@ -920,11 +920,11 @@ MembrosDetails As screen:
                     ButtonIcon: =If(_Associated,Icon.Cancel,Icon.HorizontalLine)
                     Height: =40
                     Visible: |-
-                        =If(
+                        =/*If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/ true
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -955,11 +955,11 @@ MembrosDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        =If(
+                        =/*If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/ true
                     X: =DynamicBtn_15.X
                     Y: =DynamicBtn_15.Y
                     ZIndex: =3
@@ -1409,11 +1409,11 @@ MembrosDetails As screen:
                     ButtonIcon: =Icon.DocumentWithContent
                     Height: =40
                     Visible: |-
-                        ='empresas do grupo'.Visible And If(
+                        ='empresas do grupo'.Visible /*And If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1435,11 +1435,11 @@ MembrosDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        ='empresas do grupo'.Visible And If(
+                        ='empresas do grupo'.Visible /*And If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/
                     X: =DynamicBtn_24.X
                     Y: =DynamicBtn_24.Y
                     ZIndex: =7
@@ -1613,11 +1613,11 @@ MembrosDetails As screen:
                     ButtonIcon: =Icon.Trash
                     Height: =40
                     Visible: |-
-                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
+                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible /*And If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1639,11 +1639,11 @@ MembrosDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
+                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible /*And If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/
                     X: =DynamicBtn_17.X
                     Y: =DynamicBtn_17.Y
                     ZIndex: =4
@@ -1660,11 +1660,11 @@ MembrosDetails As screen:
                     ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Cancel,Icon.Edit)
                     Height: =40
                     Visible: |-
-                        =If(
+                        =/*If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/ true
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -1702,11 +1702,11 @@ MembrosDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        =If(
+                        =/*If(
                             CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
-                        )
+                        )*/ true
                     X: =DynamicBtn_18.X
                     Y: =DynamicBtn_18.Y
                     ZIndex: =6
