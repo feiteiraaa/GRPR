@@ -1082,7 +1082,7 @@ MembrosDetails As screen:
                         localShowEditForm,
                         LookUp(
                             'Membros-Participadas',
-                            ThisRecord.ID = 'empresas do grupo'.Selected.ID
+                            ThisRecord.ID = 'empresas do grupo'.Selected.'Parent ID'.ID
                         )
                     )
                 NumberOfColumns: =2
