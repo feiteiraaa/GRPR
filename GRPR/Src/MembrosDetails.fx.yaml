@@ -864,7 +864,7 @@ MembrosDetails As screen:
                     //'Membros-Participadas'
                 NoDataText: ="Não existe nenhuma empresa participada do grupo associada a "& LabelMembroName.Text
                 SelectedFill: =cores.amareloMontepio
-                Visible: =!_Associated
+                Visible: =!_Associated And !localShowEditForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_15.Y+50
@@ -1067,10 +1067,23 @@ MembrosDetails As screen:
 
             EmpresasParticipadas As form:
                 DataSource: ='Membros-Participadas'
-                DefaultMode: =FormMode.New
+                DefaultMode: |-
+                    =If(
+                        localShowEditForm,
+                        FormMode.Edit,
+                        FormMode.New
+                    )
                 Height: =Parent.Height-60
+                Item: |-
+                    =If(
+                        localShowEditForm,
+                        LookUp(
+                            'Membros-Familiares-Respetivas',
+                            ID = 'empresas do grupo'.Selected.ID
+                        )
+                    )
                 NumberOfColumns: =2
-                Visible: =_Associated
+                Visible: =_Associated Or localShowEditForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_15.Y+80
@@ -1499,7 +1512,7 @@ MembrosDetails As screen:
                     Height: =40
                     Visible: |-
                         =If(
-                            CountRows(ligacaoRespetivas) = 0,
+                            CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
                         ) And 'empresas do grupo'.Visible
@@ -1523,10 +1536,10 @@ MembrosDetails As screen:
                             _AssociatedR Or localShowEditForm,
                             UpdateContext(
                                 {
-                                    _AssociatedR: false,
-                                    localShowEliminacao: false,
+                                    _Associated: false,
+                                    localShowLeg: false,
                                     localShowEditForm:false,
-                                    _AssociarR:false
+                                    _Associar:false
                                 }
                             ),
                             UpdateContext(
@@ -1541,7 +1554,7 @@ MembrosDetails As screen:
                     Text: =""
                     Visible: |-
                         =If(
-                            CountRows(ligacaoRespetivas) = 0,
+                            CountRows(ligacaoParticipadas) = 0,
                             false,
                             true
                         ) And 'empresas do grupo'.Visible
