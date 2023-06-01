@@ -1075,13 +1075,13 @@ MembrosDetails As screen:
                     )
                 Height: =Parent.Height-60
                 Item: |-
-                    =If(
-                        localShowEditForm,
+                    =/*If(
+                        localShowEditForm,*/
                         LookUp(
-                            'Membros-Familiares-Respetivas',
-                            ID = 'empresas do grupo'.Selected.ID
+                            'Membros-Participadas'
+                            ThisRecord.ID = 1
                         )
-                    )
+                    //)
                 NumberOfColumns: =2
                 Visible: =_Associated Or localShowEditForm
                 Width: =Parent.Width * 0.95
