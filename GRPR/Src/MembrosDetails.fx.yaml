@@ -1583,6 +1583,7 @@ MembrosDetails As screen:
                         ),
                         ThisRecord.uipp_ID_Empresa.ID = Empresas[@ID]
                     )*/
+                    //Empresas
                 NoDataText: ="Não existe nenhuma empresa respetiva associada a "& LabelMembroName.Text
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_AssociatedR And !localShowEditForm
@@ -1602,9 +1603,10 @@ MembrosDetails As screen:
                     OnSelect: |-
                         =//Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected,localFormRespetivas: true})
                     Order: =1
-                    Text: |
+                    Text: |-
                         =//LookUp(Empresas,ID = ThisItem.ID_Empresa.ID).Designacao
                         //ThisItem.ID_Empresa.ID
+                        //ThisItem.ID_Empresa.Designacao
                         ThisItem.ID_Empresa.Designacao
                     Width: =478
                     X: =0
@@ -2248,8 +2250,8 @@ MembrosDetails As screen:
                     ButtonIcon: =Icon.DocumentWithContent
                     Height: =40
                     Visible: |-
-                        ='empresas do grupo'.Visible And If(
-                            CountRows(ligacaoParticipadas) = 0,
+                        ='empresas respetivas'.Visible And If(
+                            CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
                         )
@@ -2275,8 +2277,8 @@ MembrosDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        ='empresas do grupo'.Visible And If(
-                            CountRows(ligacaoParticipadas) = 0,
+                        ='empresas respetivas'.Visible And If(
+                            CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
                         )
