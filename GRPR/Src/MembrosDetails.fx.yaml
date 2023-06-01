@@ -68,15 +68,9 @@ MembrosDetails As screen:
                     Empresas,
                     ID = ligacaoRespetiva[@ID_Membro].ID
                 ).Designacao
+                
             )
         );
-        /*ClearCollect(
-            ligacaoRespetivasDesignacao,
-            Filter(
-                    Empresas,
-                    ID in ligacaoRespetiva[@ID_Membro]
-                ).Designacao
-        );*/
         ClearCollect(
             ligacaoFamiliar0,
             Filter(
