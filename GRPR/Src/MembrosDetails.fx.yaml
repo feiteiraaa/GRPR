@@ -202,6 +202,7 @@ MembrosDetails As screen:
 
                     StarVisible1 As label:
                         Align: =Align.Center
+                        Color: =cores.cinzento
                         Height: =DataCardKey3.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -278,6 +279,7 @@ MembrosDetails As screen:
 
                     StarVisible2 As label:
                         Align: =Align.Center
+                        Color: =cores.cinzento
                         Height: =DataCardKey4.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -349,6 +351,7 @@ MembrosDetails As screen:
 
                     StarVisible3 As label:
                         Align: =Align.Center
+                        Color: =cores.cinzento
                         Height: =DataCardKey5.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -1089,6 +1092,8 @@ MembrosDetails As screen:
 
                     DataCardKey31 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -1098,15 +1103,19 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue7 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                        ChevronBackground: =cores.amareloMontepio
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
+                        HoverFill: =cores.amareloMontepio
                         IsSearchable: =false
                         Items: =Choices('cargo (categoria) ')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedFill: =cores.amareloMontepio
                         SearchFields: =["Value"]
                         SearchItems: =[]
+                        SelectionFill: =cores.amareloMontepio
                         SelectMultiple: =false
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -1131,6 +1140,7 @@ MembrosDetails As screen:
 
                     StarVisible31 As label:
                         Align: =Align.Center
+                        Color: =cores.cinzento
                         Height: =DataCardKey31.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
@@ -1157,6 +1167,8 @@ MembrosDetails As screen:
 
                     DataCardKey32 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -1166,7 +1178,7 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue8 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
@@ -1224,6 +1236,8 @@ MembrosDetails As screen:
 
                     DataCardKey34 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -1233,7 +1247,7 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue31 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
@@ -1266,6 +1280,7 @@ MembrosDetails As screen:
 
                     StarVisible34 As label:
                         Align: =Align.Center
+                        Color: =cores.cinzento
                         Height: =DataCardKey34.Height
                         Text: ="*"
                         Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
