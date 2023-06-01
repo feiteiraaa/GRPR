@@ -169,7 +169,7 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue3 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
@@ -238,15 +238,22 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue4 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                        ChevronBackground: |
+                            =cores.amareloMontepio
                         DefaultSelectedItems: =[Parent.Default]
                         DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
+                        HoverFill: |
+                            =cores.amareloMontepio
                         IsSearchable: =false
                         Items: =Choices('Tipo de Documento')
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedFill: =cores.amareloMontepio
                         SearchFields: =["Value"]
                         SearchItems: =[]
+                        SelectionFill: |
+                            =cores.amareloMontepio
                         SelectMultiple: =false
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -309,7 +316,7 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue5 As text:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
@@ -526,17 +533,21 @@ MembrosDetails As screen:
                         ZIndex: =1
 
                     DataCardValue6 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                        ChevronBackground: =cores.amareloMontepio
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["uipp_tipodeenquadramento"]
                         DisplayMode: =Parent.DisplayMode
+                        HoverFill: =cores.amareloMontepio
                         IsSearchable: =false
                         Items: |-
                             =Choices([@Membros_1].'Legislacao aplicada')
                             //[@Legislaçãos].uipp_tipodeenquadramento
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedFill: =cores.amareloMontepio
                         SearchFields: =["uipp_tipodeenquadramento"]
                         SearchItems: =[]
+                        SelectionFill: =cores.amareloMontepio
                         SelectMultiple: =false
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
