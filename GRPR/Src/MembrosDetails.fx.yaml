@@ -70,6 +70,13 @@ MembrosDetails As screen:
                 ).Designacao
             )
         );
+        /*ClearCollect(
+            ligacaoRespetivasDesignacao,
+            Filter(
+                    Empresas,
+                    ID in ligacaoRespetiva[@ID_Membro]
+                ).Designacao
+        );*/
         ClearCollect(
             ligacaoFamiliar0,
             Filter(
@@ -1572,7 +1579,16 @@ MembrosDetails As screen:
                 Height: =Parent.Height-60
                 Items: |-
                     =ligacaoRespetivas
-                    //'Membros-Familiares-Respetivas'
+                    /*Filter(
+                        Ungroup(
+                            Table(
+                                {MyTables: ligacaoRespetivas},
+                                {MyTables: Empresas}
+                            ),
+                            "MyTables"
+                        ),
+                        ThisRecord.uipp_ID_Empresa.ID = Empresas[@ID]
+                    )*/
                 NoDataText: ="Não existe nenhuma empresa respetiva associada a "& LabelMembroName.Text
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_AssociatedR And !localShowEditForm
@@ -1592,7 +1608,10 @@ MembrosDetails As screen:
                     OnSelect: |-
                         =//Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected,localFormRespetivas: true})
                     Order: =1
-                    Text: =ThisItem.Designacao
+                    Text: |
+                        =//LookUp(Empresas,ID = ThisItem.ID_Empresa.ID).Designacao
+                        //ThisItem.ID_Empresa.ID
+                        ThisItem.ID_Empresa.Designacao
                     Width: =478
                     X: =0
                     Y: =0
@@ -2925,7 +2944,7 @@ MembrosDetails As screen:
                 localShowLeg,
                 "Tem certeza de que deseja dissociar a empresa " & 'empresas do grupo'.Selected.Designacao & " do membro " & LabelMembroName.Text & " ?",
                 localShowEliminacao,
-                "Tem certeza de que deseja eliminar a empresa " & 'empresas respetivas'.Selected.Designacao & " do membro " & LabelMembroName.Text & " ?",
+                "Tem certeza de que deseja eliminar a empresa " & /*'empresas respetivas'.Selected.Designacao &*/ " do membro " & LabelMembroName.Text & " ?",
                 //!localShowData And !localShowLeg And !localShowEliminacao And !localShowRelacao And !localShowPrazo And !localShowNewForm And !_AssociarR And !_Associar,
                 "Tem certeza de que deseja eliminar o membro " & LabelMembroName.Text & " ?"
             )

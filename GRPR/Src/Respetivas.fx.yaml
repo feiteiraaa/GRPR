@@ -898,7 +898,14 @@ Respetivas As screen:
         HoverColor: =RGBA(70, 70, 70, 1)
         HoverFill: =ColorFade(RGBA(70, 70, 70, 1), 85%)
         OnSelect: |-
-            =UpdateContext({localFormRespetivas:false})
+            =If(
+                IsBlank(_selectedRespetivas),
+                UpdateContext({localFormRespetivas: false}),
+                Navigate(
+                    MembrosDetails,
+                    ScreenTransition.None
+                )
+            )
         PaddingLeft: =50
         RadiusBottomLeft: =5
         RadiusBottomRight: =5
