@@ -1502,7 +1502,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And 'empresas do grupo'.Visible
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1544,7 +1544,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And 'empresas do grupo'.Visible
                     X: =DynamicBtn_28.X
                     Y: =DynamicBtn_28.Y
                     ZIndex: =9
@@ -1849,7 +1849,7 @@ MembrosDetails As screen:
                         )
                     )
                 NumberOfColumns: =2
-                Visible: =_AssociatedR Or  localShowEditForm
+                Visible: =_AssociatedR Or localShowEditForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_17.Y+80
