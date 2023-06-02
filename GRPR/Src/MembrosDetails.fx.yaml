@@ -2563,17 +2563,6 @@ MembrosDetails As screen:
                             Y: =4
                             ZIndex: =3
 
-                        "'NIF Familiares e Empresas_2' As label":
-                            Height: =31
-                            OnSelect: =Select(Parent)
-                            Text: |-
-                                =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
-                                ThisItem.ID_Empresa.ID
-                            Width: =95
-                            X: =186
-                            Y: =5
-                            ZIndex: =4
-
                         "IconPessoaEmpresa_1 As icon.'3DPrinting'":
                             Color: =cores.amareloMontepio
                             Height: =25

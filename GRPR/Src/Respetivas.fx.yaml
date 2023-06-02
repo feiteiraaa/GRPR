@@ -930,13 +930,6 @@ Respetivas As screen:
         Y: =79
         ZIndex: =16
 
-    Label17 As label:
-        BorderThickness: =5
-        Text: =_selectedRespetivas
-        X: =542
-        Y: =164
-        ZIndex: =21
-
     Group1 As group:
         Height: =5
         Width: =5
