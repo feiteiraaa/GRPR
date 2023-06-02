@@ -1548,7 +1548,7 @@ MembrosFamiDetails As screen:
 
                 uipp_cargodescricao_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="uipp_cargodescricao"
+                    FieldDisplayName: ="Cargo (Descrição)"
                     FieldName: ="uipp_cargodescricao"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
@@ -1562,7 +1562,7 @@ MembrosFamiDetails As screen:
 
                 uipp_cargocategoria_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="uipp_cargocategoria"
+                    FieldDisplayName: ="Cargo (Categoria)"
                     FieldName: ="uipp_cargocategoria"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
@@ -1576,14 +1576,14 @@ MembrosFamiDetails As screen:
 
                 uipp_ID_Empresa_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="uipp_ID_Empresa"
+                    FieldDisplayName: ="Participação"
                     FieldName: ="uipp_ID_Empresa"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =3
                     Text: =ThisItem.ID_Empresa.Designacao
-                    Visible: =false
+                    Visible: =true
                     Width: =100
                     X: =0
                     Y: =0
