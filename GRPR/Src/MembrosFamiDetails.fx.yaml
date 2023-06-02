@@ -1185,6 +1185,7 @@ MembrosFamiDetails As screen:
                     LayoutHeight: =Parent.Height
                     Order: =6
                     Text: =ThisItem.ID
+                    Visible: =false
                     Width: =100
                     X: =0
                     Y: =0
@@ -1240,7 +1241,7 @@ MembrosFamiDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =1
-                    Text: =ThisItem.'Nome e Designacao_1'.Text
+                    Text: =ThisItem.ID_Empresa.Designacao
                     Width: =100
                     X: =0
                     Y: =0
@@ -1255,6 +1256,7 @@ MembrosFamiDetails As screen:
                     LayoutHeight: =Parent.Height
                     Order: =7
                     Text: =ThisItem.ID_Empresa.ID
+                    Visible: =false
                     Width: =100
                     X: =0
                     Y: =0
