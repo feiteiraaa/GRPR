@@ -17932,6 +17932,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "MembrosFamiDetails.localShowLeg"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosFamiDetails.localShowLeg",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "localShowLeg",
+                "module": "MembrosFamiDetails",
+                "type": "MembrosFamiDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MembrosFamiDetails.localShowNewForm"
                 }
               ],
@@ -17943,6 +17973,36 @@
               },
               "properties": {
                 "member": "localShowNewForm",
+                "module": "MembrosFamiDetails",
+                "type": "MembrosFamiDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosFamiDetails.localShowRelacao"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosFamiDetails.localShowRelacao",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "localShowRelacao",
                 "module": "MembrosFamiDetails",
                 "type": "MembrosFamiDetails"
               }

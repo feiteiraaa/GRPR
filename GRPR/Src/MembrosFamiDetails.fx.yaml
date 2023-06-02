@@ -1036,7 +1036,7 @@ MembrosFamiDetails As screen:
                 =//!IsBlank(_Membro)
                 true
             Width: =Parent.Width
-            Y: =If(localShowLeg, 'Informacao Content_1'.Y + 'Informacao Content_1'.Height, 'Informacao Content_1'.Y)
+            Y: =If(localShowData, 'Informacao Content_1'.Y + 'Informacao Content_1'.Height, 'Informacao Content_1'.Y)
             ZIndex: =6
 
             "'Info Bottom_12' As icon.HorizontalLine":
@@ -1117,7 +1117,7 @@ MembrosFamiDetails As screen:
                 =//!IsBlank(_Membro)
                 true
             Width: =Parent.Width
-            Y: =If(localShowRelacao, 'Empresas Respetivas Content_1'.Y + 'Empresas Respetivas Content_1'.Height, 'Empresas Respetivas Content_1'.Y)
+            Y: =If(localShowEliminacao, 'Empresas Respetivas Content_1'.Y + 'Empresas Respetivas Content_1'.Height, 'Empresas Respetivas Content_1'.Y)
             ZIndex: =10
 
             "'Info Bottom_14' As icon.HorizontalLine":
