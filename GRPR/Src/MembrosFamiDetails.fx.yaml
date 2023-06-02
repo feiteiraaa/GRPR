@@ -1183,7 +1183,7 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =6
+                    Order: =7
                     Text: =ThisItem.ID
                     Visible: =false
                     Width: =100
@@ -1198,7 +1198,7 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =5
+                    Order: =6
                     Text: =ThisItem.uipp_participacao
                     Width: =100
                     X: =0
@@ -1212,7 +1212,7 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =4
+                    Order: =5
                     Text: =ThisItem.uipp_cargodescricao
                     Width: =100
                     X: =0
@@ -1226,26 +1226,12 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =3
+                    Order: =4
                     Text: =ThisItem.uipp_cargocategoria
                     Width: =100
                     X: =0
                     Y: =0
                     ZIndex: =17
-
-                "'Nome e Designacao_1_Column1' As dataTableColumn.textualColumn":
-                    DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Nome e Designacao_1"
-                    FieldName: ="Nome e Designacao_1"
-                    FieldVariantName: ="textualColumn"
-                    Height: =Parent.Height
-                    LayoutHeight: =Parent.Height
-                    Order: =1
-                    Text: =ThisItem.ID_Empresa.Designacao
-                    Width: =100
-                    X: =0
-                    Y: =0
-                    ZIndex: =18
 
                 uipp_ID_Empresa_Column2 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
@@ -1254,8 +1240,8 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =7
-                    Text: =ThisItem.ID_Empresa.ID
+                    Order: =3
+                    Text: =ThisItem.ID_Empresa.Designacao
                     Visible: =false
                     Width: =100
                     X: =0
