@@ -88,6 +88,7 @@ MembrosFamiDetails As screen:
                         Items: |-
                             =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
                             //[@'Relações Parentescos'].uipp_graudeparentesco
+                        OnChange: =
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedFill: =cores.amareloMontepio
                         SearchFields: =["uipp_graudeparentesco"]
@@ -810,13 +811,17 @@ MembrosFamiDetails As screen:
 
                     DataCardValue47 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        Default: =DataCardValue44.Selected
-                        DefaultSelectedItems: |
-                            =Parent.Default
+                        Default: |-
+                            =//DataCardValue44.Selected
+                            Parent.Default
+                        DefaultSelectedItems: |-
+                            =//Parent.Default
+                            DataCardValue44.Selected
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        Reset: =
                         SearchFields: =["uipp_id"]
                         SearchItems: =Search(Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco),DataCardValue47.SearchText,"uipp_id")
                         SelectMultiple: =false
@@ -921,13 +926,14 @@ MembrosFamiDetails As screen:
                             If(
                                 Len(DataCardValue5_2.Text) = 9,
                                 If(
-                                    SubmitForm(Informacao_1),
+                                    SubmitForm(Informacao_1) And SubmitForm(InfoRelaçãoFami),
                                     Notify(
                                         "O registo foi submetido com sucesso!",
                                         NotificationType.Success
                                     );
                                     
                                     ResetForm(Informacao_1);
+                                    ResetForm(InfoRelaçãoFami);
                                     UpdateContext(
                                         {
                                             localShowData: false,
