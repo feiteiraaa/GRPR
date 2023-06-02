@@ -34,20 +34,17 @@ MembrosFamiDetails As screen:
             Informacao_1 As form:
                 DataSource: =Familiares
                 DefaultMode: |-
-                    =/*If(
+                    =If(
                         localShowNewForm,
                         FormMode.Edit,
-                        IsBlank(_Membro),
-                        ColabFormMode,
                         FormMode.View
-                    )*/
-                     FormMode.View
-                Height: |-
-                    =//Parent.Height-DynamicBtn_31.Height
-                    Parent.Height
-                Item: =//LookUp(Membros_1, _Membro = ThisRecord.ID)
+                    )
+                Height: |
+                    =Parent.Height-DynamicBtn_29.Height
+                Item: =LookUp(Familiares,ID = _Familiar)
                 Width: =Parent.Width*0.95
                 X: =24
+                Y: =50
                 ZIndex: =1
 
                 Nome_DataCard1_2 As typedDataCard.textualEditCard:
@@ -422,9 +419,8 @@ MembrosFamiDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_Legislacaoaplicada"
                     Default: =ThisItem.'Legislacao aplicada'
-                    DisplayMode: |-
-                        =//If(DRI And (localShowNewForm Or IsBlank(_Membro)) ,DisplayMode.Edit,DisplayMode.View)
-                        DisplayMode.View
+                    DisplayMode: |
+                        =If(DRI And localShowNewForm,DisplayMode.Edit,DisplayMode.View)
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -566,6 +562,128 @@ MembrosFamiDetails As screen:
                         Wrap: =false
                         Y: =DataCardKey30_1.Y
                         ZIndex: =7
+
+            Group3 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =4
+
+                DynamicBtn_29 As DynamicBtn:
+                    BtnText: =If(localShowNewForm Or IsBlank(_Familiar), "Guardar" ,"Editar")
+                    ButtonIcon: =If(localShowNewForm Or IsBlank(_Familiar),Icon.Save ,Icon.Edit)
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
+                    ZIndex: =2
+
+                edit_btn_7 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |
+                        =If(
+                            localShowNewForm Or Informacao_1.Mode = FormMode.New,
+                            If(
+                                Len(DataCardValue5_2.Text) = 9,
+                                If(
+                                    SubmitForm(Informacao_1),
+                                    Notify(
+                                        "O registo foi submetido com sucesso!",
+                                        NotificationType.Success
+                                    );
+                                    
+                                    ResetForm(Informacao_1);
+                                    UpdateContext(
+                                        {
+                                            localShowData: false,
+                                            localShowNewForm: !localShowNewForm
+                                        }
+                                    );
+                                    /*If(
+                                        Informacao.Mode = FormMode.New,
+                                        Navigate(
+                                            Particulares,
+                                            ScreenTransition.None
+                                        )
+                                    )*/
+                                    Back(),
+                                    Notify(
+                                        "Por favor, tente novamente.",
+                                        NotificationType.Error
+                                    )
+                                ),
+                                Notify(
+                                    "Por favor, preencha o número do documento corretamente.",
+                                    NotificationType.Error
+                                )
+                            ),
+                            UpdateContext(
+                                {localShowNewForm: !localShowNewForm
+                                //localFormMode: FormMode.New
+                        }
+                            )
+                        );
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_29.X
+                    Y: =DynamicBtn_29.Y
+                    ZIndex: =3
+
+            Group4 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =6
+
+                DynamicBtn_30 As DynamicBtn:
+                    BtnText: ="Cancelar"
+                    ButtonIcon: =Icon.Cancel
+                    Height: =40
+                    Visible: =localShowNewForm Or IsBlank(_Familiar)
+                    Width: =160
+                    X: =Parent.X+600
+                    Y: =7
+                    ZIndex: =4
+
+                cancel_btn_7 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =UpdateContext({localShowNewForm: false});
+                        /*If(
+                            IsBlank(_Familiar),
+                            Navigate(
+                                Particulares,
+                                ScreenTransition.None
+                            )
+                        );
+                        ResetForm(Informacao);*/
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    Visible: =localShowNewForm Or IsBlank(_Familiar)
+                    X: =DynamicBtn_30.X
+                    Y: =DynamicBtn_30.Y
+                    ZIndex: =5
 
         Infomacao_1 As groupContainer.manualLayoutContainer:
             Height: =50
