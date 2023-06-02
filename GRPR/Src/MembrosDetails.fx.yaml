@@ -937,6 +937,21 @@ MembrosDetails As screen:
                     Y: =0
                     ZIndex: =19
 
+                uipp_id_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="uipp_id"
+                    FieldName: ="uipp_id"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =15
+                    Text: =ThisItem.uipp_id
+                    Visible: =false
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =25
+
             EliminarMembrosPart As group:
                 Height: =5
                 Width: =5
@@ -1082,7 +1097,8 @@ MembrosDetails As screen:
                         localShowEditForm,
                         LookUp(
                             'Membros-Participadas',
-                            ThisRecord.ID = 'empresas do grupo'.Selected.'Parent ID'.ID
+                            //ThisRecord.ID = 'empresas do grupo'.Selected.'Parent ID'.ID
+                            ThisRecord.ID = 'empresas do grupo'.Selected.ID
                         )
                     )
                 NumberOfColumns: =2
