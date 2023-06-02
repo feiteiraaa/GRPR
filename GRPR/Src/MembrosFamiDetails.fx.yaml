@@ -1262,20 +1262,20 @@ MembrosFamiDetails As screen:
         AutoHeight: =true
         FontWeight: =FontWeight.Semibold
         Text: |-
-            =/*If(
+            =If(
                 LookUp(
                     Familiares,
                     ID = _Familiar
                 ).Ativo,
             
-                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome,
-                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome & "(Eliminado)"
-            )*/
-            LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome
+                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text,
+                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text & " [Eliminado] "
+            
+            )
         Visible: |-
             =//!IsBlank(_Membro)
             true
-        Width: =300
+        Width: =Parent.Width/2
         X: =365
         Y: =124
         ZIndex: =9

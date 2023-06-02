@@ -2497,6 +2497,7 @@ MembrosDetails As screen:
                             =//Select(Parent)
                             Navigate(MembrosFamiDetails, ScreenTransition.None, {_MembroF:_Membro ,_Allitems:GalleryFamiliaresEmpresas_1.Selected,_Familiar:'Membros dos Orgaos Sociais_1'.Selected.ID_Familiares.ID
                             //,_Associated:false,_AssociatedR:false
+                            ,_Allitems2:'Membros dos Orgaos Sociais_1'.Selected
                             })
                         Text: =ThisItem.NomeF
                         Width: =336
