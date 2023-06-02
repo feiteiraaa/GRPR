@@ -1,4 +1,5 @@
 MembrosFamiDetails As screen:
+    OnHidden: =
     OnVisible: |-
         =UpdateContext(
             {
