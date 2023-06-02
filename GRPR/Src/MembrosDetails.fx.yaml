@@ -2556,7 +2556,7 @@ MembrosDetails As screen:
 
                         "'Cargo e Relacao2_1' As label":
                             OnSelect: =Select(Parent)
-                            Text: =ThisItem.Participação
+                            Text: =ThisItem.Participação&" %"
                             Width: =341
                             X: =599
                             Y: =4
