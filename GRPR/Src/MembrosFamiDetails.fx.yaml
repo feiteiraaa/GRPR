@@ -1162,8 +1162,10 @@ MembrosFamiDetails As screen:
                 BorderStyle: =BorderStyle.Solid
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(0, 0, 0, 0)
+                HeadingFill: =cores.cinzento
                 Height: =310
                 Items: =_Allitems
+                SelectedFill: =cores.amareloMontepio
                 Width: =800
                 X: =60
                 Y: =0
