@@ -1316,7 +1316,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue33.Selected
-                    Visible: =true
+                    Visible: =false
                     Width: =464
                     X: =0
                     Y: =2
@@ -1392,7 +1392,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue32.Selected
-                    Visible: =true
+                    Visible: =false
                     Width: =464
                     X: =0
                     Y: =2
