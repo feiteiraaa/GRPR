@@ -1163,12 +1163,12 @@ MembrosFamiDetails As screen:
                 DisplayMode: =DisplayMode.Edit
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
-                Height: =310
+                Height: =Parent.Height-60
                 Items: =_Allitems
                 SelectedFill: =cores.amareloMontepio
-                Width: =800
-                X: =60
-                Y: =0
+                Width: =Parent.Width * 0.95
+                X: =24
+                Y: =DynamicBtn_31.Y+50
                 ZIndex: =12
 
                 ID_Column1 As dataTableColumn.textualColumn:
@@ -1254,6 +1254,243 @@ MembrosFamiDetails As screen:
                     X: =0
                     Y: =0
                     ZIndex: =19
+
+            Group5 As group:
+                Height: =5
+                Width: =5
+                X: =100
+                Y: =100
+                ZIndex: =15
+
+                DynamicBtn_31 As DynamicBtn:
+                    BtnText: ="Eliminar"
+                    ButtonIcon: =Icon.Trash
+                    Height: =40
+                    Visible: |-
+                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
+                            CountRows(ligacaoRespetivas) = 0,
+                            false,
+                            true
+                        )
+                    Width: =160
+                    X: =Parent.X+200
+                    Y: =7
+                    ZIndex: =13
+
+                elim_btn_8 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =UpdateContext({localShowModal: true})
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    Visible: |-
+                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
+                            CountRows(ligacaoRespetivas) = 0,
+                            false,
+                            true
+                        )
+                    X: =DynamicBtn_31.X
+                    Y: =DynamicBtn_31.Y
+                    ZIndex: =14
+
+            Group6 As group:
+                Height: =5
+                Width: =5
+                X: =100
+                Y: =100
+                ZIndex: =17
+
+                DynamicBtn_32 As DynamicBtn:
+                    BtnText: =If(_AssociatedR Or localShowEditForm,"Cancelar","Editar")
+                    ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Cancel,Icon.Edit)
+                    Height: =40
+                    Visible: |-
+                        =If(
+                            CountRows(ligacaoRespetivas) = 0,
+                            false,
+                            true
+                        )
+                    Width: =160
+                    X: =Parent.X+600
+                    Y: =7
+                    ZIndex: =15
+
+                edit_btn_8 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =If(
+                            _AssociatedR Or localShowEditForm,
+                            UpdateContext(
+                                {
+                                    _AssociatedR: false,
+                                    localShowEliminacao: false,
+                                    localShowEditForm:false,
+                                    _AssociarR:false
+                                }
+                            ),
+                            UpdateContext(
+                                {
+                                    localShowEditForm: true
+                                    
+                                }
+                            )
+                        )
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    Visible: |-
+                        =If(
+                            CountRows(ligacaoRespetivas) = 0,
+                            false,
+                            true
+                        )
+                    X: =DynamicBtn_32.X
+                    Y: =DynamicBtn_32.Y
+                    ZIndex: =16
+
+            Group8 As group:
+                Height: =5
+                Width: =5
+                X: =100
+                Y: =100
+                ZIndex: =19
+
+                DynamicBtn_33 As DynamicBtn:
+                    BtnText: =If(_AssociatedR Or localShowEditForm,"Guardar","Novo")
+                    ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Save,Icon.Add)
+                    Height: =40
+                    Visible: =true
+                    Width: =160
+                    X: =Parent.X+800
+                    Y: =7
+                    ZIndex: =17
+
+                elim_btn_9 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =If(
+                            _AssociatedR Or localShowEditForm,
+                            If(
+                                SubmitForm(FormRespetivas),
+                                Notify(
+                                    "O registo foi submetido com sucesso!",
+                                    NotificationType.Success
+                                );
+                                ResetForm(FormRespetivas);
+                                UpdateContext(
+                                    {
+                                        _AssociatedR: false,
+                                        localShowEliminacao: false,
+                                        localShowEditForm: false,
+                                        _AssociarR:false
+                                    }
+                                );
+                                Navigate(
+                                    Particulares,
+                                    ScreenTransition.None
+                                ),
+                                Notify(
+                                    "Por favor, tente novamente.",
+                                    NotificationType.Error
+                                );
+                                UpdateContext(
+                                    {
+                                        _AssociatedR: false,
+                                        localShowEliminacao: false,
+                                        localShowEditForm: false,
+                                        _AssociarR:false
+                                    }
+                                )
+                            ),
+                            Notify(
+                                "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro " & LabelMembroName.Text & " ou clique em '+Novo' para criar uma nova empresa.",
+                                NotificationType.Information
+                            );
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {_AssociarR: true}
+                            )
+                        )
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    X: =DynamicBtn_33.X
+                    Y: =DynamicBtn_33.Y
+                    ZIndex: =18
+
+            Group9 As group:
+                Height: =5
+                Width: =5
+                X: =100
+                Y: =100
+                ZIndex: =21
+
+                DynamicBtn_34 As DynamicBtn:
+                    BtnText: ="Detalhes"
+                    ButtonIcon: =Icon.DocumentWithContent
+                    Height: =40
+                    Visible: |-
+                        ='empresas respetivas'.Visible And If(
+                            CountRows(ligacaoRespetivas) = 0,
+                            false,
+                            true
+                        )
+                    Width: =160
+                    X: =Parent.X+400
+                    Y: =7
+                    ZIndex: =19
+
+                elim_btn_10 As button:
+                    BorderColor: =RGBA(0,0,0, 0)
+                    Color: =RGBA(0,0,0, 0)
+                    DisabledBorderColor: =RGBA(0,0,0, 0)
+                    DisabledColor: =RGBA(0,0,0, 0)
+                    DisabledFill: =RGBA(0,0,0, 0)
+                    Fill: =RGBA(0,0,0, 0)
+                    Height: =39
+                    HoverColor: =RGBA(0,0,0, 0)
+                    HoverFill: =RGBA(0,0,0, 0)
+                    OnSelect: |-
+                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected.ID_Empresa.ID,localFormRespetivas: true})
+                    PressedColor: =RGBA(0,0,0, 0)
+                    PressedFill: =RGBA(0,0,0, 0)
+                    Text: =""
+                    Visible: |-
+                        ='empresas respetivas'.Visible And If(
+                            CountRows(ligacaoRespetivas) = 0,
+                            false,
+                            true
+                        )
+                    X: =DynamicBtn_34.X
+                    Y: =DynamicBtn_34.Y
+                    ZIndex: =20
 
         "'Empresas Respetivas_1' As groupContainer.manualLayoutContainer":
             Height: =50
