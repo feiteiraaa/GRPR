@@ -15,14 +15,13 @@ MembrosFamiDetails As screen:
     BackBtn_6 As BackBtn:
         X: =365
         Y: =74
-        ZIndex: =2
 
     "'Mid Section_Membros_1' As groupContainer.manualLayoutContainer":
         Height: =580
         Width: =978
         X: =368
         Y: =LabelMembroName_1.Y +50
-        ZIndex: =4
+        ZIndex: =2
 
         "'Informacao Content_1' As groupContainer.manualLayoutContainer":
             Height: =300
@@ -563,7 +562,7 @@ MembrosFamiDetails As screen:
                         Y: =DataCardKey30_1.Y
                         ZIndex: =7
 
-            Group3 As group:
+            EditarFami As group:
                 Height: =5
                 Width: =5
                 X: =40
@@ -640,7 +639,7 @@ MembrosFamiDetails As screen:
                     Y: =DynamicBtn_29.Y
                     ZIndex: =3
 
-            Group4 As group:
+            Cancel As group:
                 Height: =5
                 Width: =5
                 X: =40
@@ -1159,6 +1158,101 @@ MembrosFamiDetails As screen:
                     15
                 ZIndex: =11
 
+            "'empresas respetivas fami' As dataTable.datatable":
+                BorderStyle: =BorderStyle.Solid
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Height: =310
+                Items: =_Allitems
+                Width: =800
+                X: =60
+                Y: =0
+                ZIndex: =12
+
+                ID_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="ID"
+                    FieldName: ="uipp_id"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =6
+                    Text: =ThisItem.ID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =13
+
+                uipp_participacao_Column3 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="uipp_participacao"
+                    FieldName: ="uipp_participacao"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.uipp_participacao
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =15
+
+                uipp_cargodescricao_Column3 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="uipp_cargodescricao"
+                    FieldName: ="uipp_cargodescricao"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =ThisItem.uipp_cargodescricao
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =16
+
+                uipp_cargocategoria_Column3 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="uipp_cargocategoria"
+                    FieldName: ="uipp_cargocategoria"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =3
+                    Text: =ThisItem.uipp_cargocategoria
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =17
+
+                "'Nome e Designacao_1_Column1' As dataTableColumn.textualColumn":
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Nome e Designacao_1"
+                    FieldName: ="Nome e Designacao_1"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.'Nome e Designacao_1'
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =18
+
+                uipp_ID_Empresa_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="uipp_ID_Empresa"
+                    FieldName: ="uipp_ID_Empresa"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =7
+                    Text: =ThisItem.ID_Empresa.ID
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =19
+
         "'Empresas Respetivas_1' As groupContainer.manualLayoutContainer":
             Height: =50
             Visible: |-
@@ -1323,7 +1417,7 @@ MembrosFamiDetails As screen:
         Width: =529
         X: =365
         Y: =26
-        ZIndex: =5
+        ZIndex: =3
 
     LeftSectionComponent_18 As LeftSectionComponent:
         TabelaMenu: |-
@@ -1385,7 +1479,7 @@ MembrosFamiDetails As screen:
                     VisivelPara: Or(godMode, DRI)
                 }
             )
-        ZIndex: =6
+        ZIndex: =4
 
     LabelMembroName_1 As label:
         AutoHeight: =true
@@ -1407,12 +1501,12 @@ MembrosFamiDetails As screen:
         Width: =Parent.Width/2
         X: =365
         Y: =124
-        ZIndex: =9
+        ZIndex: =5
 
     ModalConfirmation_8 As ModalConfirmation:
         ModalText: = "Tem certeza de que deseja eliminar "
         Visible: =localShowModal
-        ZIndex: =10
+        ZIndex: =6
 
     elim_components_2 As group:
         Height: =5
@@ -1445,7 +1539,7 @@ MembrosFamiDetails As screen:
             Width: =165
             X: =717
             Y: =440
-            ZIndex: =11
+            ZIndex: =7
 
         confirm_btn_2 As button:
             Align: =Align.Left
@@ -1469,7 +1563,7 @@ MembrosFamiDetails As screen:
             Width: =165
             X: =486
             Y: =440
-            ZIndex: =12
+            ZIndex: =8
 
         Icon8_4 As icon.Check:
             Color: =cores.amareloMontepio
@@ -1503,7 +1597,7 @@ MembrosFamiDetails As screen:
             Width: =30
             X: =496
             Y: =445
-            ZIndex: =13
+            ZIndex: =9
 
         Icon8_5 As icon.Check:
             Color: =cores.amareloMontepio
@@ -1517,5 +1611,5 @@ MembrosFamiDetails As screen:
             Width: =30
             X: =726
             Y: =445
-            ZIndex: =14
+            ZIndex: =10
 
