@@ -15206,7 +15206,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Designacao_Column2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -45950,7 +45950,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_cargocategoria_Column2",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46077,7 +46077,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_cargodescricao_Column2",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46183,7 +46183,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_id_Column1",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -46303,7 +46303,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_participacao_Column2",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
