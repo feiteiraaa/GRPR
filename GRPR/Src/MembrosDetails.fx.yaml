@@ -2527,8 +2527,8 @@ MembrosDetails As screen:
                             )
                         Layout: =Layout.Vertical
                         LoadingSpinner: =LoadingSpinner.Data
-                        OnSelect: |-
-                            =//Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID})
+                        OnSelect: |
+                            =Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:GalleryFamiliaresEmpresas_1.Selected.ID_Empresa.ID,localFormRespetivas: true})
                         TemplatePadding: =0
                         TemplateSize: =45
                         Visible: =localseta And ThisItem.IsSelected
@@ -2537,7 +2537,8 @@ MembrosDetails As screen:
                         ZIndex: =5
 
                         "'Nome e Designacao_1' As label":
-                            OnSelect: =Select(Parent)
+                            OnSelect: |
+                                =Select(Parent)
                             Text: =LookUp(Empresas,ID=ThisItem.ID_Empresa.ID).Designacao
                             Width: =300
                             X: =35
@@ -2562,6 +2563,17 @@ MembrosDetails As screen:
                             Y: =4
                             ZIndex: =3
 
+                        "'NIF Familiares e Empresas_2' As label":
+                            Height: =31
+                            OnSelect: =Select(Parent)
+                            Text: |-
+                                =//Concatenate(ThisItem.uipp_numerodocumento,ThisItem.uipp_numerodocumento)
+                                ThisItem.ID_Empresa.ID
+                            Width: =95
+                            X: =186
+                            Y: =5
+                            ZIndex: =4
+
                         "IconPessoaEmpresa_1 As icon.'3DPrinting'":
                             Color: =cores.amareloMontepio
                             Height: =25
@@ -2570,7 +2582,7 @@ MembrosDetails As screen:
                             Width: =25
                             X: =10
                             Y: =11
-                            ZIndex: =4
+                            ZIndex: =5
 
                     Rectangle3_1 As rectangle:
                         Fill: =RGBA(128, 128, 128, 1)
