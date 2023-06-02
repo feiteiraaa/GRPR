@@ -21,7 +21,7 @@ MembrosFamiDetails As screen:
             ZIndex: =1
 
             Informacao_1 As form:
-                DataSource: =Membros_1
+                DataSource: =Familiares
                 DefaultMode: |-
                     =/*If(
                         localShowNewForm,
@@ -1264,19 +1264,14 @@ MembrosFamiDetails As screen:
         Text: |-
             =/*If(
                 LookUp(
-                    Membros_1,
-                    ID = _Membro
+                    Familiares,
+                    ID = _Familiar
                 ).Ativo,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome & " (Eliminado)"
+            
+                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome,
+                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome & "(Eliminado)"
             )*/
-            "Familiar"
+            LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome
         Visible: |-
             =//!IsBlank(_Membro)
             true

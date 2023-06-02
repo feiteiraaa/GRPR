@@ -2495,7 +2495,7 @@ MembrosDetails As screen:
                     "'Nome Membro_1' As label":
                         OnSelect: |-
                             =//Select(Parent)
-                            Navigate(MembrosFamiDetails, ScreenTransition.None, {_MembroF: 'Membros dos Orgaos Sociais_1'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas_1.Selected
+                            Navigate(MembrosFamiDetails, ScreenTransition.None, {_MembroF:_Membro ,_Allitems:GalleryFamiliaresEmpresas_1.Selected,_Familiar:'Membros dos Orgaos Sociais_1'.Selected.ID_Familiares.ID
                             //,_Associated:false,_AssociatedR:false
                             })
                         Text: =ThisItem.NomeF

@@ -17872,36 +17872,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosFamiDetails._MembroF"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails._MembroF",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "_MembroF",
-                "module": "MembrosFamiDetails",
-                "type": "MembrosFamiDetails"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "MembrosFamiDetails.localShowArq"
                 }
               ],
