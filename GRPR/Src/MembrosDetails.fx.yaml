@@ -1316,7 +1316,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue33.Selected
-                    Visible: =false
+                    Visible: =true
                     Width: =464
                     X: =0
                     Y: =2
@@ -1336,7 +1336,14 @@ MembrosDetails As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: |-
                             =//Parent.Default
-                            LookUp('Empresas Participadas do Grupos',ID=_AssociateParticipadas)
+                            If(
+                                localShowEditForm,
+                                Parent.Default,
+                                LookUp(
+                                    'Empresas Participadas do Grupos',
+                                    ID = _AssociateParticipadas
+                                )
+                            )
                         DisplayFields: =["uipp_name"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Participadas'].uipp_ParentID)
@@ -1385,7 +1392,7 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue32.Selected
-                    Visible: =false
+                    Visible: =true
                     Width: =464
                     X: =0
                     Y: =2
