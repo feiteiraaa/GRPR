@@ -37,7 +37,6 @@ MembrosFamiDetails As screen:
                 Item: =//LookUp(Membros_1, _Membro = ThisRecord.ID)
                 Width: =Parent.Width*0.95
                 X: =24
-                Y: =50
                 ZIndex: =1
 
                 Nome_DataCard1_2 As typedDataCard.textualEditCard:
@@ -1033,7 +1032,9 @@ MembrosFamiDetails As screen:
 
         "'Empresas Respetivas_1' As groupContainer.manualLayoutContainer":
             Height: =50
-            Visible: =//!IsBlank(_Membro)
+            Visible: |-
+                =//!IsBlank(_Membro)
+                true
             Width: =Parent.Width
             Y: =If(localShowLeg, 'Informacao Content_1'.Y + 'Informacao Content_1'.Height, 'Informacao Content_1'.Y)
             ZIndex: =6
@@ -1112,9 +1113,11 @@ MembrosFamiDetails As screen:
 
         "'Atividades Info_1' As groupContainer.manualLayoutContainer":
             Height: =50
-            Visible: =//!IsBlank(_Membro)
+            Visible: |-
+                =//!IsBlank(_Membro)
+                true
             Width: =Parent.Width
-            Y: =If(localShowRelacao, 'Empresas Respetivas Content_1'.Y + 'Empresas Respetivas Content_1'.Height, 'Empresas Respetivas_1'.Y)
+            Y: =If(localShowRelacao, 'Empresas Respetivas Content_1'.Y + 'Empresas Respetivas Content_1'.Height, 'Empresas Respetivas Content_1'.Y)
             ZIndex: =10
 
             "'Info Bottom_14' As icon.HorizontalLine":
