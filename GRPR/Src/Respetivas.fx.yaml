@@ -393,7 +393,7 @@ Respetivas As screen:
                 ZIndex: =1
 
             DataCardValue30 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
@@ -464,15 +464,19 @@ Respetivas As screen:
                 ZIndex: =1
 
             DataCardValue37 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                ChevronBackground: =cores.amareloMontepio
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
+                HoverFill: =cores.amareloMontepio
                 IsSearchable: =false
                 Items: =Choices('Tipo de Documento')
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedFill: =cores.amareloMontepio
                 SearchFields: =["Value"]
                 SearchItems: =[]
+                SelectionFill: =cores.amareloMontepio
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -535,7 +539,7 @@ Respetivas As screen:
                 ZIndex: =1
 
             DataCardValue35 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 Default: =Parent.Default
                 DelayOutput: =true
                 DisplayMode: =Parent.DisplayMode
@@ -606,17 +610,21 @@ Respetivas As screen:
                 ZIndex: =1
 
             DataCardValue34 As combobox:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                ChevronBackground: =cores.amareloMontepio
                 DefaultSelectedItems: =Parent.Default
                 DisplayFields: =["uipp_tipodeenquadramento"]
                 DisplayMode: =Parent.DisplayMode
+                HoverFill: =cores.amareloMontepio
                 IsSearchable: =false
                 Items: |-
                     =Choices([@Empresas].'Legislacao aplicada')
                     //[@Legislaçãos].uipp_tipodeenquadramento
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PressedFill: =cores.amareloMontepio
                 SearchFields: =["uipp_tipodeenquadramento"]
                 SearchItems: =[]
+                SelectionFill: =cores.amareloMontepio
                 SelectMultiple: =false
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -680,7 +688,7 @@ Respetivas As screen:
                 ZIndex: =1
 
             DateValue5 As datepicker:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
                 DefaultDate: |
                     =//ThisItem.'Data de insercao'
                     /*Text(
@@ -691,7 +699,7 @@ Respetivas As screen:
                     //Text( Today(), "[$-en-US]dd/mm/yyyy")
                     
                     Now()
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 EndYear: =Year(Today())+100
                 Format: |-
                     =Text(
