@@ -1652,17 +1652,7 @@ MembrosDetails As screen:
                 Height: =Parent.Height-60
                 Items: |-
                     =ligacaoRespetivas
-                    /*Filter(
-                        Ungroup(
-                            Table(
-                                {MyTables: ligacaoRespetivas},
-                                {MyTables: Empresas}
-                            ),
-                            "MyTables"
-                        ),
-                        ThisRecord.uipp_ID_Empresa.ID = Empresas[@ID]
-                    )*/
-                    //Empresas
+                    //'Membros-Familiares-Respetivas'
                 NoDataText: ="Não existe nenhuma empresa respetiva associada a "& LabelMembroName.Text
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_AssociatedR And !localShowEditForm
@@ -1736,6 +1726,21 @@ MembrosDetails As screen:
                     X: =0
                     Y: =0
                     ZIndex: =23
+
+                uipp_id_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="uipp_id"
+                    FieldName: ="uipp_id"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.uipp_id
+                    Visible: =false
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =24
 
             EliminarMembrosResp As group:
                 Height: =5
@@ -1861,7 +1866,7 @@ MembrosDetails As screen:
                         localShowEditForm,
                         LookUp(
                             'Membros-Familiares-Respetivas',
-                            ThisRecord.ID_Empresa.ID = 'empresas respetivas'.Selected.ID_Empresa.ID
+                            ThisRecord.ID = 'empresas respetivas'.Selected.ID
                         )
                     )
                 NumberOfColumns: =2
