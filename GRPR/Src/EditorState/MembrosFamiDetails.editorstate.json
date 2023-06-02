@@ -691,7 +691,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cancel_btn_7",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2046,7 +2046,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Data aprovacao CA_DataCard1_1",
-      "ParentIndex": 5,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5095,7 +5095,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey50",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5369,7 +5369,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey51",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5643,7 +5643,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey52",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5917,7 +5917,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldName.ID%",
       "Name": "DataCardKey53",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9908,7 +9908,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue44",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10282,7 +10282,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue45",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10646,7 +10646,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue46",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -11026,7 +11026,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldValue.ID%",
       "Name": "DataCardValue47",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13402,7 +13402,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_29",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13563,7 +13563,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_30",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13724,7 +13724,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_31",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13885,7 +13885,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_32",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14039,7 +14039,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_33",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14200,7 +14200,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_34",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14423,7 +14423,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_7",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -14778,7 +14778,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "edit_btn_8",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15235,7 +15235,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_10",
-      "ParentIndex": 4,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15590,7 +15590,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_8",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15938,7 +15938,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_9",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -16495,7 +16495,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "empresas respetivas fami",
-      "ParentIndex": 0,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19737,7 +19737,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage49",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20306,7 +20306,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage50",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20587,7 +20587,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage51",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -20868,7 +20868,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%ErrorMessage.ID%",
       "Name": "ErrorMessage52",
-      "ParentIndex": 2,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22003,7 +22003,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ID_Column1",
-      "ParentIndex": 0,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -22586,7 +22586,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ID_GrauParentesco_DataCard1",
-      "ParentIndex": 0,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26216,7 +26216,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "InfoRelaçãoFami",
-      "ParentIndex": 0,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26522,7 +26522,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "Informacao_1",
-      "ParentIndex": 5,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -26697,7 +26697,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LabelDesignacao_3",
-      "ParentIndex": 9,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -27708,7 +27708,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Legislacao aplicada_DataCard3_1",
-      "ParentIndex": 6,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28345,7 +28345,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Nome_DataCard1_2",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -28497,7 +28497,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Numero documento_DataCard1_1",
-      "ParentIndex": 3,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -31635,7 +31635,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible49",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32197,7 +32197,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible50",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32478,7 +32478,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible51",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -32759,7 +32759,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "%FieldRequired.ID%",
       "Name": "StarVisible52",
-      "ParentIndex": 3,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33322,7 +33322,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Tipo de documento_DataCard2_1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33425,7 +33425,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_cargocategoria_Column3",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33626,7 +33626,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_ID_Empresa_Column2",
-      "ParentIndex": 4,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -33724,7 +33724,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "uipp_participacao_Column3",
-      "ParentIndex": 1,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

@@ -44,7 +44,7 @@
         "Name": "Rectangle1",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 839,
+        "PublishOrderIndex": 881,
         "Rules": [
           {
             "Category": "Design",
@@ -208,7 +208,7 @@
         "Name": "Icon4",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 840,
+        "PublishOrderIndex": 882,
         "Rules": [
           {
             "Category": "Design",
@@ -436,7 +436,7 @@
         "Name": "Label4",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 841,
+        "PublishOrderIndex": 883,
         "Rules": [
           {
             "Category": "Data",
@@ -849,7 +849,7 @@
         "Name": "Button1_2",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 842,
+        "PublishOrderIndex": 884,
         "Rules": [
           {
             "Category": "Data",
@@ -1257,7 +1257,7 @@
         "Name": "Button1_3",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 843,
+        "PublishOrderIndex": 885,
         "Rules": [
           {
             "Category": "Data",
@@ -1567,7 +1567,7 @@
         "Name": "Icon2_2",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 844,
+        "PublishOrderIndex": 886,
         "Rules": [
           {
             "Category": "Design",
@@ -1793,7 +1793,7 @@
         "Name": "Icon2_3",
         "Parent": "ModalConfirmation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 845,
+        "PublishOrderIndex": 887,
         "Rules": [
           {
             "Category": "Design",
