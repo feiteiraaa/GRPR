@@ -811,9 +811,8 @@ MembrosFamiDetails As screen:
                     DataCardValue47 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: =DataCardValue44.Selected
-                        DefaultSelectedItems: |-
-                            =//Parent.Default
-                            DataCardValue44.Selected
+                        DefaultSelectedItems: |
+                            =Parent.Default
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
