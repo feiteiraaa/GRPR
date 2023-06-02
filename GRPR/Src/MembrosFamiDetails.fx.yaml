@@ -65,6 +65,8 @@ MembrosFamiDetails As screen:
 
                     DataCardKey50 As label:
                         AutoHeight: =true
+                        Color: =cores.cinzento
+                        FontWeight: =FontWeight.Semibold
                         Height: =34
                         Text: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -76,12 +78,15 @@ MembrosFamiDetails As screen:
                     DataCardValue44 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: =Parent.Default
-                        DisplayFields: =["uipp_id"]
+                        DisplayFields: =["uipp_graudeparentesco"]
                         DisplayMode: =Parent.DisplayMode
-                        Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
+                        IsSearchable: =false
+                        Items: |-
+                            =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
+                            //[@'Relações Parentescos'].uipp_graudeparentesco
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        SearchFields: =["uipp_id"]
-                        SearchItems: =Search(Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco),DataCardValue44.SearchText,"uipp_id")
+                        SearchFields: =["uipp_graudeparentesco"]
+                        SearchItems: =[]
                         SelectMultiple: =false
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
