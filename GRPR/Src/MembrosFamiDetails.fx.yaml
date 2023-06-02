@@ -813,7 +813,8 @@ MembrosFamiDetails As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: |-
                             =//DataCardValue44.Selected
-                            Parent.Default
+                            //Parent.Default
+                            LookUp('Relações Parentescos','Grau de parentesco'=TextInput3.Text)
                         DefaultSelectedItems: |-
                             =//Parent.Default
                             DataCardValue44.Selected
@@ -855,6 +856,14 @@ MembrosFamiDetails As screen:
                         Wrap: =false
                         Y: =DataCardKey53.Y
                         ZIndex: =4
+
+                    TextInput3 As text:
+                        Default: =DataCardValue44.Selected.'Grau de parentesco'
+                        Visible: =false
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey53.Y + DataCardKey53.Height + 5
+                        ZIndex: =5
 
                 ID_DataCard2 As typedDataCard.textualViewCard:
                     BorderStyle: =BorderStyle.Solid
