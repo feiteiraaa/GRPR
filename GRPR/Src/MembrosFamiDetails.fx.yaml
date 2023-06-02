@@ -1,5 +1,16 @@
 MembrosFamiDetails As screen:
-    OnVisible: =
+    OnVisible: |-
+        =UpdateContext(
+            {
+                
+                localShowModal: false,
+                localShowData: false,
+                localShowPrazo: false,
+                localShowEliminacao:false
+                
+                
+            }
+        );
 
     BackBtn_6 As BackBtn:
         X: =365
