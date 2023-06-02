@@ -59,8 +59,8 @@ MembrosFamiDetails As screen:
                     Required: =false
                     Update: =DataCardValue44.Selected
                     Width: =309
-                    X: =1
-                    Y: =2
+                    X: =0
+                    Y: =1
                     ZIndex: =1
 
                     DataCardKey50 As label:
@@ -68,7 +68,9 @@ MembrosFamiDetails As screen:
                         Color: =cores.cinzento
                         FontWeight: =FontWeight.Semibold
                         Height: =34
-                        Text: =Parent.DisplayName
+                        Text: |-
+                            =//Parent.DisplayName
+                            "Relação Familiar"
                         Width: =Parent.Width - 60
                         Wrap: =false
                         X: =30
@@ -76,17 +78,21 @@ MembrosFamiDetails As screen:
                         ZIndex: =1
 
                     DataCardValue44 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
+                        ChevronBackground: =cores.amareloMontepio
                         DefaultSelectedItems: =Parent.Default
                         DisplayFields: =["uipp_graudeparentesco"]
                         DisplayMode: =Parent.DisplayMode
+                        HoverFill: =cores.amareloMontepio
                         IsSearchable: =false
                         Items: |-
                             =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
                             //[@'Relações Parentescos'].uipp_graudeparentesco
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedFill: =cores.amareloMontepio
                         SearchFields: =["uipp_graudeparentesco"]
                         SearchItems: =[]
+                        SelectionFill: =cores.amareloMontepio
                         SelectMultiple: =false
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -353,7 +359,7 @@ MembrosFamiDetails As screen:
                         =//ColabFormMode<>FormMode.New
                         true
                     Width: =266
-                    X: =0
+                    X: =1
                     Y: =1
                     ZIndex: =1
 
@@ -429,8 +435,8 @@ MembrosFamiDetails As screen:
                     Update: =DateValue2_1.SelectedDate
                     Visible: =!IsBlank(ThisItem.'Data aprovacao CA')
                     Width: =266
-                    X: =1
-                    Y: =1
+                    X: =0
+                    Y: =2
                     ZIndex: =1
 
                     DataCardKey7_1 As label:
@@ -577,7 +583,7 @@ MembrosFamiDetails As screen:
                     Update: =DateValue3_1.SelectedDate 
                     Visible: =!IsBlank(ThisItem.'Data de saida')
                     Width: =266
-                    X: =0
+                    X: =1
                     Y: =2
                     ZIndex: =1
 
