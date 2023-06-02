@@ -52,10 +52,10 @@ MembrosFamiDetails As screen:
                     DataField: ="uipp_nome"
                     Default: =ThisItem.Nome
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_nome")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_nome")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
-                    MaxLength: =DataSourceInfo([@Membros_1], DataSourceInfo.MaxLength, "uipp_nome")
+                    MaxLength: =DataSourceInfo([@Familiares], DataSourceInfo.MaxLength, "uipp_nome")
                     Required: =true
                     Update: =DataCardValue3_2.Text
                     Width: =266
@@ -123,7 +123,7 @@ MembrosFamiDetails As screen:
                     DataField: ="uipp_tipodedocumento"
                     Default: =ThisItem.'Tipo de documento'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_tipodedocumento")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_tipodedocumento")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =true
@@ -200,7 +200,7 @@ MembrosFamiDetails As screen:
                     DataField: ="uipp_numerodocumento"
                     Default: =ThisItem.'Numero documento'
                     DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_numerodocumento")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_numerodocumento")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =true
@@ -272,7 +272,7 @@ MembrosFamiDetails As screen:
                     DataField: ="uipp_datadeinsercao"
                     Default: =ThisItem.'Data de insercao'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_datadeinsercao")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_datadeinsercao")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -350,7 +350,7 @@ MembrosFamiDetails As screen:
                     DataField: ="uipp_dataaprovacaoca"
                     Default: =ThisItem.'Data aprovacao CA'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_dataaprovacaoca")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_dataaprovacaoca")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -421,7 +421,7 @@ MembrosFamiDetails As screen:
                     Default: =ThisItem.'Legislacao aplicada'
                     DisplayMode: |
                         =If(DRI And localShowNewForm,DisplayMode.Edit,DisplayMode.View)
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
@@ -454,7 +454,7 @@ MembrosFamiDetails As screen:
                         HoverFill: =cores.amareloMontepio
                         IsSearchable: =false
                         Items: |-
-                            =Choices([@Membros_1].'Legislacao aplicada')
+                            =Choices([@Familiares].'Legislacao aplicada')
                             //[@Legislaçãos].uipp_tipodeenquadramento
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedFill: =cores.amareloMontepio
@@ -498,7 +498,7 @@ MembrosFamiDetails As screen:
                     DataField: ="uipp_datadesaida"
                     Default: =ThisItem.'Data de saida'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_datadesaida")
+                    DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_datadesaida")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
                     Required: =false
