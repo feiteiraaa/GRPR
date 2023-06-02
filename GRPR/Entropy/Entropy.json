@@ -293,6 +293,7 @@
     "Designacao_Column3_1": 62,
     "Designacao_DataCard1": 67,
     "DetailMembroResp": 689,
+    "DetalhesMembrosFamiResp": 1024,
     "DetalhesMembrosPart": 638,
     "Developer": 490,
     "Dia_Column1": 269,
@@ -342,6 +343,7 @@
     "EditarFami": 994,
     "EditarMembrosInfo": 588,
     "EditMembrosFami": 721,
+    "EditMembrosFamiResp": 1018,
     "EditMembrosPart": 639,
     "EditMembrosResp": 687,
     "elim_btn": 263,
@@ -361,6 +363,7 @@
     "elim_group": 402,
     "Eliminacao Content": 334,
     "EliminarMembro": 733,
+    "EliminarMembrosFamiResp": 1015,
     "EliminarMembrosPart": 636,
     "EliminarMembrosResp": 686,
     "ElimMembrosFami": 722,
@@ -477,11 +480,7 @@
     "Grau de parentesco_DataCard1": 369,
     "Group1": 107,
     "Group2": 108,
-    "Group5": 1015,
-    "Group6": 1018,
     "Group7": 193,
-    "Group8": 1021,
-    "Group9": 1024,
     "Grupo_DataCard1_1": 221,
     "Grupo_DataCard2": 125,
     "Host": 3,
@@ -710,6 +709,7 @@
     "ModalDelete": 250,
     "ModalDelete_1": 154,
     "NewMembrosFami": 720,
+    "NewMembrosFamiResp": 1021,
     "NewMembrosResp": 688,
     "NIF Familiares e Empresas": 458,
     "NIF Familiares e Empresas_1": 715,
@@ -907,7 +907,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/02/2023 15:51:01",
+  "HeaderLastSavedDateTimeUTC": "06/02/2023 16:14:02",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1319,6 +1319,10 @@
       "DynamicBtn_27": 0,
       "elim_btn_7": 1
     },
+    "DetalhesMembrosFamiResp": {
+      "DynamicBtn_34": 0,
+      "elim_btn_10": 1
+    },
     "DetalhesMembrosPart": {
       "DynamicBtn_24": 0,
       "elim_btn_5": 1
@@ -1339,6 +1343,10 @@
     "EditMembrosFami": {
       "DynamicBtn_20": 0,
       "edit_btn_3": 1
+    },
+    "EditMembrosFamiResp": {
+      "DynamicBtn_32": 0,
+      "edit_btn_8": 1
     },
     "EditMembrosPart": {
       "DynamicBtn_28": 0,
@@ -1375,6 +1383,10 @@
     "EliminarMembro": {
       "DynamicBtn_13": 0,
       "elim_btn_1": 1
+    },
+    "EliminarMembrosFamiResp": {
+      "DynamicBtn_31": 0,
+      "elim_btn_8": 1
     },
     "EliminarMembrosPart": {
       "DynamicBtn_15": 0,
@@ -1417,14 +1429,6 @@
       "Button2_27": 1,
       "DynamicBtn_25": 0
     },
-    "Group5": {
-      "DynamicBtn_31": 0,
-      "elim_btn_8": 1
-    },
-    "Group6": {
-      "DynamicBtn_32": 0,
-      "edit_btn_8": 1
-    },
     "Group7": {
       "BtnExportar": 1,
       "Button2_26": 4,
@@ -1436,14 +1440,6 @@
       "Label11": 7,
       "Label11_1": 8,
       "TopSectionComponent_2": 0
-    },
-    "Group8": {
-      "DynamicBtn_33": 0,
-      "elim_btn_9": 1
-    },
-    "Group9": {
-      "DynamicBtn_34": 0,
-      "elim_btn_10": 1
     },
     "ImportBtn": {
       "Button2_22": 1,
@@ -1478,6 +1474,10 @@
     "NewMembrosFami": {
       "DynamicBtn_21": 0,
       "edit_btn_5": 1
+    },
+    "NewMembrosFamiResp": {
+      "DynamicBtn_33": 0,
+      "elim_btn_9": 1
     },
     "NewMembrosResp": {
       "DynamicBtn_19": 0,
@@ -1818,6 +1818,7 @@
     "Designacao_Column3_1": {},
     "Designacao_DataCard1": {},
     "DetailMembroResp": {},
+    "DetalhesMembrosFamiResp": {},
     "DetalhesMembrosPart": {},
     "Developer": {},
     "Dia_Column1": {},
@@ -1867,6 +1868,7 @@
     "EditarFami": {},
     "EditarMembrosInfo": {},
     "EditMembrosFami": {},
+    "EditMembrosFamiResp": {},
     "EditMembrosPart": {},
     "EditMembrosResp": {},
     "elim_btn": {},
@@ -1886,6 +1888,7 @@
     "elim_group": {},
     "Eliminacao Content": {},
     "EliminarMembro": {},
+    "EliminarMembrosFamiResp": {},
     "EliminarMembrosPart": {},
     "EliminarMembrosResp": {},
     "ElimMembrosFami": {},
@@ -2002,11 +2005,7 @@
     "Grau de parentesco_DataCard1": {},
     "Group1": {},
     "Group2": {},
-    "Group5": {},
-    "Group6": {},
     "Group7": {},
-    "Group8": {},
-    "Group9": {},
     "Grupo_DataCard1_1": {},
     "Grupo_DataCard2": {},
     "Host": {},
@@ -2235,6 +2234,7 @@
     "ModalDelete": {},
     "ModalDelete_1": {},
     "NewMembrosFami": {},
+    "NewMembrosFamiResp": {},
     "NewMembrosResp": {},
     "NIF Familiares e Empresas": {},
     "NIF Familiares e Empresas_1": {},
@@ -2717,6 +2717,7 @@
     "Designacao_Column3_1": 518,
     "Designacao_DataCard1": 523,
     "DetailMembroResp": 219,
+    "DetalhesMembrosFamiResp": 0,
     "DetalhesMembrosPart": 165,
     "Developer": 282,
     "Dia_Column1": 689,
@@ -2766,6 +2767,7 @@
     "EditarFami": 320,
     "EditarMembrosInfo": 120,
     "EditMembrosFami": 270,
+    "EditMembrosFamiResp": 0,
     "EditMembrosPart": 168,
     "EditMembrosResp": 222,
     "elim_btn": 681,
@@ -2785,6 +2787,7 @@
     "elim_group": 652,
     "Eliminacao Content": 742,
     "EliminarMembro": 106,
+    "EliminarMembrosFamiResp": 0,
     "EliminarMembrosPart": 171,
     "EliminarMembrosResp": 216,
     "ElimMembrosFami": 267,
@@ -2901,11 +2904,7 @@
     "Grau de parentesco_DataCard1": 774,
     "Group1": 504,
     "Group2": 509,
-    "Group5": 0,
-    "Group6": 0,
     "Group7": 625,
-    "Group8": 0,
-    "Group9": 0,
     "Grupo_DataCard1_1": 429,
     "Grupo_DataCard2": 474,
     "Host": 0,
@@ -3134,6 +3133,7 @@
     "ModalDelete": 406,
     "ModalDelete_1": 461,
     "NewMembrosFami": 273,
+    "NewMembrosFamiResp": 0,
     "NewMembrosResp": 225,
     "NIF Familiares e Empresas": 92,
     "NIF Familiares e Empresas_1": 288,

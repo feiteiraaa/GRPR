@@ -1164,7 +1164,12 @@ MembrosFamiDetails As screen:
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
                 Height: =Parent.Height-60
-                Items: =_Allitems
+                Items: |-
+                    =Filter(
+                        'Membros-Familiares-Respetivas',
+                        ThisRecord.ID_Familiares.ID = _Familiar And IsBlank(ID_GrauParentesco.ID)
+                        
+                    )
                 SelectedFill: =cores.amareloMontepio
                 Width: =Parent.Width * 0.95
                 X: =24
@@ -1255,7 +1260,7 @@ MembrosFamiDetails As screen:
                     Y: =0
                     ZIndex: =19
 
-            Group5 As group:
+            EliminarMembrosFamiResp As group:
                 Height: =5
                 Width: =5
                 X: =100
@@ -1302,7 +1307,7 @@ MembrosFamiDetails As screen:
                     Y: =DynamicBtn_31.Y
                     ZIndex: =14
 
-            Group6 As group:
+            EditMembrosFamiResp As group:
                 Height: =5
                 Width: =5
                 X: =100
@@ -1365,7 +1370,7 @@ MembrosFamiDetails As screen:
                     Y: =DynamicBtn_32.Y
                     ZIndex: =16
 
-            Group8 As group:
+            NewMembrosFamiResp As group:
                 Height: =5
                 Width: =5
                 X: =100
@@ -1444,7 +1449,7 @@ MembrosFamiDetails As screen:
                     Y: =DynamicBtn_33.Y
                     ZIndex: =18
 
-            Group9 As group:
+            DetalhesMembrosFamiResp As group:
                 Height: =5
                 Width: =5
                 X: =100
