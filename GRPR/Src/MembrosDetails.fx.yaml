@@ -2819,7 +2819,8 @@ MembrosDetails As screen:
                             localShowNewForm: false,
                             localShowEditForm: false,
                             _Associated: false,
-                            _AssociatedR: false
+                            _AssociatedR: false,
+                            localseta:false
                         }
                     )
                 Width: ='Info Circle_8'.Width
