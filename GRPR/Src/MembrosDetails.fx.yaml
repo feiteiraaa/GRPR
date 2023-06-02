@@ -2590,6 +2590,12 @@ MembrosDetails As screen:
                             If(localseta And ThisItem.IsSelected,Icon.ChevronUp,Icon.ChevronDown)
                         OnSelect: |-
                             =UpdateContext({localseta:!localseta})
+                        Visible: |-
+                            =If(
+                                CountRows(GalleryFamiliaresEmpresas_1.AllItems) > 0,
+                                true,
+                                false
+                            )
                         Width: =25
                         X: =894.0999999999999
                         ZIndex: =7
