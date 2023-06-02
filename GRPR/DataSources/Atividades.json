@@ -37,6 +37,7 @@
       "uipp_data": "Data",
       "uipp_id": "ID",
       "uipp_item": "Item",
+      "uipp_itemcolumns": "ItemColumns",
       "uipp_itemid": "ItemID",
       "uipp_listadaatividade": "Lista da atividade",
       "uipp_tipodealteracao": "Tipo de alteracao",

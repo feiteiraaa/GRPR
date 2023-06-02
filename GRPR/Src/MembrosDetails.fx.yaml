@@ -1861,7 +1861,7 @@ MembrosDetails As screen:
                         localShowEditForm,
                         LookUp(
                             'Membros-Familiares-Respetivas',
-                            ID = 'empresas respetivas'.Selected.ID
+                            ThisRecord.ID_Empresa.ID = 'empresas respetivas'.Selected.ID_Empresa.ID
                         )
                     )
                 NumberOfColumns: =2
