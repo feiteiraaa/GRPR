@@ -1534,7 +1534,7 @@ MembrosFamiDetails As screen:
 
                 uipp_participacao_Column3 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="uipp_participacao"
+                    FieldDisplayName: ="Participação"
                     FieldName: ="uipp_participacao"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
