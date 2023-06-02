@@ -2485,8 +2485,7 @@ MembrosDetails As screen:
                     Items: =ligacaoFamiliares
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
-                    OnSelect: |-
-                        =//Navigate(MembrosDetails, ScreenTransition.None, {_Membro: 'Membros dos Orgaos Sociais_1'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas_1.Selected})
+                    OnSelect: =
                     TemplateSize: =127
                     Width: =Parent.Width * 0.95
                     X: =24
@@ -2494,7 +2493,11 @@ MembrosDetails As screen:
                     ZIndex: =1
 
                     "'Nome Membro_1' As label":
-                        OnSelect: =Select(Parent)
+                        OnSelect: |-
+                            =//Select(Parent)
+                            Navigate(MembrosFamiDetails, ScreenTransition.None, {_MembroF: 'Membros dos Orgaos Sociais_1'.Selected.ID,_Allitems:GalleryFamiliaresEmpresas_1.Selected
+                            //,_Associated:false,_AssociatedR:false
+                            })
                         Text: =ThisItem.NomeF
                         Width: =336
                         X: =4
