@@ -369,9 +369,8 @@ MembrosFamiDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DateValue1_1.SelectedDate
-                    Visible: |-
-                        =//ColabFormMode<>FormMode.New
-                        true
+                    Visible: |
+                        =ColabFormMode<>FormMode.New
                     Width: =266
                     X: =1
                     Y: =1
@@ -393,7 +392,7 @@ MembrosFamiDetails As screen:
 
                     DateValue1_1 As datepicker:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultDate: =Parent.Default
+                        DefaultDate: =If(IsBlank(_MembroF),Text(Today(),"yyyy-mm-dd"),Parent.Default)
                         DisplayMode: =Parent.DisplayMode
                         EndYear: =Year(Today())+100
                         Format: |-
