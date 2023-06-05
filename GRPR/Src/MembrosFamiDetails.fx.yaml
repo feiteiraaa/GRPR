@@ -649,6 +649,7 @@ MembrosFamiDetails As screen:
                 DataSource: ='Membros-Familiares-Respetivas'
                 Height: =58
                 Item: =LookUp('Membros-Familiares-Respetivas',ID_Familiares.ID=_Familiar And ID_Membro.ID=_MembroF)
+                Visible: =false
                 X: =40
                 Y: =240
                 ZIndex: =3
