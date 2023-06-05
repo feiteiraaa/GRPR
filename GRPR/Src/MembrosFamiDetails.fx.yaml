@@ -1505,17 +1505,15 @@ MembrosFamiDetails As screen:
 
             LabelDesignacao_3 As label:
                 FontWeight: =FontWeight.Semibold
-                Height: |-
-                    =//DynamicBtn_35.Height
-                    30
+                Height: |
+                    =DynamicBtn_33.Height
                 Text: |-
-                    =//"Designação: " & LookUp(Empresas,ID=_AssociateRespetivas).Designacao
+                    ="Designação: " & LookUp(Empresas,ID=_AssociateRespetivas).Designacao
                 Visible: =_AssociatedR
                 Width: =700
                 X: =40
-                Y: |-
-                    =//DynamicBtn_35.Height + 15
-                    15
+                Y: |
+                    =DynamicBtn_33.Height + 15
                 ZIndex: =11
 
             "'empresas respetivas fami' As dataTable.datatable":
@@ -1621,11 +1619,11 @@ MembrosFamiDetails As screen:
                     ButtonIcon: =Icon.Trash
                     Height: =40
                     Visible: |-
-                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
+                        =!_AssociarRF And !localShowEditForm And !FormRespetivas_1.Visible /*And If(
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        )*/
                     Width: =160
                     X: =Parent.X+200
                     Y: =7
@@ -1647,11 +1645,11 @@ MembrosFamiDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        =!_AssociarR And !localShowEditForm And !FormRespetivas.Visible And If(
+                        =!_AssociarRF And !localShowEditForm And !FormRespetivas_1.Visible /*And If(
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        )*/
                     X: =DynamicBtn_31.X
                     Y: =DynamicBtn_31.Y
                     ZIndex: =14
@@ -1782,7 +1780,7 @@ MembrosFamiDetails As screen:
                                 )
                             ),
                             Notify(
-                                "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o membro " & LabelMembroName.Text & " ou clique em '+Novo' para criar uma nova empresa.",
+                                "Por favor, selecione na tabela a 'Empresa Respetiva' ao qual deseja associar o familiar " & LookUp(Familiares,ID = _Familiar).Nome & " ou clique em '+Novo' para criar uma nova empresa.",
                                 NotificationType.Information
                             );
                             Navigate(

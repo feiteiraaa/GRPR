@@ -18660,17 +18660,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosFamiDetails._AssociarRF"
+                  "fullyQualifiedName": "MembrosFamiDetails._AssociarR"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails._AssociarRF",
+                  "fullyQualifiedName": "MembrosFamiDetails._AssociarR",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "_AssociarRF",
+                "member": "_AssociarR",
                 "module": "MembrosFamiDetails",
                 "type": "MembrosFamiDetails"
               }
