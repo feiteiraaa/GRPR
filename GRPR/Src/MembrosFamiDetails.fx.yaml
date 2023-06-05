@@ -1821,7 +1821,8 @@ MembrosFamiDetails As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
-                        Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected.ID_Empresa.ID,localFormRespetivas: true})
+                        //Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected.ID_Empresa.ID,localFormRespetivas: true})
+                        Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivasF:'empresas respetivas'.Selected.ID_Empresa.ID,localFormRespetivas: true})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""

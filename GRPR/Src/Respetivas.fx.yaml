@@ -1,6 +1,6 @@
 Respetivas As screen:
     OnHidden: |-
-        =UpdateContext({_AssociarR:false,localFormRespetivas:false,_selectedRespetivas:Blank()})
+        =UpdateContext({_AssociarR:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
     OnVisible: |-
         =UpdateContext({localFormRespetivasNew:false});
         ClearCollect(CollecRespectivas, Empresas);
@@ -346,15 +346,28 @@ Respetivas As screen:
                 FormMode.View
             )
         Item: |-
-            =If(
+            =/*If(
                 IsBlank(_selectedRespetivas),
                 EmpresasRespetivas1_1.Selected,
                 LookUp(
                     Empresas,
                     ID = _selectedRespetivas
                 )
-            )
+            )*/
              //EmpresasRespetivas1_1.Selected
+             If(
+                !IsBlank(_selectedRespetivas),
+                LookUp(
+                    Empresas,
+                    ID = _selectedRespetivas
+                ),
+                !IsBlank(_selectedRespetivasF),
+                LookUp(
+                    Empresas,
+                    ID = _selectedRespetivasF
+                ),
+                EmpresasRespetivas1_1.Selected
+            )
         NumberOfColumns: =2
         Visible: =localFormRespetivas Or localFormRespetivasNew
         Width: =980
@@ -907,12 +920,17 @@ Respetivas As screen:
         HoverFill: =ColorFade(RGBA(70, 70, 70, 1), 85%)
         OnSelect: |-
             =If(
-                IsBlank(_selectedRespetivas),
-                UpdateContext({localFormRespetivas: false}),
+                !IsBlank(_selectedRespetivas),
                 Navigate(
                     MembrosDetails,
                     ScreenTransition.None
-                )
+                ),
+                 !IsBlank(_selectedRespetivasF),
+                 Navigate(
+                    MembrosFamiDetails,
+                    ScreenTransition.None
+                ),
+                UpdateContext({localFormRespetivas: false})
             )
         PaddingLeft: =50
         RadiusBottomLeft: =5
