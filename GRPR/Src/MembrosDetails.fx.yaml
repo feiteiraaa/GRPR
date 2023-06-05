@@ -2148,7 +2148,14 @@ MembrosDetails As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: |-
                             =//Parent.Default
-                            LookUp(Empresas,ID=_AssociateRespetivas)
+                            If(
+                                FormRespetivas.Mode = FormMode.New,
+                                LookUp(
+                                    Empresas,
+                                    ID = _AssociateRespetivas
+                                ),
+                                Parent.Default
+                            )
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Empresa)

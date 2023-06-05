@@ -18660,6 +18660,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "MembrosFamiDetails._AssociarRF"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosFamiDetails._AssociarRF",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "_AssociarRF",
+                "module": "MembrosFamiDetails",
+                "type": "MembrosFamiDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MembrosFamiDetails._Associated"
                 }
               ],

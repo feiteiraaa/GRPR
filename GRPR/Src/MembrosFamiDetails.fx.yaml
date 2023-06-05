@@ -7,7 +7,11 @@ MembrosFamiDetails As screen:
                 localShowModal: false,
                 localShowData: false,
                 localShowPrazo: false,
-                localShowEliminacao:false
+                localShowEliminacao:If(
+                    _AssociatedR,
+                    true,
+                    false
+                )
                 
                 
             }
@@ -1364,7 +1368,7 @@ MembrosFamiDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue41_1.Selected
-                    Visible: =false
+                    Visible: =true
                     Width: =464
                     X: =1
                     Y: =1
@@ -1384,7 +1388,14 @@ MembrosFamiDetails As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: |-
                             =//Parent.Default
-                            //LookUp(Empresas,ID=_AssociateRespetivas)
+                            If(
+                                FormRespetivas_1.Mode = FormMode.New,
+                                LookUp(
+                                    Empresas,
+                                    ID = _AssociateRespetivas
+                                ),
+                                Parent.Default
+                            )
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Empresa)
@@ -1433,7 +1444,7 @@ MembrosFamiDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue42_1.Selected
-                    Visible: =false
+                    Visible: =true
                     Width: =464
                     X: =0
                     Y: =2
@@ -1453,7 +1464,7 @@ MembrosFamiDetails As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         DefaultSelectedItems: |-
                             =//Parent.Default
-                            //LookUp(Membros_1,ID=_Membro)
+                            LookUp(Membros_1,ID=_MembroF)
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Membro)
@@ -1739,24 +1750,24 @@ MembrosFamiDetails As screen:
                         =If(
                             _AssociatedR Or localShowEditForm,
                             If(
-                                SubmitForm(FormRespetivas),
+                                SubmitForm(FormRespetivas_1),
                                 Notify(
                                     "O registo foi submetido com sucesso!",
                                     NotificationType.Success
                                 );
-                                ResetForm(FormRespetivas);
+                                ResetForm(FormRespetivas_1);
                                 UpdateContext(
                                     {
                                         _AssociatedR: false,
                                         localShowEliminacao: false,
                                         localShowEditForm: false,
-                                        _AssociarR:false
+                                        _AssociarRF:false
                                     }
-                                );
+                                )/*;
                                 Navigate(
                                     Particulares,
                                     ScreenTransition.None
-                                ),
+                                )*/,
                                 Notify(
                                     "Por favor, tente novamente.",
                                     NotificationType.Error
@@ -1766,7 +1777,7 @@ MembrosFamiDetails As screen:
                                         _AssociatedR: false,
                                         localShowEliminacao: false,
                                         localShowEditForm: false,
-                                        _AssociarR:false
+                                        _AssociarRF:false
                                     }
                                 )
                             ),
@@ -1777,7 +1788,7 @@ MembrosFamiDetails As screen:
                             Navigate(
                                 Respetivas,
                                 ScreenTransition.None,
-                                {_AssociarR: true}
+                                {_AssociarRF: true}
                             )
                         )
                     PressedColor: =RGBA(0,0,0, 0)
@@ -1799,11 +1810,11 @@ MembrosFamiDetails As screen:
                     ButtonIcon: =Icon.DocumentWithContent
                     Height: =40
                     Visible: |-
-                        ='empresas respetivas'.Visible And If(
-                            CountRows(ligacaoRespetivas) = 0,
+                        ='empresas respetivas fami'.Visible /*And If(
+                            CountRows('empresas respetivas fami') = 0,
                             false,
                             true
-                        )
+                        )*/
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1827,11 +1838,11 @@ MembrosFamiDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        ='empresas respetivas'.Visible And If(
-                            CountRows(ligacaoRespetivas) = 0,
+                        ='empresas respetivas fami'.Visible /*And If(
+                            CountRows('empresas respetivas fami') = 0,
                             false,
                             true
-                        )
+                        )*/
                     X: =DynamicBtn_34.X
                     Y: =DynamicBtn_34.Y
                     ZIndex: =20

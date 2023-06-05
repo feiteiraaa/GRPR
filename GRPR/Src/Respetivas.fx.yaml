@@ -242,6 +242,16 @@ Respetivas As screen:
                             _AssociarR:false
                         }
                     ),
+                    _AssociarRF,
+                    Navigate(
+                        MembrosFamiDetails,
+                        ScreenTransition.None,
+                        {
+                            _AssociateRespetivas: EmpresasRespetivas1_1.Selected.ID,
+                            _AssociatedR: true,
+                            _AssociarRF:false
+                        }
+                    ),
                     UpdateContext({localFormRespetivas: true})
                 )
             Order: =3
