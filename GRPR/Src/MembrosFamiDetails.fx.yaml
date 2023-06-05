@@ -947,41 +947,11 @@ MembrosFamiDetails As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |
                         =If(
-                            localShowNewForm,
+                            localShowNewForm Or Informacao_1.Mode = FormMode.New,
                             If(
                                 Len(DataCardValue5_2.Text) = 9,
                                 If(
                                     SubmitForm(Informacao_1) And SubmitForm(InfoRelaçãoFami),
-                                    Notify(
-                                        "O registo foi submetido com sucesso!",
-                                        NotificationType.Success
-                                    );
-                                    ResetForm(Informacao_1);
-                                    ResetForm(InfoRelaçãoFami);
-                                    UpdateContext(
-                                        {
-                                            localShowData: false,
-                                            localShowNewForm: !localShowNewForm
-                                        }
-                                    );
-                                    Back(),
-                                    Notify(
-                                        "Por favor, tente novamente.",
-                                        NotificationType.Error
-                                    )
-                                ),
-                                Notify(
-                                    "Por favor, preencha o número do documento corretamente.",
-                                    NotificationType.Error
-                                )
-                            ),
-                            Informacao_1.Mode = FormMode.New,
-                            If(
-                                Len(DataCardValue5_2.Text) = 9,
-                                If(
-                                    SubmitForm(Informacao_1), /*And 
-                                    SubmitForm(InfoRelaçãoFami)*/
-                                    //And Patch(),
                                     Notify(
                                         "O registo foi submetido com sucesso!",
                                         NotificationType.Success
