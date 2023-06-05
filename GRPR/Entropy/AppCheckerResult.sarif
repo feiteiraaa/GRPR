@@ -10962,66 +10962,6 @@
               "message": {
                 "text": "Error occurred running rule app-InefficientDelayLoading."
               }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
-            },
-            {
-              "associatedRule": {
-                "id": "app-InefficientDelayLoading",
-                "index": 10
-              },
-              "descriptor": {
-                "id": "app-InefficientDelayLoading"
-              },
-              "message": {
-                "text": "Error occurred running rule app-InefficientDelayLoading."
-              }
             }
           ]
         }
@@ -17894,36 +17834,6 @@
                 "member": "AccessibleLabel",
                 "module": "MembrosFamiDetails",
                 "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Empresa_DataCard1_1.DataCardValue41_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Membro_DataCard1_1.DataCardValue42_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Membro_DataCard1_1.DataCardValue42_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "MembrosFamiDetails",
-                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Membro_DataCard1_1.DataCardValue42_1"
               }
             }
           ],
