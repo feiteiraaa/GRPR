@@ -1120,13 +1120,13 @@ MembrosFamiDetails As screen:
                     )
                 Height: =Parent.Height-90
                 Item: |-
-                    =/*If(
+                    =If(
                         localShowEditForm,
                         LookUp(
                             'Membros-Familiares-Respetivas',
-                            ThisRecord.ID = 'empresas respetivas_1'.Selected.ID
+                            ThisRecord.ID = 'empresas respetivas fami'.Selected.ID
                         )
-                    )*/
+                    )
                 NumberOfColumns: =2
                 Visible: =_AssociatedR Or localShowEditForm
                 Width: =Parent.Width * 0.95
@@ -1520,6 +1520,7 @@ MembrosFamiDetails As screen:
                         
                     )
                 SelectedFill: =cores.amareloMontepio
+                Visible: =!_AssociatedR And !localShowEditForm
                 Width: =Parent.Width * 0.95
                 X: =24
                 Y: =DynamicBtn_31.Y+50
