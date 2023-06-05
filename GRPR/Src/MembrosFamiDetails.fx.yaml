@@ -1119,75 +1119,6 @@ MembrosFamiDetails As screen:
                     80
                 ZIndex: =10
 
-                ID_Familiares_DataCard2 As typedDataCard.comboBoxEditCard:
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="uipp_ID_Familiares"
-                    Default: =ThisItem.ID_Familiares
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'Membros-Familiares-Respetivas'],DataSourceInfo.DisplayName,"uipp_ID_Familiares")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =DataCardValue39.Selected
-                    Visible: =false
-                    Width: =464
-                    X: =0
-                    Y: =2
-                    ZIndex: =1
-
-                    DataCardKey45 As label:
-                        AutoHeight: =true
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue39 As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultSelectedItems: |-
-                            =//Parent.Default
-                            LookUp(Familiares,ID=_Familiar)
-                        DisplayFields: =["uipp_id"]
-                        DisplayMode: =Parent.DisplayMode
-                        Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Familiares)
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        SearchFields: =["uipp_id"]
-                        SearchItems: =Search(Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Familiares),DataCardValue39.SearchText,"uipp_id")
-                        SelectMultiple: =false
-                        Tooltip: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey45.Y + DataCardKey45.Height + 5
-                        ZIndex: =2
-
-                    ErrorMessage45 As label:
-                        AutoHeight: =true
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardValue39.Y + DataCardValue39.Height
-                        ZIndex: =3
-
-                    StarVisible45 As label:
-                        Align: =Align.Center
-                        Height: =DataCardKey45.Height
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey45.Y
-                        ZIndex: =4
-
                 "'Cargo (Categoria)_DataCard2_1' As typedDataCard.comboBoxOptionSetSingleEditCard":
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_cargocategoria"
@@ -1480,6 +1411,75 @@ MembrosFamiDetails As screen:
                         Width: =30
                         Wrap: =false
                         Y: =DataCardKey47_1.Y
+                        ZIndex: =4
+
+                ID_Familiares_DataCard2 As typedDataCard.comboBoxEditCard:
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="uipp_ID_Familiares"
+                    Default: =ThisItem.ID_Familiares
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'Membros-Familiares-Respetivas'],DataSourceInfo.DisplayName,"uipp_ID_Familiares")
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =DataCardValue39.Selected
+                    Visible: =false
+                    Width: =464
+                    X: =0
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey45 As label:
+                        AutoHeight: =true
+                        Height: =34
+                        Text: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        Wrap: =false
+                        X: =30
+                        Y: =10
+                        ZIndex: =1
+
+                    DataCardValue39 As combobox:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        DefaultSelectedItems: |-
+                            =//Parent.Default
+                            LookUp(Familiares,ID=_Familiar)
+                        DisplayFields: =["uipp_id"]
+                        DisplayMode: =Parent.DisplayMode
+                        Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Familiares)
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        SearchFields: =["uipp_id"]
+                        SearchItems: =Search(Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Familiares),DataCardValue39.SearchText,"uipp_id")
+                        SelectMultiple: =false
+                        Tooltip: =Parent.DisplayName
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardKey45.Y + DataCardKey45.Height + 5
+                        ZIndex: =2
+
+                    ErrorMessage45 As label:
+                        AutoHeight: =true
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =DataCardValue39.Y + DataCardValue39.Height
+                        ZIndex: =3
+
+                    StarVisible45 As label:
+                        Align: =Align.Center
+                        Height: =DataCardKey45.Height
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey45.Y
                         ZIndex: =4
 
             LabelDesignacao_3 As label:
