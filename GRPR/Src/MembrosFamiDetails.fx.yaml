@@ -1368,7 +1368,7 @@ MembrosFamiDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue41_1.Selected
-                    Visible: =true
+                    Visible: =false
                     Width: =464
                     X: =1
                     Y: =1
@@ -1444,7 +1444,7 @@ MembrosFamiDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue42_1.Selected
-                    Visible: =true
+                    Visible: =false
                     Width: =464
                     X: =0
                     Y: =2
