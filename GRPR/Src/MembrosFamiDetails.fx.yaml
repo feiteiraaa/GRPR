@@ -655,6 +655,7 @@ MembrosFamiDetails As screen:
 
             InfoRelaçãoFami As form:
                 DataSource: ='Membros-Familiares-Respetivas'
+                DefaultMode: =Informacao_1.Mode
                 Height: =58
                 Item: =LookUp('Membros-Familiares-Respetivas',ID_Familiares.ID=_Familiar And ID_Membro.ID=_MembroF)
                 X: =40
@@ -955,7 +956,6 @@ MembrosFamiDetails As screen:
                                         "O registo foi submetido com sucesso!",
                                         NotificationType.Success
                                     );
-                                    
                                     ResetForm(Informacao_1);
                                     ResetForm(InfoRelaçãoFami);
                                     UpdateContext(
@@ -964,13 +964,6 @@ MembrosFamiDetails As screen:
                                             localShowNewForm: !localShowNewForm
                                         }
                                     );
-                                    /*If(
-                                        Informacao.Mode = FormMode.New,
-                                        Navigate(
-                                            Particulares,
-                                            ScreenTransition.None
-                                        )
-                                    )*/
                                     Back(),
                                     Notify(
                                         "Por favor, tente novamente.",
@@ -1024,14 +1017,14 @@ MembrosFamiDetails As screen:
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
                         =UpdateContext({localShowNewForm: false});
-                        /*If(
+                        If(
                             IsBlank(_Familiar),
                             Navigate(
-                                Particulares,
+                                MembrosDetails,
                                 ScreenTransition.None
                             )
                         );
-                        ResetForm(Informacao);*/
+                        ResetForm(Informacao_1);
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
