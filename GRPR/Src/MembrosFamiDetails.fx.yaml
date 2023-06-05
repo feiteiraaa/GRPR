@@ -5,7 +5,11 @@ MembrosFamiDetails As screen:
             {
                 
                 localShowModal: false,
-                localShowData: false,
+                localShowData: If(
+                    IsBlank(_MembroF),
+                    true,
+                    false
+                ),
                 localShowPrazo: false,
                 localShowEliminacao:If(
                     _AssociatedR,
@@ -43,6 +47,8 @@ MembrosFamiDetails As screen:
                     =If(
                         localShowNewForm,
                         FormMode.Edit,
+                        IsBlank(_MembroF),
+                        ColabFormMode,
                         FormMode.View
                     )
                 Height: |
@@ -1847,9 +1853,8 @@ MembrosFamiDetails As screen:
 
         "'Empresas Respetivas_1' As groupContainer.manualLayoutContainer":
             Height: =50
-            Visible: |-
-                =//!IsBlank(_Membro)
-                true
+            Visible: |
+                =!IsBlank(_MembroF)
             Width: =Parent.Width
             Y: =If(localShowData, 'Informacao Content_1'.Y + 'Informacao Content_1'.Height, 'Informacao Content_1'.Y)
             ZIndex: =6
@@ -1928,9 +1933,8 @@ MembrosFamiDetails As screen:
 
         "'Atividades Info_1' As groupContainer.manualLayoutContainer":
             Height: =50
-            Visible: |-
-                =//!IsBlank(_Membro)
-                true
+            Visible: |
+                =!IsBlank(_MembroF)
             Width: =Parent.Width
             Y: =If(localShowEliminacao, 'Empresas Respetivas Content_1'.Y + 'Empresas Respetivas Content_1'.Height, 'Empresas Respetivas Content_1'.Y)
             ZIndex: =10

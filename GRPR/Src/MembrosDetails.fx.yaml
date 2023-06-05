@@ -2671,11 +2671,7 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =/*If(
-                            localShowFimPeriodoForm,
-                            UpdateContext({localShowFimPeriodoForm: false}),
-                            UpdateContext({ModalConfirmation_1:1})
-                        )*/
+                        =Navigate(MembrosFamiDetails, ScreenTransition.None, {ColabFormMode: FormMode.New,_MembroF:Blank()})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
