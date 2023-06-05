@@ -3067,7 +3067,7 @@ MembrosDetails As screen:
                 localShowLeg,
                 "Tem certeza de que deseja dissociar a empresa " & 'empresas do grupo'.Selected.Designacao & " do membro " & LabelMembroName.Text & " ?",
                 localShowEliminacao,
-                "Tem certeza de que deseja eliminar a empresa " & /*'empresas respetivas'.Selected.Designacao &*/ " do membro " & LabelMembroName.Text & " ?",
+                "Tem certeza de que deseja eliminar a empresa " & 'empresas respetivas'.Selected.ID_Empresa.Designacao & " do membro " & LabelMembroName.Text & " ?",
                 //!localShowData And !localShowLeg And !localShowEliminacao And !localShowRelacao And !localShowPrazo And !localShowNewForm And !_AssociarR And !_Associar,
                 "Tem certeza de que deseja eliminar o membro " & LabelMembroName.Text & " ?"
             )

@@ -2096,7 +2096,7 @@ MembrosFamiDetails As screen:
         ZIndex: =5
 
     ModalConfirmation_8 As ModalConfirmation:
-        ModalText: = "Tem certeza de que deseja eliminar "
+        ModalText: ="Tem certeza de que deseja eliminar a empresa " & 'empresas respetivas fami'.Selected.ID_Empresa.Designacao & " do familiar " & LookUp(Familiares,ID = _Familiar).Nome & " ?"
         Visible: =localShowModal
         ZIndex: =6
 
