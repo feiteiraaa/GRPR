@@ -2100,7 +2100,7 @@ MembrosFamiDetails As screen:
                         ID = _Familiar
                     ).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text & " [Eliminado] "
                 ),
-                "Criar novo familiar para o membro " & LookUp(
+                "Criar novo Familiar para o Membro " & LookUp(
                     Membros_1,
                     ID = _MembroF
                 ).Nome
