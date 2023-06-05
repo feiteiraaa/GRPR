@@ -365,7 +365,12 @@ MembrosDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_datadeinsercao"
                     Default: =ThisItem.'Data de insercao'
-                    DisplayMode: =DisplayMode.View
+                    DisplayMode: |-
+                        =If(
+                            IsBlank(_Membro),
+                            Parent.DisplayMode,
+                            DisplayMode.View
+                        )
                     DisplayName: =DataSourceInfo([@Membros_1],DataSourceInfo.DisplayName,"uipp_datadeinsercao")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50

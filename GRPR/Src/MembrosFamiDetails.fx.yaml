@@ -363,7 +363,12 @@ MembrosFamiDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_datadeinsercao"
                     Default: =ThisItem.'Data de insercao'
-                    DisplayMode: =DisplayMode.View
+                    DisplayMode: |-
+                        =If(
+                            IsBlank(_Familiar),
+                            Parent.DisplayMode,
+                            DisplayMode.View
+                        )
                     DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_datadeinsercao")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -657,7 +662,14 @@ MembrosFamiDetails As screen:
                 DataSource: ='Membros-Familiares-Respetivas'
                 DefaultMode: =Informacao_1.Mode
                 Height: =58
-                Item: =LookUp('Membros-Familiares-Respetivas',ID_Familiares.ID=_Familiar And ID_Membro.ID=_MembroF)
+                Item: |-
+                    =If(
+                        !IsBlank(_Familiar),
+                        LookUp(
+                            'Membros-Familiares-Respetivas',
+                            ID_Familiares.ID = _Familiar And ID_Membro.ID = _MembroF
+                        )
+                    )
                 X: =40
                 Y: =240
                 ZIndex: =3
@@ -689,7 +701,15 @@ MembrosFamiDetails As screen:
 
                     DataCardValue45 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultSelectedItems: =LookUp(Familiares,ID=_Familiar)
+                        DefaultSelectedItems: |-
+                            =If(
+                                IsBlank(_Familiar),
+                                Informacao_1.LastSubmit,
+                                LookUp(
+                                    Familiares,
+                                    ID = _Familiar
+                                )
+                            )
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_Familiares)
@@ -881,43 +901,6 @@ MembrosFamiDetails As screen:
                         Y: =DataCardKey53.Y + DataCardKey53.Height + 5
                         ZIndex: =5
 
-                ID_DataCard2 As typedDataCard.textualViewCard:
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="uipp_id"
-                    Default: =ThisItem.ID
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'Membros-Familiares-Respetivas'],DataSourceInfo.DisplayName,"uipp_id")
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =266
-                    X: =0
-                    Y: =1
-                    ZIndex: =1
-
-                    DataCardKey54 As label:
-                        AutoHeight: =true
-                        Height: =34
-                        Text: =Parent.DisplayName
-                        Width: =Parent.Width - 60
-                        Wrap: =false
-                        X: =30
-                        Y: =10
-                        ZIndex: =1
-
-                    DataCardValue48 As label:
-                        AutoHeight: =true
-                        DisplayMode: =Parent.DisplayMode
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Text: =Parent.Default
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey54.Y + DataCardKey54.Height + 5
-                        ZIndex: =2
-
             EditarFami As group:
                 Height: =5
                 Width: =5
@@ -951,7 +934,7 @@ MembrosFamiDetails As screen:
                             If(
                                 Len(DataCardValue5_2.Text) = 9,
                                 If(
-                                    SubmitForm(Informacao_1) And SubmitForm(InfoRelaçãoFami),
+                                    SubmitForm(InfoRelaçãoFami) And SubmitForm(Informacao_1),
                                     Notify(
                                         "O registo foi submetido com sucesso!",
                                         NotificationType.Success
