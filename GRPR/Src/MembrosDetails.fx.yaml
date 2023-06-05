@@ -3159,7 +3159,7 @@ MembrosDetails As screen:
                             )
                         ),
                         Notify(
-                            "Empresa Respectiva foi eliminada com sucesso, mas permanece ativa por estar associada a outro registo",
+                            "Empresa Respectiva foi dissociada com sucesso, mas permanece ativa por estar associada a outro registo",
                             NotificationType.Success
                         )
                     )

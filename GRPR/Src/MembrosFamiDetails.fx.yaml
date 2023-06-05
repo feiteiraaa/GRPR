@@ -2142,7 +2142,54 @@ MembrosFamiDetails As screen:
             HoverBorderColor: =
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =ColorFade(RGBA(70, 70, 70, 1),80%)
-            OnSelect: =
+            OnSelect: |-
+                =If(
+                    localShowEliminacao,
+                    Remove(
+                        'Membros-Familiares-Respetivas',
+                        'empresas respetivas fami'.Selected
+                    );
+                    If(
+                        IsBlank(
+                            Filter(
+                                'Membros-Familiares-Respetivas',
+                                ID_Empresa.ID = 'empresas respetivas fami'.Selected.ID
+                            )
+                        ),
+                        If(
+                            Patch(
+                                Empresas,
+                                LookUp(
+                                    Empresas,
+                                    ThisRecord.ID = 'empresas respetivas fami'.Selected.ID
+                                ),
+                                {
+                                    Ativo: false,
+                                    Bloqueado: true,
+                                    'Data de saída': Now()
+                                }
+                            ).Ativo = false,
+                            //Back();
+                            Notify(
+                                "Empresa Respetiva foi eliminada com sucesso!",
+                                NotificationType.Success
+                            ),
+                            Notify(
+                                "Por favor, tente novamente ou contacte o administrador da solução!",
+                                NotificationType.Error
+                            )
+                        ),
+                        Notify(
+                            "Empresa Respetiva foi dissociada com sucesso, mas permanece ativa por estar associada a outro registo",
+                            NotificationType.Success
+                        )
+                    )
+                );
+                UpdateContext({localShowModal: false})/*;
+                Navigate(
+                    Particulares,
+                    ScreenTransition.None
+                )*/
             PaddingLeft: =50
             PressedColor: =Color.Black
             PressedFill: =ColorFade(RGBA(70, 70, 70, 1),90%)
