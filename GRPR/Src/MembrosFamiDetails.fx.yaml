@@ -307,9 +307,11 @@ MembrosFamiDetails As screen:
                         HoverFill: =cores.amareloMontepio
                         IsSearchable: =false
                         Items: |-
-                            =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
+                            =Choices([@'Membros-Familiares-Respetivas'].ID_GrauParentesco)
                             //[@'Relações Parentescos'].uipp_graudeparentesco
-                        OnChange: =
+                        OnChange: =Set(varIDgrau,DataCardValue44.Selected.'Grau de parentesco')
+                        OnSelect: |
+                            =false
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         PressedFill: =cores.amareloMontepio
                         SearchFields: =["uipp_graudeparentesco"]
@@ -788,7 +790,9 @@ MembrosFamiDetails As screen:
                 ID_GrauParentesco_DataCard2 As typedDataCard.comboBoxEditCard:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_ID_GrauParentesco"
-                    Default: =ThisItem.ID_GrauParentesco
+                    Default: |-
+                        =//ThisItem.ID_GrauParentesco
+                        DataCardValue44.Selected
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'Membros-Familiares-Respetivas'],DataSourceInfo.DisplayName,"uipp_ID_GrauParentesco")
                     Fill: =RGBA(0, 0, 0, 0)
@@ -812,20 +816,22 @@ MembrosFamiDetails As screen:
 
                     DataCardValue47 As combobox:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        Default: |-
-                            =DataCardValue44.Selected
-                            //Parent.Default
-                            //LookUp('Relações Parentescos','Grau de parentesco'=TextInput3.Text).ID
+                        Default: |
+                            =//DataCardValue44.Selected
+                            Parent.Default
                         DefaultSelectedItems: |-
-                            =//Parent.Default
-                            DataCardValue44.Selected
+                            =Parent.Default
+                            //DataCardValue44.Selected
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
-                        Items: =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
+                        IsSearchable: =false
+                        Items: |-
+                            =//Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
+                            DataCardValue44.Selected
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         Reset: =
                         SearchFields: =["uipp_id"]
-                        SearchItems: =Search(Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco),DataCardValue47.SearchText,"uipp_id")
+                        SearchItems: =[]
                         SelectMultiple: =false
                         Tooltip: =Parent.DisplayName
                         Width: =Parent.Width - 60
@@ -859,7 +865,7 @@ MembrosFamiDetails As screen:
                         ZIndex: =4
 
                     TextInput3 As text:
-                        Default: =DataCardValue44.Selected.'Grau de parentesco'
+                        Default: =varIDgrau
                         Visible: =false
                         Width: =Parent.Width - 60
                         X: =30
