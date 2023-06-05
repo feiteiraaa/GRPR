@@ -441,8 +441,7 @@ MembrosFamiDetails As screen:
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="uipp_Legislacaoaplicada"
                     Default: =ThisItem.'Legislacao aplicada'
-                    DisplayMode: |
-                        =If(DRI And localShowNewForm,DisplayMode.Edit,DisplayMode.View)
+                    DisplayMode: =If(DRI And (localShowNewForm Or IsBlank(_MembroF)) ,DisplayMode.Edit,DisplayMode.View)
                     DisplayName: =DataSourceInfo([@Familiares],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =50
@@ -928,8 +927,8 @@ MembrosFamiDetails As screen:
                 ZIndex: =4
 
                 DynamicBtn_29 As DynamicBtn:
-                    BtnText: =If(localShowNewForm Or IsBlank(_Familiar), "Guardar" ,"Editar")
-                    ButtonIcon: =If(localShowNewForm Or IsBlank(_Familiar),Icon.Save ,Icon.Edit)
+                    BtnText: =If(localShowNewForm Or IsBlank(_MembroF), "Guardar" ,"Editar")
+                    ButtonIcon: =If(localShowNewForm Or IsBlank(_MembroF),Icon.Save ,Icon.Edit)
                     Height: =40
                     Visible: =true
                     Width: =160
@@ -1009,7 +1008,7 @@ MembrosFamiDetails As screen:
                     BtnText: ="Cancelar"
                     ButtonIcon: =Icon.Cancel
                     Height: =40
-                    Visible: =localShowNewForm Or IsBlank(_Familiar)
+                    Visible: =localShowNewForm Or IsBlank(_MembroF)
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -1038,7 +1037,7 @@ MembrosFamiDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    Visible: =localShowNewForm Or IsBlank(_Familiar)
+                    Visible: =localShowNewForm Or IsBlank(_MembroF)
                     X: =DynamicBtn_30.X
                     Y: =DynamicBtn_30.Y
                     ZIndex: =6
