@@ -2940,21 +2940,24 @@ MembrosDetails As screen:
         FontWeight: =FontWeight.Semibold
         Text: |-
             =If(
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Ativo,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome,
-                LookUp(
-                    Membros_1,
-                    ID = _Membro
-                ).Nome & " (Eliminado)"
+                !IsBlank(_Membro),
+                If(
+                    LookUp(
+                        Membros_1,
+                        ID = _Membro
+                    ).Ativo,
+                    LookUp(
+                        Membros_1,
+                        ID = _Membro
+                    ).Nome,
+                    LookUp(
+                        Membros_1,
+                        ID = _Membro
+                    ).Nome & " (Eliminado)"
+                ),
+                "Criar novo Membro de Órgãos Sociais"
             )
-        Visible: =!IsBlank(_Membro)
-        Width: =300
+        Width: =Parent.Width/2
         X: =365
         Y: =124
         ZIndex: =9
