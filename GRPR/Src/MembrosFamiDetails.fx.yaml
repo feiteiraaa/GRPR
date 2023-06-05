@@ -6,7 +6,7 @@ MembrosFamiDetails As screen:
                 
                 localShowModal: false,
                 localShowData: If(
-                    IsBlank(_MembroF),
+                    IsBlank(_Familiar),
                     true,
                     false
                 ),
@@ -47,7 +47,7 @@ MembrosFamiDetails As screen:
                     =If(
                         localShowNewForm,
                         FormMode.Edit,
-                        IsBlank(_MembroF),
+                        IsBlank(_Familiar),
                         ColabFormMode,
                         FormMode.View
                     )
@@ -657,7 +657,6 @@ MembrosFamiDetails As screen:
                 DataSource: ='Membros-Familiares-Respetivas'
                 Height: =58
                 Item: =LookUp('Membros-Familiares-Respetivas',ID_Familiares.ID=_Familiar And ID_Membro.ID=_MembroF)
-                Visible: =false
                 X: =40
                 Y: =240
                 ZIndex: =3
@@ -926,7 +925,7 @@ MembrosFamiDetails As screen:
                 ZIndex: =4
 
                 DynamicBtn_29 As DynamicBtn:
-                    BtnText: =If(localShowNewForm Or IsBlank(_MembroF), "Guardar" ,"Editar")
+                    BtnText: =If(localShowNewForm Or IsBlank(_Familiar), "Guardar" ,"Editar")
                     ButtonIcon: =If(localShowNewForm Or IsBlank(_MembroF),Icon.Save ,Icon.Edit)
                     Height: =40
                     Visible: =true
@@ -1007,7 +1006,7 @@ MembrosFamiDetails As screen:
                     BtnText: ="Cancelar"
                     ButtonIcon: =Icon.Cancel
                     Height: =40
-                    Visible: =localShowNewForm Or IsBlank(_MembroF)
+                    Visible: =localShowNewForm Or IsBlank(_Familiar)
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -1036,7 +1035,7 @@ MembrosFamiDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
-                    Visible: =localShowNewForm Or IsBlank(_MembroF)
+                    Visible: =localShowNewForm Or IsBlank(_Familiar)
                     X: =DynamicBtn_30.X
                     Y: =DynamicBtn_30.Y
                     ZIndex: =6
@@ -1852,7 +1851,7 @@ MembrosFamiDetails As screen:
         "'Empresas Respetivas_1' As groupContainer.manualLayoutContainer":
             Height: =50
             Visible: |
-                =!IsBlank(_MembroF)
+                =!IsBlank(_Familiar)
             Width: =Parent.Width
             Y: =If(localShowData, 'Informacao Content_1'.Y + 'Informacao Content_1'.Height, 'Informacao Content_1'.Y)
             ZIndex: =6
@@ -1932,7 +1931,7 @@ MembrosFamiDetails As screen:
         "'Atividades Info_1' As groupContainer.manualLayoutContainer":
             Height: =50
             Visible: |
-                =!IsBlank(_MembroF)
+                =!IsBlank(_Familiar)
             Width: =Parent.Width
             Y: =If(localShowEliminacao, 'Empresas Respetivas Content_1'.Y + 'Empresas Respetivas Content_1'.Height, 'Empresas Respetivas Content_1'.Y)
             ZIndex: =10
@@ -2080,14 +2079,31 @@ MembrosFamiDetails As screen:
         FontWeight: =FontWeight.Semibold
         Text: |-
             =If(
-                LookUp(
-                    Familiares,
-                    ID = _Familiar
-                ).Ativo,
-            
-                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text,
-                LookUp(Membros_1,ID = _MembroF).Nome &  " » " & LookUp(Familiares,ID = _Familiar).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text & " [Eliminado] "
-            
+                !IsBlank(_Familiar),
+                If(
+                    LookUp(
+                        Familiares,
+                        ID = _Familiar
+                    ).Ativo,
+                    LookUp(
+                        Membros_1,
+                        ID = _MembroF
+                    ).Nome & " » " & LookUp(
+                        Familiares,
+                        ID = _Familiar
+                    ).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text,
+                    LookUp(
+                        Membros_1,
+                        ID = _MembroF
+                    ).Nome & " » " & LookUp(
+                        Familiares,
+                        ID = _Familiar
+                    ).Nome & " - " & _Allitems2.'Cargo e Relacao_1'.Text & " [Eliminado] "
+                ),
+                "Criar novo familiar para o membro " & LookUp(
+                    Membros_1,
+                    ID = _MembroF
+                ).Nome
             )
         Visible: |-
             =//!IsBlank(_Membro)

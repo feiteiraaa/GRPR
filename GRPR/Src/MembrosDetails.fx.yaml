@@ -2503,24 +2503,55 @@ MembrosDetails As screen:
                     "'Nome Membro_1' As label":
                         OnSelect: |-
                             =//Select(Parent)
-                            Navigate(MembrosFamiDetails, ScreenTransition.None, {_MembroF:_Membro ,_Allitems:GalleryFamiliaresEmpresas_1.Selected,_Familiar:'Membros dos Orgaos Sociais_1'.Selected.ID_Familiares.ID
-                            //,_Associated:false,_AssociatedR:false
-                            ,_Allitems2:'Membros dos Orgaos Sociais_1'.Selected
-                            })
+                            Navigate(
+                                MembrosFamiDetails,
+                                ScreenTransition.None,
+                                {
+                                    _MembroF: _Membro,
+                                    //_Allitems: GalleryFamiliaresEmpresas_1.Selected,
+                                    _Familiar: 'Membros dos Orgaos Sociais_1'.Selected.ID_Familiares.ID,
+                                    //_AssociatedR: false,
+                                    _Allitems2: 'Membros dos Orgaos Sociais_1'.Selected
+                                }
+                            )
                         Text: =ThisItem.NomeF
                         Width: =336
                         X: =4
                         ZIndex: =1
 
                     "'NIF Membro_1' As label":
-                        OnSelect: =Select(Parent)
+                        OnSelect: |-
+                            =//Select(Parent)
+                            Navigate(
+                                MembrosFamiDetails,
+                                ScreenTransition.None,
+                                {
+                                    _MembroF: _Membro,
+                                    //_Allitems: GalleryFamiliaresEmpresas_1.Selected,
+                                    _Familiar: 'Membros dos Orgaos Sociais_1'.Selected.ID_Familiares.ID,
+                                    //_AssociatedR: false,
+                                    _Allitems2: 'Membros dos Orgaos Sociais_1'.Selected
+                                }
+                            )
                         Text: =ThisItem.NumDoc
                         Width: =242
                         X: =346
                         ZIndex: =2
 
                     "'Cargo e Relacao_1' As label":
-                        OnSelect: =Select(Parent)
+                        OnSelect: |-
+                            =//Select(Parent)
+                            Navigate(
+                                MembrosFamiDetails,
+                                ScreenTransition.None,
+                                {
+                                    _MembroF: _Membro,
+                                    //_Allitems: GalleryFamiliaresEmpresas_1.Selected,
+                                    _Familiar: 'Membros dos Orgaos Sociais_1'.Selected.ID_Familiares.ID,
+                                    //_AssociatedR: false,
+                                    _Allitems2: 'Membros dos Orgaos Sociais_1'.Selected
+                                }
+                            )
                         Text: |-
                             =//Filter('Membros-Familiares-Respetivas',ID_Membro.ID=ThisItem.ID 
                             ThisItem.ID_GrauParentesco.'Grau de parentesco'
@@ -2671,7 +2702,7 @@ MembrosDetails As screen:
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
                     OnSelect: |-
-                        =Navigate(MembrosFamiDetails, ScreenTransition.None, {ColabFormMode: FormMode.New,_MembroF:Blank()})
+                        =Navigate(MembrosFamiDetails, ScreenTransition.None, {ColabFormMode: FormMode.New,_Familiar:Blank(),_MembroF:_Membro})
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
