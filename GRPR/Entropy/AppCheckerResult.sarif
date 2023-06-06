@@ -11390,215 +11390,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.Nome_DataCard2.DataCardValue15.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.Nome_DataCard2.DataCardValue15.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ROCDetails",
-                "type": "ROCDetails.ROCForm.Nome_DataCard2.DataCardValue15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.Grupo_DataCard2.DataCardValue13.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.Grupo_DataCard2.DataCardValue13.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ROCDetails",
-                "type": "ROCDetails.ROCForm.Grupo_DataCard2.DataCardValue13"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.'Tipo de documento_DataCard1'.DataCardValue16.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.'Tipo de documento_DataCard1'.DataCardValue16.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ROCDetails",
-                "type": "ROCDetails.ROCForm.'Tipo de documento_DataCard1'.DataCardValue16"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.'Numero Documento_DataCard1'.DataCardValue17.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.'Numero Documento_DataCard1'.DataCardValue17.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ROCDetails",
-                "type": "ROCDetails.ROCForm.'Numero Documento_DataCard1'.DataCardValue17"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.'Legislacao aplicada_DataCard2'.DataCardValue14.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.'Legislacao aplicada_DataCard2'.DataCardValue14.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ROCDetails",
-                "type": "ROCDetails.ROCForm.'Legislacao aplicada_DataCard2'.DataCardValue14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.Ativo_DataCard2.DataCardValue2.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "ROCDetails.ROCForm.Ativo_DataCard2.DataCardValue2.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "ROCDetails",
-                "type": "ROCDetails.ROCForm.Ativo_DataCard2.DataCardValue2"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Screen1"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Screen1",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "module": "Screen1",
-                "type": "Screen1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Low"
-          },
-          "ruleId": "acc-ReadableScreenNameNeeded",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Atividade.InputPesquisar.AccessibleLabel"
                 }
               ],
@@ -12012,7 +11803,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -12132,7 +11923,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -12252,7 +12043,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -12372,7 +12163,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -12492,7 +12283,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -13002,7 +12793,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -13062,7 +12853,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -13122,7 +12913,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -13392,7 +13183,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -13482,7 +13273,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -14172,7 +13963,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -14689,6 +14480,186 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.Nome_DataCard2.DataCardValue15.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.Nome_DataCard2.DataCardValue15.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ROCDetails",
+                "type": "ROCDetails.ROCForm.Nome_DataCard2.DataCardValue15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.Grupo_DataCard2.DataCardValue13.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.Grupo_DataCard2.DataCardValue13.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ROCDetails",
+                "type": "ROCDetails.ROCForm.Grupo_DataCard2.DataCardValue13"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.'Tipo de documento_DataCard1'.DataCardValue16.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.'Tipo de documento_DataCard1'.DataCardValue16.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ROCDetails",
+                "type": "ROCDetails.ROCForm.'Tipo de documento_DataCard1'.DataCardValue16"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.'Numero Documento_DataCard1'.DataCardValue17.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.'Numero Documento_DataCard1'.DataCardValue17.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ROCDetails",
+                "type": "ROCDetails.ROCForm.'Numero Documento_DataCard1'.DataCardValue17"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.'Legislacao aplicada_DataCard2'.DataCardValue14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.'Legislacao aplicada_DataCard2'.DataCardValue14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ROCDetails",
+                "type": "ROCDetails.ROCForm.'Legislacao aplicada_DataCard2'.DataCardValue14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.Ativo_DataCard2.DataCardValue2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "ROCDetails.ROCForm.Ativo_DataCard2.DataCardValue2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "ROCDetails",
+                "type": "ROCDetails.ROCForm.Ativo_DataCard2.DataCardValue2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "Participadas.TextInput2_1.AccessibleLabel"
                 }
               ],
@@ -14742,7 +14713,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -15282,7 +15253,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -15612,7 +15583,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -15882,7 +15853,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -16152,7 +16123,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -16332,7 +16303,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -16352,6 +16323,126 @@
                 "member": "TabIndex",
                 "module": "MembrosDetails",
                 "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Nome Membro_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.FocusedBorderThickness"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.FocusedBorderThickness",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "FocusedBorderThickness",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'"
               }
             }
           ],
@@ -16512,7 +16603,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -16572,7 +16663,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -17082,7 +17173,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -17479,19 +17570,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.TextInput3.AccessibleLabel"
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.TextInput3.AccessibleLabel",
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MembrosFamiDetails",
-                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.TextInput3"
+                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47"
               }
             }
           ],
@@ -17509,19 +17600,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47.AccessibleLabel"
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.TextInput3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47.AccessibleLabel",
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.TextInput3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MembrosFamiDetails",
-                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47"
+                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.TextInput3"
               }
             }
           ],
@@ -17562,7 +17653,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -17779,19 +17870,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.FocusedBorderThickness"
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Familiares_DataCard2.DataCardValue39.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.FocusedBorderThickness",
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Familiares_DataCard2.DataCardValue39.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'"
+                "member": "AccessibleLabel",
+                "module": "MembrosFamiDetails",
+                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Familiares_DataCard2.DataCardValue39"
               }
             }
           ],
@@ -17801,8 +17892,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -17832,7 +17923,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 4
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -18049,19 +18140,18 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Familiares_DataCard2.DataCardValue39.AccessibleLabel"
+                  "fullyQualifiedName": "Screen1"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Familiares_DataCard2.DataCardValue39.AccessibleLabel",
+                  "fullyQualifiedName": "Screen1",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
-                "module": "MembrosFamiDetails",
-                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Empresas Respetivas Content_1'.FormRespetivas_1.ID_Familiares_DataCard2.DataCardValue39"
+                "module": "Screen1",
+                "type": "Screen1"
               }
             }
           ],
@@ -18069,100 +18159,10 @@
             "id": "issue"
           },
           "properties": {
-            "level": "Medium"
+            "level": "Low"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'NIF Membro_1'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.FocusedBorderThickness"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.FocusedBorderThickness",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "FocusedBorderThickness",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
+          "ruleId": "acc-ReadableScreenNameNeeded",
           "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "MembrosDetails",
-                "type": "MembrosDetails.'Mid Section_Membros'.'Familiares Content'.'Membros dos Orgaos Sociais_1'.'Cargo e Relacao_1'"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -19453,23 +19453,6 @@
               }
             },
             {
-              "id": "acc-ReadableScreenNameNeeded",
-              "messageStrings": {
-                "issue": {
-                  "text": "Revise screen name"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Give the screen  a title that describes what's on the screen or what it's used for."
-                ],
-                "level": "Low",
-                "primaryCategory": "accessibility",
-                "whyFix": "People who are blind, have low vision, or a reading disability rely on screen titles to navigate using the screen reader. "
-              }
-            },
-            {
               "id": "acc-FocusBorderShouldBeVisible",
               "messageStrings": {
                 "issue": {
@@ -19484,6 +19467,23 @@
                 "level": "Medium",
                 "primaryCategory": "accessibility",
                 "whyFix": "If the focus isn't visible, people who don't use a mouse won't be able to see it when they're interacting with the app."
+              }
+            },
+            {
+              "id": "acc-ReadableScreenNameNeeded",
+              "messageStrings": {
+                "issue": {
+                  "text": "Revise screen name"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Give the screen  a title that describes what's on the screen or what it's used for."
+                ],
+                "level": "Low",
+                "primaryCategory": "accessibility",
+                "whyFix": "People who are blind, have low vision, or a reading disability rely on screen titles to navigate using the screen reader. "
               }
             },
             {

@@ -13,14 +13,14 @@ LeftSectionComponent As CanvasComponent:
                 text: "Inicio",
                 Navigate: Inicio,
                 VisivelPara: true
-            },
+            },/*
             {
                 selected: false,
                 icon: Icon.Bug,
                 text: "Developer",
                 Navigate: Developer,
                 VisivelPara: godMode
-            },
+            },*/
             {
                 selected: false,
                 icon: Icon.People,

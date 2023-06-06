@@ -4349,7 +4349,7 @@
         {
           "Category": "Data",
           "PropertyName": "TabelaMenu",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",

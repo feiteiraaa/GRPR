@@ -117,7 +117,7 @@ Inicio As screen:
         Color: =RGBA(128, 128, 128, 1)
         FontWeight: =FontWeight.Semibold
         Size: =15
-        Text: ="Notificações (brevemente)"
+        Text: ="Notificações"
         Width: =270
         X: =365
         Y: =93
