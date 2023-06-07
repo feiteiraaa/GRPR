@@ -319,7 +319,7 @@ MembrosFamiDetails As screen:
                         Items: |-
                             =Choices([@'Membros-Familiares-Respetivas'].ID_GrauParentesco)
                             //[@'Relações Parentescos'].uipp_graudeparentesco
-                        OnChange: =Set(varIDgrau,DataCardValue44.Selected.'Grau de parentesco')
+                        OnChange: =Set(varIDgrau,Filter('Relações Parentescos','Grau de parentesco'=DataCardValue44.Selected.'Grau de parentesco').ID)
                         OnSelect: |
                             =false
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -847,16 +847,20 @@ MembrosFamiDetails As screen:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                         Default: |
                             =//DataCardValue44.Selected
-                            Parent.Default
-                        DefaultSelectedItems: |-
-                            =Parent.Default
+                            //Parent.Default
+                            //ThisItem.ID_GrauParentesco
+                        DefaultSelectedItems: |+
+                            =//Parent.Default
                             //DataCardValue44.Selected
+                            //ThisItem.ID_GrauParentesco
+                            [@varIDgrau].ID
+                            
                         DisplayFields: =["uipp_id"]
                         DisplayMode: =Parent.DisplayMode
                         IsSearchable: =false
                         Items: |-
-                            =//Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
-                            DataCardValue44.Selected
+                            =Choices([@'Membros-Familiares-Respetivas'].uipp_ID_GrauParentesco)
+                            //LookUp('Relações Parentescos','Grau de parentesco'=DataCardValue44.Selected.'Grau de parentesco').ID
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                         Reset: =
                         SearchFields: =["uipp_id"]
@@ -892,14 +896,6 @@ MembrosFamiDetails As screen:
                         Wrap: =false
                         Y: =DataCardKey53.Y
                         ZIndex: =4
-
-                    TextInput3 As text:
-                        Default: =varIDgrau
-                        Visible: =false
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =DataCardKey53.Y + DataCardKey53.Height + 5
-                        ZIndex: =5
 
             EditarFami As group:
                 Height: =5
