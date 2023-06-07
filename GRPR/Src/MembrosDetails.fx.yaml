@@ -98,7 +98,12 @@ MembrosDetails As screen:
                 LookUp(
                     Familiares,
                     ID = ligacaoFamiliar[@ID_Familiares].ID
-                ).'Numero documento'
+                ).'Numero documento',
+                "Ativo",
+                LookUp(
+                    Familiares,
+                    ID = ligacaoFamiliar[@ID_Familiares].ID
+                ).Ativo
             )
         );
         Refresh('Membros-Familiares-Respetivas');
@@ -2495,7 +2500,24 @@ MembrosDetails As screen:
                 "'Membros dos Orgaos Sociais_1' As gallery.variableTemplateHeightGallery":
                     DelayItemLoading: =true
                     Height: ='Familiares Content'.Height
-                    Items: =ligacaoFamiliares
+                    Items: |-
+                        =//ligacaoFamiliares
+                        Search(
+                                //SortByColumns(
+                            Filter(
+                                ligacaoFamiliares,
+                                If(
+                                    Checkbox1_3.Value = false,
+                                    ThisRecord.Ativo = true,
+                                    ThisRecord.Ativo = true Or ThisRecord.Ativo = false
+                                )
+                                   /* ),
+                                    varSortCol,
+                                    varSortDir*/
+                            ),
+                            TextInput2_2.Text,
+                            "NomeF"
+                        )
                     Layout: =Layout.Vertical
                     LoadingSpinner: =LoadingSpinner.Data
                     OnSelect: =
