@@ -2680,6 +2680,25 @@ MembrosDetails As screen:
                         X: =583
                         ZIndex: =3
 
+            TextInput2_2 As text:
+                BorderColor: =ColorFade(cores.cinzento, 80%)
+                BorderThickness: =1
+                Clear: =true
+                Color: |-
+                    =//RGBA(0, 0, 0, 1)
+                    cores.cinzento
+                Default: =
+                Fill: =ColorFade(cores.cinzento, 90%)
+                HintText: ="Pesquisar"
+                HoverBorderColor: =RGBA(128, 128, 128, 1)
+                HoverFill: =
+                PaddingLeft: =40
+                Tooltip: =
+                Width: =366
+                X: =38
+                Y: =7
+                ZIndex: =8
+
             NewMembrosFami As group:
                 Height: =5
                 Width: =5
@@ -2714,6 +2733,32 @@ MembrosDetails As screen:
                     X: =DynamicBtn_21.X
                     Y: =DynamicBtn_21.Y
                     ZIndex: =7
+
+            "Icon1_4 As icon.'3DPrinting'":
+                Color: |-
+                    =///RGBA(0, 18, 107, 1)
+                    cores.amareloMontepio
+                Height: =25
+                Icon: =Icon.Search
+                OnSelect: =//Select(Parent)
+                Width: =25
+                X: =48
+                Y: =16
+                ZIndex: =9
+
+            Checkbox1_3 As checkbox:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                CheckboxBackgroundFill: =ColorFade(cores.cinzento, 90%)
+                CheckboxBorderColor: =ColorFade(cores.cinzento, 80%)
+                CheckmarkFill: =cores.cinzento
+                FocusedBorderThickness: =0
+                Height: =40
+                HoverColor: =//RGBA(0, 18, 107, 1)
+                Text: ="Listar eliminados"
+                Width: =215
+                X: =443
+                Y: =8
+                ZIndex: =10
 
         Familiares1 As groupContainer.manualLayoutContainer:
             Height: =50

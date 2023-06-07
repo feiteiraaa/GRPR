@@ -740,7 +740,13 @@ Particulares As screen:
                 localFiltro = "Membros dos Orgãos Sociais",
                 Nome_Column2.X + 650
             )
-        Y: =Nome_Column1.Y + 212
+        Y: |-
+            =//Nome_Column1.Y + 212
+            If(
+                Checkbox1_1.Visible,
+                Nome_Column1.Y + 212 + Label3_1.Height + Label3.Height,
+                Nome_Column1.Y + 212
+            )
         ZIndex: =16
 
     IconCargo As icon.ChevronDown:
@@ -774,7 +780,13 @@ Particulares As screen:
         Width: =20
         X: |
             ='Cargo (Categoria)_Column1'.X +490
-        Y: ='Cargo (Categoria)_Column1'.Y + 212
+        Y: |-
+            =//'Cargo (Categoria)_Column1'.Y + 212
+            If(
+                Checkbox1_1.Visible,
+                'Cargo (Categoria)_Column1'.Y + 212 + Label3_1.Height + Label3.Height,
+                'Cargo (Categoria)_Column1'.Y + 212
+            )
         ZIndex: =17
 
     ActionBar As group:
@@ -917,7 +929,13 @@ Particulares As screen:
         Visible: =localFiltro="Colaboradores"
         Width: =20
         X: ='Unidade organica_Column1'.X +490
-        Y: ='Unidade organica_Column1'.Y + 212
+        Y: |-
+            =//'Unidade organica_Column1'.Y + 212
+            If(
+                Checkbox1_1.Visible,
+                'Unidade organica_Column1'.Y + 212 + Label3_1.Height + Label3.Height,
+                'Unidade organica_Column1'.Y + 212
+            )
         ZIndex: =18
 
     FimPeriodo As group:
@@ -1012,7 +1030,13 @@ Particulares As screen:
                 localFiltro = "ROC",
                 uipp_tipodedocumento_Column1.X + 520
             )
-        Y: ='Tipo Documento_Column2'.Y + 212
+        Y: |-
+            =//'Tipo Documento_Column2'.Y + 212
+            If(
+                Checkbox1_1.Visible,
+                'Tipo Documento_Column2'.Y + 212 + Label3_1.Height + Label3.Height,
+                'Tipo Documento_Column2'.Y + 212
+            )
         ZIndex: =19
 
     IconNDoc As icon.ChevronDown:
@@ -1055,7 +1079,13 @@ Particulares As screen:
                 localFiltro = "Membros dos Orgãos Sociais",
                 900*/
             )
-        Y: ='Numero Documento_Column2'.Y + 212
+        Y: |-
+            =//'Numero Documento_Column2'.Y + 212
+            If(
+                Checkbox1_1.Visible,
+                'Numero Documento_Column2'.Y + 212 + Label3_1.Height + Label3.Height,
+                'Numero Documento_Column2'.Y + 212
+            )
         ZIndex: =20
 
     IconTipo As icon.ChevronDown:
@@ -1089,7 +1119,13 @@ Particulares As screen:
         Width: =20
         X: |
             =uipp_tipo_Column1.X +520
-        Y: ='Tipo Documento_Column2'.Y + 212
+        Y: |-
+            =//'Tipo Documento_Column2'.Y + 212
+            If(
+                Checkbox1_1.Visible,
+                'Tipo Documento_Column2'.Y + 212 + Label3_1.Height + Label3.Height,
+                'Tipo Documento_Column2'.Y + 212
+            )
         ZIndex: =21
 
     ImportBtn As group:

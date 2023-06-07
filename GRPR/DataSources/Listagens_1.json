@@ -27,10 +27,11 @@
       "statuscode": "Razão do Estado",
       "timezoneruleversionnumber": "Número de Versão da Regra de Fuso Horário",
       "uipp_comentarios": "Comentarios",
-      "uipp_datadeaprovacaoca": "Data de aprovacao CA",
+      "uipp_datadeaprovacaoca": "Data de Aprovacao CA",
       "uipp_datadereferencia": "Data de referencia",
       "uipp_datadevalidacao": "Data de validacao",
       "uipp_estado": "Estado (uipp_estado)",
+      "uipp_estado_aprovacao_ca": "Estado_Aprovacao_CA",
       "uipp_id": "ID",
       "uipp_listagem": "Listagem",
       "uipp_listagens_AsyncOperations": "Tarefas de Sistema",
@@ -78,6 +79,10 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "uipp_estado",
+        "OptionSetReferenceEntityName": "Listagens_1"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "uipp_estado_aprovacao_ca",
         "OptionSetReferenceEntityName": "Listagens_1"
       }
     },
