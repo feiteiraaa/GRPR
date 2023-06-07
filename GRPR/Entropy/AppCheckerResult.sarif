@@ -17794,19 +17794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47.AccessibleLabel"
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard3.DataCardValue43.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47.AccessibleLabel",
+                  "fullyQualifiedName": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard3.DataCardValue43.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "MembrosFamiDetails",
-                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard2.DataCardValue47"
+                "type": "MembrosFamiDetails.'Mid Section_Membros_1'.'Informacao Content_1'.InfoRelaçãoFami.ID_GrauParentesco_DataCard3.DataCardValue43"
               }
             }
           ],
@@ -18404,6 +18404,36 @@
               },
               "properties": {
                 "member": "varBase64Only",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.varIDgrau"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.varIDgrau",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "varIDgrau",
                 "module": "App",
                 "type": "App"
               }
