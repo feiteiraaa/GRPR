@@ -51,7 +51,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataTable1",
-      "ParentIndex": 2,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -259,7 +259,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DataTable2",
-      "ParentIndex": 0,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -480,7 +480,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "LeftSectionComponent_4",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
