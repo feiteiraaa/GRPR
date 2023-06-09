@@ -2258,7 +2258,37 @@ MembrosFamiDetails As screen:
                             "Por favor, tente novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
+                    );
+                
+                ForAll(
+                    RespetivasFamiliar,
+                    If(
+                        IsBlank(
+                            Filter(
+                                'Membros-Familiares-Respetivas',
+                                //ThisRecord.ID_Empresa.ID = uipp_ID_Empresa.ID And ID_Familiar.ID <> _Familiar And(!IsBlank(ThisRecord.ID_Familiares.ID) Or !IsBlank(ThisRecord.ID_Membro.ID))
+                                //ThisRecord.ID_Empresa.ID = RespetivasFamiliar[@uipp_ID_Empresa.ID]
+                                ID="1"
+                            )
+                        ),
+                        //If true = não tenho nem familiar nem membro associado; If false = tenho membro ou familiar associado,
+                
+                        Patch(
+                            Empresas,
+                            LookUp(
+                                Empresas,
+                                ThisRecord.ID = uipp_ID_Empresa.ID
+                            ),
+                            {
+                                Ativo: false,
+                                //Bloqueado: true,
+                                'Data de saída': Now()
+                            }
+                        )
                     )
+                )
+                
+                
                 );
                 UpdateContext({localShowModal: false});
                 Navigate(
