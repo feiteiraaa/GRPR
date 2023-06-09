@@ -964,6 +964,8 @@ MembrosFamiDetails As screen:
                         }
                             )
                         );
+                        Set(var1,InfoRelaçãoFami.LastSubmit.ID);
+                        Set(var2,Informacao_1.LastSubmit.ID)
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
