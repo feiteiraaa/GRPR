@@ -436,22 +436,51 @@ Particulares As screen:
 
                 "'Nome e Designacao' As label":
                     OnSelect: =Select(Parent)
-                    Text: |+
+                    Text: |-
                         =Concatenate(
+                            /*If(
+                                LookUp(
+                                    Empresas,
+                                    ID = ThisItem.uipp_ID_Empresa.ID
+                                ).Ativo,*/
                             LookUp(
                                 Empresas,
                                 ID = ThisItem.uipp_ID_Empresa.ID
                             ).Designacao,
+                                /*LookUp(
+                                    Empresas,
+                                    ID = ThisItem.uipp_ID_Empresa.ID
+                                ).Designacao & "(Eliminado)"
+                            ),
+                            If(
+                                LookUp(
+                                    'Empresas Participadas do Grupos',
+                                    ID = ThisItem.uipp_ParentID.ID
+                                ).Ativo,*/
                             LookUp(
                                 'Empresas Participadas do Grupos',
                                 ID = ThisItem.uipp_ParentID.ID
                             ).Nome,
+                               /* LookUp(
+                                    'Empresas Participadas do Grupos',
+                                    ID = ThisItem.uipp_ParentID.ID
+                                ).Nome & "(Eliminado)"
+                            ),
+                            If(
+                                LookUp(
+                                    Familiares,
+                                    ID = ThisItem.uipp_ID_Familiares.ID
+                                ).Ativo,*/
                             LookUp(
                                 Familiares,
                                 ID = ThisItem.uipp_ID_Familiares.ID
-                            ).Nome
+                            ).Nome/*,
+                                LookUp(
+                                    Familiares,
+                                    ID = ThisItem.uipp_ID_Familiares.ID
+                                ).Nome & "(Eliminado)"
+                            )*/
                         )
-                        
                     Width: =300
                     X: =35
                     Y: =4
