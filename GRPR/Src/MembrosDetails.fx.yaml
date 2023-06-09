@@ -3184,6 +3184,53 @@ MembrosDetails As screen:
                             "Empresa Respectiva foi dissociada com sucesso, mas permanece ativa por estar associada a outro registo",
                             NotificationType.Success
                         )
+                    ),
+                    If(
+                        Patch(
+                            Membros_1,
+                            LookUp(
+                                Membros_1,
+                                ThisRecord.ID = _Membro
+                            ),
+                            {
+                                Ativo: false,
+                                //Bloqueado: true,
+                                'Data de saida': Now()
+                            }
+                        ).Ativo = false,
+                        Notify(
+                            "Membro eliminado com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    );
+                    ForAll(
+                        ligacaoFamiliares,
+                        If(
+                            Patch(
+                                Familiares,
+                                LookUp(
+                                    Familiares,
+                                    ThisRecord.ID = ligacaoFamiliares[@ID_Familiares].ID
+                                ),
+                                {
+                                    Ativo: false,
+                                    //Bloqueado: true,
+                                    'Data de saida': Now()
+                                }
+                            ).Ativo = false,
+                            Notify(
+                                "Familiares associados ao membro eliminado com sucesso!",
+                                NotificationType.Success
+                            ),
+                            Notify(
+                                "Por favor, tente novamente ou contacte o administrador da solução!",
+                                NotificationType.Error
+                            )
+                        )
                     )
                 );
                 UpdateContext({localShowModal: false});
