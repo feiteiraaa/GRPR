@@ -1576,6 +1576,11 @@ MembrosFamiDetails As screen:
                 HeadingFill: =cores.cinzento
                 Height: =Parent.Height-60
                 Items: =RespetivasFamiliar
+                NoDataText: |-
+                    ="Não existe nenhuma empresa respetiva associada ao familiar "& LookUp(
+                                Familiares,
+                                ID = _Familiar
+                            ).Nome
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_AssociatedR And !localShowEditForm
                 Width: =Parent.Width * 0.95
@@ -1776,7 +1781,7 @@ MembrosFamiDetails As screen:
                     BtnText: =If(_AssociatedR Or localShowEditForm,"Guardar","Novo")
                     ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Save,Icon.Add)
                     Height: =40
-                    Visible: =true
+                    Visible: =Not("[Eliminado]" in LabelMembroName_1.Text)
                     Width: =160
                     X: =Parent.X+800
                     Y: =7
@@ -1840,6 +1845,7 @@ MembrosFamiDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =Not("[Eliminado]" in LabelMembroName_1.Text)
                     X: =DynamicBtn_33.X
                     Y: =DynamicBtn_33.Y
                     ZIndex: =18

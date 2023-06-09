@@ -873,7 +873,7 @@ MembrosDetails As screen:
                 Items: |-
                     =ligacaoParticipadas
                     //'Membros-Participadas'
-                NoDataText: ="Não existe nenhuma empresa participada do grupo associada a "& LabelMembroName.Text
+                NoDataText: ="Não existe nenhuma empresa participada do grupo associada ao membro "& LabelMembroName.Text
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_Associated And !localShowEditForm
                 Width: =Parent.Width * 0.95
@@ -1687,7 +1687,7 @@ MembrosDetails As screen:
                 Items: |-
                     =ligacaoRespetivas
                     //'Membros-Familiares-Respetivas'
-                NoDataText: ="Não existe nenhuma empresa respetiva associada a "& LabelMembroName.Text
+                NoDataText: ="Não existe nenhuma empresa respetiva associada ao membro "& LabelMembroName.Text
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_AssociatedR And !localShowEditForm
                 Width: =Parent.Width * 0.95
