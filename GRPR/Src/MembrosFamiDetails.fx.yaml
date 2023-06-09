@@ -45,7 +45,7 @@ MembrosFamiDetails As screen:
                     //'Membros-Familiares-Respetivas'
                 DefaultMode: |-
                     =If(
-                        localShowNewForm,
+                        localShowNewForm And !IsBlank(_Familiar),
                         FormMode.Edit,
                         IsBlank(_Familiar),
                         ColabFormMode,
@@ -912,29 +912,13 @@ MembrosFamiDetails As screen:
                     Height: =39
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
-                    OnSelect: |
+                    OnSelect: |-
                         =If(
-                            localShowNewForm Or Informacao_1.Mode = FormMode.New,
+                            localShowNewForm,//Or Informacao_1.Mode = FormMode.New,
                             If(
                                 Len(DataCardValue5_2.Text) = 9,
                                 If(
                                     SubmitForm(InfoRelaçãoFami) And SubmitForm(Informacao_1),
-                                    If(
-                                        Informacao_1.Mode = FormMode.New,
-                                        Patch(
-                                            'Membros-Familiares-Respetivas',
-                                            LookUp(
-                                                'Membros-Familiares-Respetivas',
-                                                ThisRecord.ID = InfoRelaçãoFami.LastSubmit.ID
-                                            ),
-                                            {
-                                                ID_Familiares: LookUp(
-                                                    Familiares,
-                                                    ID = Informacao_1.LastSubmit.ID
-                                                )
-                                            }
-                                        )
-                                    );
                                     Notify(
                                         "O registo foi submetido com sucesso!",
                                         NotificationType.Success
@@ -958,14 +942,57 @@ MembrosFamiDetails As screen:
                                     NotificationType.Error
                                 )
                             ),
-                            UpdateContext(
-                                {localShowNewForm: !localShowNewForm
-                                //localFormMode: FormMode.New
-                        }
-                            )
-                        );
-                        Set(var1,InfoRelaçãoFami.LastSubmit.ID);
-                        Set(var2,Informacao_1.LastSubmit.ID)
+                            Informacao_1.Mode = FormMode.New,
+                            If(
+                                Len(DataCardValue5_2.Text) = 9,
+                                If(
+                                    SubmitForm(InfoRelaçãoFami) And SubmitForm(Informacao_1),
+                                    Set(
+                                        varLastFami,
+                                        Informacao_1.LastSubmit.ID
+                                    );
+                                    Set(
+                                        varLastRela,
+                                        InfoRelaçãoFami.LastSubmit.ID
+                                    );
+                                    Notify(
+                                        "O registo foi submetido com sucesso!" & "Nome: " & Informacao_1.LastSubmit.Nome & "ID: " & Informacao_1.LastSubmit.ID,
+                                        NotificationType.Success
+                                    );
+                                    ResetForm(Informacao_1);
+                                    ResetForm(InfoRelaçãoFami);
+                                    UpdateContext(
+                                        {
+                                            localShowData: false,
+                                            localShowNewForm: !localShowNewForm
+                                        }
+                                    );
+                                    Patch(
+                                        'Membros-Familiares-Respetivas',
+                                        LookUp(
+                                            'Membros-Familiares-Respetivas',
+                                            ThisRecord.ID = varLastRela
+                                        ),
+                                        {
+                                            ID_Familiares: LookUp(
+                                                Familiares,
+                                                ID = varLastFami
+                                            )
+                                        }
+                                    );
+                                    Back(),
+                                    Notify(
+                                        "Por favor, tente novamente.",
+                                        NotificationType.Error
+                                    )
+                                ),
+                                Notify(
+                                    "Por favor, preencha o número do documento corretamente.",
+                                    NotificationType.Error
+                                )
+                            ),
+                            UpdateContext({localShowNewForm: !localShowNewForm})
+                        )
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
