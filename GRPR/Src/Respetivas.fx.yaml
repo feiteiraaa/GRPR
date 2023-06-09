@@ -966,6 +966,10 @@ Respetivas As screen:
         Y: =79
         ZIndex: =16
 
+    ModalConfirmation_9 As ModalConfirmation:
+        Visible: =localShowModal
+        ZIndex: =21
+
     Group1 As group:
         Height: =5
         Width: =5
@@ -1006,19 +1010,16 @@ Respetivas As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =/*If(
-                    ColabFormMode = FormMode.View,
-                    UpdateContext({
-                        localShowModal: true
-                    }),
-                    UpdateContext({
-                        ColabFormMode: FormMode.View
-                    })
-                )*/
-                 UpdateContext({
-                        localFormRespetivasNew: false,
-                        localFormRespetivasEdit: false
-                    })
+                =If(
+                    EmpresasRespetivas.Mode = FormMode.View,
+                    UpdateContext({localShowModal: true}),
+                    UpdateContext(
+                        {
+                            localFormRespetivasNew: false,
+                            localFormRespetivasEdit: false
+                        }
+                    )
+                )
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
@@ -1143,4 +1144,162 @@ Respetivas As screen:
             X: =DynamicBtn_25.X
             Y: =DynamicBtn_25.Y
             ZIndex: =18
+
+    elim_components_3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =26
+
+        cancelar_btn_3 As button:
+            Align: =Align.Left
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            Fill: =cores.rosa
+            FontWeight: =FontWeight.Normal
+            HoverColor: =RGBA(51, 51, 51, 1)
+            HoverFill: =cores.rosa
+            OnSelect: |-
+                =UpdateContext({
+                    localShowModal: false
+                })
+            PaddingLeft: =50
+            PressedColor: =Color.Black
+            PressedFill: =cores.rosa
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: ="CANCELAR"
+            Visible: =localShowModal
+            Width: =165
+            X: =717
+            Y: =440
+            ZIndex: =22
+
+        confirm_btn_3 As button:
+            Align: =Align.Left
+            BorderStyle: =BorderStyle.None
+            Color: =RGBA(51, 51, 51, 1)
+            Fill: =RGBA(237, 237, 237, 1)
+            FontWeight: =FontWeight.Normal
+            HoverBorderColor: =
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =ColorFade(RGBA(70, 70, 70, 1),80%)
+            OnSelect: |-
+                =If(
+                    EmpresasRespetivas.Mode = FormMode.View,
+                    If(
+                        Patch(
+                            Empresas,
+                            If(
+                                !IsBlank(_selectedRespetivas),
+                                LookUp(
+                                    Empresas,
+                                    ID = _selectedRespetivas
+                                ),
+                                !IsBlank(_selectedRespetivasF),
+                                LookUp(
+                                    Empresas,
+                                    ID = _selectedRespetivasF
+                                ),
+                                EmpresasRespetivas1_1.Selected
+                            ),
+                            {
+                                Ativo: false,
+                                //Bloqueado: true,
+                                'Data de saída': Now()
+                            }
+                        ).Ativo = false,
+                        Back();
+                        Notify(
+                            "Registo eliminado com sucesso!",
+                            NotificationType.Success
+                        );
+                        UpdateContext({localShowModal: false}),
+                        Notify(
+                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    )/*,
+                    UpdateContext({ColabFormMode: FormMode.View})*/
+                
+                )
+            PaddingLeft: =50
+            PressedColor: =Color.Black
+            PressedFill: =ColorFade(RGBA(70, 70, 70, 1),90%)
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: ="Confirmar"
+            Visible: =localShowModal
+            Width: =165
+            X: =486
+            Y: =440
+            ZIndex: =23
+
+        Icon8_6 As icon.Check:
+            Color: =cores.amareloMontepio
+            Height: =30
+            Icon: =Icon.Check
+            OnSelect: |-
+                =If(
+                    EmpresasRespetivas.Mode = FormMode.View,
+                    If(
+                        Patch(
+                            Empresas,
+                            If(
+                                !IsBlank(_selectedRespetivas),
+                                LookUp(
+                                    Empresas,
+                                    ID = _selectedRespetivas
+                                ),
+                                !IsBlank(_selectedRespetivasF),
+                                LookUp(
+                                    Empresas,
+                                    ID = _selectedRespetivasF
+                                ),
+                                EmpresasRespetivas1_1.Selected
+                            ),
+                            {
+                                Ativo: false,
+                                //Bloqueado: true,
+                                'Data de saída': Now()
+                            }
+                        ).Ativo = false,
+                        Back();
+                        Notify(
+                            "Registo eliminado com sucesso!",
+                            NotificationType.Success
+                        );
+                        UpdateContext({localShowModal: false}),
+                        Notify(
+                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    )/*,
+                    UpdateContext({ColabFormMode: FormMode.View})*/
+                
+                )
+            Visible: =localShowModal
+            Width: =30
+            X: =496
+            Y: =445
+            ZIndex: =24
+
+        Icon8_7 As icon.Check:
+            Color: =cores.amareloMontepio
+            Height: =30
+            Icon: =Icon.Cancel
+            OnSelect: |-
+                =UpdateContext({
+                    localShowModal: false
+                })
+            Visible: =localShowModal
+            Width: =30
+            X: =726
+            Y: =445
+            ZIndex: =25
 
