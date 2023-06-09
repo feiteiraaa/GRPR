@@ -30,6 +30,31 @@ MembrosFamiDetails As screen:
                 RespetivasFamiliar0,
                 IsBlank(ID_GrauParentesco.ID)
             )
+        );
+        ClearCollect(
+            RespetivasOutros0,
+            Filter(
+                'Membros-Familiares-Respetivas',
+                ThisRecord.ID_Familiares.ID <> _Familiar //And (!IsBlank(ThisRecord.ID_Familiares.ID) Or !IsBlank(ThisRecord.ID_Membro.ID))
+            )
+        );
+        ClearCollect(
+            RespetivasOutros1,
+            Filter(
+                RespetivasOutros0,
+                IsBlank(ID_GrauParentesco.ID)
+            )
+        );
+        ClearCollect(RespetivasOutros,"");
+        ForAll(
+            RespetivasFamiliar,
+            Collect(
+                RespetivasOutros,
+                Filter(
+                    RespetivasOutros1, 
+                    RespetivasFamiliar[@ID_Empresa].ID = ThisRecord.ID_Empresa.ID
+                )
+            )
         )
 
     BackBtn_6 As BackBtn:
@@ -2259,33 +2284,10 @@ MembrosFamiDetails As screen:
                             NotificationType.Error
                         )
                     );
-                
                 ForAll(
                     RespetivasFamiliar,
-                    If(
-                        IsBlank(
-                            Filter(
-                                'Membros-Familiares-Respetivas',
-                                //ThisRecord.ID_Empresa.ID = uipp_ID_Empresa.ID And ID_Familiar.ID <> _Familiar And(!IsBlank(ThisRecord.ID_Familiares.ID) Or !IsBlank(ThisRecord.ID_Membro.ID))
-                                //ThisRecord.ID_Empresa.ID = RespetivasFamiliar[@uipp_ID_Empresa.ID]
-                                ID="1"
-                            )
-                        ),
-                        //If true = não tenho nem familiar nem membro associado; If false = tenho membro ou familiar associado,
-                
-                        Patch(
-                            Empresas,
-                            LookUp(
-                                Empresas,
-                                ThisRecord.ID = uipp_ID_Empresa.ID
-                            ),
-                            {
-                                Ativo: false,
-                                //Bloqueado: true,
-                                'Data de saída': Now()
-                            }
-                        )
-                    )
+                    ID_Empresa.ID
+                    
                 )
                 
                 
