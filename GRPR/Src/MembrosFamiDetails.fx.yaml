@@ -928,7 +928,7 @@ MembrosFamiDetails As screen:
                                     UpdateContext(
                                         {
                                             localShowData: false,
-                                            localShowNewForm: !localShowNewForm
+                                            localShowNewForm: false
                                         }
                                     );
                                     Back(),
@@ -964,7 +964,7 @@ MembrosFamiDetails As screen:
                                     UpdateContext(
                                         {
                                             localShowData: false,
-                                            localShowNewForm: !localShowNewForm
+                                            localShowNewForm: false//!localShowNewForm
                                         }
                                     );
                                     Patch(
