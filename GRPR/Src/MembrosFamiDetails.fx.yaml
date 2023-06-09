@@ -670,6 +670,7 @@ MembrosFamiDetails As screen:
                             ID_Familiares.ID = _Familiar And ID_Membro.ID = _MembroF
                         )
                     )
+                Visible: =false
                 X: =40
                 Y: =240
                 ZIndex: =3
