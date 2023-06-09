@@ -2173,7 +2173,7 @@ MembrosFamiDetails As screen:
             BtnText: ="Eliminar"
             ButtonIcon: =Icon.Trash
             Height: =40
-            Visible: =!IsBlank(_Familiar)
+            Visible: =!IsBlank(_Familiar) And Not("[Eliminado]" in LabelMembroName_1.Text)
             Width: =160
             X: =1186
             Y: =74
@@ -2206,7 +2206,7 @@ MembrosFamiDetails As screen:
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            Visible: =!IsBlank(_Familiar)
+            Visible: =!IsBlank(_Familiar) And  Not("[Eliminado]" in LabelMembroName_1.Text)
             X: =DynamicBtn_35.X
             Y: =DynamicBtn_35.Y
             ZIndex: =7
