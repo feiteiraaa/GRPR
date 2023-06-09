@@ -677,7 +677,7 @@ MembrosDetails As screen:
                     BtnText: =If(localShowNewForm Or IsBlank(_Membro), "Guardar" ,"Editar")
                     ButtonIcon: =If(localShowNewForm Or IsBlank(_Membro),Icon.Save ,Icon.Edit)
                     Height: =40
-                    Visible: =true
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+800
                     Y: =7
@@ -739,6 +739,7 @@ MembrosDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_14.X
                     Y: =DynamicBtn_14.Y
                     ZIndex: =3
@@ -1032,7 +1033,7 @@ MembrosDetails As screen:
                     BtnText: =If(_Associated Or localShowEditForm,"Guardar","Associar")
                     ButtonIcon: =If(_Associated Or localShowEditForm,Icon.Save,Icon.Add)
                     Height: =40
-                    Visible: =true
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+800
                     Y: =7
@@ -1091,6 +1092,7 @@ MembrosDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_16.X
                     Y: =DynamicBtn_16.Y
                     ZIndex: =5
@@ -1793,7 +1795,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+200
                     Y: =7
@@ -1819,7 +1821,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_17.X
                     Y: =DynamicBtn_17.Y
                     ZIndex: =3
@@ -1840,7 +1842,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -1882,7 +1884,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_18.X
                     Y: =DynamicBtn_18.Y
                     ZIndex: =5
@@ -2285,7 +2287,7 @@ MembrosDetails As screen:
                     BtnText: =If(_AssociatedR Or localShowEditForm,"Guardar","Novo")
                     ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Save,Icon.Add)
                     Height: =40
-                    Visible: =true
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+800
                     Y: =7
@@ -2349,6 +2351,7 @@ MembrosDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_19.X
                     Y: =DynamicBtn_19.Y
                     ZIndex: =7
@@ -2380,7 +2383,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -2407,7 +2410,7 @@ MembrosDetails As screen:
                             CountRows(ligacaoRespetivas) = 0,
                             false,
                             true
-                        )
+                        ) And Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_27.X
                     Y: =DynamicBtn_27.Y
                     ZIndex: =9
@@ -2732,7 +2735,7 @@ MembrosDetails As screen:
                 DynamicBtn_21 As DynamicBtn:
                     BtnText: ="Novo"
                     Height: =40
-                    Visible: =true
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     Width: =160
                     X: =Parent.X+800
                     Y: =7
@@ -2753,6 +2756,7 @@ MembrosDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =Not("(Eliminado)" in LabelMembroName.Text)
                     X: =DynamicBtn_21.X
                     Y: =DynamicBtn_21.Y
                     ZIndex: =7
