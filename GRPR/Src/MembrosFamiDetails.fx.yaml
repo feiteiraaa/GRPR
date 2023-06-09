@@ -941,7 +941,7 @@ MembrosFamiDetails As screen:
                     BtnText: =If(localShowNewForm Or IsBlank(_Familiar), "Guardar" ,"Editar")
                     ButtonIcon: =If(localShowNewForm Or IsBlank(_MembroF),Icon.Save ,Icon.Edit)
                     Height: =40
-                    Visible: =true
+                    Visible: =Not("[Eliminado]" in LabelMembroName_1.Text)
                     Width: =160
                     X: =Parent.X+800
                     Y: =7
@@ -1041,6 +1041,7 @@ MembrosFamiDetails As screen:
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
+                    Visible: =Not("[Eliminado]" in LabelMembroName_1.Text)
                     X: =DynamicBtn_29.X
                     Y: =DynamicBtn_29.Y
                     ZIndex: =4
@@ -2169,7 +2170,7 @@ MembrosFamiDetails As screen:
         Visible: =localShowModal
         ZIndex: =8
 
-    Group3 As group:
+    Eliminar As group:
         Height: =5
         Width: =5
         X: =40

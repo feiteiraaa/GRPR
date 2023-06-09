@@ -375,6 +375,7 @@
     "elim_components_3": 454,
     "elim_group": 652,
     "Eliminacao Content": 594,
+    "Eliminar": 891,
     "EliminarMembro": 317,
     "EliminarMembrosFamiResp": 877,
     "EliminarMembrosPart": 222,
@@ -496,7 +497,6 @@
     "Grau de parentesco_DataCard1": 624,
     "Group1": 452,
     "Group2": 453,
-    "Group3": 891,
     "Group7": 73,
     "Grupo_DataCard1_1": 721,
     "Grupo_DataCard2": 471,
@@ -938,7 +938,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/09/2023 16:45:49",
+  "HeaderLastSavedDateTimeUTC": "06/09/2023 16:58:28",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1423,6 +1423,10 @@
       "Icon5": 3,
       "Icon6": 1
     },
+    "Eliminar": {
+      "DynamicBtn_35": 0,
+      "elim_btn_11": 1
+    },
     "EliminarMembro": {
       "DynamicBtn_13": 0,
       "elim_btn_1": 1
@@ -1467,10 +1471,6 @@
     "Group2": {
       "Button2_27": 1,
       "DynamicBtn_25": 0
-    },
-    "Group3": {
-      "DynamicBtn_35": 0,
-      "elim_btn_11": 1
     },
     "Group7": {
       "BtnExportar": 1,
@@ -1943,6 +1943,7 @@
     "elim_components_3": {},
     "elim_group": {},
     "Eliminacao Content": {},
+    "Eliminar": {},
     "EliminarMembro": {},
     "EliminarMembrosFamiResp": {},
     "EliminarMembrosPart": {},
@@ -2064,7 +2065,6 @@
     "Grau de parentesco_DataCard1": {},
     "Group1": {},
     "Group2": {},
-    "Group3": {},
     "Group7": {},
     "Grupo_DataCard1_1": {},
     "Grupo_DataCard2": {},
@@ -2873,6 +2873,7 @@
     "elim_components_3": 624,
     "elim_group": 691,
     "Eliminacao Content": 781,
+    "Eliminar": 305,
     "EliminarMembro": 106,
     "EliminarMembrosFamiResp": 386,
     "EliminarMembrosPart": 171,
@@ -2994,7 +2995,6 @@
     "Grau de parentesco_DataCard1": 813,
     "Group1": 543,
     "Group2": 548,
-    "Group3": 305,
     "Group7": 664,
     "Grupo_DataCard1_1": 468,
     "Grupo_DataCard2": 513,
