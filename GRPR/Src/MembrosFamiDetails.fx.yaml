@@ -14,7 +14,8 @@ MembrosFamiDetails As screen:
                     _AssociatedR,
                     true,
                     false
-                )
+                ),
+                localBloquear:false
             }
         );
         ClearCollect(
@@ -2465,4 +2466,53 @@ MembrosFamiDetails As screen:
             X: =496
             Y: =445
             ZIndex: =12
+
+    Bloquear As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =15
+
+        DynamicBtn_36 As DynamicBtn:
+            BtnText: |-
+                =If(
+                    localBloquear,
+                    "Desbloquear",
+                    "Bloquear"
+                )
+            BtnWidth: =180
+            ButtonIcon: |-
+                =If(
+                    localBloquear,
+                    Icon.Unlock,
+                    Icon.Lock
+                )
+            Height: =40
+            Visible: ="[Eliminado]" in LabelMembroName_1.Text
+            Width: =180
+            X: =1150
+            Y: =74
+            ZIndex: =13
+
+        elim_btn_12 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |
+                =UpdateContext({localBloquear: !localBloquear});
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: ="[Eliminado]" in LabelMembroName_1.Text
+            Width: =180
+            X: =DynamicBtn_36.X
+            Y: =DynamicBtn_36.Y
+            ZIndex: =14
 
