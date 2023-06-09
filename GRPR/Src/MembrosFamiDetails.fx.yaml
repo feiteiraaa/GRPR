@@ -1776,11 +1776,11 @@ MembrosFamiDetails As screen:
                                         localShowEditForm: false,
                                         _AssociarRF:false
                                     }
-                                )/*;
+                                );
                                 Navigate(
-                                    Particulares,
+                                    MembrosDetails,
                                     ScreenTransition.None
-                                )*/,
+                                ),
                                 Notify(
                                     "Por favor, tente novamente.",
                                     NotificationType.Error
