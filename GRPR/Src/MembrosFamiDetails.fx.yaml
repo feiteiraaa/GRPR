@@ -2236,6 +2236,28 @@ MembrosFamiDetails As screen:
                             "Empresa Respetiva foi dissociada com sucesso, mas permanece ativa por estar associada a outro registo",
                             NotificationType.Success
                         )
+                    ),
+                    If(
+                        Patch(
+                            Familiares,
+                            LookUp(
+                                Familiares,
+                                ThisRecord.ID = _Familiar
+                            ),
+                            {
+                                Ativo: false,
+                                //Bloqueado: true,
+                                'Data de saida': Now()
+                            }
+                        ).Ativo = false,
+                        Notify(
+                            "Familiar foi eliminado com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
                     )
                 );
                 UpdateContext({localShowModal: false});
