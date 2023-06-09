@@ -155,3 +155,29 @@ Screen1 As screen:
         X: =1024
         ZIndex: =2
 
+    DataTable2 As dataTable.datatable:
+        BorderStyle: =BorderStyle.Solid
+        DisplayMode: =DisplayMode.Edit
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =500
+        Items: =RespetivasOutros
+        Width: =800
+        X: =40
+        Y: =488
+        ZIndex: =3
+
+        uipp_ID_Empresa_Column3 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_ID_Empresa"
+            FieldName: ="uipp_ID_Empresa"
+            FieldVariantName: ="textualColumn"
+            Height: =161
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.uipp_ID_Empresa.ID
+            Width: =644
+            X: =50
+            Y: =340
+            ZIndex: =10
+

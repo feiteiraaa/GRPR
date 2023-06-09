@@ -1,6 +1,6 @@
 Respetivas As screen:
     OnHidden: |-
-        =UpdateContext({_AssociarR:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
+        =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
     OnVisible: |-
         =UpdateContext({localFormRespetivasNew:false});
         ClearCollect(CollecRespectivas, Empresas);

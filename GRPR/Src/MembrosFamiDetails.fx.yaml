@@ -35,7 +35,7 @@ MembrosFamiDetails As screen:
             RespetivasOutros0,
             Filter(
                 'Membros-Familiares-Respetivas',
-                ThisRecord.ID_Familiares.ID <> _Familiar //And (!IsBlank(ThisRecord.ID_Familiares.ID) Or !IsBlank(ThisRecord.ID_Membro.ID))
+                ThisRecord.ID_Familiares.ID <> _Familiar
             )
         );
         ClearCollect(
@@ -45,15 +45,22 @@ MembrosFamiDetails As screen:
                 IsBlank(ID_GrauParentesco.ID)
             )
         );
-        ClearCollect(RespetivasOutros,"");
+        Clear(RespetivasOutros2);
         ForAll(
             RespetivasFamiliar,
             Collect(
-                RespetivasOutros,
+                RespetivasOutros2,
                 Filter(
-                    RespetivasOutros1, 
+                    RespetivasOutros1,
                     RespetivasFamiliar[@ID_Empresa].ID = ThisRecord.ID_Empresa.ID
-                )
+                ).uipp_ID_Empresa
+            )
+        );
+        ClearCollect(
+            RespetivasOutros,
+            ForAll(
+                RespetivasOutros2.ID_Empresa,
+                ID_Empresa.ID
             )
         )
 
@@ -2253,7 +2260,7 @@ MembrosFamiDetails As screen:
                                 NotificationType.Success
                             ),
                             Notify(
-                                "Por favor, tente novamente ou contacte o administrador da solução!",
+                                "Por favor, tente eliminar a Empresa Respetiva novamente ou contacte o administrador da solução!",
                                 NotificationType.Error
                             )
                         ),
@@ -2280,17 +2287,57 @@ MembrosFamiDetails As screen:
                             NotificationType.Success
                         ),
                         Notify(
-                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            "Por favor, tente eliminar o Familiar novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
                     );
-                ForAll(
-                    RespetivasFamiliar,
-                    ID_Empresa.ID
-                    
-                )
-                
-                
+                    If(
+                        IsBlank(RespetivasOutros),
+                        //If true = não tenho nem familiar nem membro associado; If false = tenho membro ou familiar associado,
+                        ForAll(
+                            RespetivasFamiliar,
+                            If(
+                                Patch(
+                                    Empresas,
+                                    LookUp(
+                                        Empresas,
+                                        ThisRecord.ID = RespetivasFamiliar[@ID_Empresa].ID
+                                    ),
+                                    {
+                                        Ativo: false,
+                                        //Bloqueado: true,
+                                        'Data de saída': Now()
+                                    }
+                                ).Ativo = false,
+                                Notify(
+                                    "A empresa respetiva " & RespetivasFamiliar[@ID_Empresa].Designacao & " estava associada apenas ao Familiar eliminado, portanto foi eliminada com sucesso!",
+                                    NotificationType.Success
+                                ),
+                                Notify(
+                                    "Falha ao eliminar a empresa respetiva " & RespetivasFamiliar[@ID_Empresa].Designacao & " associada apenas ao Familiar eliminado, tente novamente na secção 'Empresas Respetivas'ou contacte o administrador da solução!",
+                                    NotificationType.Error
+                                )
+                            )
+                        ),
+                        ForAll(
+                            RespetivasFamiliar,
+                            If(
+                                Not(RespetivasFamiliar[@ID_Empresa].ID in RespetivasOutros.Value),
+                                Patch(
+                                    Empresas,
+                                    LookUp(
+                                        Empresas,
+                                        ThisRecord.ID = RespetivasFamiliar[@ID_Empresa].ID
+                                    ),
+                                    {
+                                        Ativo: false,
+                                        //Bloqueado: true,
+                                        'Data de saída': Now()
+                                    }
+                                )
+                            )
+                        )
+                    )
                 );
                 UpdateContext({localShowModal: false});
                 Navigate(
