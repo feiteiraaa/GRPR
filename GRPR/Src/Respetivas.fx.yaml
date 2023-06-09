@@ -975,23 +975,21 @@ Respetivas As screen:
 
         DynamicBtn_26 As DynamicBtn:
             BtnText: |-
-                =/*If(
-                    ColabFormMode = FormMode.View,
+                =If(
+                    EmpresasRespetivas.Mode = FormMode.View,
                     "Eliminar",
                     "Cancelar"
-                )*/
-                "Cancelar"
+                )
             ButtonIcon: |-
-                =/*If(
-                    ColabFormMode = FormMode.View,
+                =If(
+                    EmpresasRespetivas.Mode = FormMode.View,
                     Icon.Trash,
                     Icon.Cancel
-                )*/
-                Icon.Cancel
+                )
             Height: =40
             Visible: |-
-                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-                EmpresasRespetivas.DisplayMode <> DisplayMode.View
+                =Or(godMode, DRI, DGP_Editor, DGP_Validador) And EmpresasRespetivas.Visible
+                //EmpresasRespetivas.DisplayMode <> DisplayMode.View
             Width: =160
             X: =1001
             Y: =74
@@ -1025,8 +1023,8 @@ Respetivas As screen:
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
             Visible: |-
-                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-                EmpresasRespetivas.DisplayMode <> DisplayMode.View
+                =Or(godMode, DRI, DGP_Editor, DGP_Validador) And EmpresasRespetivas.Visible
+                //EmpresasRespetivas.DisplayMode <> DisplayMode.View
             X: =1000
             Y: =73
             ZIndex: =20
