@@ -2128,7 +2128,7 @@ MembrosFamiDetails As screen:
     ModalConfirmation_8 As ModalConfirmation:
         ModalText: ="Tem certeza de que deseja eliminar a empresa " & 'empresas respetivas fami'.Selected.ID_Empresa.Designacao & " do familiar " & LookUp(Familiares,ID = _Familiar).Nome & " ?"
         Visible: =localShowModal
-        ZIndex: =6
+        ZIndex: =11
 
     Group3 As group:
         Height: =5
@@ -2145,7 +2145,7 @@ MembrosFamiDetails As screen:
             Width: =160
             X: =1186
             Y: =74
-            ZIndex: =11
+            ZIndex: =7
 
         elim_btn_11 As button:
             BorderColor: =RGBA(0,0,0, 0)
@@ -2177,7 +2177,7 @@ MembrosFamiDetails As screen:
             Visible: =!IsBlank(_Familiar)
             X: =DynamicBtn_35.X
             Y: =DynamicBtn_35.Y
-            ZIndex: =12
+            ZIndex: =8
 
     elim_components_2 As group:
         Height: =5
@@ -2210,7 +2210,7 @@ MembrosFamiDetails As screen:
             Width: =165
             X: =717
             Y: =440
-            ZIndex: =7
+            ZIndex: =6
 
         confirm_btn_2 As button:
             Align: =Align.Left
@@ -2281,7 +2281,7 @@ MembrosFamiDetails As screen:
             Width: =165
             X: =486
             Y: =440
-            ZIndex: =8
+            ZIndex: =9
 
         Icon8_4 As icon.Check:
             Color: =cores.amareloMontepio
@@ -2315,7 +2315,7 @@ MembrosFamiDetails As screen:
             Width: =30
             X: =496
             Y: =445
-            ZIndex: =9
+            ZIndex: =10
 
         Icon8_5 As icon.Check:
             Color: =cores.amareloMontepio
@@ -2329,5 +2329,5 @@ MembrosFamiDetails As screen:
             Width: =30
             X: =726
             Y: =445
-            ZIndex: =10
+            ZIndex: =12
 
