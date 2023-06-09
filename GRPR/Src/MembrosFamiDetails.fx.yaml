@@ -3,7 +3,6 @@ MembrosFamiDetails As screen:
     OnVisible: |-
         =UpdateContext(
             {
-                
                 localShowModal: false,
                 localShowData: If(
                     IsBlank(_Familiar),
@@ -11,15 +10,27 @@ MembrosFamiDetails As screen:
                     false
                 ),
                 localShowPrazo: false,
-                localShowEliminacao:If(
+                localShowEliminacao: If(
                     _AssociatedR,
                     true,
                     false
                 )
-                
-                
             }
         );
+        ClearCollect(
+            RespetivasFamiliar0,
+            Filter(
+                'Membros-Familiares-Respetivas',
+                ThisRecord.ID_Familiares.ID = _Familiar
+            )
+        );
+        ClearCollect(
+            RespetivasFamiliar,
+            Filter(
+                RespetivasFamiliar0,
+                IsBlank(ID_GrauParentesco.ID)
+            )
+        )
 
     BackBtn_6 As BackBtn:
         X: =365
@@ -1531,12 +1542,7 @@ MembrosFamiDetails As screen:
                 Fill: =RGBA(0, 0, 0, 0)
                 HeadingFill: =cores.cinzento
                 Height: =Parent.Height-60
-                Items: |-
-                    =Filter(
-                        'Membros-Familiares-Respetivas',
-                        ThisRecord.ID_Familiares.ID = _Familiar And IsBlank(ID_GrauParentesco.ID)
-                        
-                    )
+                Items: =RespetivasFamiliar
                 SelectedFill: =cores.amareloMontepio
                 Visible: =!_AssociatedR And !localShowEditForm
                 Width: =Parent.Width * 0.95
@@ -1628,11 +1634,11 @@ MembrosFamiDetails As screen:
                     ButtonIcon: =Icon.Trash
                     Height: =40
                     Visible: |-
-                        =!_AssociarRF And !localShowEditForm And !FormRespetivas_1.Visible /*And If(
-                            CountRows(ligacaoRespetivas) = 0,
+                        =!_AssociarRF And !localShowEditForm And !FormRespetivas_1.Visible And If(
+                            CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )*/
+                        )
                     Width: =160
                     X: =Parent.X+200
                     Y: =7
@@ -1654,11 +1660,11 @@ MembrosFamiDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        =!_AssociarRF And !localShowEditForm And !FormRespetivas_1.Visible /*And If(
-                            CountRows(ligacaoRespetivas) = 0,
+                        =!_AssociarRF And !localShowEditForm And !FormRespetivas_1.Visible And If(
+                            CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )*/
+                        )
                     X: =DynamicBtn_31.X
                     Y: =DynamicBtn_31.Y
                     ZIndex: =14
@@ -1676,7 +1682,7 @@ MembrosFamiDetails As screen:
                     Height: =40
                     Visible: |-
                         =If(
-                            CountRows(ligacaoRespetivas) = 0,
+                            CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
                         )
@@ -1718,7 +1724,7 @@ MembrosFamiDetails As screen:
                     Text: =""
                     Visible: |-
                         =If(
-                            CountRows(ligacaoRespetivas) = 0,
+                            CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
                         )
@@ -1817,11 +1823,11 @@ MembrosFamiDetails As screen:
                     ButtonIcon: =Icon.DocumentWithContent
                     Height: =40
                     Visible: |-
-                        ='empresas respetivas fami'.Visible /*And If(
-                            CountRows('empresas respetivas fami') = 0,
+                        ='empresas respetivas fami'.Visible And If(
+                            CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )*/
+                        )
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1845,11 +1851,11 @@ MembrosFamiDetails As screen:
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
                     Visible: |-
-                        ='empresas respetivas fami'.Visible /*And If(
-                            CountRows('empresas respetivas fami') = 0,
+                        ='empresas respetivas fami'.Visible And If(
+                            CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )*/
+                        )
                     X: =DynamicBtn_34.X
                     Y: =DynamicBtn_34.Y
                     ZIndex: =20
