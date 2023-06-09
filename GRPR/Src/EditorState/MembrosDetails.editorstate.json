@@ -1474,7 +1474,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "cancelar_btn_1",
-      "ParentIndex": 9,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3768,7 +3768,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "confirm_btn_1",
-      "ParentIndex": 8,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -15842,7 +15842,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_13",
-      "ParentIndex": 4,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -17767,7 +17767,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_37",
-      "ParentIndex": 12,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19570,7 +19570,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_1",
-      "ParentIndex": 5,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -19925,7 +19925,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "elim_btn_13",
-      "ParentIndex": 13,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29641,7 +29641,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon8_2",
-      "ParentIndex": 10,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -29861,7 +29861,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon8_3",
-      "ParentIndex": 11,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -37313,7 +37313,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LabelMembroName",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -38482,7 +38482,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Mid Section_Membros",
-      "ParentIndex": 7,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
