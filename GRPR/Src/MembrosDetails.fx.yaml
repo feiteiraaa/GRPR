@@ -3434,19 +3434,26 @@ MembrosDetails As screen:
         DynamicBtn_37 As DynamicBtn:
             BtnText: |-
                 =If(
-                    localBloquear,
-                    "Bloquear",
-                    "Desbloquear"
+                    LookUp(
+                        Membros_1,
+                        ThisRecord.ID = _Membro
+                    ).Bloqueado,
+                    
+                    "Desbloquear",
+                    "Bloquear"
                 )
             BtnWidth: =180
             ButtonIcon: |-
                 =If(
-                    localBloquear,
-                    Icon.Lock,
-                    Icon.Unlock
+                    LookUp(
+                        Membros_1,
+                        ThisRecord.ID = _Membro
+                    ).Bloqueado,
+                    Icon.Unlock,
+                    Icon.Lock
                 )
             Height: =40
-            Visible: ="[Eliminado]" in LabelMembroName_1.Text
+            Visible: ="(Eliminado)" in LabelMembroName.Text
             Width: =180
             X: =1150
             Y: =74
@@ -3464,25 +3471,10 @@ MembrosDetails As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |
                 =If(
-                    localBloquear,
-                    If(
-                        Patch(
-                            Membros_1,
-                            LookUp(
-                                Membros_1,
-                                ThisRecord.ID = _Membro
-                            ),
-                            {Bloqueado: true}
-                        ).Bloqueado = true,
-                        Notify(
-                            "Membro bloqueado com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente bloquear o Membro novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    ),
+                    LookUp(
+                        Membros_1,
+                        ThisRecord.ID = _Membro
+                    ).Bloqueado,
                     If(
                         Patch(
                             Membros_1,
@@ -3500,13 +3492,30 @@ MembrosDetails As screen:
                             "Por favor, tente desbloquear o Membro novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
+                    ),
+                    If(
+                        Patch(
+                            Membros_1,
+                            LookUp(
+                                Membros_1,
+                                ThisRecord.ID = _Membro
+                            ),
+                            {Bloqueado: true}
+                        ).Bloqueado = true,
+                        Notify(
+                            "Membro bloqueado com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente bloquear o Membro novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
                     )
                 );
-                UpdateContext({localBloquear: !localBloquear});
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            Visible: ="[Eliminado]" in LabelMembroName_1.Text
+            Visible: ="(Eliminado)" in LabelMembroName.Text
             Width: =180
             X: =DynamicBtn_37.X
             Y: =DynamicBtn_37.Y

@@ -19199,6 +19199,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "MembrosDetails.localBloquear"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "MembrosDetails.localBloquear",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "localBloquear",
+                "module": "MembrosDetails",
+                "type": "MembrosDetails"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "MembrosDetails.localShowArq"
                 }
               ],
