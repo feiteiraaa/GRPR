@@ -2,7 +2,7 @@ Respetivas As screen:
     OnHidden: |-
         =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
     OnVisible: |
-        =UpdateContext({localFormRespetivasNew:false});
+        =UpdateContext({localFormRespetivasNew:false,localBloquear:true});
         ClearCollect(CollecRespectivas, Empresas);
 
     LeftSectionComponent_3 As LeftSectionComponent:
@@ -356,16 +356,7 @@ Respetivas As screen:
                 FormMode.View
             )
         Item: |-
-            =/*If(
-                IsBlank(_selectedRespetivas),
-                EmpresasRespetivas1_1.Selected,
-                LookUp(
-                    Empresas,
-                    ID = _selectedRespetivas
-                )
-            )*/
-             //EmpresasRespetivas1_1.Selected
-             If(
+            = If(
                 !IsBlank(_selectedRespetivas),
                 LookUp(
                     Empresas,
@@ -1374,7 +1365,7 @@ Respetivas As screen:
                     Icon.Unlock
                 )
             Height: =40
-            Visible: ="(Eliminado)" in LabelMembroName_2.Text
+            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
             Width: =180
             X: =1150
             Y: =74
@@ -1395,37 +1386,37 @@ Respetivas As screen:
                     localBloquear,
                     If(
                         Patch(
-                            Familiares,
+                            Empresas,
                             LookUp(
-                                Familiares,
-                                ThisRecord.ID = _Familiar
+                                Empresas,
+                                ThisRecord.ID =  _selectedRespetivas Or ThisRecord.ID =  _selectedRespetivasF Or ThisRecord.ID =  EmpresasRespetivas1_1.Selected.ID
                             ),
                             {Bloqueado: true}
                         ).Bloqueado = true,
                         Notify(
-                            "Familiar foi bloqueado com sucesso!",
+                            "Empresa Respetiva bloqueada com sucesso!",
                             NotificationType.Success
                         ),
                         Notify(
-                            "Por favor, tente bloquear o Familiar novamente ou contacte o administrador da solução!",
+                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
                     ),
                     If(
                         Patch(
-                            Familiares,
+                            Empresas,
                             LookUp(
-                                Familiares,
-                                ThisRecord.ID = _Familiar
+                                Empresas,
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID =  _selectedRespetivasF Or ThisRecord.ID =  EmpresasRespetivas1_1.Selected.ID
                             ),
                             {Bloqueado: false}
                         ).Bloqueado = false,
                         Notify(
-                            "Familiar foi desbloqueado com sucesso!",
+                            "Empresa Respetiva bloqueada com sucesso!",
                             NotificationType.Success
                         ),
                         Notify(
-                            "Por favor, tente desbloquear o Familiar novamente ou contacte o administrador da solução!",
+                            "Por favor, tente desbloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
                     )
@@ -1434,7 +1425,7 @@ Respetivas As screen:
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            Visible: ="(Eliminado)" in LabelMembroName_2.Text
+            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
             Width: =180
             X: =DynamicBtn_38.X
             Y: =DynamicBtn_38.Y
