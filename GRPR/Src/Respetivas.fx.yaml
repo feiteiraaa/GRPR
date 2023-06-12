@@ -1,7 +1,7 @@
 Respetivas As screen:
     OnHidden: |-
         =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
-    OnVisible: |-
+    OnVisible: |
         =UpdateContext({localFormRespetivasNew:false});
         ClearCollect(CollecRespectivas, Empresas);
 
@@ -1144,6 +1144,46 @@ Respetivas As screen:
             X: =DynamicBtn_25.X
             Y: =DynamicBtn_25.Y
             ZIndex: =18
+
+    LabelMembroName_2 As label:
+        AutoHeight: =true
+        FontWeight: =FontWeight.Bold
+        Text: |-
+            =/*If(
+                !IsBlank(_Membro),
+                If(
+                    LookUp(
+                        Membros_1,
+                        ID = _Membro
+                    ).Ativo,
+                    LookUp(
+                        Membros_1,
+                        ID = _Membro
+                    ).Nome,
+                    LookUp(
+                        Membros_1,
+                        ID = _Membro
+                    ).Nome & " (Eliminado)"
+                ),
+                "Criar nova Empresa Respetiva"
+            )*/
+            If(
+                !IsBlank(_selectedRespetivas),
+                LookUp(
+                    Empresas,
+                    ID = _selectedRespetivas
+                ).Designacao,
+                !IsBlank(_selectedRespetivasF),
+                LookUp(
+                    Empresas,
+                    ID = _selectedRespetivasF
+                ).Designacao,
+                EmpresasRespetivas1_1.Selected.Designacao
+            )
+        Width: =Parent.Width/2
+        X: =365
+        Y: =124
+        ZIndex: =26
 
     elim_components_3 As group:
         Height: =5
