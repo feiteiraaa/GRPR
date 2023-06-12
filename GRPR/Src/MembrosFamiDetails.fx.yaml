@@ -2200,17 +2200,51 @@ MembrosFamiDetails As screen:
             OnSelect: |-
                 =UpdateContext(
                     {
-                        
                         _AssociarRF: false,
                         localShowModal: true,
                         localShowData: false,
                         localShowLeg: false,
-                        localShowEliminacao:false,
+                        localShowEliminacao: false,
                         localShowRelacao: false,
                         localShowPrazo: false,
                         localShowNewForm: false
                     }
                 );
+                ClearCollect(
+                    RespetivasOutros0,
+                    Filter(
+                        'Membros-Familiares-Respetivas',
+                        ThisRecord.ID_Familiares.ID <> _Familiar
+                    )
+                );
+                ClearCollect(
+                    RespetivasOutros1,
+                    Filter(
+                        RespetivasOutros0,
+                        IsBlank(ID_GrauParentesco.ID)
+                    )
+                );
+                Clear(RespetivasOutros2);
+                ForAll(
+                    RespetivasFamiliar,
+                    Collect(
+                        RespetivasOutros2,
+                        Filter(
+                            RespetivasOutros1,
+                            RespetivasFamiliar[@ID_Empresa].ID = ThisRecord.ID_Empresa.ID
+                        ).uipp_ID_Empresa
+                    )
+                );
+                ClearCollect(
+                    RespetivasOutros,
+                    Distinct(
+                        ForAll(
+                            RespetivasOutros2.ID_Empresa,
+                            ID_Empresa.ID
+                        ),
+                        Value
+                    )
+                )
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""

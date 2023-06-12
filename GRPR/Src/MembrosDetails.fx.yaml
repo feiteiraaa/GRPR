@@ -1,5 +1,5 @@
 MembrosDetails As screen:
-    OnVisible: |-
+    OnVisible: |+
         =UpdateContext(
             {
                 _Associar: false,
@@ -23,7 +23,7 @@ MembrosDetails As screen:
                 localShowRelacao: false,
                 localShowPrazo: false,
                 localShowNewForm: false,
-                localBloquear:true
+                localBloquear: true
             }
         );
         Refresh('Membros-Familiares-Respetivas');
@@ -69,7 +69,6 @@ MembrosDetails As screen:
                     Empresas,
                     ID = ligacaoRespetiva[@ID_Membro].ID
                 ).Designacao
-                
             )
         );
         ClearCollect(
@@ -109,7 +108,8 @@ MembrosDetails As screen:
         );
         Refresh('Membros-Familiares-Respetivas');
         Refresh('Membros-Participadas');
-        Set(DRI,true)
+        //Set(DRI,true)
+        
 
     BackBtn_5 As BackBtn:
         X: =365
@@ -3079,6 +3079,69 @@ MembrosDetails As screen:
                         localShowPrazo: false,
                         localShowNewForm: false
                     }
+                );
+                ClearCollect(//Filtrar todos os IDs de familiares associados ao membro
+                    RespetivasOutrosFami,
+                    ForAll(
+                        ligacaoFamiliares.ID_Familiares,
+                        ID_Familiares.ID
+                    )
+                );
+                ClearCollect(//Filtrar registos que estejam associados ao membro ou aos familiares deste membro
+                    RespetivasOutrosFamiResp0,
+                    Filter(
+                        'Membros-Familiares-Respetivas',
+                        ThisRecord.ID_Membro.ID = _Membro Or ThisRecord.ID_Familiares.ID in RespetivasOutrosFami[@Value]
+                    )
+                );
+                ClearCollect(//Filtrar apenas relações de empresas respetivas
+                    RespetivasMembroFamiResp,
+                    Filter(
+                        RespetivasOutrosFamiResp0,
+                        IsBlank(ID_GrauParentesco.ID)
+                    )
+                );
+                ClearCollect(//Filtrar empresas respetivas que não estejam associadas ao membro que quero excluir
+                    RespetivasOutros0,
+                    Filter(
+                        'Membros-Familiares-Respetivas',
+                        ThisRecord.ID_Membro.ID <> _Membro
+                    )
+                );
+                ClearCollect(//Filtrar empresas respetivas que não estejam associadas ao familiar do membro que quero excluir
+                    RespetivasOutros01,
+                    Filter(
+                        RespetivasOutros0,
+                        Not(ThisRecord.ID_Familiares.ID in RespetivasOutrosFami[@Value])
+                    )
+                );
+                ClearCollect(//filtrar apenas relações de empresas respetivas
+                    RespetivasOutros1,
+                    Filter(
+                        RespetivasOutros01,
+                        IsBlank(ID_GrauParentesco.ID)
+                    )
+                );
+                Clear(RespetivasOutros2);
+                ForAll(
+                    RespetivasMembroFamiResp,// For all empresas respetivas pertencentes ao membro e/ou familiares
+                    Collect(
+                        RespetivasOutros2,
+                        Filter(
+                            RespetivasOutros1,// Filtrar relações de outros membros e familiares com empresas respetivas que tenha associado a mesma empresa desse membro e/ou familiar
+                            RespetivasMembroFamiResp[@ID_Empresa].ID = ThisRecord.ID_Empresa.ID
+                        ).uipp_ID_Empresa
+                    )
+                );
+                ClearCollect( //Filtrar as empresas que não posso inativar
+                    RespetivasOutros,
+                    Distinct(
+                        ForAll(
+                            RespetivasOutros2.ID_Empresa,
+                            ID_Empresa.ID
+                        ),
+                        Value
+                    )
                 );
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)

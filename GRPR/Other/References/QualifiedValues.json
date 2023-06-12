@@ -127,7 +127,9 @@
     {
       "Kind": "default.cds_uipp_empresasparticipadasdogrupo_forms",
       "Namespace": "Empresas Participadas do Grupos (Forms)",
-      "Values": {}
+      "Values": {
+        "Information": "0947f3d1-1e25-45b4-9d1d-ce775da0b9d8"
+      }
     },
     {
       "Kind": "default.cds_uipp_empresas_forms",

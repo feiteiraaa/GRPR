@@ -61,7 +61,13 @@
     "RelatedEntityName": "Empresas Participadas do Grupos",
     "TrimmedViewName": true,
     "Type": "ViewInfo",
-    "ViewInfoNameMapping": {}
+    "ViewInfoNameMapping": {
+      "0fc53f36-740b-47ea-b7c5-4fa6a259a330": "Empresas Participadas do Grupo Lookup View",
+      "138d0ec1-0893-438a-8caa-725929a2dcb2": "Inactive Empresas Participadas do Grupos",
+      "35f9d28a-03bf-47f6-a546-39dbddaa9d84": "Active Empresas Participadas do Grupos",
+      "a47737a8-ac37-4388-a86c-1281af525b29": "Empresas Participadas do Grupo Advanced Find View",
+      "ddc7a9a3-4b84-487a-808f-1da2925341d9": "Empresas Participadas do Grupo Associated View"
+    }
   },
   {
     "DisplayName": "Estado (Empresas Participadas do Grupos)",
