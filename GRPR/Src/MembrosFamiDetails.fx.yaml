@@ -1610,6 +1610,18 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "[Eliminado]" in LabelMembroName_1.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivasF: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =6
                     Text: =ThisItem.uipp_participacao
                     Width: =100
@@ -1624,6 +1636,18 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "[Eliminado]" in LabelMembroName_1.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivasF: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =5
                     Text: =ThisItem.uipp_cargodescricao
                     Width: =100
@@ -1638,6 +1662,18 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "[Eliminado]" in LabelMembroName_1.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivasF: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =4
                     Text: =ThisItem.uipp_cargocategoria
                     Width: =100
@@ -1652,6 +1688,18 @@ MembrosFamiDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "[Eliminado]" in LabelMembroName_1.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivasF: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =3
                     Text: =ThisItem.ID_Empresa.Designacao
                     Visible: =true

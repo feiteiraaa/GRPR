@@ -891,7 +891,17 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                ParticipadasDetails,
+                                ScreenTransition.None,
+                                {
+                                    _EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID,
+                                    ColabFormMode: FormMode.View
+                                }
+                            )
+                        )
                     Order: =12
                     Text: =ThisItem.'Cargo (Categoria)'
                     Width: =151
@@ -907,7 +917,17 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                ParticipadasDetails,
+                                ScreenTransition.None,
+                                {
+                                    _EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID,
+                                    ColabFormMode: FormMode.View
+                                }
+                            )
+                        )
                     Order: =13
                     Text: =ThisItem.'Cargo (Descricao)'
                     Width: =184
@@ -924,7 +944,17 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                ParticipadasDetails,
+                                ScreenTransition.None,
+                                {
+                                    _EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID,
+                                    ColabFormMode: FormMode.View
+                                }
+                            )
+                        )
                     Order: =14
                     Text: =ThisItem.uipp_participacao
                     Width: =123
@@ -941,7 +971,17 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =//Navigate(ParticipadasDetails, ScreenTransition.None, {_EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID, ColabFormMode: FormMode.View})
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                ParticipadasDetails,
+                                ScreenTransition.None,
+                                {
+                                    _EmpresasParticipadas: 'empresas do grupo'.Selected.'Parent ID'.ID,
+                                    ColabFormMode: FormMode.View
+                                }
+                            )
+                        )
                     Order: =6
                     Text: =ThisItem.Designacao
                     Width: =478
@@ -1706,7 +1746,17 @@ MembrosDetails As screen:
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     OnSelect: |-
-                        =//Navigate(Respetivas,ScreenTransition.None,{_selectedRespetivas:'empresas respetivas'.Selected,localFormRespetivas: true})
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivas: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =1
                     Text: |-
                         =//LookUp(Empresas,ID = ThisItem.ID_Empresa.ID).Designacao
@@ -1726,6 +1776,18 @@ MembrosDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivas: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =2
                     Text: =ThisItem.'Cargo (Categoria)'
                     Width: =151
@@ -1741,6 +1803,18 @@ MembrosDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivas: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =3
                     Text: =ThisItem.'Cargo (Descrição)'
                     Width: =169
@@ -1756,6 +1830,18 @@ MembrosDetails As screen:
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
+                    OnSelect: |-
+                        =If(
+                            "(Eliminado)" in LabelMembroName.Text,
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None,
+                                {
+                                    _selectedRespetivas: 'empresas respetivas'.Selected.ID_Empresa.ID,
+                                    localFormRespetivas: true
+                                }
+                            )
+                        )
                     Order: =4
                     Text: =ThisItem.uipp_participacao
                     Width: =123
