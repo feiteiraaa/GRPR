@@ -1676,7 +1676,7 @@ MembrosFamiDetails As screen:
                             CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )
+                        ) And Not("[Eliminado]" in LabelMembroName_1.Text)
                     Width: =160
                     X: =Parent.X+200
                     Y: =7
@@ -1702,7 +1702,7 @@ MembrosFamiDetails As screen:
                             CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )
+                        ) And Not("[Eliminado]" in LabelMembroName_1.Text)
                     X: =DynamicBtn_31.X
                     Y: =DynamicBtn_31.Y
                     ZIndex: =14
@@ -1723,7 +1723,7 @@ MembrosFamiDetails As screen:
                             CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )
+                        ) And Not("[Eliminado]" in LabelMembroName_1.Text)
                     Width: =160
                     X: =Parent.X+600
                     Y: =7
@@ -1765,7 +1765,7 @@ MembrosFamiDetails As screen:
                             CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )
+                        ) And Not("[Eliminado]" in LabelMembroName_1.Text)
                     X: =DynamicBtn_32.X
                     Y: =DynamicBtn_32.Y
                     ZIndex: =16
@@ -1866,7 +1866,7 @@ MembrosFamiDetails As screen:
                             CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )
+                        ) And Not("[Eliminado]" in LabelMembroName_1.Text)
                     Width: =160
                     X: =Parent.X+400
                     Y: =7
@@ -1894,7 +1894,7 @@ MembrosFamiDetails As screen:
                             CountRows(RespetivasFamiliar) = 0,
                             false,
                             true
-                        )
+                        ) And Not("[Eliminado]" in LabelMembroName_1.Text)
                     X: =DynamicBtn_34.X
                     Y: =DynamicBtn_34.Y
                     ZIndex: =20
