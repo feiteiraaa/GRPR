@@ -2939,7 +2939,8 @@ MembrosDetails As screen:
                             _AssociatedR: false,
                             localseta:false
                         }
-                    )
+                    );
+                    Reset(Checkbox1_3);
                 Width: ='Info Circle_8'.Width
                 X: =Parent.Width - (30 + 'Info Circle_8'.Width)
                 Y: =5
