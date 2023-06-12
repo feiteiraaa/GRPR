@@ -1149,37 +1149,46 @@ Respetivas As screen:
         AutoHeight: =true
         FontWeight: =FontWeight.Bold
         Text: |-
-            =/*If(
-                !IsBlank(_Membro),
+            =If(
+                !IsBlank(_selectedRespetivas),
                 If(
                     LookUp(
-                        Membros_1,
-                        ID = _Membro
+                        Empresas,
+                        ID = _selectedRespetivas
                     ).Ativo,
                     LookUp(
-                        Membros_1,
-                        ID = _Membro
-                    ).Nome,
+                        Empresas,
+                        ID = _selectedRespetivas
+                    ).Designacao,
                     LookUp(
-                        Membros_1,
-                        ID = _Membro
-                    ).Nome & " (Eliminado)"
+                        Empresas,
+                        ID = _selectedRespetivas
+                    ).Designacao & " (Eliminado)"
                 ),
-                "Criar nova Empresa Respetiva"
-            )*/
-            If(
-                !IsBlank(_selectedRespetivas),
-                LookUp(
-                    Empresas,
-                    ID = _selectedRespetivas
-                ).Designacao,
                 !IsBlank(_selectedRespetivasF),
-                LookUp(
-                    Empresas,
-                    ID = _selectedRespetivasF
-                ).Designacao,
-                EmpresasRespetivas1_1.Selected.Designacao
+                If(
+                    LookUp(
+                        Empresas,
+                        ID = _selectedRespetivasF
+                    ).Ativo,
+                    LookUp(
+                        Empresas,
+                        ID = _selectedRespetivasF
+                    ).Designacao,
+                    LookUp(
+                        Empresas,
+                        ID = _selectedRespetivasF
+                    ).Designacao & " (Eliminado)"
+                ),
+                localFormRespetivasNew,
+                "Criar nova Empresa Respetiva",
+                If(
+                    EmpresasRespetivas1_1.Selected.Ativo,
+                    EmpresasRespetivas1_1.Selected.Designacao,
+                    EmpresasRespetivas1_1.Selected.Designacao & " (Eliminado)"
+                )
             )
+        Visible: =EmpresasRespetivas.Visible
         Width: =Parent.Width/2
         X: =365
         Y: =124
