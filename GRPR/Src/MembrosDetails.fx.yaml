@@ -3299,6 +3299,63 @@ MembrosDetails As screen:
                                 NotificationType.Error
                             )
                         )
+                    );
+                    If(
+                        IsBlank(RespetivasOutros),
+                    //If true = não tenho nem familiar nem membro associado; If false = tenho membro ou familiar associado,
+                        ForAll(
+                            RespetivasMembroFamiResp,
+                            If(
+                                Patch(
+                                    Empresas,
+                                    LookUp(
+                                        Empresas,
+                                        ThisRecord.ID = RespetivasMembroFamiResp[@ID_Empresa].ID
+                                    ),
+                                    {
+                                        Ativo: false,
+                                        //Bloqueado: true,
+                                        'Data de saída': Now()
+                                    }
+                                ).Ativo = false,
+                                Notify(
+                                    "A empresa respetiva " & RespetivasMembroFamiResp[@ID_Empresa].Designacao & " estava associada apenas ao Familiar eliminado, portanto foi eliminada com sucesso!",
+                                    NotificationType.Success
+                                ),
+                                Notify(
+                                    "Falha ao eliminar a empresa respetiva " & RespetivasMembroFamiResp[@ID_Empresa].Designacao & " associada apenas ao Familiar eliminado, tente novamente na secção 'Empresas Respetivas'ou contacte o administrador da solução!",
+                                    NotificationType.Error
+                                )
+                            )
+                        ),
+                        ForAll(
+                            RespetivasMembroFamiResp,
+                            If(
+                                Not(RespetivasMembroFamiResp[@ID_Empresa].ID in RespetivasOutros.Value),
+                                If(
+                                    Patch(
+                                        Empresas,
+                                        LookUp(
+                                            Empresas,
+                                            ThisRecord.ID = RespetivasMembroFamiResp[@ID_Empresa].ID
+                                        ),
+                                        {
+                                            Ativo: false,
+                                            //Bloqueado: true,
+                                            'Data de saída': Now()
+                                        }
+                                    ).Ativo = false,
+                                    Notify(
+                                        "A empresa respetiva " & RespetivasMembroFamiResp[@ID_Empresa].Designacao & " associada ao Membro e/ou familiar(es) foi eliminada com sucesso!",
+                                        NotificationType.Success
+                                    ),
+                                    Notify(
+                                        "Falha ao eliminar a empresa respetiva " & RespetivasMembroFamiResp[@ID_Empresa].Designacao & " associada apenas ao Membro e/ou familiar(es), tente novamente na secção 'Empresas Respetivas'ou contacte o administrador da solução!",
+                                        NotificationType.Error
+                                    )
+                                )
+                            )
+                        )
                     )
                 );
                 UpdateContext({localShowModal: false});
