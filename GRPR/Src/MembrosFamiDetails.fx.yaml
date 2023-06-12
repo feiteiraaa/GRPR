@@ -14,8 +14,7 @@ MembrosFamiDetails As screen:
                     _AssociatedR,
                     true,
                     false
-                ),
-                localBloquear:true
+                )
             }
         );
         ClearCollect(
@@ -2518,16 +2517,23 @@ MembrosFamiDetails As screen:
         DynamicBtn_36 As DynamicBtn:
             BtnText: |-
                 =If(
-                    localBloquear,
-                    "Bloquear",
-                    "Desbloquear"
+                    LookUp(
+                        Familiares,
+                        ThisRecord.ID = _Familiar
+                    ).Bloqueado,
+                    
+                    "Desbloquear",
+                    "Bloquear"
                 )
             BtnWidth: =180
             ButtonIcon: |-
                 =If(
-                    localBloquear,
-                    Icon.Lock,
-                    Icon.Unlock
+                    LookUp(
+                        Familiares,
+                        ThisRecord.ID = _Familiar
+                    ).Bloqueado,
+                    Icon.Unlock,
+                    Icon.Lock
                 )
             Height: =40
             Visible: ="[Eliminado]" in LabelMembroName_1.Text
@@ -2548,25 +2554,10 @@ MembrosFamiDetails As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |
                 =If(
-                    localBloquear,
-                    If(
-                        Patch(
-                            Familiares,
-                            LookUp(
-                                Familiares,
-                                ThisRecord.ID = _Familiar
-                            ),
-                            {Bloqueado: true}
-                        ).Bloqueado = true,
-                        Notify(
-                            "Familiar foi bloqueado com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente bloquear o Familiar novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    ),
+                    LookUp(
+                        Familiares,
+                        ThisRecord.ID = _Familiar
+                    ).Bloqueado,
                     If(
                         Patch(
                             Familiares,
@@ -2582,6 +2573,24 @@ MembrosFamiDetails As screen:
                         ),
                         Notify(
                             "Por favor, tente desbloquear o Familiar novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    ),
+                    If(
+                        Patch(
+                            Familiares,
+                            LookUp(
+                                Familiares,
+                                ThisRecord.ID = _Familiar
+                            ),
+                            {Bloqueado: true}
+                        ).Bloqueado = true,
+                        Notify(
+                            "Familiar foi bloqueado com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente bloquear o Familiar novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
                     )
