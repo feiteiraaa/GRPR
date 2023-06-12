@@ -2,7 +2,7 @@ Respetivas As screen:
     OnHidden: |-
         =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
     OnVisible: |
-        =UpdateContext({localFormRespetivasNew:false,localBloquear:true});
+        =UpdateContext({localFormRespetivasNew:false/*,localBloquear:true*/});
         ClearCollect(CollecRespectivas, Empresas);
 
     LeftSectionComponent_3 As LeftSectionComponent:
@@ -1207,7 +1207,7 @@ Respetivas As screen:
                     EmpresasRespetivas1_1.Selected.Designacao,
                     EmpresasRespetivas1_1.Selected.Designacao & " (Eliminado)"
                 )
-            )
+            ) 
         Visible: =EmpresasRespetivas.Visible
         Width: =Parent.Width/2
         X: =365
@@ -1382,16 +1382,23 @@ Respetivas As screen:
         DynamicBtn_38 As DynamicBtn:
             BtnText: |-
                 =If(
-                    localBloquear,
-                    "Bloquear",
-                    "Desbloquear"
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    "Desbloquear",
+                    "Bloquear"
                 )
             BtnWidth: =180
             ButtonIcon: |-
                 =If(
-                    localBloquear,
-                    Icon.Lock,
-                    Icon.Unlock
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    
+                    Icon.Unlock,
+                    Icon.Lock
                 )
             Height: =40
             Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
@@ -1410,33 +1417,18 @@ Respetivas As screen:
             Height: =39
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |
+            OnSelect: |+
                 =If(
-                    localBloquear,
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
                     If(
                         Patch(
                             Empresas,
                             LookUp(
                                 Empresas,
-                                ThisRecord.ID =  _selectedRespetivas Or ThisRecord.ID =  _selectedRespetivasF Or ThisRecord.ID =  EmpresasRespetivas1_1.Selected.ID
-                            ),
-                            {Bloqueado: true}
-                        ).Bloqueado = true,
-                        Notify(
-                            "Empresa Respetiva bloqueada com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    ),
-                    If(
-                        Patch(
-                            Empresas,
-                            LookUp(
-                                Empresas,
-                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID =  _selectedRespetivasF Or ThisRecord.ID =  EmpresasRespetivas1_1.Selected.ID
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
                             ),
                             {Bloqueado: false}
                         ).Bloqueado = false,
@@ -1448,9 +1440,27 @@ Respetivas As screen:
                             "Por favor, tente desbloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
                             NotificationType.Error
                         )
+                    ),
+                    If(
+                        Patch(
+                            Empresas,
+                            LookUp(
+                                Empresas,
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                            ),
+                            {Bloqueado: true}
+                        ).Bloqueado = true,
+                        Notify(
+                            "Empresa Respetiva bloqueada com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
                     )
                 );
-                UpdateContext({localBloquear: !localBloquear});
+                
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
