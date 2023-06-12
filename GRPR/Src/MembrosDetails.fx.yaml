@@ -1,5 +1,5 @@
 MembrosDetails As screen:
-    OnVisible: |+
+    OnVisible: |
         =UpdateContext(
             {
                 _Associar: false,
@@ -109,7 +109,6 @@ MembrosDetails As screen:
         Refresh('Membros-Familiares-Respetivas');
         Refresh('Membros-Participadas');
         //Set(DRI,true)
-        
 
     BackBtn_5 As BackBtn:
         X: =365
