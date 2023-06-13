@@ -91,6 +91,52 @@ Atividade As screen:
     LeftSectionComponent_11 As LeftSectionComponent:
         ZIndex: =15
 
+    Label18_1 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Size: =12
+        Text: =AtividadeTable.Selected.'Criado Por'.'Nome Completo'
+        Visible: =ShowDetails
+        Width: =349
+        X: =342
+        Y: =252
+        ZIndex: =21
+
+    Label18_2 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Size: =12
+        Text: |-
+            =Text(DateTimeValue(AtividadeTable.Selected.Data), "dd/mm/yyyy hh:mm")
+        Visible: =ShowDetails
+        Width: =349
+        X: =836
+        Y: =252
+        ZIndex: =23
+
+    Label19_2 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =cores.amareloMontepio
+        FontWeight: =FontWeight.Semibold
+        Size: =12
+        Text: |-
+            ="Data: "
+        Visible: =ShowDetails
+        Width: =154
+        X: =682
+        Y: =252
+        ZIndex: =24
+
+    Label18_3 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Size: =12
+        Text: =AtividadeTable.Selected.'Tipo de alteracao'
+        Visible: =ShowDetails
+        Width: =349
+        X: =342
+        Y: =299
+        ZIndex: =25
+
     Group7 As group:
         Height: =5
         Width: =5
@@ -235,6 +281,75 @@ Atividade As screen:
             Y: =130
             ZIndex: =14
 
+    Label19_3 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =cores.amareloMontepio
+        FontWeight: =FontWeight.Semibold
+        Size: =12
+        Text: |-
+            ="Tipo de alteração: "
+        Visible: =ShowDetails
+        Width: =154
+        X: =188
+        Y: =299
+        ZIndex: =26
+
+    Label18_4 As label:
+        BorderColor: =RGBA(0, 0, 0, 1)
+        Size: =12
+        Text: =AtividadeTable.Selected.'Lista da atividade'
+        Visible: =ShowDetails
+        Width: =349
+        X: =836
+        Y: =299
+        ZIndex: =27
+
+    Label19_4 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =cores.amareloMontepio
+        FontWeight: =FontWeight.Semibold
+        Size: =12
+        Text: |-
+            ="Lista da Atividade: "
+        Visible: =ShowDetails
+        Width: =154
+        X: =682
+        Y: =299
+        ZIndex: =28
+
+    Label18_5 As label:
+        AutoHeight: =true
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Height: =144
+        Size: =12
+        Text: =Text(AtividadeTable.Selected.Item)
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =ShowDetails
+        Width: =793
+        X: =357
+        Y: =355
+        ZIndex: =29
+
+    Label19_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 0, 0, 1)
+        DisplayMode: =DisplayMode.View
+        Fill: =cores.amareloMontepio
+        FontWeight: =FontWeight.Semibold
+        Size: =12
+        Text: |-
+            ="Alterações:"
+        Visible: =ShowDetails
+        Width: =154
+        X: =188
+        Y: =355
+        ZIndex: =30
+
     PopUp As group:
         Height: =5
         Width: =5
@@ -291,16 +406,6 @@ Atividade As screen:
             Y: =200
             ZIndex: =20
 
-        Label18_1 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
-            Text: =AtividadeTable.Selected.'Criado Por'.'Nome Completo'
-            Visible: =ShowDetails
-            Width: =349
-            X: =342
-            Y: =252
-            ZIndex: =21
-
         Label19_1 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -315,106 +420,4 @@ Atividade As screen:
             X: =188
             Y: =252
             ZIndex: =22
-
-        Label18_2 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
-            Text: |-
-                =Text(DateTimeValue(AtividadeTable.Selected.Data), "dd/mm/yyyy hh:mm")
-            Visible: =ShowDetails
-            Width: =349
-            X: =836
-            Y: =252
-            ZIndex: =23
-
-        Label19_2 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =cores.amareloMontepio
-            FontWeight: =FontWeight.Semibold
-            Size: =12
-            Text: |-
-                ="Data: "
-            Visible: =ShowDetails
-            Width: =154
-            X: =682
-            Y: =252
-            ZIndex: =24
-
-        Label18_3 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
-            Text: =AtividadeTable.Selected.'Tipo de alteracao'
-            Visible: =ShowDetails
-            Width: =349
-            X: =342
-            Y: =299
-            ZIndex: =25
-
-        Label19_3 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =cores.amareloMontepio
-            FontWeight: =FontWeight.Semibold
-            Size: =12
-            Text: |-
-                ="Tipo de alteração: "
-            Visible: =ShowDetails
-            Width: =154
-            X: =188
-            Y: =299
-            ZIndex: =26
-
-        Label18_4 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
-            Text: =AtividadeTable.Selected.'Lista da atividade'
-            Visible: =ShowDetails
-            Width: =349
-            X: =836
-            Y: =299
-            ZIndex: =27
-
-        Label19_4 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =cores.amareloMontepio
-            FontWeight: =FontWeight.Semibold
-            Size: =12
-            Text: |-
-                ="Lista da Atividade: "
-            Visible: =ShowDetails
-            Width: =154
-            X: =682
-            Y: =299
-            ZIndex: =28
-
-        Label18_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            Height: =144
-            Size: =12
-            Text: =AtividadeTable.Selected.Item
-            Visible: =ShowDetails
-            Width: =793
-            X: =357
-            Y: =355
-            ZIndex: =29
-
-        Label19_5 As label:
-            Align: =Align.Center
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.View
-            Fill: =cores.amareloMontepio
-            FontWeight: =FontWeight.Semibold
-            Size: =12
-            Text: |-
-                ="Alterações:"
-            Visible: =ShowDetails
-            Width: =154
-            X: =188
-            Y: =355
-            ZIndex: =30
 
