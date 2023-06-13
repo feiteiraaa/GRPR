@@ -1,15 +1,11 @@
 Respetivas As screen:
-    OnHidden: |-
+    OnHidden: |
         =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()});
-        Set(
-            varSortCol,
-            "uipp_nome"
-        );
     OnVisible: |-
         =UpdateContext({localFormRespetivasNew:false, localShowPrazo: false});
         ClearCollect(CollecRespectivas, Empresas);
         Set(
-            varSortCol,
+            varSortCol1,
             "uipp_designacao"
         )
 
@@ -21,20 +17,21 @@ Respetivas As screen:
         Height: =500
         Items: |-
             =Search(
-                    
-                            Filter(
-                                CollecRespectivas,
-                                If(
-                                    Checkbox1_4.Value = false,
-                                    ThisRecord.Ativo = true,
-                                    ThisRecord.Ativo = true Or ThisRecord.Ativo = false
-                                )
-                         
-                        ),
-            
-                    TextInput2_3.Text,
-                    "uipp_designacao"
-                )
+                SortByColumns(
+                    Filter(
+                        CollecRespectivas,
+                        If(
+                            Checkbox1_4.Value = false,
+                            ThisRecord.Ativo = true,
+                            ThisRecord.Ativo = true Or ThisRecord.Ativo = false
+                        )
+                    ),
+                    varSortCol1,
+                    varSortDir
+                ),
+                TextInput2_3.Text,
+                "uipp_designacao"
+            )
             //Empresas
         SelectedFill: =cores.amareloMontepio
         Visible: =!localFormRespetivas And !localFormRespetivasNew
@@ -302,7 +299,7 @@ Respetivas As screen:
         Icon: =Icon.ChevronDown
         OnSelect: |-
             =Set(
-                varSortCol,
+                varSortCol1,
                 "uipp_designacao"
             );
             Set(
@@ -324,7 +321,7 @@ Respetivas As screen:
         Icon: =Icon.ChevronDown
         OnSelect: |-
             =Set(
-                varSortCol,
+                varSortCol1,
                 "uipp_tipodedocumento"
             );
             Set(
@@ -346,7 +343,7 @@ Respetivas As screen:
         Icon: =Icon.ChevronDown
         OnSelect: |-
             =Set(
-                varSortCol,
+                varSortCol1,
                 "uipp_numerodocumento"
             );
             Set(

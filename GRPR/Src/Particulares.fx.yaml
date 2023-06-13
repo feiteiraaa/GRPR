@@ -9,6 +9,10 @@ Particulares As screen:
             Refresh(Membros_1)
         );
         Set(
+            varSortCol,
+            "uipp_nome"
+        );
+        Set(
             varSortDir,
             SortOrder.Descending
         );
