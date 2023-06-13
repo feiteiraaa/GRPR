@@ -2,7 +2,7 @@ Respetivas As screen:
     OnHidden: |-
         =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
     OnVisible: |
-        =UpdateContext({localFormRespetivasNew:false/*,localBloquear:true*/});
+        =UpdateContext({localFormRespetivasNew:false, localShowPrazo: false});
         ClearCollect(CollecRespectivas, Empresas);
 
     LeftSectionComponent_3 As LeftSectionComponent:
@@ -1397,7 +1397,7 @@ Respetivas As screen:
             Items: |-
                 =SortByColumns(
                     With(
-                        {records: atividadesMembros
+                        {records: atividadesRespetivas
                             /*Ungroup(
                                 Table(
                                 {Atividades: Atividades},
@@ -1434,7 +1434,7 @@ Respetivas As screen:
                     DGC_Editor,
                     DGC_Validador
                 
-                ) And CountRows(atividadesMembros) <> 0
+                ) And CountRows(atividadesRespetivas) <> 0
             Width: =Parent.Width * 0.95
             X: =24
             Y: =Container1_4.Height + Container1_4.Y
@@ -1490,7 +1490,7 @@ Respetivas As screen:
         Container1_4 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(70, 70, 70, 1)
             Height: =34
-            Visible: =CountRows(atividadesMembros) <> 0
+            Visible: =CountRows(atividadesRespetivas) <> 0
             Width: =Parent.Width * 0.95
             X: =24
             Y: =15
@@ -1690,27 +1690,20 @@ Respetivas As screen:
             OnSelect: |-
                 =UpdateContext(
                     {
-                        localShowPrazo: !localShowPrazo,
-                        localShowData: false,
-                        localShowLeg: false,
-                        localShowEliminacao: false,
-                        localShowRelacao: false,
-                        localShowNewForm: false,
-                        localShowEditForm: false,
-                        _Associated: false,
-                        _AssociatedR: false
+                        localShowPrazo: !localShowPrazo
+                
                     }
                 );
-                /*ClearCollect(
-                    atividadesMembros,
+                ClearCollect(
+                    atividadesRespetivas,
                     FirstN(
                         Filter(
                             Atividades,
-                            ItemID = _Membro
+                            (ItemID = _selectedRespetivas Or ItemID = _selectedRespetivasF Or ItemID = EmpresasRespetivas1_1.Selected.ID) And 'Lista da atividade' = 'lista da atividade'.'Empresas Respetivas'
                         ),
                         20
                     )
-                )*/
+                )
             Width: ='Info Circle_11'.Width
             X: =Parent.Width - (30 + 'Info Circle_11'.Width)
             Y: =5

@@ -1027,7 +1027,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/13/2023 11:20:24",
+  "HeaderLastSavedDateTimeUTC": "06/13/2023 11:33:19",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1080,6 +1080,7 @@
     "Atividades\\uipp_tipodealteracao": 8,
     "atividadesFami": 278,
     "atividadesMembros": 279,
+    "atividadesRespetivas": 303,
     "Clientes": 260,
     "Clientes Potenciais": 259,
     "Clientes Potenciais\\adx_contact_adx_confirmremovepassword": 11,
