@@ -1562,6 +1562,18 @@ Respetivas As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
                 =UpdateContext({localFormRespetivasEdit: !localFormRespetivasEdit})
+                /*If(
+                    ColabFormMode <> FormMode.View,
+                    If(
+                        SubmitForm(FormParticipadas),
+                        Back();
+                        Notify("Registo criado com sucesso!", NotificationType.Success),
+                        Notify("Por favor, tente novamente ou contacte o administrador da solução!", NotificationType.Error)
+                    ),
+                    UpdateContext({
+                        ColabFormMode: FormMode.Edit
+                    })
+                ) */
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
