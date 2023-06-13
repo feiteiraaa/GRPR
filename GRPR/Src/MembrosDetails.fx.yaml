@@ -3011,11 +3011,10 @@ MembrosDetails As screen:
                     Color: =RGBA(77, 77, 77, 1)
                     Height: =53
                     OnSelect: =Select(Parent)
-                    PaddingLeft: =20
-                    PaddingRight: =0
+                    PaddingLeft: =15
                     Size: =12
                     Text: |-
-                        =Text(ThisItem.'Criado Em', "dd-mm-yyyy hh:tt")
+                        =Text(ThisItem.'Criado Em', "dd-mm-yyyy hh:mm AM/PM")
                     Width: =Label6_6.Width
                     X: =Label6_6.X
                     ZIndex: =2
@@ -3143,9 +3142,12 @@ MembrosDetails As screen:
                     );
                     ClearCollect(
                         atividadesMembros,
-                        Filter(
-                            Atividades,
-                            ItemID = _Membro
+                        FirstN(
+                            Filter(
+                                Atividades,
+                                ItemID = _Membro
+                            ),
+                            20
                         )
                     )
                 Width: ='Info Circle_9'.Width
