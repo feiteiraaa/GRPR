@@ -2043,8 +2043,155 @@ MembrosFamiDetails As screen:
             Height: =340
             Visible: =localShowPrazo
             Width: =Parent.Width
-            Y: =240
+            Y: ='Atividades Info_1'.Y + 'Atividades Info_1'.Height
             ZIndex: =9
+
+            GalleryAtividadesMembros_1 As gallery.variableTemplateHeightGallery:
+                BorderColor: =RGBA(128, 128, 128, 1)
+                BorderThickness: =0.5
+                DelayItemLoading: =true
+                Fill: =RGBA(219, 219, 219, 1)
+                Height: |-
+                    =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
+                    If(
+                        CountRows(atividadesFami) * Label3_9.Height < 'Atividades Content'.Height - (Container1_3.Height + Container1_3.Y),
+                        CountRows(atividadesFami) * Label3_9.Height,
+                        'Atividades Content'.Height - (Container1_3.Height + Container1_3.Y)
+                    )
+                Items: |
+                    =With(
+                            {
+                                records: atividadesFami
+                                /*Ungroup(
+                                    Table(
+                                    {Atividades: Atividades},
+                                    {Atividades: Listagens_1}
+                            ),
+                            "Atividades"
+                            )*/
+                            },
+                            ForAll(
+                                Sequence(CountRows(records)),
+                                Patch(
+                                    Last(
+                                        FirstN(records,Value)
+                                    ),
+                                    {rowNumber: Value}
+                                )
+                            )
+                        )
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplatePadding: =0
+                TemplateSize: =55
+                Visible: |-
+                    =Or(
+                        godMode,
+                        DRI,
+                        DGC_Editor,
+                        DGC_Validador
+                    
+                    ) And CountRows(atividadesFami) <> 0
+                Width: =Parent.Width * 0.95
+                X: =24
+                Y: =Container1_3.Height + Container1_3.Y
+                ZIndex: =1
+
+                Rectangle1_3 As rectangle:
+                    Fill: |-
+                        =If(
+                            Mod(ThisItem.rowNumber, 2) = 0,
+                            RGBA(219, 219, 219, 1),
+                            Color.White
+                        )
+                    Height: =50
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.Width
+                    Y: =1
+                    ZIndex: =1
+
+                Label5_2 As label:
+                    Color: =RGBA(77, 77, 77, 1)
+                    Height: =53
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =15
+                    Size: =12
+                    Text: |-
+                        =Text(ThisItem.'Criado Em', "dd-mm-yyyy hh:mm AM/PM")
+                    Width: =Label6_9.Width
+                    X: =Label6_9.X
+                    ZIndex: =2
+
+                Label3_8 As label:
+                    Color: =RGBA(77, 77, 77, 1)
+                    Height: =53
+                    OnSelect: =Select(Parent)
+                    PaddingLeft: =10
+                    PaddingRight: =0
+                    Size: =12
+                    Text: =ThisItem.uipp_titulo
+                    Width: =Label6_10.Width
+                    X: =Label6_10.X
+                    ZIndex: =3
+
+                Label3_9 As label:
+                    Color: =RGBA(77, 77, 77, 1)
+                    Height: =53
+                    OnSelect: =Select(Parent)
+                    Size: =12
+                    Text: =ThisItem.'Criado Por'.'Nome Completo'
+                    Width: =Label6_11.Width
+                    X: =Label6_11.X
+                    ZIndex: =4
+
+            Container1_3 As groupContainer.manualLayoutContainer:
+                Fill: =RGBA(70, 70, 70, 1)
+                Height: =34
+                Visible: =CountRows(atividadesFami) <> 0
+                Width: =Parent.Width * 0.95
+                X: =24
+                Y: =15
+                ZIndex: =2
+
+                Label6_9 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =34
+                    Text: ="Data"
+                    Width: =180
+                    X: =4
+                    ZIndex: =1
+
+                Label6_10 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =34
+                    Text: ="Atividade"
+                    Width: =500
+                    X: =Label6_9.Width+5
+                    ZIndex: =2
+
+                Label6_11 As label:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =34
+                    Text: ="Autor"
+                    Width: =Container1_3.Width-(Label6_10.Width+Label6_9.Width) -10
+                    X: =Label6_10.Width+Label6_9.Width+10
+                    ZIndex: =3
+
+            Label17 As label:
+                Align: =Align.Center
+                Height: =Container1_3.Height
+                Size: =11
+                Text: |-
+                    ="De momento, não existe atividade associada ao familiar " & LookUp(
+                        Familiares,
+                        ID = _Familiar
+                    ).Nome & "."
+                Visible: =CountRows(atividadesFami) = 0
+                Width: =Container1_3.Width
+                X: =Container1_3.X
+                Y: =Container1_3.Y
+                ZIndex: =3
 
         "'Atividades Info_1' As groupContainer.manualLayoutContainer":
             Height: =50
@@ -2113,6 +2260,16 @@ MembrosFamiDetails As screen:
                             _Associated: false,
                             _AssociatedR: false
                         }
+                    );
+                    ClearCollect(
+                        atividadesFami,
+                        FirstN(
+                            Filter(
+                                Atividades,
+                                ItemID = _Familiar
+                            ),
+                            20
+                        )
                     )
                 Width: ='Info Circle_14'.Width
                 X: =Parent.Width - (30 + 'Info Circle_14'.Width)
