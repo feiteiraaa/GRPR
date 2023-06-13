@@ -43,6 +43,7 @@
     "BackBtn_7": 489,
     "background": 6,
     "BackgroundTopSection": 43,
+    "backrespetivas": 995,
     "Bloqueado_DataCard1_1": 573,
     "Bloquear": 481,
     "BloquearMembro": 993,
@@ -380,6 +381,7 @@
     "EditMembrosFamiResp": 454,
     "EditMembrosPart": 888,
     "EditMembrosResp": 937,
+    "editrespetivas": 263,
     "elim_btn": 615,
     "elim_btn_1": 786,
     "elim_btn_10": 416,
@@ -408,6 +410,7 @@
     "EliminarMembrosFamiResp": 455,
     "EliminarMembrosPart": 885,
     "EliminarMembrosResp": 936,
+    "elimirespetivas": 262,
     "empresas do grupo": 853,
     "Empresas Grupo": 838,
     "Empresas Grupo Content": 843,
@@ -529,8 +532,6 @@
     "GalleryTopEdge": 16,
     "Grau de parentesco_Column1": 712,
     "Grau de parentesco_DataCard1": 706,
-    "Group1": 262,
-    "Group2": 263,
     "Group7": 525,
     "Grupo_DataCard1_1": 553,
     "Grupo_DataCard2": 282,
@@ -1005,7 +1006,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/13/2023 15:31:38",
+  "HeaderLastSavedDateTimeUTC": "06/13/2023 15:45:34",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1379,6 +1380,10 @@
       "BackBtn_7": 0,
       "elim_btn_16": 1
     },
+    "backrespetivas": {
+      "Button1_6": 0,
+      "Icon2_6": 1
+    },
     "Bloquear": {
       "DynamicBtn_36": 0,
       "elim_btn_12": 1
@@ -1492,6 +1497,10 @@
       "DynamicBtn_18": 0,
       "edit_btn_4": 1
     },
+    "editrespetivas": {
+      "Button2_27": 1,
+      "DynamicBtn_25": 0
+    },
     "elim_components": {
       "cancelar_btn": 0,
       "confirm_btn": 1,
@@ -1542,6 +1551,10 @@
       "DynamicBtn_17": 0,
       "elim_btn_3": 1
     },
+    "elimirespetivas": {
+      "Button2_29": 1,
+      "DynamicBtn_26": 0
+    },
     "FimPeriodo": {
       "Checkbox1_1": 2,
       "Label3": 0,
@@ -1562,14 +1575,6 @@
       "Label8_1": 1,
       "Label8_2": 2,
       "Label8_3": 3
-    },
-    "Group1": {
-      "Button2_29": 1,
-      "DynamicBtn_26": 0
-    },
-    "Group2": {
-      "Button2_27": 1,
-      "DynamicBtn_25": 0
     },
     "Group7": {
       "BtnExportar": 1,
@@ -1710,6 +1715,7 @@
     "BackBtn_7": {},
     "background": {},
     "BackgroundTopSection": {},
+    "backrespetivas": {},
     "Bloqueado_DataCard1_1": {},
     "Bloquear": {},
     "BloquearMembro": {},
@@ -2047,6 +2053,7 @@
     "EditMembrosFamiResp": {},
     "EditMembrosPart": {},
     "EditMembrosResp": {},
+    "editrespetivas": {},
     "elim_btn": {},
     "elim_btn_1": {},
     "elim_btn_10": {},
@@ -2075,6 +2082,7 @@
     "EliminarMembrosFamiResp": {},
     "EliminarMembrosPart": {},
     "EliminarMembrosResp": {},
+    "elimirespetivas": {},
     "empresas do grupo": {},
     "Empresas Grupo": {},
     "Empresas Grupo Content": {},
@@ -2196,8 +2204,6 @@
     "GalleryTopEdge": {},
     "Grau de parentesco_Column1": {},
     "Grau de parentesco_DataCard1": {},
-    "Group1": {},
-    "Group2": {},
     "Group7": {},
     "Grupo_DataCard1_1": {},
     "Grupo_DataCard2": {},
@@ -2707,6 +2713,7 @@
     "BackBtn_7": 981,
     "background": 10,
     "BackgroundTopSection": 43,
+    "backrespetivas": 0,
     "Bloqueado_DataCard1_1": 97,
     "Bloquear": 560,
     "BloquearMembro": 343,
@@ -3044,6 +3051,7 @@
     "EditMembrosFamiResp": 649,
     "EditMembrosPart": 419,
     "EditMembrosResp": 466,
+    "editrespetivas": 858,
     "elim_btn": 171,
     "elim_btn_1": 333,
     "elim_btn_10": 641,
@@ -3072,6 +3080,7 @@
     "EliminarMembrosFamiResp": 650,
     "EliminarMembrosPart": 416,
     "EliminarMembrosResp": 465,
+    "elimirespetivas": 856,
     "empresas do grupo": 414,
     "Empresas Grupo": 347,
     "Empresas Grupo Content": 348,
@@ -3193,8 +3202,6 @@
     "GalleryTopEdge": 19,
     "Grau de parentesco_Column1": 267,
     "Grau de parentesco_DataCard1": 262,
-    "Group1": 856,
-    "Group2": 858,
     "Group7": 64,
     "Grupo_DataCard1_1": 93,
     "Grupo_DataCard2": 934,

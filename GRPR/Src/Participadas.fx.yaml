@@ -207,7 +207,9 @@ Participadas As screen:
                 )
             Order: =5
             Text: =ThisItem.'Legislacao aplicada'.'Tipo de enquadramento'
-            Visible: =DRI
+            Visible: |-
+                =//DRI
+                true
             Width: =191
             X: =0
             Y: =0
