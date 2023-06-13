@@ -11953,46 +11953,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "SearchAtividade.Form1.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "SearchAtividade.Form1.X",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 16,
-                  "snippet": {
-                    "text": ".x"
-                  }
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "SearchAtividade",
-                "type": "SearchAtividade.Form1"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "x"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "LeftSectionComponent.MainContainerLeftSection.background.AccessibleLabel"
                 }
               ],

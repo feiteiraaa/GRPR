@@ -133,7 +133,7 @@ SearchAtividade As screen:
         ZIndex: =15
 
     Form1 As form:
-        X: =AtividadeTable_1.x
+        X: =AtividadeTable_1.X
         Y: =40
         ZIndex: =18
 
