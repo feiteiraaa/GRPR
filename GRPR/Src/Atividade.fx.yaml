@@ -23,9 +23,9 @@ Atividade As screen:
                         If(!IsBlank(InputPesquisar.Text), InputPesquisar.Text in ThisRecord.Titulo, true)
                         And
                         If(!IsBlank(DatePicker2.SelectedDate),
-                DatePicker1.SelectedDate >= ThisRecord.Data
+                ThisRecord.Data >= DatePicker1.SelectedDate 
                 Or 
-                DatePicker2.SelectedDate <= ThisRecord.Data, true))
+                ThisRecord.Data<=DatePicker2.SelectedDate  , true))
         SelectedFill: =cores.amareloMontepio
         Width: =980
         X: =357
