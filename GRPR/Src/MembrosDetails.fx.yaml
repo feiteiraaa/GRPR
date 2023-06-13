@@ -2972,10 +2972,10 @@ MembrosDetails As screen:
                         CountRows(atividadesMembros) * Label3_7.Height,
                         'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
                     )
-                Items: |
-                    =With(
-                            {
-                                records: atividadesMembros
+                Items: |-
+                    =SortByColumns(
+                        With(
+                            {records: atividadesMembros
                                 /*Ungroup(
                                     Table(
                                     {Atividades: Atividades},
@@ -2983,17 +2983,23 @@ MembrosDetails As screen:
                             ),
                             "Atividades"
                             )*/
-                            },
+                    },
                             ForAll(
                                 Sequence(CountRows(records)),
                                 Patch(
                                     Last(
-                                        FirstN(records,Value)
+                                        FirstN(
+                                            records,
+                                            Value
+                                        )
                                     ),
                                     {rowNumber: Value}
                                 )
                             )
-                        )
+                        ),
+                        "createdon",
+                        SortOrder.Descending
+                    )
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 ShowScrollbar: =false
