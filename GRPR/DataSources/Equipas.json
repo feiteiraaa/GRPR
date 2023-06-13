@@ -6,7 +6,6 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "team",
-    "MaxGetRowsCount": 500,
     "Name": "Equipas",
     "NativeCDSDataSourceInfoNameMapping": {
       "_regardingobjectid_value": "Id de Objeto Relativo A",
