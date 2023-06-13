@@ -46,6 +46,8 @@ Atividade As screen:
             FieldVariantName: ="complexTypeColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =UpdateContext({ShowDetails: true})
             Order: =8
             Text: =ThisItem.'Criado Por'.'Nome Completo'
             Width: =100
@@ -76,6 +78,8 @@ Atividade As screen:
             FieldVariantName: ="dateTimeColumn"
             Height: =Parent.Height
             LayoutHeight: =Parent.Height
+            OnSelect: |-
+                =UpdateContext({ShowDetails: true})
             Order: =7
             Text: |-
                 =Text(DateTimeValue(ThisItem.Data), "dd/mm/yyyy hh:mm")
@@ -86,123 +90,6 @@ Atividade As screen:
 
     LeftSectionComponent_11 As LeftSectionComponent:
         ZIndex: =15
-
-    PopUp As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =19
-
-        Rectangle2 As rectangle:
-            Fill: =RGBA(77, 77, 77, 0.27)
-            Height: =768
-            Visible: =ShowDetails
-            Width: =1366
-            ZIndex: =15
-
-        RectDetails As rectangle:
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =384
-            Visible: =ShowDetails
-            Width: =1014
-            X: =176
-            Y: =191
-            ZIndex: =16
-
-        DataTable3 As dataTable.datatable:
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            HeadingFill: =cores.cinzento
-            Height: =227
-            Items: =AtividadeTable.Selected
-            Size: =15
-            Visible: =ShowDetails
-            Width: =RectDetails.Width
-            X: =RectDetails.X
-            Y: =RectDetails.Y
-            ZIndex: =17
-
-            Atividade_Column2 As dataTableColumn.textualColumn:
-                DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Atividade"
-                FieldName: ="uipp_atividadeid"
-                FieldVariantName: ="textualColumn"
-                Height: =Parent.Height
-                LayoutHeight: =Parent.Height
-                Order: =1
-                Text: =ThisItem.Titulo
-                Width: =100
-                X: =0
-                Y: =0
-                ZIndex: =8
-
-            Data_Column2 As dataTableColumn.dateTimeColumn:
-                DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Data"
-                FieldName: ="uipp_data"
-                FieldVariantName: ="dateTimeColumn"
-                Height: =Parent.Height
-                LayoutHeight: =Parent.Height
-                Order: =2
-                Text: |-
-                    =Text(DateTimeValue(ThisItem.Data), "dd/mm/yyyy hh:mm")
-                Width: =100
-                X: =0
-                Y: =0
-                ZIndex: =9
-
-            "'Criado Por_Column2' As dataTableColumn.complexTypeColumn":
-                DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Criado Por"
-                FieldName: ="createdby"
-                FieldVariantName: ="complexTypeColumn"
-                Height: =Parent.Height
-                LayoutHeight: =Parent.Height
-                Order: =3
-                Text: =ThisItem.'Criado Por'.'Nome Completo'
-                Width: =100
-                X: =0
-                Y: =0
-                ZIndex: =10
-
-            "'Lista da atividade_Column1' As dataTableColumn.complexOptionSetColumn":
-                DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Lista da atividade"
-                FieldName: ="uipp_listadaatividade"
-                FieldVariantName: ="complexOptionSetColumn"
-                Height: =Parent.Height
-                LayoutHeight: =Parent.Height
-                Order: =4
-                Text: =ThisItem.'Lista da atividade'
-                Width: =100
-                X: =0
-                Y: =0
-                ZIndex: =11
-
-            "'Tipo de alteracao_Column1' As dataTableColumn.complexOptionSetColumn":
-                DisplayMode: =DisplayMode.Edit
-                FieldDisplayName: ="Tipo de alteracao"
-                FieldName: ="uipp_tipodealteracao"
-                FieldVariantName: ="complexOptionSetColumn"
-                Height: =Parent.Height
-                LayoutHeight: =Parent.Height
-                Order: =5
-                Text: =ThisItem.'Tipo de alteracao'
-                Width: =100
-                X: =0
-                Y: =0
-                ZIndex: =12
-
-        Button4 As button:
-            OnSelect: |-
-                =UpdateContext({ShowDetails:false})
-            Text: ="Fechar"
-            Visible: =ShowDetails
-            X: =561
-            Y: =510
-            ZIndex: =18
 
     Group7 As group:
         Height: =5
@@ -347,4 +234,187 @@ Atividade As screen:
             X: =1088
             Y: =130
             ZIndex: =14
+
+    PopUp As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =31
+
+        Rectangle2 As rectangle:
+            Fill: =RGBA(77, 77, 77, 0.27)
+            Height: =768
+            Visible: =ShowDetails
+            Width: =1366
+            ZIndex: =15
+
+        RectDetails As rectangle:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =384
+            Visible: =ShowDetails
+            Width: =1014
+            X: =176
+            Y: =191
+            ZIndex: =16
+
+        Button4 As button:
+            Fill: =cores.amareloMontepio
+            OnSelect: |-
+                =UpdateContext({ShowDetails:false})
+            Text: ="Fechar"
+            Visible: =ShowDetails
+            X: =561
+            Y: =510
+            ZIndex: =18
+
+        Label18 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Text: =AtividadeTable.Selected.Titulo
+            Visible: =ShowDetails
+            Width: =843
+            X: =342
+            Y: =200
+            ZIndex: =19
+
+        Label19 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =cores.amareloMontepio
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Atividade: "
+            Visible: =ShowDetails
+            Width: =154
+            X: =188
+            Y: =200
+            ZIndex: =20
+
+        Label18_1 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Size: =12
+            Text: =AtividadeTable.Selected.'Criado Por'.'Nome Completo'
+            Visible: =ShowDetails
+            Width: =349
+            X: =342
+            Y: =252
+            ZIndex: =21
+
+        Label19_1 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =cores.amareloMontepio
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: |-
+                ="Criado Por: "
+            Visible: =ShowDetails
+            Width: =154
+            X: =188
+            Y: =252
+            ZIndex: =22
+
+        Label18_2 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Size: =12
+            Text: |-
+                =Text(DateTimeValue(AtividadeTable.Selected.Data), "dd/mm/yyyy hh:mm")
+            Visible: =ShowDetails
+            Width: =349
+            X: =836
+            Y: =252
+            ZIndex: =23
+
+        Label19_2 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =cores.amareloMontepio
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: |-
+                ="Data: "
+            Visible: =ShowDetails
+            Width: =154
+            X: =682
+            Y: =252
+            ZIndex: =24
+
+        Label18_3 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Size: =12
+            Text: =AtividadeTable.Selected.'Tipo de alteracao'
+            Visible: =ShowDetails
+            Width: =349
+            X: =342
+            Y: =299
+            ZIndex: =25
+
+        Label19_3 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =cores.amareloMontepio
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: |-
+                ="Tipo de alteração: "
+            Visible: =ShowDetails
+            Width: =154
+            X: =188
+            Y: =299
+            ZIndex: =26
+
+        Label18_4 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Size: =12
+            Text: =AtividadeTable.Selected.'Lista da atividade'
+            Visible: =ShowDetails
+            Width: =349
+            X: =836
+            Y: =299
+            ZIndex: =27
+
+        Label19_4 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =cores.amareloMontepio
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: |-
+                ="Lista da Atividade: "
+            Visible: =ShowDetails
+            Width: =154
+            X: =682
+            Y: =299
+            ZIndex: =28
+
+        Label18_5 As label:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            Height: =144
+            Size: =12
+            Text: =AtividadeTable.Selected.Item
+            Visible: =ShowDetails
+            Width: =793
+            X: =357
+            Y: =355
+            ZIndex: =29
+
+        Label19_5 As label:
+            Align: =Align.Center
+            BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
+            Fill: =cores.amareloMontepio
+            FontWeight: =FontWeight.Semibold
+            Size: =12
+            Text: |-
+                ="Alterações:"
+            Visible: =ShowDetails
+            Width: =154
+            X: =188
+            Y: =355
+            ZIndex: =30
 

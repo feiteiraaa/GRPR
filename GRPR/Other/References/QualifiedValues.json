@@ -139,6 +139,17 @@
       }
     },
     {
+      "Kind": "default.cds_team_forms",
+      "Namespace": "Equipas (Forms)",
+      "Values": {
+        "Equipa": "7ba7fac1-1418-4335-935f-f7f8dfd73fcc",
+        "Equipa - Admin": "2d30acf4-f434-495c-83c1-cc7b9dbab043",
+        "Formulário de equipa – Empresa": "4aabf594-b30a-490d-bf97-89c67c6777fe",
+        "Informações": "f5cfab6a-d4c2-4519-b68f-6e7485432e29",
+        "Novo Formulário": "a9012f85-915a-4349-b3b4-62ff2040e87c"
+      }
+    },
+    {
       "Kind": "default.cds_uipp_familiares_forms",
       "Namespace": "Familiares (Forms)",
       "Values": {
