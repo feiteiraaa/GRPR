@@ -478,6 +478,12 @@ MembrosDetails As screen:
                         DefaultDate: =Parent.Default
                         DisplayMode: =Parent.DisplayMode
                         EndYear: =Year(Today())+100
+                        Format: |-
+                            =Text(
+                                Parent.Default,
+                                "dd-mm-yyyy",
+                                "pt-PT"
+                            )
                         IsEditable: =true
                         PaddingBottom: =0
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
@@ -625,6 +631,12 @@ MembrosDetails As screen:
                         DefaultDate: =Parent.Default
                         DisplayMode: =Parent.DisplayMode
                         EndYear: =Year(Today())+100
+                        Format: |-
+                            =Text(
+                                Parent.Default,
+                                "dd-mm-yyyy",
+                                "pt-PT"
+                            )
                         IsEditable: =true
                         PaddingBottom: =0
                         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
