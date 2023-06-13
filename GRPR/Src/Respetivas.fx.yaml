@@ -1555,18 +1555,13 @@ Respetivas As screen:
         ZIndex: =32
 
         DynamicBtn_20 As DynamicBtn:
-            BtnText: =If(_AssociatedR Or localShowEditForm,"Cancelar","Editar")
-            ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Cancel,Icon.Edit)
+            BtnText: =If(localFormRespetivasEdit Or localFormRespetivasNew,"Cancelar","Editar")
+            ButtonIcon: =If(localFormRespetivasEdit Or localFormRespetivasNew,Icon.Cancel,Icon.Edit)
             Height: =40
-            Visible: |-
-                =If(
-                    CountRows(ligacaoRespetivas) = 0,
-                    false,
-                    true
-                ) And Not("(Eliminado)" in LabelMembroName.Text)
+            Visible: =EmpresasRespetivas.Visible
             Width: =160
-            X: =Parent.X+600
-            Y: =7
+            X: =1150
+            Y: =131
             ZIndex: =30
 
         edit_btn_9 As button:
@@ -1580,33 +1575,12 @@ Respetivas As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =If(
-                    _AssociatedR Or localShowEditForm,
-                    UpdateContext(
-                        {
-                            _AssociatedR: false,
-                            localShowEliminacao: false,
-                            localShowEditForm:false,
-                            _AssociarR:false
-                        }
-                    ),
-                    UpdateContext(
-                        {
-                            localShowEditForm: true
-                            
-                        }
-                    )
-                )
+                =UpdateContext({localFormRespetivasEdit: !localFormRespetivasEdit})
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
-            Visible: |-
-                =If(
-                    CountRows(ligacaoRespetivas) = 0,
-                    false,
-                    true
-                ) And Not("(Eliminado)" in LabelMembroName.Text)
+            Visible: =EmpresasRespetivas.Visible
             X: =DynamicBtn_20.X
-            Y: =DynamicBtn_20.Y
+            Y: =131
             ZIndex: =31
 

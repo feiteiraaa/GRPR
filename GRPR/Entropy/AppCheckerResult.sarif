@@ -12385,46 +12385,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Respetivas.DynamicBtn_20.X"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Respetivas.DynamicBtn_20.X",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 2,
-                  "charOffset": 6,
-                  "snippet": {
-                    "text": ".X"
-                  }
-                }
-              },
-              "properties": {
-                "member": "X",
-                "module": "Respetivas",
-                "type": "Respetivas.DynamicBtn_20"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "X"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Inicio.Label8_3.Text"
                 }
               ],
@@ -20865,36 +20825,6 @@
               },
               "properties": {
                 "member": "localShowArq",
-                "module": "Respetivas",
-                "type": "Respetivas"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Respetivas.localShowEliminacao"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Respetivas.localShowEliminacao",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "localShowEliminacao",
                 "module": "Respetivas",
                 "type": "Respetivas"
               }
