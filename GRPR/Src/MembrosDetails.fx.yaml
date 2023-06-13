@@ -3051,25 +3051,25 @@ MembrosDetails As screen:
                 Label6_6 As label:
                     Color: =RGBA(255, 255, 255, 1)
                     Height: =34
-                    Text: ="Nome / Designação"
-                    Width: =338
+                    Text: ="Data"
+                    Width: =180
                     X: =4
                     ZIndex: =1
 
                 Label6_7 As label:
                     Color: =RGBA(255, 255, 255, 1)
                     Height: =34
-                    Text: ="NIF / NIPC"
-                    Width: =240
-                    X: =342
+                    Text: ="Atividade"
+                    Width: =500
+                    X: =Label6_6.Width+5
                     ZIndex: =2
 
                 Label6_8 As label:
                     Color: =RGBA(255, 255, 255, 1)
                     Height: =34
-                    Text: ="% Participação / Relação Familiar"
-                    Width: =346
-                    X: =583
+                    Text: ="Autor"
+                    Width: =Container1_2.Width-(Label6_7.Width+Label6_6.Width) -10
+                    X: =Label6_7.Width+Label6_6.Width+10
                     ZIndex: =3
 
         "'Atividades Info' As groupContainer.manualLayoutContainer":
