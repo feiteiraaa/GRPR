@@ -5,194 +5,6 @@ Respetivas As screen:
         =UpdateContext({localFormRespetivasNew:false, localShowPrazo: false});
         ClearCollect(CollecRespectivas, Empresas);
 
-    LeftSectionComponent_3 As LeftSectionComponent:
-
-    Label1_11 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =48
-        Size: =15
-        Text: ="Empresas Respectivas"
-        Width: =529
-        X: =365
-        Y: =26
-        ZIndex: =7
-
-    ActionBar_3 As group:
-        Height: =5
-        Width: =5
-        X: =20
-        Y: =20
-        ZIndex: =7
-
-        TextInput2_3 As text:
-            BorderColor: =ColorFade(cores.cinzento, 80%)
-            BorderThickness: =1
-            Clear: =true
-            Color: |-
-                =//RGBA(0, 0, 0, 1)
-                cores.cinzento
-            Default: =
-            Fill: =ColorFade(cores.cinzento, 90%)
-            HintText: ="Pesquisar"
-            HoverBorderColor: =RGBA(128, 128, 128, 1)
-            HoverFill: =
-            PaddingLeft: =40
-            Tooltip: =
-            Visible: =!localFormRespetivas And !localFormRespetivasNew
-            Width: =366
-            X: =385
-            Y: =156
-            ZIndex: =2
-
-        "Icon1_5 As icon.'3DPrinting'":
-            Color: |-
-                =///RGBA(0, 18, 107, 1)
-                cores.amareloMontepio
-            Height: =25
-            Icon: =Icon.Search
-            OnSelect: =//Select(Parent)
-            Visible: =!localFormRespetivas And !localFormRespetivasNew
-            Width: =25
-            X: =395
-            Y: =164
-            ZIndex: =3
-
-        Checkbox1_4 As checkbox:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            CheckboxBackgroundFill: =ColorFade(cores.cinzento, 90%)
-            CheckboxBorderColor: =ColorFade(cores.cinzento, 80%)
-            CheckmarkFill: =cores.cinzento
-            FocusedBorderThickness: =0
-            Height: =40
-            HoverColor: =//RGBA(0, 18, 107, 1)
-            Text: ="Listar eliminados"
-            Visible: =!localFormRespetivas And !localFormRespetivasNew
-            Width: =215
-            X: =790
-            Y: =156
-            ZIndex: =4
-
-        ParticularesAdd_11 As DynamicBtn:
-            BtnOnSelect: =
-            BtnText: ="Novo"
-            Visible: =!localFormRespetivas And !localFormRespetivasNew
-            X: =1166
-            Y: =156
-            ZIndex: =5
-
-        Button2_28 As button:
-            BorderColor: =RGBA(0,0,0, 0)
-            Color: =RGBA(0,0,0, 0)
-            DisabledBorderColor: =RGBA(0,0,0, 0)
-            DisabledColor: =RGBA(0,0,0, 0)
-            DisabledFill: =RGBA(0,0,0, 0)
-            Fill: =RGBA(0,0,0, 0)
-            Height: =39
-            HoverColor: =RGBA(0,0,0, 0)
-            HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |-
-                =//Navigate(ParticipadasDetails, ScreenTransition.None, {ColabFormMode: FormMode.New})
-                 UpdateContext(
-                            {
-                                localFormRespetivasNew:true
-                            }
-                        )
-            PressedColor: =RGBA(0,0,0, 0)
-            PressedFill: =RGBA(0,0,0, 0)
-            Text: =""
-            Visible: =!localFormRespetivas And !localFormRespetivasNew
-            X: =1165
-            Y: =159
-            ZIndex: =6
-
-    Icon7_8 As icon.ChevronDown:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =20
-        Icon: =Icon.ChevronDown
-        OnSelect: |-
-            =/*Set(
-                varSortCol,
-                "uipp_designacao"
-            );
-            Set(
-                varSortDir,
-                If(
-                    varSortDir = SortOrder.Ascending,
-                    SortOrder.Descending,
-                    SortOrder.Ascending
-                )
-            )*/
-        Width: =20
-        X: =519
-        Y: =228
-        ZIndex: =8
-
-    Icon7_9 As icon.ChevronDown:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =20
-        Icon: =Icon.ChevronDown
-        OnSelect: |-
-            =/*Set(
-                varSortCol,
-                "uipp_numerodocumento"
-            );
-            Set(
-                varSortDir,
-                If(
-                    varSortDir = SortOrder.Ascending,
-                    SortOrder.Descending,
-                    SortOrder.Ascending
-                )
-            )*/
-        Width: =20
-        X: =696
-        Y: =228
-        ZIndex: =9
-
-    Icon7_10 As icon.ChevronDown:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =20
-        Icon: =Icon.ChevronDown
-        OnSelect: |-
-            =/*Set(
-                varSortCol,
-                "uipp_participacaoefetiva"
-            );
-            Set(
-                varSortDir,
-                If(
-                    varSortDir = SortOrder.Ascending,
-                    SortOrder.Descending,
-                    SortOrder.Ascending
-                )
-            )*/
-        Width: =20
-        X: =935
-        Y: =228
-        ZIndex: =10
-
-    Icon7_11 As icon.ChevronDown:
-        Color: =RGBA(255, 255, 255, 1)
-        Height: =20
-        Icon: =Icon.ChevronDown
-        OnSelect: |-
-            =/*Set(
-                varSortCol,
-                "uipp_controlo"
-            );
-            Set(
-                varSortDir,
-                If(
-                    varSortDir = SortOrder.Ascending,
-                    SortOrder.Descending,
-                    SortOrder.Ascending
-                )
-            )*/
-        Width: =20
-        X: =1115
-        Y: =228
-        ZIndex: =11
-
     EmpresasRespetivas1_1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
         DisplayMode: =DisplayMode.Edit
@@ -221,7 +33,7 @@ Respetivas As screen:
         Width: =980
         X: =364
         Y: =216
-        ZIndex: =12
+        ZIndex: =1
 
         Designacao_Column3_1 As dataTableColumn.textualColumn:
             DisplayMode: =DisplayMode.Edit
@@ -374,6 +186,173 @@ Respetivas As screen:
             X: =0
             Y: =0
             ZIndex: =9
+
+    LeftSectionComponent_3 As LeftSectionComponent:
+        ZIndex: =2
+
+    ActionBar_3 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =7
+
+        TextInput2_3 As text:
+            BorderColor: =ColorFade(cores.cinzento, 80%)
+            BorderThickness: =1
+            Clear: =true
+            Color: |-
+                =//RGBA(0, 0, 0, 1)
+                cores.cinzento
+            Default: =
+            Fill: =ColorFade(cores.cinzento, 90%)
+            HintText: ="Pesquisar"
+            HoverBorderColor: =RGBA(128, 128, 128, 1)
+            HoverFill: =
+            PaddingLeft: =40
+            Tooltip: =
+            Visible: =!localFormRespetivas And !localFormRespetivasNew
+            Width: =366
+            X: =385
+            Y: =156
+            ZIndex: =3
+
+        "Icon1_5 As icon.'3DPrinting'":
+            Color: |-
+                =///RGBA(0, 18, 107, 1)
+                cores.amareloMontepio
+            Height: =25
+            Icon: =Icon.Search
+            OnSelect: =//Select(Parent)
+            Visible: =!localFormRespetivas And !localFormRespetivasNew
+            Width: =25
+            X: =395
+            Y: =164
+            ZIndex: =4
+
+        Checkbox1_4 As checkbox:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            CheckboxBackgroundFill: =ColorFade(cores.cinzento, 90%)
+            CheckboxBorderColor: =ColorFade(cores.cinzento, 80%)
+            CheckmarkFill: =cores.cinzento
+            FocusedBorderThickness: =0
+            Height: =40
+            HoverColor: =//RGBA(0, 18, 107, 1)
+            Text: ="Listar eliminados"
+            Visible: =!localFormRespetivas And !localFormRespetivasNew
+            Width: =215
+            X: =790
+            Y: =156
+            ZIndex: =5
+
+        ParticularesAdd_11 As DynamicBtn:
+            BtnOnSelect: =
+            BtnText: ="Novo"
+            Visible: =!localFormRespetivas And !localFormRespetivasNew
+            X: =1166
+            Y: =156
+            ZIndex: =6
+
+        Button2_28 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |-
+                =//Navigate(ParticipadasDetails, ScreenTransition.None, {ColabFormMode: FormMode.New})
+                 UpdateContext(
+                            {
+                                localFormRespetivasNew:true
+                            }
+                        )
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: =!localFormRespetivas And !localFormRespetivasNew
+            X: =1165
+            Y: =159
+            ZIndex: =7
+
+    Label1_11 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =15
+        Text: ="Empresas Respectivas"
+        Width: =529
+        X: =365
+        Y: =26
+        ZIndex: =8
+
+    Icon7_8 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =20
+        Icon: =Icon.ChevronDown
+        OnSelect: |-
+            =/*Set(
+                varSortCol,
+                "uipp_designacao"
+            );
+            Set(
+                varSortDir,
+                If(
+                    varSortDir = SortOrder.Ascending,
+                    SortOrder.Descending,
+                    SortOrder.Ascending
+                )
+            )*/
+        Width: =20
+        X: =Designacao_Column3_1.X+550
+        Y: =228
+        ZIndex: =9
+
+    Icon7_9 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =20
+        Icon: =Icon.ChevronDown
+        OnSelect: |-
+            =/*Set(
+                varSortCol,
+                "uipp_numerodocumento"
+            );
+            Set(
+                varSortDir,
+                If(
+                    varSortDir = SortOrder.Ascending,
+                    SortOrder.Descending,
+                    SortOrder.Ascending
+                )
+            )*/
+        Width: =20
+        X: =Icon7_8.X+'Tipo de documento_Column1_1'.X+20
+        Y: =228
+        ZIndex: =10
+
+    Icon7_10 As icon.ChevronDown:
+        Color: =RGBA(255, 255, 255, 1)
+        Height: =20
+        Icon: =Icon.ChevronDown
+        OnSelect: |-
+            =/*Set(
+                varSortCol,
+                "uipp_participacaoefetiva"
+            );
+            Set(
+                varSortDir,
+                If(
+                    varSortDir = SortOrder.Ascending,
+                    SortOrder.Descending,
+                    SortOrder.Ascending
+                )
+            )*/
+        Width: =20
+        X: = 'Numero Documento_Column1_1'.X + Icon7_8.X +23
+        Y: =228
+        ZIndex: =11
 
     EmpresasRespetivas As form:
         DataSource: =Empresas
@@ -982,7 +961,7 @@ Respetivas As screen:
         Width: =140
         X: =365
         Y: =74
-        ZIndex: =15
+        ZIndex: =14
 
     "Icon2_6 As icon.'3DPrinting'":
         Color: =RGBA(255, 191, 0, 1)
@@ -994,11 +973,11 @@ Respetivas As screen:
         Width: =30
         X: =375
         Y: =79
-        ZIndex: =16
+        ZIndex: =15
 
     ModalConfirmation_9 As ModalConfirmation:
         Visible: =localShowModal
-        ZIndex: =21
+        ZIndex: =20
 
     Group1 As group:
         Height: =5
@@ -1027,7 +1006,7 @@ Respetivas As screen:
             Width: =160
             X: =1001
             Y: =74
-            ZIndex: =19
+            ZIndex: =18
 
         Button2_29 As button:
             BorderColor: =RGBA(0,0,0, 0)
@@ -1058,7 +1037,7 @@ Respetivas As screen:
                 //EmpresasRespetivas.DisplayMode <> DisplayMode.View
             X: =1000
             Y: =73
-            ZIndex: =20
+            ZIndex: =19
 
     Group2 As group:
         Height: =5
@@ -1085,7 +1064,7 @@ Respetivas As screen:
                 (localFormRespetivas Or localFormRespetivasNew) And Not("(Eliminado)" in LabelMembroName_2.Text)
             X: =1174
             Y: =74
-            ZIndex: =17
+            ZIndex: =16
 
         Button2_27 As button:
             BorderColor: =RGBA(0,0,0, 0)
@@ -1173,7 +1152,7 @@ Respetivas As screen:
                 (localFormRespetivas Or localFormRespetivasNew) And Not("(Eliminado)" in LabelMembroName_2.Text)
             X: =DynamicBtn_25.X
             Y: =DynamicBtn_25.Y
-            ZIndex: =18
+            ZIndex: =17
 
     LabelMembroName_2 As label:
         AutoHeight: =true
@@ -1222,7 +1201,7 @@ Respetivas As screen:
         Width: =Parent.Width/2
         X: =365
         Y: =124
-        ZIndex: =26
+        ZIndex: =25
 
     elim_components_3 As group:
         Height: =5
@@ -1255,7 +1234,7 @@ Respetivas As screen:
             Width: =165
             X: =717
             Y: =440
-            ZIndex: =22
+            ZIndex: =21
 
         confirm_btn_3 As button:
             Align: =Align.Left
@@ -1317,7 +1296,7 @@ Respetivas As screen:
             Width: =165
             X: =486
             Y: =440
-            ZIndex: =23
+            ZIndex: =22
 
         Icon8_6 As icon.Check:
             Color: =cores.amareloMontepio
@@ -1366,7 +1345,7 @@ Respetivas As screen:
             Width: =30
             X: =496
             Y: =445
-            ZIndex: =24
+            ZIndex: =23
 
         Icon8_7 As icon.Check:
             Color: =cores.amareloMontepio
@@ -1380,7 +1359,7 @@ Respetivas As screen:
             Width: =30
             X: =726
             Y: =445
-            ZIndex: =25
+            ZIndex: =24
 
     "'Atividades Content_2' As groupContainer.manualLayoutContainer":
         Height: =170
@@ -1388,7 +1367,7 @@ Respetivas As screen:
         Width: ='Atividades Info_2'.Width
         X: ='Atividades Info_2'.X
         Y: ='Atividades Info_2'.Y + 'Atividades Info_2'.Height
-        ZIndex: =29
+        ZIndex: =28
 
         GalleryAtividadesMembros_2 As gallery.variableTemplateHeightGallery:
             BorderColor: =RGBA(128, 128, 128, 1)
@@ -1543,111 +1522,13 @@ Respetivas As screen:
             Y: =Container1_3.Y
             ZIndex: =3
 
-    BloquearRespetiva As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =29
-
-        DynamicBtn_38 As DynamicBtn:
-            BtnText: |-
-                =If(
-                    LookUp(
-                        Empresas,
-                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                    ).Bloqueado,
-                    "Desbloquear",
-                    "Bloquear"
-                )
-            BtnWidth: =180
-            ButtonIcon: |-
-                =If(
-                    LookUp(
-                        Empresas,
-                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                    ).Bloqueado,
-                    
-                    Icon.Unlock,
-                    Icon.Lock
-                )
-            Height: =40
-            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
-            Width: =180
-            X: =1150
-            Y: =74
-            ZIndex: =27
-
-        elim_btn_14 As button:
-            BorderColor: =RGBA(0,0,0, 0)
-            Color: =RGBA(0,0,0, 0)
-            DisabledBorderColor: =RGBA(0,0,0, 0)
-            DisabledColor: =RGBA(0,0,0, 0)
-            DisabledFill: =RGBA(0,0,0, 0)
-            Fill: =RGBA(0,0,0, 0)
-            Height: =39
-            HoverColor: =RGBA(0,0,0, 0)
-            HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |+
-                =If(
-                    LookUp(
-                        Empresas,
-                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                    ).Bloqueado,
-                    If(
-                        Patch(
-                            Empresas,
-                            LookUp(
-                                Empresas,
-                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                            ),
-                            {Bloqueado: false}
-                        ).Bloqueado = false,
-                        Notify(
-                            "Empresa Respetiva bloqueada com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente desbloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    ),
-                    If(
-                        Patch(
-                            Empresas,
-                            LookUp(
-                                Empresas,
-                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                            ),
-                            {Bloqueado: true}
-                        ).Bloqueado = true,
-                        Notify(
-                            "Empresa Respetiva bloqueada com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    )
-                );
-                
-            PressedColor: =RGBA(0,0,0, 0)
-            PressedFill: =RGBA(0,0,0, 0)
-            Text: =""
-            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
-            Width: =180
-            X: =DynamicBtn_38.X
-            Y: =DynamicBtn_38.Y
-            ZIndex: =28
-
     "'Atividades Info_2' As groupContainer.manualLayoutContainer":
         Height: =50
         Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New
         Width: =EmpresasRespetivas.Width
         X: =EmpresasRespetivas.X
         Y: =EmpresasRespetivas.Height+EmpresasRespetivas.Y+10
-        ZIndex: =30
+        ZIndex: =29
 
         "'Info Bottom_11' As icon.HorizontalLine":
             AutoDisableOnSelect: =false
@@ -1716,4 +1597,102 @@ Respetivas As screen:
             X: =Parent.Width - (30 + 'Info Circle_11'.Width)
             Y: =5
             ZIndex: =4
+
+    BloquearRespetiva As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DynamicBtn_38 As DynamicBtn:
+            BtnText: |-
+                =If(
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    "Desbloquear",
+                    "Bloquear"
+                )
+            BtnWidth: =180
+            ButtonIcon: |-
+                =If(
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    
+                    Icon.Unlock,
+                    Icon.Lock
+                )
+            Height: =40
+            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
+            Width: =180
+            X: =1150
+            Y: =74
+            ZIndex: =26
+
+        elim_btn_14 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |+
+                =If(
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    If(
+                        Patch(
+                            Empresas,
+                            LookUp(
+                                Empresas,
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                            ),
+                            {Bloqueado: false}
+                        ).Bloqueado = false,
+                        Notify(
+                            "Empresa Respetiva bloqueada com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente desbloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    ),
+                    If(
+                        Patch(
+                            Empresas,
+                            LookUp(
+                                Empresas,
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                            ),
+                            {Bloqueado: true}
+                        ).Bloqueado = true,
+                        Notify(
+                            "Empresa Respetiva bloqueada com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    )
+                );
+                
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
+            Width: =180
+            X: =DynamicBtn_38.X
+            Y: =DynamicBtn_38.Y
+            ZIndex: =27
 
