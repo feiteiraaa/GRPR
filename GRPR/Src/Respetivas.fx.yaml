@@ -1382,104 +1382,6 @@ Respetivas As screen:
             Y: =445
             ZIndex: =25
 
-    BloquearRespetiva As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =29
-
-        DynamicBtn_38 As DynamicBtn:
-            BtnText: |-
-                =If(
-                    LookUp(
-                        Empresas,
-                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                    ).Bloqueado,
-                    "Desbloquear",
-                    "Bloquear"
-                )
-            BtnWidth: =180
-            ButtonIcon: |-
-                =If(
-                    LookUp(
-                        Empresas,
-                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                    ).Bloqueado,
-                    
-                    Icon.Unlock,
-                    Icon.Lock
-                )
-            Height: =40
-            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
-            Width: =180
-            X: =1150
-            Y: =74
-            ZIndex: =27
-
-        elim_btn_14 As button:
-            BorderColor: =RGBA(0,0,0, 0)
-            Color: =RGBA(0,0,0, 0)
-            DisabledBorderColor: =RGBA(0,0,0, 0)
-            DisabledColor: =RGBA(0,0,0, 0)
-            DisabledFill: =RGBA(0,0,0, 0)
-            Fill: =RGBA(0,0,0, 0)
-            Height: =39
-            HoverColor: =RGBA(0,0,0, 0)
-            HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |+
-                =If(
-                    LookUp(
-                        Empresas,
-                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                    ).Bloqueado,
-                    If(
-                        Patch(
-                            Empresas,
-                            LookUp(
-                                Empresas,
-                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                            ),
-                            {Bloqueado: false}
-                        ).Bloqueado = false,
-                        Notify(
-                            "Empresa Respetiva bloqueada com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente desbloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    ),
-                    If(
-                        Patch(
-                            Empresas,
-                            LookUp(
-                                Empresas,
-                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
-                            ),
-                            {Bloqueado: true}
-                        ).Bloqueado = true,
-                        Notify(
-                            "Empresa Respetiva bloqueada com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    )
-                );
-                
-            PressedColor: =RGBA(0,0,0, 0)
-            PressedFill: =RGBA(0,0,0, 0)
-            Text: =""
-            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
-            Width: =180
-            X: =DynamicBtn_38.X
-            Y: =DynamicBtn_38.Y
-            ZIndex: =28
-
     "'Atividades Content_2' As groupContainer.manualLayoutContainer":
         Height: =170
         Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New And localShowPrazo
@@ -1640,6 +1542,104 @@ Respetivas As screen:
             X: =Container1_3.X
             Y: =Container1_3.Y
             ZIndex: =3
+
+    BloquearRespetiva As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =29
+
+        DynamicBtn_38 As DynamicBtn:
+            BtnText: |-
+                =If(
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    "Desbloquear",
+                    "Bloquear"
+                )
+            BtnWidth: =180
+            ButtonIcon: |-
+                =If(
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    
+                    Icon.Unlock,
+                    Icon.Lock
+                )
+            Height: =40
+            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
+            Width: =180
+            X: =1150
+            Y: =74
+            ZIndex: =27
+
+        elim_btn_14 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |+
+                =If(
+                    LookUp(
+                        Empresas,
+                        ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                    ).Bloqueado,
+                    If(
+                        Patch(
+                            Empresas,
+                            LookUp(
+                                Empresas,
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                            ),
+                            {Bloqueado: false}
+                        ).Bloqueado = false,
+                        Notify(
+                            "Empresa Respetiva bloqueada com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente desbloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    ),
+                    If(
+                        Patch(
+                            Empresas,
+                            LookUp(
+                                Empresas,
+                                ThisRecord.ID = _selectedRespetivas Or ThisRecord.ID = _selectedRespetivasF Or ThisRecord.ID = EmpresasRespetivas1_1.Selected.ID
+                            ),
+                            {Bloqueado: true}
+                        ).Bloqueado = true,
+                        Notify(
+                            "Empresa Respetiva bloqueada com sucesso!",
+                            NotificationType.Success
+                        ),
+                        Notify(
+                            "Por favor, tente bloquear a Empresa Respetiva novamente ou contacte o administrador da solução!",
+                            NotificationType.Error
+                        )
+                    )
+                );
+                
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: ="(Eliminado)" in LabelMembroName_2.Text And localFormRespetivas
+            Width: =180
+            X: =DynamicBtn_38.X
+            Y: =DynamicBtn_38.Y
+            ZIndex: =28
 
     "'Atividades Info_2' As groupContainer.manualLayoutContainer":
         Height: =50
