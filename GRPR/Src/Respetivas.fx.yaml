@@ -965,6 +965,12 @@ Respetivas As screen:
                     ScreenTransition.None
                 ),
                 UpdateContext({localFormRespetivas: false})
+            );
+            UpdateContext(
+                {
+                    localShowPrazo: false
+            
+                }
             )
         PaddingLeft: =50
         RadiusBottomLeft: =5
