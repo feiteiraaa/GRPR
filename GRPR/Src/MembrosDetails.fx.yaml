@@ -3003,7 +3003,7 @@ MembrosDetails As screen:
                         )
                     Height: =50
                     OnSelect: =Select(Parent)
-                    Width: =692
+                    Width: =Parent.Width
                     Y: =1
                     ZIndex: =1
 
@@ -3015,7 +3015,8 @@ MembrosDetails As screen:
                     PaddingRight: =0
                     Size: =12
                     Text: =ThisItem.uipp_data
-                    Width: =133
+                    Width: =Label6_6.Width
+                    X: =Label6_6.X
                     ZIndex: =2
 
                 Label3_6 As label:
@@ -3026,8 +3027,8 @@ MembrosDetails As screen:
                     PaddingRight: =0
                     Size: =12
                     Text: =ThisItem.uipp_titulo
-                    Width: =378
-                    X: =133
+                    Width: =Label6_7.Width
+                    X: =Label6_7.X
                     ZIndex: =3
 
                 Label3_7 As label:
@@ -3036,8 +3037,8 @@ MembrosDetails As screen:
                     OnSelect: =Select(Parent)
                     Size: =12
                     Text: =ThisItem.'Criado Por'.'Nome Completo'
-                    Width: =181
-                    X: =511
+                    Width: =Label6_8.Width
+                    X: =Label6_8.X
                     ZIndex: =4
 
             Container1_2 As groupContainer.manualLayoutContainer:
