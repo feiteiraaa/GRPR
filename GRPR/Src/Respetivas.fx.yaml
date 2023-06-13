@@ -932,20 +932,6 @@ Respetivas As screen:
         Visible: =localShowModal
         ZIndex: =20
 
-    elimirespetivas As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =21
-
-    editrespetivas As group:
-        Height: =5
-        Width: =5
-        X: =40
-        Y: =40
-        ZIndex: =21
-
     LabelMembroName_2 As label:
         AutoHeight: =true
         FontWeight: =FontWeight.Bold
@@ -1547,7 +1533,7 @@ Respetivas As screen:
             Y: =79
             ZIndex: =15
 
-    Group1 As group:
+    Editrespetivas As group:
         Height: =5
         Width: =5
         X: =40
@@ -1583,4 +1569,41 @@ Respetivas As screen:
             X: =DynamicBtn_20.X
             Y: =131
             ZIndex: =31
+
+    elimirespetivas As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =34
+
+        DynamicBtn_22 As DynamicBtn:
+            BtnText: =If(localFormRespetivasEdit Or localFormRespetivasNew,"Cancelar","Editar")
+            ButtonIcon: =If(localFormRespetivasEdit Or localFormRespetivasNew,Icon.Cancel,Icon.Edit)
+            Height: =40
+            Visible: =EmpresasRespetivas.Visible
+            Width: =160
+            X: =949
+            Y: =131
+            ZIndex: =32
+
+        edit_btn_10 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |-
+                =UpdateContext({localShowModal: true})
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: =EmpresasRespetivas.Visible
+            X: =DynamicBtn_22.X
+            Y: =DynamicBtn_22.Y
+            ZIndex: =33
 
