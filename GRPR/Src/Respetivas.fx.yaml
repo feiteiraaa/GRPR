@@ -385,6 +385,7 @@ Respetivas As screen:
                 FormMode.Edit,
                 FormMode.View
             )
+        Height: =300
         Item: |-
             = If(
                 !IsBlank(_selectedRespetivas),
@@ -1373,6 +1374,167 @@ Respetivas As screen:
             Y: =445
             ZIndex: =25
 
+    "'Atividades Content_2' As groupContainer.manualLayoutContainer":
+        Height: =170
+        Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New And localShowPrazo
+        Width: ='Atividades Info_2'.Width
+        X: ='Atividades Info_2'.X
+        Y: ='Atividades Info_2'.Y + 'Atividades Info_2'.Height
+        ZIndex: =29
+
+        GalleryAtividadesMembros_2 As gallery.variableTemplateHeightGallery:
+            BorderColor: =RGBA(128, 128, 128, 1)
+            BorderThickness: =0.5
+            DelayItemLoading: =true
+            Fill: =RGBA(219, 219, 219, 1)
+            Height: |-
+                =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
+                If(
+                    CountRows(atividadesMembros) * Label3_11.Height < 'Atividades Content_2'.Height - (Container1_4.Height + Container1_4.Y),
+                    CountRows(atividadesMembros) * Label3_11.Height,
+                    'Atividades Content_2'.Height - (Container1_4.Height + Container1_4.Y)
+                )
+            Items: |-
+                =SortByColumns(
+                    With(
+                        {records: atividadesMembros
+                            /*Ungroup(
+                                Table(
+                                {Atividades: Atividades},
+                                {Atividades: Listagens_1}
+                        ),
+                        "Atividades"
+                        )*/
+                },
+                        ForAll(
+                            Sequence(CountRows(records)),
+                            Patch(
+                                Last(
+                                    FirstN(
+                                        records,
+                                        Value
+                                    )
+                                ),
+                                {rowNumber: Value}
+                            )
+                        )
+                    ),
+                    "createdon",
+                    SortOrder.Descending
+                )
+            Layout: =Layout.Vertical
+            LoadingSpinner: =LoadingSpinner.Data
+            ShowScrollbar: =false
+            TemplatePadding: =0
+            TemplateSize: =55
+            Visible: |-
+                =Or(
+                    godMode,
+                    DRI,
+                    DGC_Editor,
+                    DGC_Validador
+                
+                ) And CountRows(atividadesMembros) <> 0
+            Width: =Parent.Width * 0.95
+            X: =24
+            Y: =Container1_4.Height + Container1_4.Y
+            ZIndex: =1
+
+            Rectangle1_4 As rectangle:
+                Fill: |-
+                    =If(
+                        Mod(ThisItem.rowNumber, 2) = 0,
+                        RGBA(219, 219, 219, 1),
+                        Color.White
+                    )
+                Height: =50
+                OnSelect: =Select(Parent)
+                Width: =Parent.Width
+                Y: =1
+                ZIndex: =1
+
+            Label5_3 As label:
+                Color: =RGBA(77, 77, 77, 1)
+                Height: =53
+                OnSelect: =Select(Parent)
+                PaddingLeft: =15
+                Size: =12
+                Text: |-
+                    =Text(ThisItem.'Criado Em', "dd-mm-yyyy hh:mm AM/PM")
+                Width: =Label6_12.Width
+                X: =Label6_12.X
+                ZIndex: =2
+
+            Label3_10 As label:
+                Color: =RGBA(77, 77, 77, 1)
+                Height: =53
+                OnSelect: =Select(Parent)
+                PaddingLeft: =10
+                PaddingRight: =0
+                Size: =12
+                Text: =ThisItem.uipp_titulo
+                Width: =Label6_13.Width
+                X: =Label6_13.X
+                ZIndex: =3
+
+            Label3_11 As label:
+                Color: =RGBA(77, 77, 77, 1)
+                Height: =53
+                OnSelect: =Select(Parent)
+                Size: =12
+                Text: =ThisItem.'Criado Por'.'Nome Completo'
+                Width: =Label6_14.Width
+                X: =Label6_14.X
+                ZIndex: =4
+
+        Container1_4 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(70, 70, 70, 1)
+            Height: =34
+            Visible: =CountRows(atividadesMembros) <> 0
+            Width: =Parent.Width * 0.95
+            X: =24
+            Y: =15
+            ZIndex: =2
+
+            Label6_12 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =34
+                Text: ="Data"
+                Width: =180
+                X: =4
+                ZIndex: =1
+
+            Label6_13 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =34
+                Text: ="Atividade"
+                Width: =500
+                X: =Label6_12.Width+5
+                ZIndex: =2
+
+            Label6_14 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Height: =34
+                Text: ="Autor"
+                Width: =Container1_4.Width-(Label6_13.Width+Label6_12.Width) -10
+                X: =Label6_13.Width+Label6_12.Width+10
+                ZIndex: =3
+
+        Label17_2 As label:
+            Align: =Align.Center
+            Height: =Container1_3.Height
+            Size: =11
+            Text: |-
+                ="De momento, não existe atividade associada a empresa respetiva. "/* & LookUp(
+                    Membros_1,
+                    ID = _Membro
+                ).Nome & "."*/
+            Visible: =CountRows(atividadesMembros) = 0
+            Width: =Container1_3.Width
+            X: =Container1_3.X
+            Y: =Container1_3.Y
+            ZIndex: =3
+
     BloquearRespetiva As group:
         Height: =5
         Width: =5
@@ -1470,4 +1632,87 @@ Respetivas As screen:
             X: =DynamicBtn_38.X
             Y: =DynamicBtn_38.Y
             ZIndex: =28
+
+    "'Atividades Info_2' As groupContainer.manualLayoutContainer":
+        Height: =50
+        Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New
+        Width: =EmpresasRespetivas.Width
+        X: =EmpresasRespetivas.X
+        Y: =EmpresasRespetivas.Height+EmpresasRespetivas.Y
+        ZIndex: =30
+
+        "'Info Bottom_11' As icon.HorizontalLine":
+            AutoDisableOnSelect: =false
+            BorderColor: =RGBA(220, 220, 220, 1)
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(220, 220, 220, 1)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Fill: =RGBA(220, 220, 220, 1)
+            FocusedBorderColor: =RGBA(220, 220, 220, 1)
+            Height: =2
+            HoverBorderColor: =RGBA(220, 220, 220, 1)
+            HoverColor: =RGBA(220, 220, 220, 1)
+            HoverFill: =RGBA(220, 220, 220, 1)
+            Icon: =Icon.HorizontalLine
+            PressedBorderColor: =RGBA(220, 220, 220, 1)
+            PressedColor: =RGBA(220, 220, 220, 1)
+            PressedFill: =RGBA(220, 220, 220, 1)
+            Width: =Parent.Width
+            Y: =40
+            ZIndex: =1
+
+        "'Info Label_11' As label":
+            AutoHeight: =true
+            Color: =RGBA(50, 86, 160, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Semibold
+            OnSelect: |-
+                =UpdateContext({localShowInfo: !localShowInfo, localShowRep : false, localShowArq: false})
+            Text: ="Atividade"
+            Width: =500
+            ZIndex: =2
+
+        "'Info Circle_11' As circle":
+            BorderColor: =RGBA(250, 191, 0, 1)
+            BorderThickness: =2
+            Fill: =If(localShowPrazo, RGBA(255, 191, 0, 1), RGBA(255, 191, 0, 0))
+            Height: =30
+            Width: =30
+            X: =Parent.Width - (30 + 'Info Circle_11'.Width)
+            Y: =5
+            ZIndex: =3
+
+        "'Info Icon_11' As icon.Add":
+            Color: =If(localShowPrazo, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
+            Height: ='Info Circle_11'.Height
+            Icon: =If(localShowPrazo, Icon.HorizontalLine, Icon.Add)
+            OnSelect: |-
+                =UpdateContext(
+                    {
+                        localShowPrazo: !localShowPrazo,
+                        localShowData: false,
+                        localShowLeg: false,
+                        localShowEliminacao: false,
+                        localShowRelacao: false,
+                        localShowNewForm: false,
+                        localShowEditForm: false,
+                        _Associated: false,
+                        _AssociatedR: false
+                    }
+                );
+                /*ClearCollect(
+                    atividadesMembros,
+                    FirstN(
+                        Filter(
+                            Atividades,
+                            ItemID = _Membro
+                        ),
+                        20
+                    )
+                )*/
+            Width: ='Info Circle_11'.Width
+            X: =Parent.Width - (30 + 'Info Circle_11'.Width)
+            Y: =5
+            ZIndex: =4
 
