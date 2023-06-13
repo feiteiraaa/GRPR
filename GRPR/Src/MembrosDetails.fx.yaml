@@ -3014,7 +3014,8 @@ MembrosDetails As screen:
                     PaddingLeft: =20
                     PaddingRight: =0
                     Size: =12
-                    Text: =ThisItem.uipp_data
+                    Text: |-
+                        =Text(ThisItem.'Criado Em', "dd-mm-yyyy hh:tt")
                     Width: =Label6_6.Width
                     X: =Label6_6.X
                     ZIndex: =2
