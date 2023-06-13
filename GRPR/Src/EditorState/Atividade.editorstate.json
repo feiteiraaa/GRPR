@@ -1917,14 +1917,7 @@
       "ControlPropertyState": [
         "DefaultDate",
         "DateTimeZone",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "DateTimeFormat.ShortDate",
-          "InvariantPropertyName": "Format",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Format",
         "InputTextPlaceholder",
         "StartYear",
         "EndYear",
