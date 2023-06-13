@@ -150,10 +150,12 @@ Inicio As screen:
             "
             DMK Consulta: " & DMK_Consulta &
             "
-            CCOMP Consulta: " & CCOMP_Consulta
+            CCOMP Consulta: " & CCOMP_Consulta &
+            "
+            God: " & godMode
         Visible: =godMode
-        Width: =203
-        X: =1163
+        Width: =227
+        X: =1139
         ZIndex: =6
 
     Label1_7 As label:

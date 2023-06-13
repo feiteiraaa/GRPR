@@ -2,7 +2,7 @@ Respetivas As screen:
     OnHidden: |
         =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()});
     OnVisible: |-
-        =UpdateContext({localFormRespetivasNew:false, localShowPrazo: false});
+        =UpdateContext({localFormRespetivasNew:false, localShowPrazo: false,localFormRespetivasEdit:false});
         ClearCollect(CollecRespectivas, Empresas);
         Set(
             varSortCol1,
