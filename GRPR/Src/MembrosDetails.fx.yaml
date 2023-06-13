@@ -3085,7 +3085,7 @@ MembrosDetails As screen:
                 Height: =Container1_3.Height
                 Size: =11
                 Text: |-
-                    ="De momento, não existe atividade associada ao familiar " & LookUp(
+                    ="De momento, não existe atividade associada ao membro " & LookUp(
                         Membros_1,
                         ID = _Membro
                     ).Nome & "."
