@@ -1610,7 +1610,8 @@ Respetivas As screen:
             HoverColor: =RGBA(0,0,0, 0)
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
-                =UpdateContext({localShowModal: true})
+                =
+                UpdateContext({localShowModal: true})
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
