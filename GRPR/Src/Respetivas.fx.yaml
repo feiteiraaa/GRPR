@@ -883,6 +883,8 @@ Respetivas As screen:
 
             DataCardKey33 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: |-
                     =//Parent.DisplayName
@@ -1638,7 +1640,7 @@ Respetivas As screen:
         Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New
         Width: =EmpresasRespetivas.Width
         X: =EmpresasRespetivas.X
-        Y: =EmpresasRespetivas.Height+EmpresasRespetivas.Y
+        Y: =EmpresasRespetivas.Height+EmpresasRespetivas.Y+10
         ZIndex: =30
 
         "'Info Bottom_11' As icon.HorizontalLine":
