@@ -135,6 +135,7 @@ SearchAtividade As screen:
     Form1 As form:
         DataSource: =Atividades
         Height: =AtividadeTable_1.Height
+        NumberOfColumns: =2
         Width: =AtividadeTable_1.Width
         X: =AtividadeTable_1.X
         Y: =AtividadeTable_1.Y
@@ -151,7 +152,7 @@ SearchAtividade As screen:
             MaxLength: =DataSourceInfo([@Atividades], DataSourceInfo.MaxLength, "uipp_titulo")
             Required: =false
             Update: =DataCardValue49.Text
-            Width: =326
+            Width: =490
             X: =0
             Y: =0
             ZIndex: =1
@@ -218,7 +219,7 @@ SearchAtividade As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue50.Selected.Value
-            Width: =326
+            Width: =490
             X: =1
             Y: =0
             ZIndex: =1
@@ -286,9 +287,9 @@ SearchAtividade As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue51.Selected.Value
-            Width: =326
-            X: =2
-            Y: =0
+            Width: =490
+            X: =0
+            Y: =1
             ZIndex: =1
 
             DataCardKey57 As label:
@@ -303,6 +304,7 @@ SearchAtividade As screen:
 
             DataCardValue51 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =cores.amareloMontepio
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
@@ -353,8 +355,8 @@ SearchAtividade As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue52.Selected.Value
-            Width: =326
-            X: =0
+            Width: =490
+            X: =1
             Y: =1
             ZIndex: =1
 
@@ -370,6 +372,7 @@ SearchAtividade As screen:
 
             DataCardValue52 As combobox:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                ChevronBackground: =cores.amareloMontepio
                 DefaultSelectedItems: =[Parent.Default]
                 DisplayFields: =["Value"]
                 DisplayMode: =Parent.DisplayMode
@@ -409,6 +412,83 @@ SearchAtividade As screen:
                 Wrap: =false
                 Y: =DataCardKey58.Y
                 ZIndex: =4
+
+        DataCard1 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =200
+            Width: =490
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DatePicker1_1 As datepicker:
+                BorderColor: =ColorFade(cores.cinzento, 80%)
+                BorderThickness: |
+                    =1
+                Fill: =ColorFade(cores.cinzento, 90%)
+                Format: |-
+                    ="dd/mm/yyyy hh:mm"
+                Height: =43
+                IconBackground: =cores.amareloMontepio
+                PaddingTop: =5
+                Width: =203
+                X: =30
+                Y: =53
+                ZIndex: =1
+
+            DatePicker2_1 As datepicker:
+                BorderColor: =ColorFade(cores.cinzento, 80%)
+                BorderThickness: |
+                    =1
+                Fill: =ColorFade(cores.cinzento, 90%)
+                Format: |-
+                    ="dd/mm/yyyy hh:mm"
+                IconBackground: =cores.amareloMontepio
+                PaddingTop: =5
+                Width: =203
+                X: =267
+                Y: =53
+                ZIndex: =2
+
+            Label11_2 As label:
+                Height: =29
+                PaddingBottom: =
+                PaddingRight: =
+                PaddingTop: =
+                Text: ="Datas"
+                X: =30
+                Y: =9
+                ZIndex: =3
+
+            Label11_3 As label:
+                Align: =Align.Center
+                FontWeight: =FontWeight.Semibold
+                Height: =47
+                PaddingBottom: =
+                PaddingTop: =
+                Text: ="a"
+                Width: =34
+                X: =233
+                Y: =53
+                ZIndex: =4
+
+        DataCard2 As typedDataCard.blankCard:
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =200
+            Width: =490
+            X: =1
+            Y: =2
+            ZIndex: =1
+
+            Dropdown1 As dropdown:
+                Items: =["Ver todos", "Minha Atividade"]
+                X: =40
+                Y: =40
+                ZIndex: =1
 
     Back_Btn As group:
         Height: =5
