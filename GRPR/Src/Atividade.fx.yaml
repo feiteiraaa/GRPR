@@ -1,4 +1,11 @@
 Atividade As screen:
+    OnVisible: |
+        =Concurrent(
+            Reset(InputPesquisar),
+            Refresh(Atividades)
+        );
+        
+        ClearCollect(CollectAtividades, Atividades);
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
@@ -19,7 +26,7 @@ Atividade As screen:
             =472
         Items: |-
             =Filter (
-                        Atividades, 
+                        CollectAtividades, 
                         If(!IsBlank(InputPesquisar.Text), InputPesquisar.Text in ThisRecord.Titulo, true)
                         And
                         If(!IsBlank(DatePicker2.SelectedDate),
@@ -331,6 +338,7 @@ Atividade As screen:
             Fill: =ColorFade(cores.cinzento, 90%)
             Height: =40
             Icon: =Icon.Filter
+            OnSelect: =Navigate(SearchAtividade,ScreenTransition.None)
             PaddingBottom: =8
             PaddingLeft: =8
             PaddingRight: =8

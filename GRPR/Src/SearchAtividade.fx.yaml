@@ -1,13 +1,13 @@
 SearchAtividade As screen:
 
-    Label1_10 As label:
+    TitlePage As label:
         FontWeight: =FontWeight.Bold
         Height: =48
         Size: =15
         Text: ="Atividade - Pesquisa Avançada"
         Width: =409
-        X: =364
-        Y: =41
+        X: =365
+        Y: =25
         ZIndex: =3
 
     AtividadeTable_1 As dataTable.datatable:
@@ -131,4 +131,40 @@ SearchAtividade As screen:
                 }
             )
         ZIndex: =15
+
+    Form1 As form:
+        X: =AtividadeTable_1.x
+        Y: =40
+        ZIndex: =18
+
+    Back_Btn As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =18
+
+        BackBtn_7 As BackBtn:
+            X: =365
+            Y: =74
+            ZIndex: =16
+
+        elim_btn_16 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =BackBtn_7.Height
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: =Navigate(Atividade,ScreenTransition.None)
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Width: =BackBtn_7.Width
+            X: =BackBtn_7.X
+            Y: =BackBtn_7.Y
+            ZIndex: =17
 
