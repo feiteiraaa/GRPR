@@ -1659,6 +1659,10 @@
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "msft_datastate",
         "OptionSetReferenceEntityName": "Clientes"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "msft_datastate",
+        "OptionSetReferenceEntityName": "Equipas"
       }
     },
     "OptionSetTypeKey": "PicklistType",
