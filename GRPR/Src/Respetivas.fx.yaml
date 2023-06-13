@@ -1547,3 +1547,66 @@ Respetivas As screen:
             Y: =79
             ZIndex: =15
 
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =32
+
+        DynamicBtn_20 As DynamicBtn:
+            BtnText: =If(_AssociatedR Or localShowEditForm,"Cancelar","Editar")
+            ButtonIcon: =If(_AssociatedR Or localShowEditForm,Icon.Cancel,Icon.Edit)
+            Height: =40
+            Visible: |-
+                =If(
+                    CountRows(ligacaoRespetivas) = 0,
+                    false,
+                    true
+                ) And Not("(Eliminado)" in LabelMembroName.Text)
+            Width: =160
+            X: =Parent.X+600
+            Y: =7
+            ZIndex: =30
+
+        edit_btn_9 As button:
+            BorderColor: =RGBA(0,0,0, 0)
+            Color: =RGBA(0,0,0, 0)
+            DisabledBorderColor: =RGBA(0,0,0, 0)
+            DisabledColor: =RGBA(0,0,0, 0)
+            DisabledFill: =RGBA(0,0,0, 0)
+            Fill: =RGBA(0,0,0, 0)
+            Height: =39
+            HoverColor: =RGBA(0,0,0, 0)
+            HoverFill: =RGBA(0,0,0, 0)
+            OnSelect: |-
+                =If(
+                    _AssociatedR Or localShowEditForm,
+                    UpdateContext(
+                        {
+                            _AssociatedR: false,
+                            localShowEliminacao: false,
+                            localShowEditForm:false,
+                            _AssociarR:false
+                        }
+                    ),
+                    UpdateContext(
+                        {
+                            localShowEditForm: true
+                            
+                        }
+                    )
+                )
+            PressedColor: =RGBA(0,0,0, 0)
+            PressedFill: =RGBA(0,0,0, 0)
+            Text: =""
+            Visible: |-
+                =If(
+                    CountRows(ligacaoRespetivas) = 0,
+                    false,
+                    true
+                ) And Not("(Eliminado)" in LabelMembroName.Text)
+            X: =DynamicBtn_20.X
+            Y: =DynamicBtn_20.Y
+            ZIndex: =31
+
