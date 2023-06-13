@@ -1,9 +1,13 @@
 Respetivas As screen:
-    OnHidden: |-
-        =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()})
-    OnVisible: |
+    OnHidden: |
+        =UpdateContext({_AssociarR:false,_AssociarRF:false,localFormRespetivas:false,_selectedRespetivas:Blank(),_selectedRespetivasF:Blank()});
+    OnVisible: |-
         =UpdateContext({localFormRespetivasNew:false, localShowPrazo: false});
         ClearCollect(CollecRespectivas, Empresas);
+        Set(
+            varSortCol1,
+            "uipp_designacao"
+        )
 
     EmpresasRespetivas1_1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -13,20 +17,21 @@ Respetivas As screen:
         Height: =500
         Items: |-
             =Search(
-                    
-                            Filter(
-                                CollecRespectivas,
-                                If(
-                                    Checkbox1_4.Value = false,
-                                    ThisRecord.Ativo = true,
-                                    ThisRecord.Ativo = true Or ThisRecord.Ativo = false
-                                )
-                         
-                        ),
-            
-                    TextInput2_3.Text,
-                    "uipp_designacao"
-                )
+                SortByColumns(
+                    Filter(
+                        CollecRespectivas,
+                        If(
+                            Checkbox1_4.Value = false,
+                            ThisRecord.Ativo = true,
+                            ThisRecord.Ativo = true Or ThisRecord.Ativo = false
+                        )
+                    ),
+                    varSortCol1,
+                    varSortDir
+                ),
+                TextInput2_3.Text,
+                "uipp_designacao"
+            )
             //Empresas
         SelectedFill: =cores.amareloMontepio
         Visible: =!localFormRespetivas And !localFormRespetivasNew
@@ -293,8 +298,8 @@ Respetivas As screen:
         Height: =20
         Icon: =Icon.ChevronDown
         OnSelect: |-
-            =/*Set(
-                varSortCol,
+            =Set(
+                varSortCol1,
                 "uipp_designacao"
             );
             Set(
@@ -304,7 +309,7 @@ Respetivas As screen:
                     SortOrder.Descending,
                     SortOrder.Ascending
                 )
-            )*/
+            )
         Width: =20
         X: =Designacao_Column3_1.X+550
         Y: =228
@@ -315,9 +320,9 @@ Respetivas As screen:
         Height: =20
         Icon: =Icon.ChevronDown
         OnSelect: |-
-            =/*Set(
-                varSortCol,
-                "uipp_numerodocumento"
+            =Set(
+                varSortCol1,
+                "uipp_tipodedocumento"
             );
             Set(
                 varSortDir,
@@ -326,7 +331,7 @@ Respetivas As screen:
                     SortOrder.Descending,
                     SortOrder.Ascending
                 )
-            )*/
+            )
         Width: =20
         X: =Icon7_8.X+'Tipo de documento_Column1_1'.X+20
         Y: =228
@@ -337,9 +342,9 @@ Respetivas As screen:
         Height: =20
         Icon: =Icon.ChevronDown
         OnSelect: |-
-            =/*Set(
-                varSortCol,
-                "uipp_participacaoefetiva"
+            =Set(
+                varSortCol1,
+                "uipp_numerodocumento"
             );
             Set(
                 varSortDir,
@@ -348,7 +353,7 @@ Respetivas As screen:
                     SortOrder.Descending,
                     SortOrder.Ascending
                 )
-            )*/
+            )
         Width: =20
         X: = 'Numero Documento_Column1_1'.X + Icon7_8.X +23
         Y: =228
@@ -923,236 +928,23 @@ Respetivas As screen:
                 Y: =DataCardKey33.Y
                 ZIndex: =7
 
-    Button1_6 As button:
-        Align: =Align.Left
-        BorderThickness: =0
-        Color: =RGBA(70, 70, 70, 1)
-        Fill: =ColorFade(RGBA(70, 70, 70, 1),90%)
-        FontWeight: =FontWeight.Normal
-        HoverColor: =RGBA(70, 70, 70, 1)
-        HoverFill: =ColorFade(RGBA(70, 70, 70, 1), 85%)
-        OnSelect: |-
-            =If(
-                !IsBlank(_selectedRespetivas),
-                Navigate(
-                    MembrosDetails,
-                    ScreenTransition.None
-                ),
-                 !IsBlank(_selectedRespetivasF),
-                 Navigate(
-                    MembrosFamiDetails,
-                    ScreenTransition.None
-                ),
-                UpdateContext({localFormRespetivas: false})
-            );
-            UpdateContext(
-                {
-                    localShowPrazo: false
-            
-                }
-            )
-        PaddingLeft: =50
-        RadiusBottomLeft: =5
-        RadiusBottomRight: =5
-        RadiusTopLeft: =5
-        RadiusTopRight: =5
-        Text: ="Voltar"
-        Visible: =localFormRespetivas
-        Width: =140
-        X: =365
-        Y: =74
-        ZIndex: =14
-
-    "Icon2_6 As icon.'3DPrinting'":
-        Color: =RGBA(255, 191, 0, 1)
-        Height: =30
-        Icon: =Icon.ChevronLeft
-        OnSelect: |-
-            =UpdateContext({localFormRespetivas:false})
-        Visible: =localFormRespetivas
-        Width: =30
-        X: =375
-        Y: =79
-        ZIndex: =15
-
     ModalConfirmation_9 As ModalConfirmation:
         Visible: =localShowModal
         ZIndex: =20
 
-    Group1 As group:
+    elimirespetivas As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =21
 
-        DynamicBtn_26 As DynamicBtn:
-            BtnText: |-
-                =If(
-                    EmpresasRespetivas.Mode = FormMode.View,
-                    "Eliminar",
-                    "Cancelar"
-                )
-            ButtonIcon: |-
-                =If(
-                    EmpresasRespetivas.Mode = FormMode.View,
-                    Icon.Trash,
-                    Icon.Cancel
-                )
-            Height: =40
-            Visible: |-
-                =Or(godMode, DRI, DGP_Editor, DGP_Validador) And EmpresasRespetivas.Visible And Not("(Eliminado)" in LabelMembroName_2.Text)
-                //EmpresasRespetivas.DisplayMode <> DisplayMode.View
-            Width: =160
-            X: =1001
-            Y: =74
-            ZIndex: =18
-
-        Button2_29 As button:
-            BorderColor: =RGBA(0,0,0, 0)
-            Color: =RGBA(0,0,0, 0)
-            DisabledBorderColor: =RGBA(0,0,0, 0)
-            DisabledColor: =RGBA(0,0,0, 0)
-            DisabledFill: =RGBA(0,0,0, 0)
-            Fill: =RGBA(0,0,0, 0)
-            Height: =39
-            HoverColor: =RGBA(0,0,0, 0)
-            HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |-
-                =If(
-                    EmpresasRespetivas.Mode = FormMode.View,
-                    UpdateContext({localShowModal: true}),
-                    UpdateContext(
-                        {
-                            localFormRespetivasNew: false,
-                            localFormRespetivasEdit: false
-                        }
-                    )
-                )
-            PressedColor: =RGBA(0,0,0, 0)
-            PressedFill: =RGBA(0,0,0, 0)
-            Text: =""
-            Visible: |-
-                =Or(godMode, DRI, DGP_Editor, DGP_Validador) And EmpresasRespetivas.Visible And Not("(Eliminado)" in LabelMembroName_2.Text)
-                //EmpresasRespetivas.DisplayMode <> DisplayMode.View
-            X: =1000
-            Y: =73
-            ZIndex: =19
-
-    Group2 As group:
+    editrespetivas As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
         ZIndex: =21
-
-        DynamicBtn_25 As DynamicBtn:
-            BtnText: |-
-                =If(
-                    localFormRespetivasNew Or localFormRespetivasEdit,
-                    "Guardar",
-                    "Edit"
-                )
-            ButtonIcon: |-
-                =If(
-                    localFormRespetivasNew Or localFormRespetivasEdit,
-                    Icon.Save,
-                    Icon.Edit
-                )
-            Visible: |-
-                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-                (localFormRespetivas Or localFormRespetivasNew) And Not("(Eliminado)" in LabelMembroName_2.Text)
-            X: =1174
-            Y: =74
-            ZIndex: =16
-
-        Button2_27 As button:
-            BorderColor: =RGBA(0,0,0, 0)
-            Color: =RGBA(0,0,0, 0)
-            DisabledBorderColor: =RGBA(0,0,0, 0)
-            DisabledColor: =RGBA(0,0,0, 0)
-            DisabledFill: =RGBA(0,0,0, 0)
-            Fill: =RGBA(0,0,0, 0)
-            Height: =39
-            HoverColor: =RGBA(0,0,0, 0)
-            HoverFill: =RGBA(0,0,0, 0)
-            OnSelect: |-
-                =/*If(
-                    localFormRespetivasNew Or localFormRespetivasEdit,
-                    If(
-                        SubmitForm(EmpresasRespetivas),
-                        //Back();
-                        Notify(
-                            "Registo criado com sucesso!",
-                            NotificationType.Success
-                        );
-                        If(
-                            _AssociarR,
-                            Navigate(
-                                MembrosDetails,
-                                ScreenTransition.None,
-                                {
-                                    _AssociateRespetivas: EmpresasRespetivas.LastSubmit.ID,
-                                    _AssociatedR: true,
-                                    _AssociarR: false
-                                }
-                            )
-                        ),
-                        Notify(
-                            "Por favor, tente novamente ou contacte o administrador da solução!",
-                            NotificationType.Error
-                        )
-                    );
-                    UpdateContext({localFormRespetivasEdit: false}),
-                    UpdateContext({localFormRespetivasEdit: true})
-                );
-                UpdateContext({localFormRespetivasNew: false})*/
-                If(
-                    localFormRespetivasNew Or localFormRespetivasEdit,
-                    If(
-                        Len(DataCardValue35.Text) = 9,
-                        If(
-                            SubmitForm(EmpresasRespetivas),
-                        //Back();
-                            Notify(
-                                "Registo criado com sucesso!",
-                                NotificationType.Success
-                            );
-                            If(
-                                _AssociarR,
-                                Navigate(
-                                    MembrosDetails,
-                                    ScreenTransition.None,
-                                    {
-                                        _AssociateRespetivas: EmpresasRespetivas.LastSubmit.ID,
-                                        _AssociatedR: true,
-                                        _AssociarR: false
-                                    }
-                                )
-                            ),
-                            Notify(
-                                "Por favor, tente novamente ou contacte o administrador da solução!",
-                                NotificationType.Error
-                            )
-                        );
-                        UpdateContext({localFormRespetivasEdit: false}),
-                        Notify(
-                            "Por favor, preencha o número do documento corretamente.",
-                            NotificationType.Error
-                        )
-                    ),
-                    UpdateContext({localFormRespetivasEdit: true})
-                );
-                UpdateContext({localFormRespetivasNew: false})
-            PressedColor: =RGBA(0,0,0, 0)
-            PressedFill: =RGBA(0,0,0, 0)
-            Text: =""
-            Visible: |-
-                =//Or(godMode, DRI, DGP_Editor, DGP_Validador)
-                (localFormRespetivas Or localFormRespetivasNew) And Not("(Eliminado)" in LabelMembroName_2.Text)
-            X: =DynamicBtn_25.X
-            Y: =DynamicBtn_25.Y
-            ZIndex: =17
 
     LabelMembroName_2 As label:
         AutoHeight: =true
@@ -1695,4 +1487,63 @@ Respetivas As screen:
             X: =DynamicBtn_38.X
             Y: =DynamicBtn_38.Y
             ZIndex: =27
+
+    backrespetivas As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =30
+
+        Button1_6 As button:
+            Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(70, 70, 70, 1)
+            Fill: =ColorFade(RGBA(70, 70, 70, 1),90%)
+            FontWeight: =FontWeight.Normal
+            HoverColor: =RGBA(70, 70, 70, 1)
+            HoverFill: =ColorFade(RGBA(70, 70, 70, 1), 85%)
+            OnSelect: |-
+                =If(
+                    !IsBlank(_selectedRespetivas),
+                    Navigate(
+                        MembrosDetails,
+                        ScreenTransition.None
+                    ),
+                     !IsBlank(_selectedRespetivasF),
+                     Navigate(
+                        MembrosFamiDetails,
+                        ScreenTransition.None
+                    ),
+                    UpdateContext({localFormRespetivas: false})
+                );
+                UpdateContext(
+                    {
+                        localShowPrazo: false
+                
+                    }
+                )
+            PaddingLeft: =50
+            RadiusBottomLeft: =5
+            RadiusBottomRight: =5
+            RadiusTopLeft: =5
+            RadiusTopRight: =5
+            Text: ="Voltar"
+            Visible: =localFormRespetivas
+            Width: =140
+            X: =365
+            Y: =74
+            ZIndex: =14
+
+        "Icon2_6 As icon.'3DPrinting'":
+            Color: =RGBA(255, 191, 0, 1)
+            Height: =30
+            Icon: =Icon.ChevronLeft
+            OnSelect: |-
+                =UpdateContext({localFormRespetivas:false})
+            Visible: =localFormRespetivas
+            Width: =30
+            X: =375
+            Y: =79
+            ZIndex: =15
 

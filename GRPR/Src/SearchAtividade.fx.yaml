@@ -54,51 +54,6 @@ SearchAtividade As screen:
         Y: =200
         ZIndex: =4
 
-        "'Criado Por_Column1_1' As dataTableColumn.complexTypeColumn":
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Criado Por"
-            FieldName: ="createdby"
-            FieldVariantName: ="complexTypeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =8
-            Text: =ThisItem.'Criado Por'.'Nome Completo'
-            Width: =100
-            X: =656
-            Y: =0
-            ZIndex: =3
-
-        Atividade_Column1_1 As dataTableColumn.textualColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Atividade"
-            FieldName: ="uipp_atividadeid"
-            FieldVariantName: ="textualColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            OnSelect: |-
-                =UpdateContext({ShowDetails: true})
-            Order: =5
-            Text: =ThisItem.Titulo
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =6
-
-        Data_Column1_1 As dataTableColumn.dateTimeColumn:
-            DisplayMode: =DisplayMode.Edit
-            FieldDisplayName: ="Data"
-            FieldName: ="uipp_data"
-            FieldVariantName: ="dateTimeColumn"
-            Height: =Parent.Height
-            LayoutHeight: =Parent.Height
-            Order: =7
-            Text: |-
-                =Text(DateTimeValue(ThisItem.Data), "dd/mm/yyyy hh:mm")
-            Width: =100
-            X: =0
-            Y: =0
-            ZIndex: =7
-
     LeftSectionComponent_19 As LeftSectionComponent:
         TabelaMenu: |-
             =Table(
