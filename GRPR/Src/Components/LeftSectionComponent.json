@@ -5580,7 +5580,7 @@
       },
       "SelectedMenu"
     ],
-    "LastModifiedTimestamp": "638222703384595765",
+    "LastModifiedTimestamp": "638222666139977509",
     "Name": "LeftSectionComponent",
     "Rules": [
       {
@@ -5597,7 +5597,7 @@
       },
       {
         "Category": "Data",
-        "InvariantScript": "Table(\r\n    {\r\n        selected: true,\r\n        icon: Icon.Home,\r\n        text: \"Inicio\",\r\n        Navigate: Inicio,\r\n        VisivelPara: true\r\n    },/*\r\n    {\r\n        selected: false,\r\n        icon: Icon.Bug,\r\n        text: \"Developer\",\r\n        Navigate: Developer,\r\n        VisivelPara: godMode\r\n    },*/\r\n    {\r\n        selected: false,\r\n        icon: Icon.People,\r\n        text: \"Particulares e empresas respetivas\",\r\n        Navigate: Particulares,\r\n        VisivelPara: Or(godMode, DRI, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n        {\r\n        selected: false,\r\n        icon: Icon.OfficeBuilding,\r\n        text: \"Empresas respetivas\",\r\n        Navigate: Respetivas,\r\n        VisivelPara: Or(godMode, DRI, DGC_Editor, DGC_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta,DMK_Consulta, CCOMP_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.OfficeBuilding,\r\n        text: \"Empresas participadas do grupo\",\r\n        Navigate: Participadas,\r\n        VisivelPara: Or(godMode, DRI, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta,DMK_Consulta, CCOMP_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Information,\r\n        text: \"Atividade\",\r\n        Navigate: Atividade,\r\n        VisivelPara: Or(godMode, DRI, DGC_Editor, DGC_Validador, DCRF_Editor, DCRF_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta, DMK_Consulta, CCOMP_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Notebook,\r\n        text: \"Listagens\",\r\n        Navigate: Listagens,\r\n        VisivelPara: Or(godMode, DRI, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Settings,\r\n        text: \"Configurações\",\r\n        Navigate: Configuracoes,\r\n        VisivelPara: Or(godMode, DRI)\r\n    }\r\n)",
+        "InvariantScript": "Table(\r\n    {\r\n        selected: true,\r\n        icon: Icon.Home,\r\n        text: \"Inicio\",\r\n        Navigate: Inicio,\r\n        VisivelPara: true\r\n    },/*\r\n    {\r\n        selected: false,\r\n        icon: Icon.Bug,\r\n        text: \"Developer\",\r\n        Navigate: Developer,\r\n        VisivelPara: godMode\r\n    },*/\r\n    {\r\n        selected: false,\r\n        icon: Icon.People,\r\n        text: \"Particulares e empresas respetivas\",\r\n        Navigate: Particulares,\r\n        VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n        {\r\n        selected: false,\r\n        icon: Icon.OfficeBuilding,\r\n        text: \"Empresas respetivas\",\r\n        Navigate: Respetivas,\r\n        VisivelPara: godMode//Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.OfficeBuilding,\r\n        text: \"Empresas participadas do grupo\",\r\n        Navigate: Participadas,\r\n        VisivelPara: Or(godMode, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Information,\r\n        text: \"Atividade\",\r\n        Navigate: Atividade,\r\n        VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DCRF_Editor, DCRF_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Notebook,\r\n        text: \"Listagens\",\r\n        Navigate: Listagens,\r\n        VisivelPara: Or(godMode, DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)\r\n    },\r\n    {\r\n        selected: false,\r\n        icon: Icon.Settings,\r\n        text: \"Configurações\",\r\n        Navigate: Configuracoes,\r\n        VisivelPara: Or(godMode, DRI)\r\n    }\r\n)",
         "Property": "TabelaMenu",
         "RuleProviderType": "System"
       },
@@ -5700,7 +5700,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638222703384595765",
+  "LastModifiedTimestamp": "638222666139977509",
   "Name": "202c7b9df8a3490fac9a819b5cf8e1b9",
   "OverridableProperties": {},
   "TemplateOriginalName": "f4a9e5b972f14149b6b4d536952d059b",
