@@ -1522,6 +1522,82 @@ Respetivas As screen:
             Y: =Container1_3.Y
             ZIndex: =3
 
+    "'Atividades Info_2' As groupContainer.manualLayoutContainer":
+        Height: =50
+        Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New
+        Width: =EmpresasRespetivas.Width
+        X: =EmpresasRespetivas.X
+        Y: =EmpresasRespetivas.Height+EmpresasRespetivas.Y+10
+        ZIndex: =29
+
+        "'Info Bottom_11' As icon.HorizontalLine":
+            AutoDisableOnSelect: =false
+            BorderColor: =RGBA(220, 220, 220, 1)
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledBorderColor: =RGBA(220, 220, 220, 1)
+            DisabledColor: =RGBA(220, 220, 220, 1)
+            DisabledFill: =RGBA(220, 220, 220, 1)
+            Fill: =RGBA(220, 220, 220, 1)
+            FocusedBorderColor: =RGBA(220, 220, 220, 1)
+            Height: =2
+            HoverBorderColor: =RGBA(220, 220, 220, 1)
+            HoverColor: =RGBA(220, 220, 220, 1)
+            HoverFill: =RGBA(220, 220, 220, 1)
+            Icon: =Icon.HorizontalLine
+            PressedBorderColor: =RGBA(220, 220, 220, 1)
+            PressedColor: =RGBA(220, 220, 220, 1)
+            PressedFill: =RGBA(220, 220, 220, 1)
+            Width: =Parent.Width
+            Y: =40
+            ZIndex: =1
+
+        "'Info Label_11' As label":
+            AutoHeight: =true
+            Color: =RGBA(50, 86, 160, 1)
+            Font: =Font.Arial
+            FontWeight: =FontWeight.Semibold
+            OnSelect: |-
+                =UpdateContext({localShowInfo: !localShowInfo, localShowRep : false, localShowArq: false})
+            Text: ="Atividade"
+            Width: =500
+            ZIndex: =2
+
+        "'Info Circle_11' As circle":
+            BorderColor: =RGBA(250, 191, 0, 1)
+            BorderThickness: =2
+            Fill: =If(localShowPrazo, RGBA(255, 191, 0, 1), RGBA(255, 191, 0, 0))
+            Height: =30
+            Width: =30
+            X: =Parent.Width - (30 + 'Info Circle_11'.Width)
+            Y: =5
+            ZIndex: =3
+
+        "'Info Icon_11' As icon.Add":
+            Color: =If(localShowPrazo, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
+            Height: ='Info Circle_11'.Height
+            Icon: =If(localShowPrazo, Icon.HorizontalLine, Icon.Add)
+            OnSelect: |-
+                =UpdateContext(
+                    {
+                        localShowPrazo: !localShowPrazo
+                
+                    }
+                );
+                ClearCollect(
+                    atividadesRespetivas,
+                    FirstN(
+                        Filter(
+                            Atividades,
+                            (ItemID = _selectedRespetivas Or ItemID = _selectedRespetivasF Or ItemID = EmpresasRespetivas1_1.Selected.ID) And 'Lista da atividade' = 'lista da atividade'.'Empresas Respetivas'
+                        ),
+                        20
+                    )
+                )
+            Width: ='Info Circle_11'.Width
+            X: =Parent.Width - (30 + 'Info Circle_11'.Width)
+            Y: =5
+            ZIndex: =4
+
     BloquearRespetiva As group:
         Height: =5
         Width: =5
@@ -1619,80 +1695,4 @@ Respetivas As screen:
             X: =DynamicBtn_38.X
             Y: =DynamicBtn_38.Y
             ZIndex: =27
-
-    "'Atividades Info_2' As groupContainer.manualLayoutContainer":
-        Height: =50
-        Visible: =EmpresasRespetivas.Visible And EmpresasRespetivas.Mode <> FormMode.New
-        Width: =EmpresasRespetivas.Width
-        X: =EmpresasRespetivas.X
-        Y: =EmpresasRespetivas.Height+EmpresasRespetivas.Y+10
-        ZIndex: =29
-
-        "'Info Bottom_11' As icon.HorizontalLine":
-            AutoDisableOnSelect: =false
-            BorderColor: =RGBA(220, 220, 220, 1)
-            Color: =RGBA(0, 0, 0, 0)
-            DisabledBorderColor: =RGBA(220, 220, 220, 1)
-            DisabledColor: =RGBA(220, 220, 220, 1)
-            DisabledFill: =RGBA(220, 220, 220, 1)
-            Fill: =RGBA(220, 220, 220, 1)
-            FocusedBorderColor: =RGBA(220, 220, 220, 1)
-            Height: =2
-            HoverBorderColor: =RGBA(220, 220, 220, 1)
-            HoverColor: =RGBA(220, 220, 220, 1)
-            HoverFill: =RGBA(220, 220, 220, 1)
-            Icon: =Icon.HorizontalLine
-            PressedBorderColor: =RGBA(220, 220, 220, 1)
-            PressedColor: =RGBA(220, 220, 220, 1)
-            PressedFill: =RGBA(220, 220, 220, 1)
-            Width: =Parent.Width
-            Y: =40
-            ZIndex: =1
-
-        "'Info Label_11' As label":
-            AutoHeight: =true
-            Color: =RGBA(50, 86, 160, 1)
-            Font: =Font.Arial
-            FontWeight: =FontWeight.Semibold
-            OnSelect: |-
-                =UpdateContext({localShowInfo: !localShowInfo, localShowRep : false, localShowArq: false})
-            Text: ="Atividade"
-            Width: =500
-            ZIndex: =2
-
-        "'Info Circle_11' As circle":
-            BorderColor: =RGBA(250, 191, 0, 1)
-            BorderThickness: =2
-            Fill: =If(localShowPrazo, RGBA(255, 191, 0, 1), RGBA(255, 191, 0, 0))
-            Height: =30
-            Width: =30
-            X: =Parent.Width - (30 + 'Info Circle_11'.Width)
-            Y: =5
-            ZIndex: =3
-
-        "'Info Icon_11' As icon.Add":
-            Color: =If(localShowPrazo, RGBA(255, 255, 255, 1), RGBA(255, 191, 0, 1))
-            Height: ='Info Circle_11'.Height
-            Icon: =If(localShowPrazo, Icon.HorizontalLine, Icon.Add)
-            OnSelect: |-
-                =UpdateContext(
-                    {
-                        localShowPrazo: !localShowPrazo
-                
-                    }
-                );
-                ClearCollect(
-                    atividadesRespetivas,
-                    FirstN(
-                        Filter(
-                            Atividades,
-                            (ItemID = _selectedRespetivas Or ItemID = _selectedRespetivasF Or ItemID = EmpresasRespetivas1_1.Selected.ID) And 'Lista da atividade' = 'lista da atividade'.'Empresas Respetivas'
-                        ),
-                        20
-                    )
-                )
-            Width: ='Info Circle_11'.Width
-            X: =Parent.Width - (30 + 'Info Circle_11'.Width)
-            Y: =5
-            ZIndex: =4
 

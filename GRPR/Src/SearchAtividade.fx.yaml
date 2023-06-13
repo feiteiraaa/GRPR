@@ -132,6 +132,17 @@ SearchAtividade As screen:
             )
         ZIndex: =15
 
+    AtividadeForm As form:
+        DataSource: =Atividades
+        DefaultMode: =FormMode.New
+        Height: =AtividadeTable_1.Height
+        NumberOfColumns: =2
+        Visible: =!ShowPesquisaAtividade
+        Width: =AtividadeTable_1.Width
+        X: =AtividadeTable_1.X
+        Y: =AtividadeTable_1.Y
+        ZIndex: =18
+
     Back_Btn As group:
         Height: =5
         Width: =5
@@ -162,17 +173,6 @@ SearchAtividade As screen:
             X: =BackBtn_7.X
             Y: =BackBtn_7.Y
             ZIndex: =17
-
-    AtividadeForm As form:
-        DataSource: =Atividades
-        DefaultMode: =FormMode.New
-        Height: =AtividadeTable_1.Height
-        NumberOfColumns: =2
-        Visible: =!ShowPesquisaAtividade
-        Width: =AtividadeTable_1.Width
-        X: =AtividadeTable_1.X
-        Y: =AtividadeTable_1.Y
-        ZIndex: =18
 
     BtnResetGroup As group:
         Height: =5
