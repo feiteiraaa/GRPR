@@ -369,6 +369,7 @@ Respetivas As screen:
             LayoutHeight: =Parent.Height
             Order: =8
             Text: =ThisItem.uipp_bloqueado
+            Visible: =false
             Width: =100
             X: =0
             Y: =0
