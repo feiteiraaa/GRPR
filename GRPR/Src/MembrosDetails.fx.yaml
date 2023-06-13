@@ -2953,7 +2953,13 @@ MembrosDetails As screen:
                 BorderThickness: =0.5
                 DelayItemLoading: =true
                 Fill: =RGBA(219, 219, 219, 1)
-                Height: ='Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
+                Height: |-
+                    =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
+                    If(
+                        CountRows(atividadesMembros) * Label3_7.Height < 'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y),
+                        CountRows(atividadesMembros) * Label3_7.Height,
+                        'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
+                    )
                 Items: |
                     =With(
                             {
