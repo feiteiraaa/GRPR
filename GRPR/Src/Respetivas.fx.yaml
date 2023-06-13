@@ -1541,8 +1541,8 @@ Respetivas As screen:
         ZIndex: =32
 
         DynamicBtn_20 As DynamicBtn:
-            BtnText: =If(localFormRespetivasEdit Or localFormRespetivasNew,"Cancelar","Editar")
-            ButtonIcon: =If(localFormRespetivasEdit Or localFormRespetivasNew,Icon.Cancel,Icon.Edit)
+            BtnText: =If(localFormRespetivasEdit Or localFormRespetivasNew,"Guardar","Editar")
+            ButtonIcon: =If(localFormRespetivasEdit Or localFormRespetivasNew,Icon.Save,Icon.Edit)
             Height: =40
             Visible: =EmpresasRespetivas.Visible
             Width: =160
