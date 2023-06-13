@@ -132,7 +132,7 @@ SearchAtividade As screen:
             )
         ZIndex: =15
 
-    Form1 As form:
+    AtividadeForm As form:
         DataSource: =Atividades
         Height: =AtividadeTable_1.Height
         NumberOfColumns: =2
@@ -485,10 +485,23 @@ SearchAtividade As screen:
             ZIndex: =1
 
             Dropdown1 As dropdown:
+                ChevronBackground: =cores.amareloMontepio
+                Height: =41
                 Items: =["Ver todos", "Minha Atividade"]
-                X: =40
-                Y: =40
+                Width: =430
+                X: =30
+                Y: =52
                 ZIndex: =1
+
+            Label11_4 As label:
+                Height: =29
+                PaddingBottom: =
+                PaddingRight: =
+                PaddingTop: =
+                Text: ="Atividades"
+                X: =30
+                Y: =9
+                ZIndex: =2
 
     Back_Btn As group:
         Height: =5
@@ -520,4 +533,52 @@ SearchAtividade As screen:
             X: =BackBtn_7.X
             Y: =BackBtn_7.Y
             ZIndex: =17
+
+    BtnResetGroup As group:
+        Height: =5
+        Width: =5
+        X: =60
+        Y: =60
+        ZIndex: =22
+
+        BtnReset As DynamicBtn:
+            BtnText: ="Limpar"
+            ButtonIcon: =Icon.ClearDrawing
+            X: =982
+            Y: =74
+            ZIndex: =20
+
+        Button5 As button:
+            Color: =Color.Transparent
+            Fill: =Color.Transparent
+            Height: =BtnReset.Height
+            OnSelect: =ResetForm(AtividadeForm)
+            Text: =""
+            Width: =BtnReset.Width
+            X: =BtnReset.X
+            Y: =BtnReset.Y
+            ZIndex: =21
+
+    BtnPequisarGroup As group:
+        Height: =5
+        Width: =5
+        X: =80
+        Y: =80
+        ZIndex: =23
+
+        BtnPesquisar As DynamicBtn:
+            BtnText: ="Pesquisar"
+            ButtonIcon: =Icon.Search
+            X: =1162
+            Y: =74
+            ZIndex: =19
+
+        Button6 As button:
+            Fill: =Color.Transparent
+            Height: =BtnPesquisar.Height
+            Text: =""
+            Width: =BtnPesquisar.Width
+            X: =BtnPesquisar.X
+            Y: =BtnPesquisar.Y
+            ZIndex: =22
 
