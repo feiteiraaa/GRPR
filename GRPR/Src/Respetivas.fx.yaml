@@ -1565,14 +1565,21 @@ Respetivas As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
                 =If(
-                    localFormRespetivasEdit,
+                    localFormRespetivasEdit Or localFormRespetivasNew,
                     If(
                         Len(DataCardValue35.Text) = 9,
                         If(
                             SubmitForm(EmpresasRespetivas),
-                            Notify(
-                                "Registo criado com sucesso!",
-                                NotificationType.Success
+                            If(
+                                localFormRespetivasNew,
+                                Notify(
+                                    "Registo criado com sucesso!",
+                                    NotificationType.Success
+                                ),
+                                Notify(
+                                    "Registo atualizado com sucesso!",
+                                    NotificationType.Success
+                                )
                             );
                             Navigate(
                                 Inicio,
