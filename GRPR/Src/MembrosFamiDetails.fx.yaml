@@ -459,7 +459,7 @@ MembrosFamiDetails As screen:
 
                     DateValue1_1 As datepicker:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultDate: =If(IsBlank(_MembroF),Text(Today(),"yyyy-mm-dd"),Parent.Default)
+                        DefaultDate: =If(IsBlank(_Familiar),Text(Today(),"yyyy-mm-dd"),Parent.Default)
                         DisplayMode: =Parent.DisplayMode
                         EndYear: =Year(Today())+100
                         Format: |-
@@ -1046,7 +1046,7 @@ MembrosFamiDetails As screen:
                                         InfoRelaçãoFami.LastSubmit.ID
                                     );
                                     Notify(
-                                        "O registo foi submetido com sucesso!" & "Nome: " & Informacao_1.LastSubmit.Nome & "ID: " & Informacao_1.LastSubmit.ID,
+                                        "O familiar " & Informacao_1.LastSubmit.Nome & " foi criado com sucesso!",
                                         NotificationType.Success
                                     );
                                     ResetForm(Informacao_1);
