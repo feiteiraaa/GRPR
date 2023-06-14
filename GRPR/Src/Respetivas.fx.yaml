@@ -792,6 +792,8 @@ Respetivas As screen:
 
             DataCardKey38 As label:
                 AutoHeight: =true
+                Color: =cores.cinzento
+                FontWeight: =FontWeight.Semibold
                 Height: =34
                 Text: =Parent.DisplayName
                 Width: =Parent.Width - 60
@@ -803,7 +805,7 @@ Respetivas As screen:
             DateValue6 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 EndYear: =Year(Today())+100
                 Format: |-
                     =Text(
@@ -882,7 +884,7 @@ Respetivas As screen:
             DateValue4 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DefaultDate: =Parent.Default
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.View
                 EndYear: =Year(Today())+100
                 Format: |-
                     =Text(
