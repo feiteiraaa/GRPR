@@ -437,7 +437,7 @@ MembrosFamiDetails As screen:
                     Required: =false
                     Update: =DateValue1_1.SelectedDate
                     Visible: |
-                        =ColabFormMode<>FormMode.New
+                        =Informacao_1.Mode<>FormMode.New
                     Width: =266
                     X: =1
                     Y: =1
