@@ -3488,7 +3488,7 @@ MembrosDetails As screen:
                             ).Ativo = false,
                             //Back();
                             Notify(
-                                "Empresa Respectiva foi eliminada com sucesso!",
+                                "Empresa Respetiva foi eliminada com sucesso!",
                                 NotificationType.Success
                             ),
                             Notify(
@@ -3497,7 +3497,7 @@ MembrosDetails As screen:
                             )
                         ),
                         Notify(
-                            "Empresa Respectiva foi dissociada com sucesso, mas permanece ativa por estar associada a outro registo",
+                            "Empresa Respetiva foi dissociada com sucesso, mas permanece ativa por estar associada a outro registo",
                             NotificationType.Success
                         )
                     ),
