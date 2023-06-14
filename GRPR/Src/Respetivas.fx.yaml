@@ -1301,7 +1301,15 @@ Respetivas As screen:
                                 'Data de saída': Now()
                             }
                         ).Ativo = false,
-                        Back();
+                        //Back();
+                        Navigate(
+                            Inicio,
+                            ScreenTransition.None
+                        );
+                        Navigate(
+                            Respetivas,
+                            ScreenTransition.None
+                        );
                         Notify(
                             "Registo eliminado com sucesso!",
                             NotificationType.Success
@@ -1313,7 +1321,6 @@ Respetivas As screen:
                         )
                     )/*,
                     UpdateContext({ColabFormMode: FormMode.View})*/
-                
                 )
             PaddingLeft: =50
             PressedColor: =Color.Black
