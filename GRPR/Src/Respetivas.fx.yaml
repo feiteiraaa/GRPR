@@ -995,8 +995,8 @@ Respetivas As screen:
             Height: |-
                 =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
                 If(
-                    CountRows(atividadesMembros) * Label3_11.Height < 'Atividades Content_2'.Height - (Container1_4.Height + Container1_4.Y),
-                    CountRows(atividadesMembros) * Label3_11.Height,
+                    CountRows(atividadesRespetivas) * Label3_11.Height < 'Atividades Content_2'.Height - (Container1_4.Height + Container1_4.Y),
+                    CountRows(atividadesRespetivas) * Label3_11.Height,
                     'Atividades Content_2'.Height - (Container1_4.Height + Container1_4.Y)
                 )
             Items: |-
@@ -1134,7 +1134,7 @@ Respetivas As screen:
                     Membros_1,
                     ID = _Membro
                 ).Nome & "."*/
-            Visible: =CountRows(atividadesMembros) = 0
+            Visible: =CountRows(atividadesRespetivas) = 0
             Width: =Container1_3.Width
             X: =Container1_3.X
             Y: =Container1_3.Y
