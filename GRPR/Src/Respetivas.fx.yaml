@@ -1573,6 +1573,14 @@ Respetivas As screen:
                             Notify(
                                 "Registo criado com sucesso!",
                                 NotificationType.Success
+                            );
+                            Navigate(
+                                Inicio,
+                                ScreenTransition.None
+                            );
+                            Navigate(
+                                Respetivas,
+                                ScreenTransition.None
                             ),
                             Notify(
                                 "Por favor, tente novamente ou contacte o administrador da solução!",
