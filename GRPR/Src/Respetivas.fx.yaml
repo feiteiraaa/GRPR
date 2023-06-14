@@ -1507,7 +1507,8 @@ Respetivas As screen:
                 );
                 UpdateContext(
                     {
-                        localShowPrazo: false
+                        localShowPrazo: false,
+                        localFormRespetivasEdit: false
                 
                     }
                 )
