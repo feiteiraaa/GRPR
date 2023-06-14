@@ -2343,7 +2343,7 @@ MembrosFamiDetails As screen:
                         FirstN(
                             Filter(
                                 Atividades,
-                                ItemID = _Familiar
+                                ItemID = _Familiar And 'Lista da atividade' = 'lista da atividade'.Familiares
                             ),
                             20
                         )

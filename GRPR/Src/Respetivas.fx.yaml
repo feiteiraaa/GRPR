@@ -7,7 +7,8 @@ Respetivas As screen:
         Set(
             varSortCol1,
             "uipp_designacao"
-        )
+        );
+        Clear(atividadesRespetivas)
 
     EmpresasRespetivas1_1 As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -360,7 +361,7 @@ Respetivas As screen:
         ZIndex: =11
 
     EmpresasRespetivas As form:
-        DataSource: =Empresas
+        DataSource: =CollecRespectivas
         DefaultMode: |-
             =If(
                 localFormRespetivasNew,
@@ -1532,7 +1533,8 @@ Respetivas As screen:
                         localFormRespetivasEdit: false
                 
                     }
-                )
+                );
+                Clear(atividadesRespetivas)
             PaddingLeft: =50
             RadiusBottomLeft: =5
             RadiusBottomRight: =5
@@ -1550,7 +1552,8 @@ Respetivas As screen:
             Height: =30
             Icon: =Icon.ChevronLeft
             OnSelect: |-
-                =UpdateContext({localFormRespetivas:false})
+                =UpdateContext({localFormRespetivas:false});
+                Clear(atividadesRespetivas)
             Visible: =localFormRespetivas
             Width: =30
             X: =375
@@ -1609,7 +1612,8 @@ Respetivas As screen:
                             Navigate(
                                 Respetivas,
                                 ScreenTransition.None
-                            ),
+                            );
+                            Refresh(Empresas),
                             Notify(
                                 "Por favor, tente novamente ou contacte o administrador da solução!",
                                 NotificationType.Error

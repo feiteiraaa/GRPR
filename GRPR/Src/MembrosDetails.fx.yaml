@@ -3236,7 +3236,7 @@ MembrosDetails As screen:
                         FirstN(
                             Filter(
                                 Atividades,
-                                ItemID = _Membro
+                                ItemID = _Membro And 'Lista da atividade' = 'lista da atividade'.Membros
                             ),
                             20
                         )
