@@ -3207,65 +3207,6 @@ MembrosDetails As screen:
         ZIndex: =4
 
     LeftSectionComponent_12 As LeftSectionComponent:
-        TabelaMenu: |-
-            =Table(
-                {
-                    selected: true,
-                    icon: Icon.Home,
-                    text: "Inicio",
-                    Navigate: Inicio,
-                    VisivelPara: true
-                },
-                {
-                    selected: false,
-                    icon: Icon.Bug,
-                    text: "Developer",
-                    Navigate: Developer,
-                    VisivelPara: godMode
-                },
-                {
-                    selected: false,
-                    icon: Icon.People,
-                    text: "Particulares e empresas respetivas",
-                    Navigate: Particulares,
-                    VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
-                },
-                {
-                    selected: false,
-                    icon: Icon.OfficeBuilding,
-                    text: "Empresas respetivas",
-                    Navigate: Respetivas,
-                    VisivelPara: godMode//Or(godMode, DGC_Editor, DGC_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
-                },
-                {
-                    selected: false,
-                    icon: Icon.OfficeBuilding,
-                    text: "Empresas participadas do grupo",
-                    Navigate: Participadas, // _Associar:false,
-                    VisivelPara: Or(godMode, DCRF_Editor, DCRF_Validador, DCOMP_Consulta, DAI_Consulta)
-                },
-                {
-                    selected: false,
-                    icon: Icon.Information,
-                    text: "Atividade",
-                    Navigate: Atividade,
-                    VisivelPara: Or(godMode, DGC_Editor, DGC_Validador, DCRF_Editor, DCRF_Validador, DGP_Editor, DGP_Validador, GCONT_Editor, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
-                },
-                {
-                    selected: false,
-                    icon: Icon.Notebook,
-                    text: "Listagens",
-                    Navigate: Listagens,
-                    VisivelPara: Or(godMode, DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador, DCOMP_Consulta, DAI_Consulta)
-                },
-                {
-                    selected: false,
-                    icon: Icon.Settings,
-                    text: "Configurações",
-                    Navigate: Configuracoes,
-                    VisivelPara: Or(godMode, DRI)
-                }
-            )
         ZIndex: =5
 
     LabelMembroName As label:
