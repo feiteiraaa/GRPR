@@ -1315,6 +1315,7 @@ Respetivas As screen:
                             "Registo eliminado com sucesso!",
                             NotificationType.Success
                         );
+                        Refresh(Empresas);
                         UpdateContext({localShowModal: false}),
                         Notify(
                             "Por favor, tente novamente ou contacte o administrador da solução!",
