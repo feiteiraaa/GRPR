@@ -513,6 +513,13 @@ MembrosFamiDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue6_2.Selected
+                    Visible: |-
+                        =If(
+                            DRI,
+                            true,
+                            IsBlank(_Familiar) And !DRI,
+                            false
+                        )
                     Width: =266
                     X: =2
                     Y: =1
