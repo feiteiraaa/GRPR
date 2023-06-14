@@ -15678,7 +15678,14 @@
         "Height",
         "DisplayMode",
         "ZIndex",
-        "Text",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "ThisItem.Designacao",
+          "InvariantPropertyName": "Text",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "AutoWidth",
         {
           "AFDDataSourceName": "",

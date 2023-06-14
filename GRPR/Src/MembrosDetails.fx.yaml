@@ -997,7 +997,7 @@ MembrosDetails As screen:
                             )
                         )
                     Order: =6
-                    Text: =ThisItem.Designacao
+                    Text: =ThisItem.'Parent ID'.Nome
                     Width: =478
                     X: =0
                     Y: =0
