@@ -322,12 +322,65 @@ Atividade As screen:
         ZIndex: =28
 
     Label18_5 As label:
-        AutoHeight: =true
         BorderColor: =RGBA(0, 0, 0, 1)
         DisplayMode: =DisplayMode.View
-        Height: =144
+        Height: =127
         Size: =12
-        Text: =Text(AtividadeTable.Selected.Item)
+        Text: |-
+            =If(
+                ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                Last(FirstN(
+                    ForAll(Split(
+                        AtividadeTable.Selected.Item,
+                        Char(34)
+                    ), {Result: ThisRecord.Value})
+                , 2)).Result)
+            
+            
+            
+            /*If(
+                ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                Last(FirstN(
+                    ForAll(Split(
+                        AtividadeTable.Selected.Item,
+                        Char(34)
+                    ), {Result: ThisRecord.Value})
+                , 2)).Result,
+                (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
+                Last(FirstN(
+                    ForAll(Split(
+                        AtividadeTable.Selected.Item,
+                        Char(34)
+                    ), {Result: ThisRecord.Value})
+                    ,4)).Result,
+            
+                (Char(34) & "]") = AtividadeTable.Selected.Item,
+                " ",
+               AtividadeTable.Selected.Item
+                
+                
+                 ) */
+            
+            /*If(
+                ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                First(
+                    ForAll(Split(
+                        AtividadeTable.Selected.Item,
+                        Char(34)
+                    ), {Result: ThisRecord.Value})
+                ).Result,
+                (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
+                Last(
+                    ForAll(Split(
+                        AtividadeTable.Selected.Item,
+                        Char(34)
+                    ), {Result: ThisRecord.Value})
+                ).Result,
+                (Char(34) & "]") = AtividadeTable.Selected.Item,
+                " ",
+               AtividadeTable.Selected.Item
+                
+            )*/
         VerticalAlign: =VerticalAlign.Top
         Visible: =ShowDetails
         Width: =793
