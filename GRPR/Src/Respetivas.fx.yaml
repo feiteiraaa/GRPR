@@ -1564,17 +1564,24 @@ Respetivas As screen:
                 =If(
                     localFormRespetivasEdit,
                     If(
-                        SubmitForm(EmpresasRespetivas),
+                        Len(DataCardValue5.Text) = 9,
+                        If(
+                            SubmitForm(EmpresasRespetivas),
+                            Notify(
+                                "Registo criado com sucesso!",
+                                NotificationType.Success
+                            ),
+                            Notify(
+                                "Por favor, tente novamente ou contacte o administrador da solução!",
+                                NotificationType.Error
+                            )
+                        );
+                        UpdateContext({localFormRespetivasEdit: false}),
                         Notify(
-                            "Registo criado com sucesso!",
-                            NotificationType.Success
-                        ),
-                        Notify(
-                            "Por favor, tente novamente ou contacte o administrador da solução!",
+                            "Por favor, preencha o número do documento corretamente.",
                             NotificationType.Error
                         )
-                    );
-                    UpdateContext({localFormRespetivasEdit: false}),
+                    ),
                     UpdateContext({localFormRespetivasEdit: true})
                 )
             PressedColor: =RGBA(0,0,0, 0)
