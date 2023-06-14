@@ -474,7 +474,7 @@ Inicio As screen:
                         'Criado Em',
                         SortOrder.Descending
                     ),
-                    !IsBlank(ThisRecord.'Data de aprovacao CA')
+                    !IsBlank(ThisRecord.'Data de Aprovacao CA')
                 ).'Criado Em'
             Visible: |-
                 =Or(
