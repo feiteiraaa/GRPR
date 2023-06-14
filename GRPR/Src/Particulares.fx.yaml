@@ -20,7 +20,8 @@ Particulares As screen:
         ClearCollect(CollectMembros, Membros_1);
         ClearCollect(CollectRoc, ROCS);
         ClearCollect(CollectColabora, Colaboradores_1);
-        Reset(Checkbox1)
+        Reset(Checkbox1);
+        Clear(atividadesMembros)
 
     ROC As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
