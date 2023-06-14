@@ -1566,7 +1566,7 @@ Respetivas As screen:
                 =If(
                     localFormRespetivasEdit,
                     If(
-                        Len(DataCardValue5.Text) = 9,
+                        Len(DataCardValue35.Text) = 9,
                         If(
                             SubmitForm(EmpresasRespetivas),
                             Notify(
