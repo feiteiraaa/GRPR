@@ -529,6 +529,13 @@ MembrosDetails As screen:
                     Height: =50
                     Required: =false
                     Update: =DataCardValue6.Selected
+                    Visible: |-
+                        =If(
+                            DRI,
+                            true,
+                            IsBlank(_Membro) And !DRI,
+                            false
+                        )
                     Width: =266
                     X: =2
                     Y: =1

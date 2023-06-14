@@ -613,12 +613,19 @@ Respetivas As screen:
             BorderStyle: =BorderStyle.Solid
             DataField: ="uipp_Legislacaoaplicada"
             Default: =ThisItem.'Legislacao aplicada'
-            DisplayMode: =Parent.DisplayMode
+            DisplayMode: =If(DRI And (localFormRespetivasNew Or localFormRespetivasEdit),DisplayMode.Edit,DisplayMode.View)
             DisplayName: =DataSourceInfo([@Empresas],DataSourceInfo.DisplayName,"uipp_Legislacaoaplicada")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             Required: =false
             Update: =DataCardValue34.Selected
+            Visible: |-
+                =If(
+                    DRI,
+                    true,
+                    localFormRespetivasNew And !DRI,
+                    false
+                )
             Width: =490
             X: =1
             Y: =1
