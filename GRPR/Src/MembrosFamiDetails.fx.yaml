@@ -1046,7 +1046,7 @@ MembrosFamiDetails As screen:
                                         InfoRelaçãoFami.LastSubmit.ID
                                     );
                                     Notify(
-                                        "O registo foi submetido com sucesso!" & "Nome: " & Informacao_1.LastSubmit.Nome & "ID: " & Informacao_1.LastSubmit.ID,
+                                        "O familiar " & Informacao_1.LastSubmit.Nome & " foi criado com sucesso!",
                                         NotificationType.Success
                                     );
                                     ResetForm(Informacao_1);
