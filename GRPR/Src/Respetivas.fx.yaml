@@ -1639,8 +1639,8 @@ Respetivas As screen:
             HoverFill: =RGBA(0,0,0, 0)
             OnSelect: |-
                 =If(
-                    localFormRespetivasEdit,
-                    UpdateContext({localFormRespetivasEdit: false}),
+                    localFormRespetivasEdit Or localFormRespetivasNew,
+                    UpdateContext({localFormRespetivasEdit: false,localFormRespetivasNew:false}),
                     UpdateContext({localShowModal: true})
                 )
             PressedColor: =RGBA(0,0,0, 0)
