@@ -976,7 +976,7 @@ MembrosFamiDetails As screen:
 
                 DynamicBtn_29 As DynamicBtn:
                     BtnText: =If(localShowNewForm Or IsBlank(_Familiar), "Guardar" ,"Editar")
-                    ButtonIcon: =If(localShowNewForm Or IsBlank(_MembroF),Icon.Save ,Icon.Edit)
+                    ButtonIcon: =If(localShowNewForm Or IsBlank(_Familiar),Icon.Save ,Icon.Edit)
                     Height: =40
                     Visible: |-
                         =Not("[Eliminado]" in LabelMembroName_1.Text) And Or(
