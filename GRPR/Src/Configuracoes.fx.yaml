@@ -2078,6 +2078,7 @@ Configuracoes As screen:
         ZIndex: =4
 
     ModalConfirmation_1 As ModalConfirmation:
+        ModalText: ="Tem certeza de que deseja eliminar o registo?"
         Visible: =ModalConfirmation_1 = 1
         ZIndex: =5
 

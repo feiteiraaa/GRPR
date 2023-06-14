@@ -584,7 +584,7 @@ ROCDetails As screen:
         ZIndex: =14
 
         ModalConfirmation_5 As ModalConfirmation:
-            ModalText: ="Deseja eliminar o registo de ''"& DataCardValue15.Text &"'' ?"
+            ModalText: ="Tem certeza de que deseja eliminar o registo de ''"& DataCardValue15.Text &"'' ?"
             Visible: =localShowModal
             ZIndex: =11
 

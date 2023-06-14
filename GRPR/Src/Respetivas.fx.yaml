@@ -726,16 +726,13 @@ Respetivas As screen:
 
             DateValue5 As datepicker:
                 BorderColor: =If(IsBlank(Parent.Error), cores.cinzento, Color.Red)
-                DefaultDate: |
-                    =//ThisItem.'Data de insercao'
-                    /*Text(
-                        Today(),
-                        "dd/mm/yyyy",
-                        "pt-PT"
-                    )*/
-                    //Text( Today(), "[$-en-US]dd/mm/yyyy")
-                    
-                    Now()
+                DefaultDate: |-
+                    =If(
+                        localFormRespetivasNew,
+                        Now(),
+                        Parent.Default
+                        //ThisItem.'Data de insercao'
+                    )
                 DisplayMode: =DisplayMode.View
                 EndYear: =Year(Today())+100
                 Format: |-
@@ -1233,6 +1230,7 @@ Respetivas As screen:
             ZIndex: =4
 
     ModalConfirmation_9 As ModalConfirmation:
+        ModalText: ="Tem certeza de que deseja eliminar a empresa respetiva " & LabelMembroName_2.Text & "?"
         Visible: =localShowModal
         ZIndex: =24
 

@@ -17795,7 +17795,7 @@
         {
           "Category": "Data",
           "PropertyName": "ModalText",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",

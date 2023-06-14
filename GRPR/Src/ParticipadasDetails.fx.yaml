@@ -522,6 +522,7 @@ ParticipadasDetails As screen:
             ZIndex: =9
 
     ModalConfirmation_6 As ModalConfirmation:
+        ModalText: ="Tem certeza de que deseja eliminar o registo?"
         Visible: =localShowModal
         ZIndex: =11
 
