@@ -62,7 +62,8 @@ ParticipadasDetails As screen:
                     UpdateContext({
                         ColabFormMode: FormMode.Edit
                     })
-                )
+                );
+                Refresh('Empresas Participadas do Grupos')
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
