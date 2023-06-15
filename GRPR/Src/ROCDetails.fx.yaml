@@ -694,7 +694,7 @@ ROCDetails As screen:
             Items: |-
                 =SortByColumns(
                     With(
-                        {records: atividadesColaboradores
+                        {records: atividadesROC
                             /*Ungroup(
                                 Table(
                                 {Atividades: Atividades},
@@ -731,7 +731,7 @@ ROCDetails As screen:
                     DGC_Editor,
                     DGC_Validador
                 
-                ) And CountRows(atividadesColaboradores) <> 0
+                ) And CountRows(atividadesROC) <> 0
             Width: =Parent.Width * 0.95
             X: =24
             Y: =Container1_6.Height + Container1_6.Y
@@ -787,7 +787,7 @@ ROCDetails As screen:
         Container1_6 As groupContainer.manualLayoutContainer:
             Fill: =RGBA(70, 70, 70, 1)
             Height: =34
-            Visible: =CountRows(atividadesColaboradores) <> 0
+            Visible: =CountRows(atividadesROC) <> 0
             Width: =Parent.Width * 0.95
             X: =24
             Y: =15
@@ -822,11 +822,11 @@ ROCDetails As screen:
             Height: =Container1_3.Height
             Size: =11
             Text: |-
-                ="De momento, não existe atividade associada ao colaborador " & LookUp(
-                    Colaboradores_1,
-                    ID = _Colaborador
+                ="De momento, não existe atividade associada ao ROC " & LookUp(
+                    ROCS,
+                    ID = _ROC
                 ).Nome & "."
-            Visible: =CountRows(atividadesColaboradores) = 0
+            Visible: =CountRows(atividadesROC) = 0
             Width: =Container1_3.Width
             X: =Container1_3.X
             Y: =Container1_3.Y
