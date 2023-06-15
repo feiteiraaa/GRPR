@@ -396,3 +396,78 @@ Participadas As screen:
     LeftSectionComponent_13 As LeftSectionComponent:
         ZIndex: =13
 
+    FimPeriodo_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        Label3_2 As label:
+            Color: =cores.cinzento
+            Fill: =RGBA(255, 244, 198, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =34
+            PaddingTop: =0
+            Text: ="Fim de periodo a decorrer"
+            Visible: |-
+                =true //Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+                And     LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Empresas Participadas"
+                    ).Aprovado = false
+                   
+            Width: =961
+            X: =373
+            Y: =74
+            ZIndex: =14
+
+        Label3_3 As label:
+            Color: =cores.cinzento
+            Fill: =RGBA(255, 244, 198, 1)
+            Height: =34
+            PaddingTop: =0
+            Text: ="Confirmo que toda a informação apresentada relativa às partes relacionadas está correta."
+            Visible: |-
+                =true //Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+                And     LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Empresas Participadas"
+                    ).Aprovado = false
+                   
+            Width: =961
+            X: =373
+            Y: =102
+            ZIndex: =15
+
+        Checkbox1_5 As checkbox:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            CheckboxBackgroundFill: =ColorFade(cores.cinzento, 90%)
+            CheckboxBorderColor: =ColorFade(cores.cinzento, 80%)
+            CheckmarkFill: =cores.cinzento
+            Fill: =RGBA(255, 244, 198, 1)
+            FocusedBorderThickness: =0
+            Height: =40
+            HoverColor: =//RGBA(0, 18, 107, 1)
+            OnCheck: |-
+                =Patch(
+                    Aprovacaos,
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Empresas Participadas"
+                    ),
+                    {Aprovado: true}
+                )
+            Text: =""
+            Visible: |-
+                =true //Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+                And     LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Empresas Participadas"
+                    ).Aprovado = false
+                   
+            Width: =48
+            X: =1286
+            Y: =85
+            ZIndex: =16
+
