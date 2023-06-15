@@ -17,7 +17,7 @@ SearchAtividade As screen:
         HeadingFill: =cores.cinzento
         Height: |
             =472
-        Items: |
+        Items: |-
             =/*If(
                 ShowPesquisaAtividade,
                 Filter(
@@ -51,29 +51,41 @@ SearchAtividade As screen:
                     )
                 )
             )*/
-              SortByColumns(
-              Filter(
+            SortByColumns(
+                Filter(
                     CollectAtividades,
                     If(
                         !IsBlank(DataCardValue47.Text),
-                        DataCardValue47.Text in ThisRecord.Titulo, true
-                    )And If(
+                        DataCardValue47.Text in ThisRecord.Titulo,
+                        true
+                    ) And If(
                         !IsBlank(DataCardValue49.Selected),
                         Text(DataCardValue49.Selected.Value) in ThisRecord.'Lista da atividade',
                         true
-                    )And If(
+                    ) And If(
                         !IsBlank(DataCardValue48.Selected.Value),
                         Text(DataCardValue48.Selected.Value) in ThisRecord.'Tipo de alteracao',
                         true
-                    )And 
-                               If(!IsBlank(DatePicker1_1.SelectedDate),  
-                ThisRecord.Data >= DatePicker1_1.SelectedDate, true)
-                And
-              If(!IsBlank(DatePicker2_1.SelectedDate),
-                ThisRecord.Data <= DatePicker2_1.SelectedDate  , true)
-            
-                    ),"uipp_data",varSortDir
-                )
+                    ) And If(
+                        !IsBlank(DatePicker1_1.SelectedDate),
+                        ThisRecord.Data >= DatePicker1_1.SelectedDate,
+                        true
+                    ) And If(
+                        !IsBlank(DatePicker2_1.SelectedDate),
+                        ThisRecord.Data <= DatePicker2_1.SelectedDate,
+                        true
+                    )And If(
+                        !IsBlank(Checkbox3.Value),
+                        User().FullName in  ThisRecord.'Criado Por'.'Nome Completo', true
+                    ) And If(
+                        !IsBlank(InputCriadoPor.Text),
+                        InputCriadoPor.Text in ThisRecord.'Criado Por'.'Nome Completo',
+                        true
+                    )
+                ),
+                "uipp_data",
+                varSortDir
+            )
         SelectedFill: =cores.amareloMontepio
         Visible: =ShowPesquisaAtividade
         Width: =980
