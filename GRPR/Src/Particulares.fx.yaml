@@ -1014,6 +1014,37 @@ Particulares As screen:
             FocusedBorderThickness: =0
             Height: =40
             HoverColor: =//RGBA(0, 18, 107, 1)
+            OnCheck: |-
+                =Switch(
+                    localFiltro,
+                    "Colaboradores",
+                    Patch(
+                        'Conteudo Validados',
+                        LookUp(
+                            'Conteudo Validados',
+                            ThisRecord.Lista = 'lista da atividade'.Colaboradores
+                        ),
+                        {Validado: true}
+                    ),
+                    "ROC",
+                    Patch(
+                        'Conteudo Validados',
+                        LookUp(
+                            'Conteudo Validados',
+                            ThisRecord.Lista = 'lista da atividade'.ROC
+                        ),
+                        {Validado: true}
+                    ),
+                    "Membros dos Orgãos Sociais",
+                    Patch(
+                        'Conteudo Validados',
+                        LookUp(
+                            'Conteudo Validados',
+                            ThisRecord.Lista = 'lista da atividade'.Membros
+                        ),
+                        {Validado: true}
+                    )
+                )
             Text: =""
             Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
             Width: =48

@@ -429,6 +429,13 @@
       "Values": {
         "Information": "dd95b6cc-2950-4f68-a4bf-ac15c4bc3824"
       }
+    },
+    {
+      "Kind": "default.cds_uipp_conteudovalidado_forms",
+      "Namespace": "Conteudo Validados (Forms)",
+      "Values": {
+        "Information": "ff1df59c-a1c4-4601-a6d3-bc5ebcdfb297"
+      }
     }
   ]
 }
