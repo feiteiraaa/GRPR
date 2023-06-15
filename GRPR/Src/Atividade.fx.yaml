@@ -1,11 +1,12 @@
 Atividade As screen:
-    OnVisible: |
+    OnVisible: |-
         =Concurrent(
             Reset(InputPesquisar),
             Refresh(Atividades)
         );
         
         ClearCollect(CollectAtividades, Atividades);
+        ClearCollect(CollectAtividadeTable, Split(AtividadeTable.Selected.Item, ",");
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
@@ -327,7 +328,12 @@ Atividade As screen:
         Height: =127
         Size: =12
         Text: |-
-            =If(
+            =CollectAtividadesTable
+            
+            
+            
+            
+            /*If(
                 ("[" & Char(34)) in AtividadeTable.Selected.Item,
                 Last(FirstN(
                     ForAll(Split(
@@ -337,7 +343,7 @@ Atividade As screen:
                 , 2)).Result)
             
             
-            
+            */
             /*If(
                 ("[" & Char(34)) in AtividadeTable.Selected.Item,
                 Last(FirstN(
