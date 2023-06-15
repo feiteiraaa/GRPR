@@ -51,7 +51,7 @@ SearchAtividade As screen:
         Visible: =ShowPesquisaAtividade
         Width: =980
         X: =357
-        Y: =200
+        Y: =180
         ZIndex: =4
 
     LeftSectionComponent_19 As LeftSectionComponent:
