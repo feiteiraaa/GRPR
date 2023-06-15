@@ -66,12 +66,12 @@ SearchAtividade As screen:
                         Text(DataCardValue48.Selected.Value) in ThisRecord.'Tipo de alteracao',
                         true
                     )And 
-                    If(!IsBlank(DatePicker2_1.SelectedDate),
-                ThisRecord.Data >= DatePicker1_1.SelectedDate 
-                Or 
-                ThisRecord.Data <= DatePicker2_1.SelectedDate, true)
+                               If(!IsBlank(DatePicker1_1.SelectedDate),  
+                ThisRecord.Data >= DatePicker1_1.SelectedDate, true)
+                And
+              If(!IsBlank(DatePicker2_1.SelectedDate),
+                ThisRecord.Data <= DatePicker2_1.SelectedDate  , true)
             
-                    
                     ),"uipp_data",varSortDir
                 )
         SelectedFill: =cores.amareloMontepio
