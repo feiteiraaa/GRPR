@@ -362,10 +362,127 @@ Atividade As screen:
             Y: =355
             ZIndex: =30
 
-    Pesquisa As group:
+    Group1 As group:
         Height: =5
         Width: =5
         X: =60
         Y: =60
-        ZIndex: =32
+        ZIndex: =40
+
+        InputPesquisar As text:
+            BorderColor: =ColorFade(cores.cinzento, 80%)
+            BorderThickness: =1
+            Clear: =true
+            Color: |-
+                =//RGBA(0, 0, 0, 1)
+                cores.cinzento
+            Default: =
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =DynamicBtn_1.Height
+            HintText: ="Pesquisar"
+            HoverBorderColor: =RGBA(128, 128, 128, 1)
+            HoverFill: =
+            PaddingLeft: =40
+            Tooltip: =
+            Width: =304
+            X: =357
+            Y: =151
+            ZIndex: =31
+
+        "Icon1 As icon.'3DPrinting'":
+            Color: |-
+                =///RGBA(0, 18, 107, 1)
+                cores.amareloMontepio
+            Height: =25
+            Icon: =Icon.Search
+            OnSelect: =//Select(Parent)
+            Width: =25
+            X: =364
+            Y: =158
+            ZIndex: =32
+
+        DatePicker1 As datepicker:
+            BorderColor: =ColorFade(cores.cinzento, 90%)
+            BorderThickness: =0
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Format: |-
+                ="dd/mm/yyyy hh:mm"
+            Height: =38
+            IconBackground: =cores.amareloMontepio
+            IconFill: =ColorFade(cores.cinzento, 90%)
+            Width: =154
+            X: =682
+            Y: =153
+            ZIndex: =33
+
+        DatePicker2 As datepicker:
+            BorderThickness: =0
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Format: |-
+                ="dd/mm/yyyy hh:mm"
+            Height: =DatePicker1.Height
+            IconBackground: =cores.amareloMontepio
+            IconFill: =ColorFade(cores.cinzento, 90%)
+            Width: =DatePicker1.Width
+            X: =871
+            Y: =DatePicker1.Y
+            ZIndex: =34
+
+        DynamicBtn_1 As DynamicBtn:
+            BtnText: ="Exportar"
+            ButtonIcon: =Icon.Download
+            X: =1177
+            Y: =151
+            ZIndex: =35
+
+        Button7 As button:
+            Color: =Color.Transparent
+            DisabledBorderColor: =Color.Transparent
+            DisabledColor: =Color.Transparent
+            DisabledFill: =Color.Transparent
+            Fill: =Color.Transparent
+            Height: =DynamicBtn_1.Height
+            HoverColor: =Color.Transparent
+            HoverFill: =Color.Transparent
+            Text: =""
+            Width: =DynamicBtn_1.Width
+            X: =DynamicBtn_1.X
+            Y: =DynamicBtn_1.Y
+            ZIndex: =36
+
+        Label11 As label:
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Datas:"
+            X: =682
+            Y: =111
+            ZIndex: =37
+
+        Label20 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =46
+            Text: ="a"
+            Width: =35
+            X: =836
+            Y: =147
+            ZIndex: =38
+
+        Icon10 As icon.Filter:
+            Color: =cores.amareloMontepio
+            Fill: =ColorFade(cores.cinzento, 90%)
+            FocusedBorderThickness: =0
+            Height: =InputPesquisar.Height
+            HoverBorderColor: =cores.amareloMontepio
+            HoverColor: =ColorFade(cores.cinzento, 20%)
+            Icon: =Icon.Filter
+            OnSelect: =Navigate(SearchAtividade)
+            PaddingBottom: =3
+            PaddingLeft: =3
+            PaddingRight: =3
+            PaddingTop: =3
+            Width: =50
+            X: =1073
+            Y: =InputPesquisar.Y
+            ZIndex: =39
 
