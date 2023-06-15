@@ -369,65 +369,6 @@ Atividade As screen:
         Y: =60
         ZIndex: =40
 
-        InputPesquisar As text:
-            BorderColor: =ColorFade(cores.cinzento, 80%)
-            BorderThickness: =1
-            Clear: =true
-            Color: |-
-                =//RGBA(0, 0, 0, 1)
-                cores.cinzento
-            Default: =
-            Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =DynamicBtn_1.Height
-            HintText: ="Pesquisar"
-            HoverBorderColor: =RGBA(128, 128, 128, 1)
-            HoverFill: =
-            PaddingLeft: =40
-            Tooltip: =
-            Width: =304
-            X: =357
-            Y: =151
-            ZIndex: =31
-
-        "Icon1 As icon.'3DPrinting'":
-            Color: |-
-                =///RGBA(0, 18, 107, 1)
-                cores.amareloMontepio
-            Height: =25
-            Icon: =Icon.Search
-            OnSelect: =//Select(Parent)
-            Width: =25
-            X: =364
-            Y: =158
-            ZIndex: =32
-
-        DatePicker1 As datepicker:
-            BorderColor: =ColorFade(cores.cinzento, 90%)
-            BorderThickness: =0
-            Fill: =ColorFade(cores.cinzento, 90%)
-            Format: |-
-                ="dd/mm/yyyy hh:mm"
-            Height: =38
-            IconBackground: =cores.amareloMontepio
-            IconFill: =ColorFade(cores.cinzento, 90%)
-            Width: =154
-            X: =682
-            Y: =153
-            ZIndex: =33
-
-        DatePicker2 As datepicker:
-            BorderThickness: =0
-            Fill: =ColorFade(cores.cinzento, 90%)
-            Format: |-
-                ="dd/mm/yyyy hh:mm"
-            Height: =DatePicker1.Height
-            IconBackground: =cores.amareloMontepio
-            IconFill: =ColorFade(cores.cinzento, 90%)
-            Width: =DatePicker1.Width
-            X: =871
-            Y: =DatePicker1.Y
-            ZIndex: =34
-
         DynamicBtn_1 As DynamicBtn:
             BtnText: ="Exportar"
             ButtonIcon: =Icon.Download
@@ -449,14 +390,6 @@ Atividade As screen:
             X: =DynamicBtn_1.X
             Y: =DynamicBtn_1.Y
             ZIndex: =36
-
-        Label11 As label:
-            FontWeight: =FontWeight.Semibold
-            Text: |-
-                ="Datas:"
-            X: =682
-            Y: =111
-            ZIndex: =37
 
         Label20 As label:
             Align: =Align.Center

@@ -677,8 +677,8 @@ ParticipadasDetails As screen:
             Height: |-
                 =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
                 If(
-                    CountRows(atividadesRespetivas) * Label3_17.Height < 'Atividades Content_5'.Height - (Container1_7.Height + Container1_7.Y),
-                    CountRows(atividadesRespetivas) * Label3_17.Height,
+                    CountRows(atividadesParticipadas) * Label3_17.Height < 'Atividades Content_5'.Height - (Container1_7.Height + Container1_7.Y),
+                    CountRows(atividadesParticipadas) * Label3_17.Height,
                     'Atividades Content_5'.Height - (Container1_7.Height + Container1_7.Y)
                 )
             Items: |-
@@ -816,7 +816,7 @@ ParticipadasDetails As screen:
                     'Empresas Participadas do Grupos',
                     ID = _EmpresasParticipadas
                 ).Nome & "."
-            Visible: =CountRows(atividadesRespetivas) = 0
+            Visible: =CountRows(atividadesParticipadas) = 0
             Width: =Container1_3.Width
             X: =Container1_3.X
             Y: =Container1_3.Y
