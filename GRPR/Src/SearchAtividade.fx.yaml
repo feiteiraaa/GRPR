@@ -591,6 +591,12 @@ SearchAtividade As screen:
             Y: =BtnReset.Y
             ZIndex: =21
 
+    Label20 As label:
+        Text: =DataCardValue47.Text
+        X: =587
+        Y: =74
+        ZIndex: =23
+
     BtnPequisarGroup As group:
         Height: =5
         Width: =5
@@ -620,10 +626,4 @@ SearchAtividade As screen:
             X: =BtnPesquisar.X
             Y: =BtnPesquisar.Y
             ZIndex: =22
-
-    Label20 As label:
-        Text: =DataCardValue47.Text
-        X: =587
-        Y: =74
-        ZIndex: =23
 
