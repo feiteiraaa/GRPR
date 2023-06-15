@@ -118,13 +118,6 @@
       }
     },
     {
-      "Kind": "default.cds_uipp_conteudovalidado_forms",
-      "Namespace": "Conteudo Validados (Forms)",
-      "Values": {
-        "Information": "ff1df59c-a1c4-4601-a6d3-bc5ebcdfb297"
-      }
-    },
-    {
       "Kind": "default.cds_uipp_datasreferencia_forms",
       "Namespace": "Datas Referências (Forms)",
       "Values": {
@@ -243,6 +236,13 @@
         "User - Admin": "d87b5f59-2175-491c-abf3-090279b1db5b",
         "Utilizador": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
         "Utilizador da Aplicação": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8"
+      }
+    },
+    {
+      "Kind": "default.cds_uipp_conteudovalidado_forms",
+      "Namespace": "Conteudo Validados (Forms)",
+      "Values": {
+        "Information": "ff1df59c-a1c4-4601-a6d3-bc5ebcdfb297"
       }
     },
     {
