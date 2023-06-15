@@ -1,12 +1,11 @@
 Atividade As screen:
-    OnVisible: |-
+    OnVisible: |
         =Concurrent(
             Reset(InputPesquisar),
             Refresh(Atividades)
         );
         
         ClearCollect(CollectAtividades, Atividades);
-        //ClearCollect(CollectAtividadeTable, Split(AtividadeTable.Selected.Item, ",");
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
@@ -55,7 +54,7 @@ Atividade As screen:
             LayoutHeight: =Parent.Height
             OnSelect: |-
                 =UpdateContext({ShowDetails: true})
-            Order: =8
+            Order: =9
             Text: =ThisItem.'Criado Por'.'Nome Completo'
             Width: =100
             X: =656
@@ -79,6 +78,7 @@ Atividade As screen:
             ZIndex: =6
 
         Data_Column1 As dataTableColumn.dateTimeColumn:
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Data"
             FieldName: ="uipp_data"
@@ -90,10 +90,25 @@ Atividade As screen:
             Order: =7
             Text: |-
                 =Text(DateTimeValue(ThisItem.Data), "dd/mm/yyyy hh:mm")
-            Width: =100
+            Width: =222
             X: =0
             Y: =0
             ZIndex: =7
+
+        uipp_tipodealteracao_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="Tipo de Alteração"
+            FieldName: ="uipp_tipodealteracao"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =8
+            Text: =ThisItem.uipp_tipodealteracao
+            Width: =161
+            X: =368
+            Y: =0
+            ZIndex: =8
 
     LeftSectionComponent_11 As LeftSectionComponent:
         ZIndex: =15
@@ -277,6 +292,7 @@ Atividade As screen:
 
         Label18 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            Size: =14
             Text: =AtividadeTable.Selected.Titulo
             Visible: =ShowDetails
             Width: =843
@@ -290,6 +306,7 @@ Atividade As screen:
             DisplayMode: =DisplayMode.View
             Fill: =cores.amareloMontepio
             FontWeight: =FontWeight.Semibold
+            Size: =14
             Text: |-
                 ="Atividade: "
             Visible: =ShowDetails
@@ -300,7 +317,6 @@ Atividade As screen:
 
         Label18_1 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
             Text: =AtividadeTable.Selected.'Criado Por'.'Nome Completo'
             Visible: =ShowDetails
             Width: =349
@@ -325,7 +341,6 @@ Atividade As screen:
 
         Label18_2 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
             Text: |-
                 =Text(DateTimeValue(AtividadeTable.Selected.Data), "dd/mm/yyyy hh:mm")
             Visible: =ShowDetails
@@ -351,7 +366,6 @@ Atividade As screen:
 
         Label18_3 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
             Text: =AtividadeTable.Selected.'Tipo de alteracao'
             Visible: =ShowDetails
             Width: =349
@@ -376,7 +390,6 @@ Atividade As screen:
 
         Label18_4 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
-            Size: =12
             Text: =AtividadeTable.Selected.'Lista da atividade'
             Visible: =ShowDetails
             Width: =349
@@ -403,10 +416,14 @@ Atividade As screen:
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
             Height: =127
-            Size: =12
             Text: |-
-                =
-                AtividadeTable.Selected.Item
+                =Substitute(Substitute(Concat(ForAll(Split(
+                            AtividadeTable.Selected.Item,
+                            Char(34)
+                        ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]","")
+                
+                
+                //AtividadeTable.Selected.Item
                 
                 
                 /*If(
@@ -416,10 +433,10 @@ Atividade As screen:
                             AtividadeTable.Selected.Item,
                             Char(34)
                         ), {Result: ThisRecord.Value})
-                    , 2)).Result)
+                    , 2)).Result)*/
                 
                 
-                */
+                
                 /*If(
                     ("[" & Char(34)) in AtividadeTable.Selected.Item,
                     Last(FirstN(
@@ -466,7 +483,7 @@ Atividade As screen:
             VerticalAlign: =VerticalAlign.Top
             Visible: =ShowDetails
             Width: =793
-            X: =357
+            X: =344
             Y: =355
             ZIndex: =29
 
