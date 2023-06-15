@@ -506,7 +506,9 @@ SearchAtividade As screen:
             Height: =BtnReset.Height
             HoverColor: =Color.Transparent
             HoverFill: =Color.Transparent
-            OnSelect: =ResetForm(AtividadeForm)
+            OnSelect: |
+                =ResetForm(AtividadeForm);
+                UpdateContext({ShowPesquisaAtividade: !ShowPesquisaAtividade})
             PressedColor: =Color.Transparent
             Text: =""
             Width: =BtnReset.Width
