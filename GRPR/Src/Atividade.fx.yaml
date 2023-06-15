@@ -362,12 +362,12 @@ Atividade As screen:
             Y: =355
             ZIndex: =30
 
-    Group1 As group:
+    Pesquisa As group:
         Height: =5
         Width: =5
-        X: =60
-        Y: =60
-        ZIndex: =40
+        X: =40
+        Y: =40
+        ZIndex: =45
 
         DynamicBtn_1 As DynamicBtn:
             BtnText: ="Exportar"
@@ -397,7 +397,7 @@ Atividade As screen:
             Height: =46
             Text: ="a"
             Width: =35
-            X: =836
+            X: =855
             Y: =147
             ZIndex: =38
 
@@ -415,7 +415,65 @@ Atividade As screen:
             PaddingRight: =3
             PaddingTop: =3
             Width: =50
-            X: =1073
+            X: =1090
             Y: =InputPesquisar.Y
             ZIndex: =39
+
+        InputPesquisar As text:
+            BorderColor: =ColorFade(cores.cinzento, 80%)
+            BorderThickness: =1
+            Clear: =true
+            Color: |-
+                =//RGBA(0, 0, 0, 1)
+                cores.cinzento
+            Default: =
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =DynamicBtn_1.Height
+            HintText: ="Pesquisar"
+            HoverBorderColor: =RGBA(128, 128, 128, 1)
+            HoverFill: =
+            PaddingLeft: =40
+            Tooltip: =
+            Width: =290
+            X: =364
+            Y: =151
+            ZIndex: =40
+
+        "Icon1_6 As icon.'3DPrinting'":
+            Color: |-
+                =///RGBA(0, 18, 107, 1)
+                cores.amareloMontepio
+            Height: =25
+            Icon: =Icon.Search
+            OnSelect: =//Select(Parent)
+            Width: =25
+            X: =375
+            Y: =158
+            ZIndex: =41
+
+        DatePicker1 As datepicker:
+            Format: ="dd/mm/yyyy"
+            Height: =InputPesquisar.Height
+            IconBackground: =cores.amareloMontepio
+            Width: =150
+            X: =700
+            Y: =InputPesquisar.Y
+            ZIndex: =42
+
+        DatePicker2 As datepicker:
+            Format: ="dd/mm/yyyy"
+            Height: =InputPesquisar.Height
+            IconBackground: =cores.amareloMontepio
+            Width: =150
+            X: =890
+            Y: =InputPesquisar.Y
+            ZIndex: =43
+
+        Label11 As label:
+            FontWeight: =FontWeight.Semibold
+            Text: |-
+                ="Datas:"
+            X: =700
+            Y: =107
+            ZIndex: =44
 
