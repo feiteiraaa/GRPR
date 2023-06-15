@@ -673,7 +673,8 @@ ColaboradoresDetails As screen:
                     UpdateContext({
                         ColabFormMode: FormMode.Edit
                     })
-                )
+                );
+                Refresh(Colaboradores_1)
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""

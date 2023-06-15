@@ -513,7 +513,8 @@ ROCDetails As screen:
                     UpdateContext({
                         ColabFormMode: FormMode.Edit
                     })
-                )
+                );
+                Refresh(ROCS)
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
