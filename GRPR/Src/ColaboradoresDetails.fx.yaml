@@ -868,8 +868,8 @@ ColaboradoresDetails As screen:
             Height: |-
                 =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
                 If(
-                    CountRows(atividadesRespetivas) * Label3_13.Height < 'Atividades Content_3'.Height - (Container1_5.Height + Container1_5.Y),
-                    CountRows(atividadesRespetivas) * Label3_13.Height,
+                    CountRows(atividadesColaboradores) * Label3_13.Height < 'Atividades Content_3'.Height - (Container1_5.Height + Container1_5.Y),
+                    CountRows(atividadesColaboradores) * Label3_13.Height,
                     'Atividades Content_3'.Height - (Container1_5.Height + Container1_5.Y)
                 )
             Items: |-

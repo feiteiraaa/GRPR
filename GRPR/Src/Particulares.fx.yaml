@@ -986,7 +986,7 @@ Particulares As screen:
             Height: =34
             PaddingTop: =0
             Text: ="Fim de periodo a decorrer"
-            Visible: =Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+            Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
             Width: =961
             X: =365
             Y: =196
@@ -998,7 +998,7 @@ Particulares As screen:
             Height: =34
             PaddingTop: =0
             Text: ="Confirmo que toda a informação apresentada relativa às partes relacionadas está correta."
-            Visible: =Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+            Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
             Width: =961
             X: =365
             Y: =224
@@ -1015,7 +1015,7 @@ Particulares As screen:
             Height: =40
             HoverColor: =//RGBA(0, 18, 107, 1)
             Text: =""
-            Visible: =Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+            Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
             Width: =48
             X: =1278
             Y: =207

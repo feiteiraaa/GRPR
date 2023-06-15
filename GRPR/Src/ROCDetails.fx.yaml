@@ -688,8 +688,8 @@ ROCDetails As screen:
             Height: |-
                 =//'Atividades Content'.Height - (Container1_2.Height + Container1_2.Y)
                 If(
-                    CountRows(atividadesRespetivas) * Label3_15.Height < 'Atividades Content_4'.Height - (Container1_6.Height + Container1_6.Y),
-                    CountRows(atividadesRespetivas) * Label3_15.Height,
+                    CountRows(atividadesROC) * Label3_15.Height < 'Atividades Content_4'.Height - (Container1_6.Height + Container1_6.Y),
+                    CountRows(atividadesROC) * Label3_15.Height,
                     'Atividades Content_4'.Height - (Container1_6.Height + Container1_6.Y)
                 )
             Items: |-
