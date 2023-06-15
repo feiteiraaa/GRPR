@@ -76,7 +76,7 @@ SearchAtividade As screen:
                         true
                     )And If(
                         !IsBlank(Checkbox3.Value),
-                        User().FullName in  ThisRecord.'Criado Por'.'Nome Completo', true
+                        User().FullName in ThisRecord.'Criado Por'.'Nome Completo', true
                     ) And If(
                         !IsBlank(InputCriadoPor.Text),
                         InputCriadoPor.Text in ThisRecord.'Criado Por'.'Nome Completo',
