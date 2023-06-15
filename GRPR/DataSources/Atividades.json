@@ -120,6 +120,10 @@
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "uipp_listadaatividade",
         "OptionSetReferenceEntityName": "Atividades"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "uipp_lista",
+        "OptionSetReferenceEntityName": "Conteudo Validados"
       }
     },
     "OptionSetTypeKey": "PicklistType",
