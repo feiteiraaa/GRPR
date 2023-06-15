@@ -68,7 +68,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Atividades Content_4",
-      "ParentIndex": 1,
+      "ParentIndex": 13,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -237,7 +237,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Atividades Info_4",
-      "ParentIndex": 0,
+      "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -592,7 +592,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "BackBtn_3",
-      "ParentIndex": 5,
+      "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -786,7 +786,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_19",
-      "ParentIndex": 12,
+      "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1120,7 +1120,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_21",
-      "ParentIndex": 13,
+      "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1454,7 +1454,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_5",
-      "ParentIndex": 7,
+      "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -1788,7 +1788,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Button2_6",
-      "ParentIndex": 9,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6177,7 +6177,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_5",
-      "ParentIndex": 6,
+      "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6324,7 +6324,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "DynamicBtn_6",
-      "ParentIndex": 8,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -8590,7 +8590,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "HtmlText1_1",
-      "ParentIndex": 10,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -9728,7 +9728,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Label1_5",
-      "ParentIndex": 4,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12055,7 +12055,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "LeftSectionComponent_10",
-      "ParentIndex": 3,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -12377,7 +12377,7 @@
       },
       "MetaDataIDKey": "",
       "Name": "ModalConfirmation_5",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13186,7 +13186,7 @@
       "LayoutName": "vertical",
       "MetaDataIDKey": "",
       "Name": "ROCForm",
-      "ParentIndex": 11,
+      "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
