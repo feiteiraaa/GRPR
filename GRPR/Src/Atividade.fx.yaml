@@ -406,6 +406,7 @@ Atividade As screen:
             Format: ="dd/mm/yyyy"
             Height: =InputPesquisar.Height
             IconBackground: =cores.amareloMontepio
+            OnSelect: =Reset(DatePicker1)
             Width: =150
             X: =700
             Y: =InputPesquisar.Y
