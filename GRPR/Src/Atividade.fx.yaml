@@ -6,7 +6,7 @@ Atividade As screen:
         );
         
         ClearCollect(CollectAtividades, Atividades);
-        ClearCollect(CollectAtividadeTable, Split(AtividadeTable.Selected.Item, ",");
+        //ClearCollect(CollectAtividadeTable, Split(AtividadeTable.Selected.Item, ",");
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
@@ -328,9 +328,8 @@ Atividade As screen:
         Height: =127
         Size: =12
         Text: |-
-            =CollectAtividadesTable
-            
-            
+            =
+            AtividadeTable.Selected.Item
             
             
             /*If(
