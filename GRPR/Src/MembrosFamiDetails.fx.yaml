@@ -1082,7 +1082,8 @@ MembrosFamiDetails As screen:
                                 )
                             ),
                             UpdateContext({localShowNewForm: !localShowNewForm})
-                        )
+                        );
+                        Refresh(Familiares)
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -1971,7 +1972,8 @@ MembrosFamiDetails As screen:
                                 ScreenTransition.None,
                                 {_AssociarRF: true}
                             )
-                        )
+                        );
+                        Refresh('Membros-Familiares-Respetivas')
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
