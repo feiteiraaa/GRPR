@@ -21,7 +21,8 @@ Particulares As screen:
         ClearCollect(CollectRoc, ROCS);
         ClearCollect(CollectColabora, Colaboradores_1);
         Reset(Checkbox1);
-        Clear(atividadesMembros)
+        Clear(atividadesMembros);
+        Reset(Checkbox1_1);
 
     ROC As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -986,7 +987,26 @@ Particulares As screen:
             Height: =34
             PaddingTop: =0
             Text: ="Fim de periodo a decorrer"
-            Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+            Visible: |-
+                =true //Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+                And Switch(
+                    localFiltro,
+                    "Colaboradores",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Colaboradores"
+                    ).Aprovado = false,
+                    "ROC",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "ROC"
+                    ).Aprovado = false,
+                    "Membros dos Orgãos Sociais",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Membros dos Orgãos Sociais"
+                    ).Aprovado = false
+                )
             Width: =961
             X: =365
             Y: =196
@@ -998,7 +1018,26 @@ Particulares As screen:
             Height: =34
             PaddingTop: =0
             Text: ="Confirmo que toda a informação apresentada relativa às partes relacionadas está correta."
-            Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+            Visible: |-
+                =true //Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+                And Switch(
+                    localFiltro,
+                    "Colaboradores",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Colaboradores"
+                    ).Aprovado = false,
+                    "ROC",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "ROC"
+                    ).Aprovado = false,
+                    "Membros dos Orgãos Sociais",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Membros dos Orgãos Sociais"
+                    ).Aprovado = false
+                )
             Width: =961
             X: =365
             Y: =224
@@ -1009,7 +1048,6 @@ Particulares As screen:
             CheckboxBackgroundFill: =ColorFade(cores.cinzento, 90%)
             CheckboxBorderColor: =ColorFade(cores.cinzento, 80%)
             CheckmarkFill: =cores.cinzento
-            Default: =true
             Fill: =RGBA(255, 244, 198, 1)
             FocusedBorderThickness: =0
             Height: =40
@@ -1019,34 +1057,53 @@ Particulares As screen:
                     localFiltro,
                     "Colaboradores",
                     Patch(
-                        'Conteudo Validados',
+                        Aprovacaos,
                         LookUp(
-                            'Conteudo Validados',
-                            ThisRecord.Lista = 'lista da atividade'.Colaboradores
+                            Aprovacaos,
+                            ThisRecord.Tabela = "Colaboradores"
                         ),
-                        {Validado: true}
+                        {Aprovado: true}
                     ),
                     "ROC",
                     Patch(
-                        'Conteudo Validados',
+                        Aprovacaos,
                         LookUp(
-                            'Conteudo Validados',
-                            ThisRecord.Lista = 'lista da atividade'.ROC
+                            Aprovacaos,
+                            ThisRecord.Tabela = "ROC"
                         ),
-                        {Validado: true}
+                        {Aprovado: true}
                     ),
                     "Membros dos Orgãos Sociais",
                     Patch(
-                        'Conteudo Validados',
+                        Aprovacaos,
                         LookUp(
-                            'Conteudo Validados',
-                            ThisRecord.Lista = 'lista da atividade'.Membros
+                            Aprovacaos,
+                            ThisRecord.Tabela = "Membros dos Orgãos Sociais"
                         ),
-                        {Validado: true}
+                        {Aprovado: true}
                     )
                 )
             Text: =""
-            Visible: =true//Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+            Visible: |-
+                =true //Or(DCRF_Validador, DGC_Validador, DGP_Validador, GCONT_Validador)
+                And Switch(
+                    localFiltro,
+                    "Colaboradores",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Colaboradores"
+                    ).Aprovado = false,
+                    "ROC",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "ROC"
+                    ).Aprovado = false,
+                    "Membros dos Orgãos Sociais",
+                    LookUp(
+                        Aprovacaos,
+                        ThisRecord.Tabela = "Membros dos Orgãos Sociais"
+                    ).Aprovado = false
+                )
             Width: =48
             X: =1278
             Y: =207
