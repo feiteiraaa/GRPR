@@ -17,42 +17,117 @@ SearchAtividade As screen:
         HeadingFill: =cores.cinzento
         Height: |
             =472
-        Items: |-
-            =If(
+        Items: |
+            =/*If(
                 ShowPesquisaAtividade,
-                Filter (
-                        CollectAtividades, 
-                        If(!IsBlank(DataCardValue47.Text), DataCardValue47.Text in ThisRecord.Titulo, true)
-                        And
-                         If(!IsBlank(DataCardValue48.Selected.Value),
-                           Text(DataCardValue48.Selected.Value) in ThisRecord.'Tipo de alteracao', true )
-                        And
-                         If(!IsBlank(DataCardValue49.Selected),
-                           Text(DataCardValue49.Selected.Value) in ThisRecord.'Lista da atividade', true )
-                        And
-                         If(!IsBlank(DataCardValue50.Selected),
-                           Text(DataCardValue50.Selected.Value) in ThisRecord.Estado, true )
-                        And
-                        If(!IsBlank(DatePicker2_1.SelectedDate),
-                            ThisRecord.Data >= DatePicker1_1.SelectedDate 
-                            Or 
-                            ThisRecord.Data <= DatePicker2_1.SelectedDate  , true)
-                        And
-                        If(!IsBlank(Checkbox3.Value),
-                           User().FullName in ThisRecord.'Criado Por'.'Nome Completo' 
-                        ) 
-                        And
-                        If(!IsBlank(InputCriadoPor.Text), InputCriadoPor.Text in ThisRecord.'Criado Por'.'Nome Completo', true)
-                       
-                
+                Filter(
+                    CollectAtividades,
+                    If(
+                        !IsBlank(DataCardValue47.Text),
+                        DataCardValue47.Text = ThisRecord.Titulo, true
+                    ) And If(
+                        !IsBlank(DataCardValue48.Selected.Value),
+                        Text(DataCardValue48.Selected.Value) in ThisRecord.'Tipo de alteracao',
+                        true
+                    ) And If(
+                        !IsBlank(DataCardValue49.Selected),
+                        Text(DataCardValue49.Selected.Value) in ThisRecord.'Lista da atividade',
+                        true
+                    ) And If(
+                        !IsBlank(DataCardValue50.Selected),
+                        Text(DataCardValue50.Selected.Value) in ThisRecord.Estado,
+                        true
+                    ) And If(
+                        !IsBlank(DatePicker2_1.SelectedDate),
+                        ThisRecord.Data >= DatePicker1_1.SelectedDate Or ThisRecord.Data <= DatePicker2_1.SelectedDate,
+                        true
+                    ) And If(
+                        !IsBlank(Checkbox3.Value),
+                        User().FullName = ThisRecord.'Criado Por'.'Nome Completo', true
+                    ) And If(
+                        !IsBlank(InputCriadoPor.Text),
+                        InputCriadoPor.Text = ThisRecord.'Criado Por'.'Nome Completo',
+                        true
+                    )
+                )
+            )*/
             
-            ))
+              Filter(
+                    CollectAtividades,
+                    If(
+                        !IsBlank(DataCardValue47.Text),
+                        DataCardValue47.Text in ThisRecord.Titulo, true
+                    )
+                    And If(
+                        !IsBlank(DataCardValue49.Selected),
+                        Text(DataCardValue49.Selected.Value) in ThisRecord.'Lista da atividade',
+                        true
+                    )
+                    
+                    
+                    )
         SelectedFill: =cores.amareloMontepio
         Visible: =ShowPesquisaAtividade
         Width: =980
         X: =357
         Y: =180
         ZIndex: =4
+
+        uipp_tipodealteracao_Column2 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_tipodealteracao"
+            FieldName: ="uipp_tipodealteracao"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =1
+            Text: =ThisItem.uipp_tipodealteracao
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+        uipp_titulo_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_titulo"
+            FieldName: ="uipp_titulo"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =2
+            Text: =ThisItem.uipp_titulo
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+        uipp_listadaatividade_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_listadaatividade"
+            FieldName: ="uipp_listadaatividade"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =3
+            Text: =ThisItem.uipp_listadaatividade
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =7
+
+        uipp_item_Column1 As dataTableColumn.textualColumn:
+            DisplayMode: =DisplayMode.Edit
+            FieldDisplayName: ="uipp_item"
+            FieldName: ="uipp_item"
+            FieldVariantName: ="textualColumn"
+            Height: =Parent.Height
+            LayoutHeight: =Parent.Height
+            Order: =4
+            Text: =ThisItem.uipp_item
+            Width: =100
+            X: =0
+            Y: =0
+            ZIndex: =8
 
     LeftSectionComponent_19 As LeftSectionComponent:
         ZIndex: =15
@@ -87,7 +162,7 @@ SearchAtividade As screen:
             DataCardKey53 As label:
                 AutoHeight: =true
                 Height: =34
-                Text: =Parent.DisplayName
+                Text: ="Atividade"
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
@@ -516,6 +591,12 @@ SearchAtividade As screen:
             Y: =BtnReset.Y
             ZIndex: =21
 
+    Label20 As label:
+        Text: =DataCardValue47.Text
+        X: =587
+        Y: =74
+        ZIndex: =23
+
     BtnPequisarGroup As group:
         Height: =5
         Width: =5
@@ -539,7 +620,7 @@ SearchAtividade As screen:
             HoverColor: =Color.Transparent
             HoverFill: =Color.Transparent
             OnSelect: |-
-                =UpdateContext({ShowPesquisaAtividade: !ShowPesquisaAtividade})
+                =UpdateContext({ShowPesquisaAtividade: true})
             Text: =""
             Width: =BtnPesquisar.Width
             X: =BtnPesquisar.X
