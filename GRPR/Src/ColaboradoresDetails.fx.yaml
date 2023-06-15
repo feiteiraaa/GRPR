@@ -1073,7 +1073,7 @@ ColaboradoresDetails As screen:
                     FirstN(
                         Filter(
                             Atividades,
-                            ItemID = _Colaborador And 'Lista da atividade' = 'lista da atividade'.'Empresas Respetivas'
+                            ItemID = _Colaborador And 'Lista da atividade' = 'lista da atividade'.Colaboradores
                         ),
                         20
                     )
