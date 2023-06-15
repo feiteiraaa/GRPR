@@ -623,7 +623,7 @@ SearchAtividade As screen:
         Label18_6 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
             Size: =14
-            Text: =AtividadeAtividadeTablePesquisaTable.Selected.Titulo
+            Text: =AtividadeTablePesquisa.Selected.Titulo
             Visible: =ShowAtividadeAvancada
             Width: =843
             X: =342
