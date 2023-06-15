@@ -160,7 +160,9 @@ Inicio As screen:
             CCOMP Consulta: " & CCOMP_Consulta &
             "
             God: " & godMode
-        Visible: =godMode
+        Visible: |-
+            =//godMode
+            false
         Width: =227
         X: =1139
         ZIndex: =6

@@ -706,7 +706,7 @@ MembrosDetails As screen:
                     Height: =39
                     HoverColor: =RGBA(0,0,0, 0)
                     HoverFill: =RGBA(0,0,0, 0)
-                    OnSelect: |
+                    OnSelect: |-
                         =If(
                             localShowNewForm Or Informacao.Mode = FormMode.New,
                             If(
@@ -749,6 +749,7 @@ MembrosDetails As screen:
                         }
                             )
                         );
+                        Refresh(Membros_1)
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -1061,7 +1062,8 @@ MembrosDetails As screen:
                                 }
                             ),
                             UpdateContext({localShowModal: true})
-                        )
+                        );
+                        Refresh('Membros-Participadas')
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -1141,7 +1143,8 @@ MembrosDetails As screen:
                                 ScreenTransition.None,
                                 {_Associar: true}
                             )
-                        )
+                        );
+                        Refresh('Membros-Participadas')
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""
@@ -2468,7 +2471,8 @@ MembrosDetails As screen:
                                 ScreenTransition.None,
                                 {_AssociarR: true}
                             )
-                        )
+                        );
+                        Refresh('Membros-Familiares-Respetivas')
                     PressedColor: =RGBA(0,0,0, 0)
                     PressedFill: =RGBA(0,0,0, 0)
                     Text: =""

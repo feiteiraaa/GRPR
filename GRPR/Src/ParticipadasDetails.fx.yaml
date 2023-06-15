@@ -62,7 +62,8 @@ ParticipadasDetails As screen:
                     UpdateContext({
                         ColabFormMode: FormMode.Edit
                     })
-                )
+                );
+                Refresh('Empresas Participadas do Grupos')
             PressedColor: =RGBA(0,0,0, 0)
             PressedFill: =RGBA(0,0,0, 0)
             Text: =""
@@ -74,11 +75,12 @@ ParticipadasDetails As screen:
     FormParticipadas As form:
         DataSource: ='Empresas Participadas do Grupos'
         DefaultMode: =ColabFormMode
+        Height: =300
         Item: =LookUp('Empresas Participadas do Grupos', _EmpresasParticipadas = ThisRecord.ID)
-        NumberOfColumns: =1
-        Width: =969
-        X: =365
-        Y: =176
+        NumberOfColumns: =2
+        Width: =980
+        X: =364
+        Y: =216
         ZIndex: =10
 
         Nome_DataCard4 As typedDataCard.textualEditCard:
@@ -92,7 +94,7 @@ ParticipadasDetails As screen:
             MaxLength: =DataSourceInfo([@'Empresas Participadas do Grupos'], DataSourceInfo.MaxLength, "uipp_nome")
             Required: =false
             Update: =DataCardValue9.Text
-            Width: =969
+            Width: =484
             X: =0
             Y: =0
             ZIndex: =1
@@ -163,9 +165,9 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue10.Text)
-            Width: =969
-            X: =0
-            Y: =1
+            Width: =484
+            X: =1
+            Y: =0
             ZIndex: =1
 
             DataCardKey10 As label:
@@ -234,9 +236,9 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue27.Text)
-            Width: =969
+            Width: =484
             X: =0
-            Y: =2
+            Y: =1
             ZIndex: =1
 
             DataCardKey11 As label:
@@ -305,9 +307,9 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =Value(DataCardValue28.Text)
-            Width: =969
-            X: =0
-            Y: =3
+            Width: =484
+            X: =1
+            Y: =1
             ZIndex: =1
 
             DataCardKey12 As label:
@@ -378,9 +380,9 @@ ParticipadasDetails As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue29.Selected
-            Width: =969
+            Width: =484
             X: =0
-            Y: =4
+            Y: =2
             ZIndex: =1
 
             DataCardKey29 As label:
