@@ -1,7 +1,12 @@
 Particulares As screen:
     OnVisible: |-
         =Concurrent(
-            UpdateContext({localFiltro: "Membros dos Orgãos Sociais",localseta:false}),
+            UpdateContext(
+                {
+                    localFiltro: "Membros dos Orgãos Sociais",
+                    localseta: false
+                }
+            ),
             ResetForm(ColaboradorForm_1),
             Reset(TextInput2),
             Refresh(Colaboradores_1),
@@ -17,12 +22,50 @@ Particulares As screen:
             SortOrder.Descending
         );
         UpdateContext({showAttachExcel: false});
-        ClearCollect(CollectMembros, Membros_1);
-        ClearCollect(CollectRoc, ROCS);
-        ClearCollect(CollectColabora, Colaboradores_1);
+        ClearCollect(
+            CollectMembros,
+            Membros_1
+        );
+        ClearCollect(
+            CollectRoc,
+            ROCS
+        );
+        ClearCollect(
+            CollectColabora,
+            Colaboradores_1
+        );
+        ClearCollect(
+            CollectMFR,
+            'Membros-Familiares-Respetivas'
+        );
         Reset(Checkbox1);
         Clear(atividadesMembros);
         Reset(Checkbox1_1);
+        /*Clear(MembroFamiliar);
+        ForAll(
+            CollectMembros,
+            Collect(
+                MembroFamiliar,
+                AddColumns(
+                    CollectMembros,
+                    "FamiName",
+                    ForAll(
+                        Filter(
+                            CollectMFR,
+                            CollectMFR[@ID_Membro].ID = CollectMembros[@ID] And IsBlank(ID_Empresa.ID)
+                        ).ID_Familiares,
+                        ID_Familiares.Nome
+                    )
+                )
+            )
+        );*/
+        /*ClearCollect(
+            MembroFamilia,
+            ForAll(
+                MembroFamiliar.ID,
+                "FamiName"
+            )
+        )*/
 
     ROC As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -419,7 +462,8 @@ Particulares As screen:
                 DelayItemLoading: =true
                 Height: =90
                 Items: |-
-                    =Filter(
+                    =//Search(
+                    Filter(
                         Ungroup(
                             Table(
                                 {MyTables: 'Membros-Participadas'},
@@ -427,8 +471,11 @@ Particulares As screen:
                             ),
                             "MyTables"
                         ),
-                        ThisItem.ID=uipp_ID_Membro.ID Or ThisItem.ID=uipp_ChildID.ID
+                        ThisItem.ID = uipp_ID_Membro.ID Or ThisItem.ID = uipp_ChildID.ID
                     )
+                    /*, TextInput2.Text,
+                            "uipp_nome"
+                        )*/
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 OnSelect: |-
