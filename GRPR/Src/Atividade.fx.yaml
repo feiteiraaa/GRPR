@@ -15,7 +15,7 @@ Atividade As screen:
         Width: =409
         X: =364
         Y: =41
-        ZIndex: =3
+        ZIndex: =10
 
     AtividadeTable As dataTable.datatable:
         BorderStyle: =BorderStyle.Solid
@@ -51,7 +51,7 @@ Atividade As screen:
         Width: =980
         X: =357
         Y: =200
-        ZIndex: =4
+        ZIndex: =11
 
         "'Criado Por_Column1' As dataTableColumn.complexTypeColumn":
             DisplayMode: =DisplayMode.Edit
@@ -119,7 +119,7 @@ Atividade As screen:
             ZIndex: =8
 
     LeftSectionComponent_11 As LeftSectionComponent:
-        ZIndex: =15
+        ZIndex: =13
 
     PopUp As group:
         Height: =5
@@ -133,7 +133,7 @@ Atividade As screen:
             Height: =768
             Visible: =ShowDetails
             Width: =1366
-            ZIndex: =15
+            ZIndex: =12
 
         RectDetails As rectangle:
             Fill: =RGBA(255, 255, 255, 1)
@@ -142,7 +142,7 @@ Atividade As screen:
             Width: =1014
             X: =176
             Y: =191
-            ZIndex: =16
+            ZIndex: =14
 
         Button4 As button:
             Fill: =cores.amareloMontepio
@@ -155,7 +155,7 @@ Atividade As screen:
             Visible: =ShowDetails
             X: =561
             Y: =510
-            ZIndex: =18
+            ZIndex: =15
 
         Label18 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -165,7 +165,7 @@ Atividade As screen:
             Width: =843
             X: =342
             Y: =200
-            ZIndex: =19
+            ZIndex: =16
 
         Label19 As label:
             Align: =Align.Center
@@ -180,7 +180,7 @@ Atividade As screen:
             Width: =154
             X: =188
             Y: =200
-            ZIndex: =20
+            ZIndex: =17
 
         Label18_1 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -189,7 +189,7 @@ Atividade As screen:
             Width: =349
             X: =342
             Y: =252
-            ZIndex: =21
+            ZIndex: =18
 
         Label19_1 As label:
             Align: =Align.Center
@@ -204,7 +204,7 @@ Atividade As screen:
             Width: =154
             X: =188
             Y: =252
-            ZIndex: =22
+            ZIndex: =19
 
         Label18_2 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -214,7 +214,7 @@ Atividade As screen:
             Width: =349
             X: =836
             Y: =252
-            ZIndex: =23
+            ZIndex: =20
 
         Label19_2 As label:
             Align: =Align.Center
@@ -229,7 +229,7 @@ Atividade As screen:
             Width: =154
             X: =682
             Y: =252
-            ZIndex: =24
+            ZIndex: =21
 
         Label18_3 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -238,7 +238,7 @@ Atividade As screen:
             Width: =349
             X: =342
             Y: =299
-            ZIndex: =25
+            ZIndex: =22
 
         Label19_3 As label:
             Align: =Align.Center
@@ -253,7 +253,7 @@ Atividade As screen:
             Width: =154
             X: =188
             Y: =299
-            ZIndex: =26
+            ZIndex: =23
 
         Label18_4 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -262,7 +262,7 @@ Atividade As screen:
             Width: =349
             X: =836
             Y: =299
-            ZIndex: =27
+            ZIndex: =24
 
         Label19_4 As label:
             Align: =Align.Center
@@ -277,7 +277,7 @@ Atividade As screen:
             Width: =154
             X: =682
             Y: =299
-            ZIndex: =28
+            ZIndex: =25
 
         Label18_5 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -352,7 +352,7 @@ Atividade As screen:
             Width: =793
             X: =344
             Y: =355
-            ZIndex: =29
+            ZIndex: =26
 
         Label19_5 As label:
             Align: =Align.Center
@@ -367,7 +367,7 @@ Atividade As screen:
             Width: =154
             X: =188
             Y: =355
-            ZIndex: =30
+            ZIndex: =27
 
     Pesquisa As group:
         Height: =5
@@ -394,7 +394,7 @@ Atividade As screen:
             Width: =290
             X: =364
             Y: =151
-            ZIndex: =40
+            ZIndex: =1
 
         "Icon1_6 As icon.'3DPrinting'":
             Color: |-
@@ -406,7 +406,7 @@ Atividade As screen:
             Width: =25
             X: =375
             Y: =158
-            ZIndex: =41
+            ZIndex: =2
 
         DatePicker1 As datepicker:
             DefaultDate: =
@@ -420,7 +420,7 @@ Atividade As screen:
             Width: =150
             X: =700
             Y: =InputPesquisar.Y
-            ZIndex: =42
+            ZIndex: =3
 
         DatePicker2 As datepicker:
             DefaultDate: =
@@ -430,7 +430,7 @@ Atividade As screen:
             Width: =150
             X: =890
             Y: =InputPesquisar.Y
-            ZIndex: =43
+            ZIndex: =4
 
         Label11 As label:
             FontWeight: =FontWeight.Semibold
@@ -439,7 +439,7 @@ Atividade As screen:
                 ="Datas:"
             X: =700
             Y: =107
-            ZIndex: =44
+            ZIndex: =5
 
         DynamicBtn_1 As DynamicBtn:
             BtnText: ="Exportar"
@@ -447,7 +447,7 @@ Atividade As screen:
             Visible: =false
             X: =1177
             Y: =151
-            ZIndex: =45
+            ZIndex: =6
 
         Button7 As button:
             Color: =Color.Transparent
@@ -464,7 +464,7 @@ Atividade As screen:
             Width: =DynamicBtn_1.Width
             X: =DynamicBtn_1.X
             Y: =DynamicBtn_1.Y
-            ZIndex: =46
+            ZIndex: =7
 
         Icon1 As icon.Filter:
             Color: =cores.amareloMontepio
@@ -479,7 +479,7 @@ Atividade As screen:
             Width: =50
             X: =1080
             Y: =InputPesquisar.Y
-            ZIndex: =47
+            ZIndex: =8
 
         Label11_1 As label:
             Align: =Align.Center
@@ -490,5 +490,5 @@ Atividade As screen:
             Width: =39
             X: =851
             Y: =151
-            ZIndex: =48
+            ZIndex: =9
 
