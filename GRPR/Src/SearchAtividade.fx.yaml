@@ -1,4 +1,7 @@
 SearchAtividade As screen:
+    OnVisible: |-
+        =
+            
 
     TitlePage As label:
         FontWeight: =FontWeight.Bold
@@ -75,7 +78,7 @@ SearchAtividade As screen:
                         ThisRecord.Data <= DatePicker2_1.SelectedDate,
                         true
                     )And If(
-                        !IsBlank(Checkbox3.Value),
+                        !IsBlank(CheckboxMinhaAtividade.Value),
                         User().FullName in ThisRecord.'Criado Por'.'Nome Completo', true
                     ) And If(
                         !IsBlank(InputCriadoPor.Text),
@@ -94,6 +97,7 @@ SearchAtividade As screen:
         ZIndex: =4
 
         uipp_tipodealteracao_Column2 As dataTableColumn.textualColumn:
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Tipo Alteração"
             FieldName: ="uipp_tipodealteracao"
@@ -104,12 +108,13 @@ SearchAtividade As screen:
                 =UpdateContext({ShowAtividadeAvancada: true})
             Order: =3
             Text: =ThisItem.uipp_tipodealteracao
-            Width: =100
-            X: =0
+            Width: =125
+            X: =424
             Y: =0
             ZIndex: =5
 
         uipp_titulo_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Atividade"
             FieldName: ="uipp_titulo"
@@ -120,12 +125,13 @@ SearchAtividade As screen:
                 =UpdateContext({ShowAtividadeAvancada: true})
             Order: =1
             Text: =ThisItem.uipp_titulo
-            Width: =100
+            Width: =273
             X: =0
             Y: =0
             ZIndex: =6
 
         uipp_listadaatividade_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Lista da Atividade"
             FieldName: ="uipp_listadaatividade"
@@ -136,12 +142,13 @@ SearchAtividade As screen:
                 =UpdateContext({ShowAtividadeAvancada: true})
             Order: =2
             Text: =ThisItem.uipp_listadaatividade
-            Width: =100
-            X: =0
+            Width: =137
+            X: =276
             Y: =0
             ZIndex: =7
 
         uipp_data_Column1 As dataTableColumn.textualColumn:
+            AutoWidth: =false
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Data"
             FieldName: ="uipp_data"
@@ -153,8 +160,8 @@ SearchAtividade As screen:
             Order: =5
             Text: |-
                 =Text(DateTimeValue(ThisItem.uipp_data), "dd/mm/yyyy hh:mm")
-            Width: =100
-            X: =0
+            Width: =201
+            X: =549
             Y: =0
             ZIndex: =9
 
@@ -266,16 +273,10 @@ SearchAtividade As screen:
             Y: =0
             ZIndex: =1
 
-            Checkbox2 As checkbox:
-                Text: ="Ver Todos"
-                X: =37
-                Y: =40
-                ZIndex: =1
-
-            Checkbox3 As checkbox:
+            CheckboxMinhaAtividade As checkbox:
                 Text: ="Minha Atividade"
                 Width: =203
-                X: =257
+                X: =48
                 Y: =40
                 ZIndex: =2
 
@@ -558,9 +559,9 @@ SearchAtividade As screen:
             Height: =BtnReset.Height
             HoverColor: =Color.Transparent
             HoverFill: =Color.Transparent
-            OnSelect: |
+            OnSelect: |+
                 =ResetForm(AtividadeForm);
-                UpdateContext({ShowPesquisaAtividade: !ShowPesquisaAtividade})
+                
             PressedColor: =Color.Transparent
             Text: =""
             Width: =BtnReset.Width
@@ -591,7 +592,7 @@ SearchAtividade As screen:
             HoverColor: =Color.Transparent
             HoverFill: =Color.Transparent
             OnSelect: |-
-                =UpdateContext({ShowPesquisaAtividade: true})
+                =UpdateContext({ShowPesquisaAtividade: !ShowPesquisaAtividade})
             Text: =""
             Width: =BtnPesquisar.Width
             X: =BtnPesquisar.X

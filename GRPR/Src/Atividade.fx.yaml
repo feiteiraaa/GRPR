@@ -1,11 +1,16 @@
 Atividade As screen:
-    OnVisible: |
+    OnVisible: |-
         =Concurrent(
             Reset(InputPesquisar),
             Refresh(Atividades)
         );
         
         ClearCollect(CollectAtividades, Atividades);
+        
+        Set(NoticacaoAlertaData, Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000));
+        
+        
+        // Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000)
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
@@ -24,30 +29,32 @@ Atividade As screen:
         HeadingFill: =cores.cinzento
         Height: |
             =472
-        Items: |
-            =    SortByColumns(
+        Items: |+
+            =SortByColumns(
                     Filter (
             
                         CollectAtividades, 
                         If(!IsBlank(InputPesquisar.Text), InputPesquisar.Text in ThisRecord.Titulo, true)
                         And
-              
                         If(!IsBlank(DatePicker1.SelectedDate),  
                             ThisRecord.Data >= DatePicker1.SelectedDate, true)
                         And
                         If(!IsBlank(DatePicker2.SelectedDate),
-                             ThisRecord.Data <= DatePicker2.SelectedDate  , true)
+                             ThisRecord.Data <= DatePicker2.SelectedDate, true)
                         And 
                         If(DatePicker1.SelectedDate = DatePicker2.SelectedDate,
                           ThisRecord.Data = DatePicker1.SelectedDate
                           Or
                           ThisRecord.Data = DatePicker2.SelectedDate, true)
-                        And
+                        /*And 
                         If( DatePicker1.SelectedDate > DatePicker2.SelectedDate,
-                        Notify("A data de inicio deve ser menor que a data final", Warning, 2000), true)
+                        Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000), true)*/
+                        
+                
                 
                 ),"uipp_data",varSortDir
-                )
+            )
+            
         SelectedFill: =cores.amareloMontepio
         Width: =980
         X: =357
@@ -115,7 +122,7 @@ Atividade As screen:
             Order: =8
             Text: =ThisItem.uipp_tipodealteracao
             Width: =161
-            X: =532
+            X: =0
             Y: =0
             ZIndex: =8
 
@@ -370,10 +377,9 @@ Atividade As screen:
             Y: =355
             ZIndex: =30
 
-    Label20 As label:
-        Text: =If(DatePicker1.SelectedDate = DatePicker2.SelectedDate, 1 , 4 )
-        X: =775
-        Y: =41
+    Label21 As label:
+        Text: =NoticacaoAlertaData
+        X: =376
         ZIndex: =49
 
     Pesquisa As group:
@@ -490,10 +496,4 @@ Atividade As screen:
             X: =851
             Y: =151
             ZIndex: =48
-
-    Label20_1 As label:
-        Text: =If(DatePicker1.SelectedDate > DatePicker2.SelectedDate, 3 , 4 )
-        X: =1030
-        Y: =41
-        ZIndex: =50
 
