@@ -378,11 +378,7 @@ Inicio As screen:
             TemplateSize: |+
                 =Gallery2.Width/4
                 
-            Visible: |-
-                =Or(
-                    godMode,
-                    DRI
-                )
+            Visible: =Or(godMode,DRI)
             Width: =Gallery2.Width
             X: =365
             Y: =580
@@ -420,19 +416,7 @@ Inicio As screen:
             Color: =cores.azulTitulo
             FontWeight: =FontWeight.Semibold
             Text: ="Fim de periodo a decorrer"
-            Visible: |-
-                =Or(
-                    godMode,
-                    DRI,
-                    DGC_Editor,
-                    DGC_Validador,
-                    DCRF_Editor,
-                    DCRF_Validador,
-                    DGP_Editor,
-                    DGP_Validador,
-                    GCONT_Editor,
-                    GCONT_Validador
-                )
+            Visible: =Or(godMode,DRI)
             Width: =235
             X: =594
             Y: =587
@@ -540,7 +524,7 @@ Inicio As screen:
             Fill: =ColorFade(cores.cinzento, 90%)
             Height: =171
             Visible: |-
-                =/*Or(
+                =Or(
                     godMode,
                     DGC_Editor,
                     DGC_Validador,
@@ -550,8 +534,7 @@ Inicio As screen:
                     DGP_Validador,
                     GCONT_Editor,
                     GCONT_Validador
-                )*/
-                false
+                )
             Width: =692
             X: =365
             Y: =580
@@ -563,7 +546,7 @@ Inicio As screen:
             FontWeight: =FontWeight.Semibold
             Text: ="Fim de periodo a decorrer"
             Visible: |-
-                =/*Or(
+                =Or(
                     godMode,
                     DGC_Editor,
                     DGC_Validador,
@@ -573,8 +556,7 @@ Inicio As screen:
                     DGP_Validador,
                     GCONT_Editor,
                     GCONT_Validador
-                )*/
-                false
+                )
             Width: =230
             X: =596
             Y: =587
@@ -586,7 +568,7 @@ Inicio As screen:
             Text: ="Por favor valide que toda a informação está correta relativamente às partes relacionadas até fim do prazo."
             VerticalAlign: =VerticalAlign.Top
             Visible: |-
-                =/*Or(
+                =Or(
                     godMode,
                     DGC_Editor,
                     DGC_Validador,
@@ -596,8 +578,7 @@ Inicio As screen:
                     DGP_Validador,
                     GCONT_Editor,
                     GCONT_Validador
-                )*/
-                false
+                )
             Width: =597
             X: =413
             Y: =660
@@ -629,7 +610,7 @@ Inicio As screen:
                     TimeUnit.Hours
                 ) & "h " & "restantes"
             Visible: |-
-                =/*Or(
+                =Or(
                     godMode,
                     DGC_Editor,
                     DGC_Validador,
@@ -639,8 +620,7 @@ Inicio As screen:
                     DGP_Validador,
                     GCONT_Editor,
                     GCONT_Validador
-                )*/
-                false
+                )
             Width: =232
             X: =595
             Y: =613
