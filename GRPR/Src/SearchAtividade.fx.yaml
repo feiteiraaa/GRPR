@@ -1,4 +1,7 @@
 SearchAtividade As screen:
+    OnHidden: |+
+        =ResetForm(AtividadeForm);
+        
     OnVisible: |-
         =
             
