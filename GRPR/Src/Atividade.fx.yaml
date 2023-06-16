@@ -444,6 +444,7 @@ Atividade As screen:
         DynamicBtn_1 As DynamicBtn:
             BtnText: ="Exportar"
             ButtonIcon: =Icon.Download
+            Visible: =false
             X: =1177
             Y: =151
             ZIndex: =45
@@ -459,6 +460,7 @@ Atividade As screen:
             HoverColor: =Color.Transparent
             HoverFill: =Color.Transparent
             Text: =""
+            Visible: =false
             Width: =DynamicBtn_1.Width
             X: =DynamicBtn_1.X
             Y: =DynamicBtn_1.Y
