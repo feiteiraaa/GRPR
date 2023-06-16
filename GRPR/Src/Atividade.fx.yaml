@@ -1,16 +1,11 @@
 Atividade As screen:
-    OnVisible: |-
+    OnVisible: |
         =Concurrent(
             Reset(InputPesquisar),
             Refresh(Atividades)
         );
         
         ClearCollect(CollectAtividades, Atividades);
-        
-        Set(NoticacaoAlertaData, Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000));
-        
-        
-        // Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000)
 
     Label1_9 As label:
         FontWeight: =FontWeight.Bold
@@ -37,19 +32,16 @@ Atividade As screen:
                         If(!IsBlank(InputPesquisar.Text), InputPesquisar.Text in ThisRecord.Titulo, true)
                         And
                         If(!IsBlank(DatePicker1.SelectedDate),  
-                            ThisRecord.Data >= DatePicker1.SelectedDate, true)
+                            ThisRecord.'Criado Em' >= DatePicker1.SelectedDate, true)
                         And
                         If(!IsBlank(DatePicker2.SelectedDate),
-                             ThisRecord.Data <= DatePicker2.SelectedDate, true)
+                             ThisRecord.'Criado Em' <= DateAdd( DatePicker2.SelectedDate, 1, TimeUnit.Days), true)
                         And 
-                        If(DatePicker1.SelectedDate = DatePicker2.SelectedDate,
-                          ThisRecord.Data = DatePicker1.SelectedDate
-                          Or
-                          ThisRecord.Data = DatePicker2.SelectedDate, true)
-                        /*And 
-                        If( DatePicker1.SelectedDate > DatePicker2.SelectedDate,
-                        Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000), true)*/
-                        
+                        If(DatePicker1.SelectedDate = DatePicker2.SelectedDate, 
+                        ThisRecord.'Criado Em' >= DatePicker1.SelectedDate
+                        Or
+                          ThisRecord.'Criado Em'  < DateAdd( DatePicker2.SelectedDate, 1, TimeUnit.Days), true)
+                       
                 
                 
                 ),"uipp_data",varSortDir
@@ -377,11 +369,6 @@ Atividade As screen:
             Y: =355
             ZIndex: =30
 
-    Label21 As label:
-        Text: =NoticacaoAlertaData
-        X: =376
-        ZIndex: =49
-
     Pesquisa As group:
         Height: =5
         Width: =5
@@ -422,15 +409,21 @@ Atividade As screen:
             ZIndex: =41
 
         DatePicker1 As datepicker:
+            DefaultDate: =
             Format: ="dd/mm/yyyy"
             Height: =InputPesquisar.Height
             IconBackground: =cores.amareloMontepio
+            OnChange: |-
+                =If(DatePicker1.SelectedDate > DatePicker2.SelectedDate,
+                
+                Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000))
             Width: =150
             X: =700
             Y: =InputPesquisar.Y
             ZIndex: =42
 
         DatePicker2 As datepicker:
+            DefaultDate: =
             Format: ="dd/mm/yyyy"
             Height: =InputPesquisar.Height
             IconBackground: =cores.amareloMontepio

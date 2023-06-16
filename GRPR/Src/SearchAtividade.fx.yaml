@@ -21,40 +21,7 @@ SearchAtividade As screen:
         Height: |
             =472
         Items: |-
-            =/*If(
-                ShowPesquisaAtividade,
-                Filter(
-                    CollectAtividades,
-                    If(
-                        !IsBlank(DataCardValue47.Text),
-                        DataCardValue47.Text = ThisRecord.Titulo, true
-                    ) And If(
-                        !IsBlank(DataCardValue48.Selected.Value),
-                        Text(DataCardValue48.Selected.Value) in ThisRecord.'Tipo de alteracao',
-                        true
-                    ) And If(
-                        !IsBlank(DataCardValue49.Selected),
-                        Text(DataCardValue49.Selected.Value) in ThisRecord.'Lista da atividade',
-                        true
-                    ) And If(
-                        !IsBlank(DataCardValue50.Selected),
-                        Text(DataCardValue50.Selected.Value) in ThisRecord.Estado,
-                        true
-                    ) And If(
-                        !IsBlank(DatePicker2_1.SelectedDate),
-                        ThisRecord.Data >= DatePicker1_1.SelectedDate Or ThisRecord.Data <= DatePicker2_1.SelectedDate,
-                        true
-                    ) And If(
-                        !IsBlank(Checkbox3.Value),
-                        User().FullName = ThisRecord.'Criado Por'.'Nome Completo', true
-                    ) And If(
-                        !IsBlank(InputCriadoPor.Text),
-                        InputCriadoPor.Text = ThisRecord.'Criado Por'.'Nome Completo',
-                        true
-                    )
-                )
-            )*/
-            SortByColumns(
+            =SortByColumns(
                 Filter(
                     CollectAtividades,
                     If(
@@ -71,15 +38,28 @@ SearchAtividade As screen:
                         true
                     ) And If(
                         !IsBlank(DatePicker1_1.SelectedDate),
-                        ThisRecord.Data >= DatePicker1_1.SelectedDate,
+                        ThisRecord.'Criado Em' >= DatePicker1_1.SelectedDate,
                         true
                     ) And If(
                         !IsBlank(DatePicker2_1.SelectedDate),
-                        ThisRecord.Data <= DatePicker2_1.SelectedDate,
+                        ThisRecord.'Criado Em' <= DateAdd(
+                            DatePicker2_1.SelectedDate,
+                            1,
+                            TimeUnit.Days
+                        ),
                         true
-                    )And If(
+                    ) And If(
+                        DatePicker1_1.SelectedDate = DatePicker2_1.SelectedDate,
+                        ThisRecord.'Criado Em' >= DatePicker1_1.SelectedDate Or ThisRecord.'Criado Em' < DateAdd(
+                            DatePicker2_1.SelectedDate,
+                            1,
+                            TimeUnit.Days
+                        ),
+                        true
+                    ) And If(
                         !IsBlank(CheckboxMinhaAtividade.Value),
-                        User().FullName in ThisRecord.'Criado Por'.'Nome Completo', true
+                        User().FullName in ThisRecord.'Criado Por'.'Nome Completo',
+                        true
                     ) And If(
                         !IsBlank(InputCriadoPor.Text),
                         InputCriadoPor.Text in ThisRecord.'Criado Por'.'Nome Completo',
@@ -294,10 +274,15 @@ SearchAtividade As screen:
                 BorderColor: =ColorFade(cores.cinzento, 80%)
                 BorderThickness: |
                     =1
+                DefaultDate: =
                 Fill: =ColorFade(cores.cinzento, 90%)
                 Format: |-
                     ="dd/mm/yyyy hh:mm"
                 IconBackground: =cores.amareloMontepio
+                OnChange: |-
+                    =If(DatePicker1_1.SelectedDate > DatePicker2_1.SelectedDate,
+                    
+                    Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000))
                 PaddingTop: =5
                 Width: =206
                 X: =27
@@ -308,6 +293,7 @@ SearchAtividade As screen:
                 BorderColor: =ColorFade(cores.cinzento, 80%)
                 BorderThickness: |
                     =1
+                DefaultDate: =
                 Fill: =ColorFade(cores.cinzento, 90%)
                 Format: |-
                     ="dd/mm/yyyy hh:mm"
