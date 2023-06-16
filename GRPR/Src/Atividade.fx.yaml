@@ -33,11 +33,14 @@ Atividade As screen:
                         And
               
                         If(!IsBlank(DatePicker1.SelectedDate),  
-                ThisRecord.Data >= DatePicker1.SelectedDate, true)
-                And
-              If(!IsBlank(DatePicker2.SelectedDate),
-                ThisRecord.Data <= DatePicker2.SelectedDate  , true)
-            
+                            ThisRecord.Data >= DatePicker1.SelectedDate, true)
+                        And
+                        If(!IsBlank(DatePicker2.SelectedDate),
+                             ThisRecord.Data <= DatePicker2.SelectedDate  , true)
+                        And 
+                        If(DatePicker1.SelectedDate = DatePicker2.SelectedDate,
+                            DatePicker2.SelectedDate = ThisRecord.Data)
+                        
                 
                 ),"uipp_data",varSortDir
                 )
@@ -363,6 +366,12 @@ Atividade As screen:
             Y: =355
             ZIndex: =30
 
+    Label20 As label:
+        Text: =If(DatePicker1.SelectedDate = DatePicker2.SelectedDate, 1 , 2 )
+        X: =775
+        Y: =41
+        ZIndex: =49
+
     Pesquisa As group:
         Height: =5
         Width: =5
@@ -406,7 +415,6 @@ Atividade As screen:
             Format: ="dd/mm/yyyy"
             Height: =InputPesquisar.Height
             IconBackground: =cores.amareloMontepio
-            OnSelect: =Reset(DatePicker1)
             Width: =150
             X: =700
             Y: =InputPesquisar.Y
