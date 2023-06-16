@@ -39,8 +39,12 @@ Atividade As screen:
                              ThisRecord.Data <= DatePicker2.SelectedDate  , true)
                         And 
                         If(DatePicker1.SelectedDate = DatePicker2.SelectedDate,
-                            DatePicker2.SelectedDate = ThisRecord.Data)
-                        
+                          ThisRecord.Data = DatePicker1.SelectedDate
+                          Or
+                          ThisRecord.Data = DatePicker2.SelectedDate, true)
+                        And
+                        If( DatePicker1.SelectedDate > DatePicker2.SelectedDate,
+                        Notify("A data de inicio deve ser menor que a data final", Warning, 2000), true)
                 
                 ),"uipp_data",varSortDir
                 )
@@ -367,7 +371,7 @@ Atividade As screen:
             ZIndex: =30
 
     Label20 As label:
-        Text: =If(DatePicker1.SelectedDate = DatePicker2.SelectedDate, 1 , 2 )
+        Text: =If(DatePicker1.SelectedDate = DatePicker2.SelectedDate, 1 , 4 )
         X: =775
         Y: =41
         ZIndex: =49
@@ -486,4 +490,10 @@ Atividade As screen:
             X: =851
             Y: =151
             ZIndex: =48
+
+    Label20_1 As label:
+        Text: =If(DatePicker1.SelectedDate > DatePicker2.SelectedDate, 3 , 4 )
+        X: =1030
+        Y: =41
+        ZIndex: =50
 
