@@ -174,6 +174,8 @@ MembrosDetails As screen:
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
+                        HoverBorderColor: =cores.cinzento
+                        HoverFill: =RGBA(0, 0, 0, 0)
                         MaxLength: =Parent.MaxLength
                         PaddingLeft: =5
                         RadiusBottomLeft: =0
@@ -324,6 +326,8 @@ MembrosDetails As screen:
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         Format: =TextFormat.Number
+                        HoverBorderColor: =cores.cinzento
+                        HoverFill: =RGBA(0, 0, 0, 0)
                         PaddingLeft: =5
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
@@ -1285,6 +1289,8 @@ MembrosDetails As screen:
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
+                        HoverBorderColor: =cores.cinzento
+                        HoverFill: =RGBA(0, 0, 0, 0)
                         MaxLength: =Parent.MaxLength
                         PaddingLeft: =5
                         RadiusBottomLeft: =0
@@ -1355,6 +1361,8 @@ MembrosDetails As screen:
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         Format: =TextFormat.Number
+                        HoverBorderColor: =cores.cinzento
+                        HoverFill: =RGBA(0, 0, 0, 0)
                         PaddingLeft: =5
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
@@ -2138,6 +2146,8 @@ MembrosDetails As screen:
                         Default: =Parent.Default
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
+                        HoverBorderColor: =cores.cinzento
+                        HoverFill: =RGBA(0, 0, 0, 0)
                         MaxLength: =Parent.MaxLength
                         PaddingLeft: =5
                         RadiusBottomLeft: =0
@@ -2210,6 +2220,8 @@ MembrosDetails As screen:
                         DelayOutput: =true
                         DisplayMode: =Parent.DisplayMode
                         Format: =TextFormat.Number
+                        HoverBorderColor: =cores.cinzento
+                        HoverFill: =RGBA(0, 0, 0, 0)
                         PaddingLeft: =5
                         RadiusBottomLeft: =0
                         RadiusBottomRight: =0
