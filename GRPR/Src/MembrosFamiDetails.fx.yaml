@@ -356,12 +356,12 @@ MembrosFamiDetails As screen:
                     Required: =false
                     Update: =DataCardValue44.Selected
                     Visible: |-
-                        =If(
+                        =/*If(
                             DRI,
                             true,
                             IsBlank(_Familiar) And !DRI,
                             false
-                        )
+                        )*/true
                     Width: =309
                     X: =0
                     Y: =1
@@ -470,7 +470,8 @@ MembrosFamiDetails As screen:
 
                     DateValue1_1 As datepicker:
                         BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        DefaultDate: =If(IsBlank(_Familiar),Text(Today(),"yyyy-mm-dd"),Parent.Default)
+                        DefaultDate: |-
+                            =If(IsBlank(_Familiar),Text(Now(),"yyyy-mm-dd hh:mm"),Parent.Default)
                         DisplayMode: =Parent.DisplayMode
                         EndYear: =Year(Today())+100
                         Format: |-

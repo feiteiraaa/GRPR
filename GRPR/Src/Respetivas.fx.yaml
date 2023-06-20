@@ -1605,6 +1605,7 @@ Respetivas As screen:
                                     "Registo criado com sucesso!",
                                     NotificationType.Success
                                 ),
+                                localFormRespetivasEdit,
                                 Notify(
                                     "Registo atualizado com sucesso!",
                                     NotificationType.Success
