@@ -491,50 +491,20 @@ Particulares As screen:
                     OnSelect: =Select(Parent)
                     Text: |-
                         =Concatenate(
-                            /*If(
-                                LookUp(
-                                    Empresas,
-                                    ID = ThisItem.uipp_ID_Empresa.ID
-                                ).Ativo,*/
                             LookUp(
                                 Empresas,
                                 ID = ThisItem.uipp_ID_Empresa.ID
                             ).Designacao,
-                                /*LookUp(
-                                    Empresas,
-                                    ID = ThisItem.uipp_ID_Empresa.ID
-                                ).Designacao & "(Eliminado)"
-                            ),
-                            If(
-                                LookUp(
-                                    'Empresas Participadas do Grupos',
-                                    ID = ThisItem.uipp_ParentID.ID
-                                ).Ativo,*/
                             LookUp(
                                 'Empresas Participadas do Grupos',
                                 ID = ThisItem.uipp_ParentID.ID
                             ).Nome,
-                               /* LookUp(
-                                    'Empresas Participadas do Grupos',
-                                    ID = ThisItem.uipp_ParentID.ID
-                                ).Nome & "(Eliminado)"
-                            ),
-                            If(
-                                LookUp(
-                                    Familiares,
-                                    ID = ThisItem.uipp_ID_Familiares.ID
-                                ).Ativo,*/
                             LookUp(
                                 Familiares,
                                 ID = ThisItem.uipp_ID_Familiares.ID
-                            ).Nome/*,
-                                LookUp(
-                                    Familiares,
-                                    ID = ThisItem.uipp_ID_Familiares.ID
-                                ).Nome & "(Eliminado)"
-                            )*/
+                            ).Nome
                         )
-                    Width: =300
+                    Width: =230
                     X: =35
                     Y: =4
                     ZIndex: =1
@@ -588,6 +558,28 @@ Particulares As screen:
                     X: ='Cargo e Relacao2'.X+50
                     Y: ='Cargo e Relacao2'.Y
                     ZIndex: =5
+
+                NomeEliminado As label:
+                    Height: ='Nome e Designacao'.Height
+                    OnSelect: =Select(Parent)
+                    Text: |-
+                        =If(
+                            LookUp(
+                                Empresas,
+                                ID = ThisItem.uipp_ID_Empresa.ID
+                            ).Ativo Or LookUp(
+                                'Empresas Participadas do Grupos',
+                                ID = ThisItem.uipp_ParentID.ID
+                            ).Ativo Or LookUp(
+                                Familiares,
+                                ID = ThisItem.uipp_ID_Familiares.ID
+                            ).Ativo,
+                            " (Eliminado)"
+                        )
+                    Width: =('Nome e Designacao'.Width/2)-10
+                    X: ='Nome e Designacao'.Width+10
+                    Y: ='Nome e Designacao'.Y
+                    ZIndex: =6
 
             Rectangle3 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
