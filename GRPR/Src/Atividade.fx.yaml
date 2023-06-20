@@ -308,7 +308,6 @@ Atividade As screen:
 
             Label18_5 As label:
                 BorderColor: =RGBA(0, 0, 0, 1)
-                DisplayMode: =DisplayMode.View
                 Height: =ContainerAlteracoes.Height
                 Overflow: =Overflow.Scroll
                 Text: |-
