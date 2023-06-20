@@ -126,7 +126,7 @@ Atividade As screen:
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =31
+        ZIndex: =29
 
         Rectangle2 As rectangle:
             Fill: =RGBA(77, 77, 77, 0.31)
@@ -281,82 +281,6 @@ Atividade As screen:
             Y: =299
             ZIndex: =25
 
-        Label18_5 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.View
-            Height: =127
-            Text: |-
-                =Substitute(
-                    Substitute(Substitute(Concat(ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]", ""), ",", Char(13))
-                
-                
-                //AtividadeTable.Selected.Item
-                
-                
-                /*If(
-                    ("[" & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(FirstN(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    , 2)).Result)*/
-                
-                
-                
-                /*If(
-                    ("[" & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(FirstN(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    , 2)).Result,
-                    (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(FirstN(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                        ,4)).Result,
-                
-                    (Char(34) & "]") = AtividadeTable.Selected.Item,
-                    " ",
-                   AtividadeTable.Selected.Item
-                    
-                    
-                     ) */
-                
-                /*If(
-                    ("[" & Char(34)) in AtividadeTable.Selected.Item,
-                    First(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    ).Result,
-                    (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    ).Result,
-                    (Char(34) & "]") = AtividadeTable.Selected.Item,
-                    " ",
-                   AtividadeTable.Selected.Item
-                    
-                )*/
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =ShowDetails
-            Width: =793
-            X: =344
-            Y: =355
-            ZIndex: =26
-
         Label19_5 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -371,6 +295,93 @@ Atividade As screen:
             X: =188
             Y: =355
             ZIndex: =27
+
+        ContainerAlteracoes As groupContainer.verticalAutoLayoutContainer:
+            Height: =152
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            Width: =847
+            X: =342
+            Y: =355
+            ZIndex: =28
+
+            Label18_5 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =ContainerAlteracoes.Height
+                Overflow: =Overflow.Scroll
+                Text: |-
+                    =Substitute(
+                        Substitute(Substitute(Concat(ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]", ""), ",", Char(13))
+                    
+                    
+                    //AtividadeTable.Selected.Item
+                    
+                    
+                    /*If(
+                        ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(FirstN(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        , 2)).Result)*/
+                    
+                    
+                    
+                    /*If(
+                        ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(FirstN(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        , 2)).Result,
+                        (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(FirstN(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                            ,4)).Result,
+                    
+                        (Char(34) & "]") = AtividadeTable.Selected.Item,
+                        " ",
+                       AtividadeTable.Selected.Item
+                        
+                        
+                         ) */
+                    
+                    /*If(
+                        ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                        First(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        ).Result,
+                        (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        ).Result,
+                        (Char(34) & "]") = AtividadeTable.Selected.Item,
+                        " ",
+                       AtividadeTable.Selected.Item
+                        
+                    )*/
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =ShowDetails
+                Width: =ContainerAlteracoes.Width
+                X: =ContainerAlteracoes.X
+                Y: =ContainerAlteracoes.Y
+                ZIndex: =1
 
     Pesquisa As group:
         Height: =5
