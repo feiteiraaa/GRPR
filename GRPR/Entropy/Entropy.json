@@ -10,6 +10,7 @@
   },
   "ControlUniqueGuids": {},
   "ControlUniqueIds": {
+    "%Participacao": 1087,
     "ActionBar": 324,
     "ActionBar_1": 224,
     "ActionBar_3": 413,
@@ -1097,7 +1098,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/20/2023 09:40:56",
+  "HeaderLastSavedDateTimeUTC": "06/20/2023 10:03:54",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1815,6 +1816,7 @@
     "text": 1
   },
   "OverridablePropertiesEntry": {
+    "%Participacao": {},
     "ActionBar": {},
     "ActionBar_1": {},
     "ActionBar_3": {},
@@ -2903,6 +2905,7 @@
   "PCFDynamicSchemaForIRRetrievalEntry": {},
   "PCFTemplateEntry": {},
   "PublishOrderIndices": {
+    "%Participacao": 0,
     "ActionBar": 50,
     "ActionBar_1": 702,
     "ActionBar_3": 607,

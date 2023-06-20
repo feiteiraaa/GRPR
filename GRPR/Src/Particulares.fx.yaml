@@ -580,6 +580,15 @@ Particulares As screen:
                     Y: =11
                     ZIndex: =4
 
+                "'%Participacao' As label":
+                    Height: ='Cargo e Relacao2'.Height
+                    OnSelect: =Select(Parent)
+                    Text: =If(!IsBlank(ThisItem.uipp_participacao),"%")
+                    Width: ='Cargo e Relacao2'.Width/4
+                    X: ='Cargo e Relacao2'.X+50
+                    Y: ='Cargo e Relacao2'.Y
+                    ZIndex: =5
+
             Rectangle3 As rectangle:
                 Fill: =RGBA(128, 128, 128, 1)
                 Height: =1
