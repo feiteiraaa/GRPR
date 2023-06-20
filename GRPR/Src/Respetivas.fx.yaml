@@ -401,7 +401,7 @@ Respetivas As screen:
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
             MaxLength: =DataSourceInfo([@Empresas], DataSourceInfo.MaxLength, "uipp_designacao")
-            Required: =false
+            Required: =true
             Update: =DataCardValue30.Text
             Width: =490
             X: =0
@@ -474,7 +474,7 @@ Respetivas As screen:
             DisplayName: =DataSourceInfo([@Empresas],DataSourceInfo.DisplayName,"uipp_tipodedocumento")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =false
+            Required: =true
             Update: =DataCardValue37.Selected.Value
             Width: =490
             X: =1
@@ -549,7 +549,7 @@ Respetivas As screen:
             DisplayName: =DataSourceInfo([@Empresas],DataSourceInfo.DisplayName,"uipp_numerodocumento")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            Required: =false
+            Required: =true
             Update: =Value(DataCardValue35.Text)
             Width: =490
             X: =0
