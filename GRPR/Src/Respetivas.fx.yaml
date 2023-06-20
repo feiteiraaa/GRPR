@@ -361,7 +361,7 @@ Respetivas As screen:
         ZIndex: =11
 
     EmpresasRespetivas As form:
-        DataSource: =CollecRespectivas
+        DataSource: =Empresas
         DefaultMode: |-
             =If(
                 localFormRespetivasNew,
