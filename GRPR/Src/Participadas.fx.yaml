@@ -3,6 +3,7 @@ Participadas As screen:
         = UpdateContext({ _Associar:false})
     OnVisible: |-
         =//UpdateContext({_Associar:false})
+        Refresh('Empresas Participadas do Grupos')
 
     "'Empresas Participadas' As dataTable.datatable":
         BorderStyle: =BorderStyle.Solid
