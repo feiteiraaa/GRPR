@@ -161,6 +161,7 @@ Atividade As screen:
 
         Label18 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Size: =14
             Text: =AtividadeTable.Selected.Titulo
             Visible: =ShowDetails
@@ -186,6 +187,7 @@ Atividade As screen:
 
         Label18_1 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: =AtividadeTable.Selected.'Criado Por'.'Nome Completo'
             Visible: =ShowDetails
             Width: =349
@@ -210,6 +212,7 @@ Atividade As screen:
 
         Label18_2 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: |-
                 =Text(DateTimeValue(AtividadeTable.Selected.Data), "dd/mm/yyyy hh:mm")
             Visible: =ShowDetails
@@ -235,6 +238,7 @@ Atividade As screen:
 
         Label18_3 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: =AtividadeTable.Selected.'Tipo de alteracao'
             Visible: =ShowDetails
             Width: =349
@@ -259,6 +263,7 @@ Atividade As screen:
 
         Label18_4 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: =AtividadeTable.Selected.'Lista da atividade'
             Visible: =ShowDetails
             Width: =349
@@ -301,6 +306,7 @@ Atividade As screen:
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMode: =LayoutMode.Auto
             LayoutOverflowY: =LayoutOverflow.Scroll
+            Visible: =ShowDetails
             Width: =847
             X: =342
             Y: =355
@@ -308,6 +314,7 @@ Atividade As screen:
 
             Label18_5 As label:
                 BorderColor: =RGBA(0, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
                 Height: =ContainerAlteracoes.Height
                 Overflow: =Overflow.Scroll
                 Text: |-
