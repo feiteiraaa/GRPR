@@ -286,10 +286,11 @@ Atividade As screen:
             DisplayMode: =DisplayMode.View
             Height: =127
             Text: |-
-                =Substitute(Substitute(Concat(ForAll(Split(
+                =Substitute(
+                    Substitute(Substitute(Concat(ForAll(Split(
                             AtividadeTable.Selected.Item,
                             Char(34)
-                        ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]","")
+                        ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]", ""), ",", Char(13))
                 
                 
                 //AtividadeTable.Selected.Item
