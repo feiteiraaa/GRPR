@@ -599,46 +599,51 @@ SearchAtividade As screen:
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =39
+        ZIndex: =38
 
         Rectangle2_1 As rectangle:
-            Fill: =RGBA(77, 77, 77, 0.27)
+            Fill: =RGBA(77, 77, 77, 0.31)
             Height: =768
             Visible: =ShowAtividadeAvancada
             Width: =1366
-            ZIndex: =24
+            ZIndex: =23
 
         RectDetails_1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderThickness: =1
             Fill: =RGBA(255, 255, 255, 1)
             Height: =384
             Visible: =ShowAtividadeAvancada
             Width: =1014
             X: =176
             Y: =191
-            ZIndex: =25
+            ZIndex: =24
 
         Button4_1 As button:
             Fill: =cores.amareloMontepio
+            HoverColor: =ColorFade(cores.cinzento, 90%)
             HoverFill: =ColorFade(cores.cinzento, 90%)
             OnSelect: |-
                 =UpdateContext({ShowAtividadeAvancada:false})
+            PressedBorderColor: =ColorFade(cores.cinzento, 90%)
             Text: ="Fechar"
             Visible: =ShowAtividadeAvancada
             X: =561
             Y: =510
-            ZIndex: =26
+            ZIndex: =25
 
-        Label18_6 As label:
+        Label18_11 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Size: =14
             Text: =AtividadeTablePesquisa.Selected.Titulo
             Visible: =ShowAtividadeAvancada
             Width: =843
             X: =342
             Y: =200
-            ZIndex: =27
+            ZIndex: =26
 
-        Label19_6 As label:
+        Label19_11 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
@@ -651,18 +656,19 @@ SearchAtividade As screen:
             Width: =154
             X: =188
             Y: =200
-            ZIndex: =28
+            ZIndex: =27
 
-        Label18_7 As label:
+        Label18_10 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: =AtividadeTablePesquisa.Selected.'Criado Por'.'Nome Completo'
             Visible: =ShowAtividadeAvancada
             Width: =349
             X: =342
             Y: =252
-            ZIndex: =29
+            ZIndex: =28
 
-        Label19_7 As label:
+        Label19_10 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
@@ -675,19 +681,20 @@ SearchAtividade As screen:
             Width: =154
             X: =188
             Y: =252
-            ZIndex: =30
+            ZIndex: =29
 
-        Label18_8 As label:
+        Label18_9 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: |-
                 =Text(DateTimeValue(AtividadeTablePesquisa.Selected.Data), "dd/mm/yyyy hh:mm")
             Visible: =ShowAtividadeAvancada
             Width: =349
             X: =836
             Y: =252
-            ZIndex: =31
+            ZIndex: =30
 
-        Label19_8 As label:
+        Label19_9 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
@@ -700,18 +707,19 @@ SearchAtividade As screen:
             Width: =154
             X: =682
             Y: =252
-            ZIndex: =32
+            ZIndex: =31
 
-        Label18_9 As label:
+        Label18_8 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: =AtividadeTablePesquisa.Selected.'Tipo de alteracao'
             Visible: =ShowAtividadeAvancada
             Width: =349
             X: =342
             Y: =299
-            ZIndex: =33
+            ZIndex: =32
 
-        Label19_9 As label:
+        Label19_8 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
@@ -724,18 +732,19 @@ SearchAtividade As screen:
             Width: =154
             X: =188
             Y: =299
-            ZIndex: =34
+            ZIndex: =33
 
-        Label18_10 As label:
+        Label18_7 As label:
             BorderColor: =RGBA(0, 0, 0, 1)
+            DisplayMode: =DisplayMode.View
             Text: =AtividadeTablePesquisa.Selected.'Lista da atividade'
             Visible: =ShowAtividadeAvancada
             Width: =349
             X: =836
             Y: =299
-            ZIndex: =35
+            ZIndex: =34
 
-        Label19_10 As label:
+        Label19_7 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
@@ -748,84 +757,9 @@ SearchAtividade As screen:
             Width: =154
             X: =682
             Y: =299
-            ZIndex: =36
+            ZIndex: =35
 
-        Label18_11 As label:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            DisplayMode: =DisplayMode.View
-            Height: =127
-            Text: |-
-                =Substitute(Substitute(Concat(ForAll(Split(
-                            AtividadeTablePesquisa.Selected.Item,
-                            Char(34)
-                        ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]","")
-                
-                
-                //AtividadeTable.Selected.Item
-                
-                
-                /*If(
-                    ("[" & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(FirstN(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    , 2)).Result)*/
-                
-                
-                
-                /*If(
-                    ("[" & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(FirstN(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    , 2)).Result,
-                    (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(FirstN(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                        ,4)).Result,
-                
-                    (Char(34) & "]") = AtividadeTable.Selected.Item,
-                    " ",
-                   AtividadeTable.Selected.Item
-                    
-                    
-                     ) */
-                
-                /*If(
-                    ("[" & Char(34)) in AtividadeTable.Selected.Item,
-                    First(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    ).Result,
-                    (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
-                    Last(
-                        ForAll(Split(
-                            AtividadeTable.Selected.Item,
-                            Char(34)
-                        ), {Result: ThisRecord.Value})
-                    ).Result,
-                    (Char(34) & "]") = AtividadeTable.Selected.Item,
-                    " ",
-                   AtividadeTable.Selected.Item
-                    
-                )*/
-            VerticalAlign: =VerticalAlign.Top
-            Visible: =ShowAtividadeAvancada
-            Width: =793
-            X: =344
-            Y: =355
-            ZIndex: =37
-
-        Label19_11 As label:
+        Label19_6 As label:
             Align: =Align.Center
             BorderColor: =RGBA(0, 0, 0, 1)
             DisplayMode: =DisplayMode.View
@@ -838,5 +772,93 @@ SearchAtividade As screen:
             Width: =154
             X: =188
             Y: =355
-            ZIndex: =38
+            ZIndex: =36
+
+        ContainerAlteracoes_1 As groupContainer.verticalAutoLayoutContainer:
+            Height: =152
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            Visible: =ShowAtividadeAvancada
+            Width: =847
+            X: =342
+            Y: =355
+            ZIndex: =37
+
+            Label18_6 As label:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                DisplayMode: =DisplayMode.View
+                Height: =ContainerAlteracoes_1.Height
+                Overflow: =Overflow.Scroll
+                Text: |-
+                    =Substitute(
+                        Substitute(Substitute(Concat(ForAll(Split(
+                                AtividadeTablePesquisa.Selected.Item,
+                                Char(34)
+                            ), ThisRecord.Value),  ThisRecord.Value, " "), "[", ""), "]", ""), ",", Char(13))
+                    
+                    
+                    //AtividadeTable.Selected.Item
+                    
+                    
+                    /*If(
+                        ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(FirstN(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        , 2)).Result)*/
+                    
+                    
+                    
+                    /*If(
+                        ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(FirstN(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        , 2)).Result,
+                        (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(FirstN(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                            ,4)).Result,
+                    
+                        (Char(34) & "]") = AtividadeTable.Selected.Item,
+                        " ",
+                       AtividadeTable.Selected.Item
+                        
+                        
+                         ) */
+                    
+                    /*If(
+                        ("[" & Char(34)) in AtividadeTable.Selected.Item,
+                        First(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        ).Result,
+                        (Char(34) & "," & Char(34)) in AtividadeTable.Selected.Item,
+                        Last(
+                            ForAll(Split(
+                                AtividadeTable.Selected.Item,
+                                Char(34)
+                            ), {Result: ThisRecord.Value})
+                        ).Result,
+                        (Char(34) & "]") = AtividadeTable.Selected.Item,
+                        " ",
+                       AtividadeTable.Selected.Item
+                        
+                    )*/
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =ShowAtividadeAvancada
+                Width: =ContainerAlteracoes_1.Width
+                X: =ContainerAlteracoes_1.X
+                Y: =ContainerAlteracoes_1.Y
+                ZIndex: =1
 
