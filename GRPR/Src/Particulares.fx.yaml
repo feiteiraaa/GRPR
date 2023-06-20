@@ -577,8 +577,8 @@ Particulares As screen:
                             " (Eliminado)"
                         )
                     Width: =('Nome e Designacao'.Width/2)-10
-                    X: ='Nome e Designacao'.Width+10
-                    Y: ='Nome e Designacao'.Y
+                    X: ='Nome e Designacao'.Width+15
+                    Y: =0//'Nome e Designacao'.Y
                     ZIndex: =6
 
             Rectangle3 As rectangle:
