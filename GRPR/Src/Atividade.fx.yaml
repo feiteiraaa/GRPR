@@ -413,6 +413,9 @@ Atividade As screen:
             Format: ="dd/mm/yyyy"
             Height: =InputPesquisar.Height
             IconBackground: =cores.amareloMontepio
+            InputTextPlaceholder: |-
+                =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                "dd/mm/yyyy"
             OnChange: |-
                 =If(DatePicker1.SelectedDate > DatePicker2.SelectedDate,
                 
@@ -427,6 +430,9 @@ Atividade As screen:
             Format: ="dd/mm/yyyy"
             Height: =InputPesquisar.Height
             IconBackground: =cores.amareloMontepio
+            InputTextPlaceholder: |-
+                =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                "dd/mm/yyyy"
             Width: =150
             X: =890
             Y: =InputPesquisar.Y

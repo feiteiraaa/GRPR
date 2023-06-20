@@ -282,13 +282,16 @@ SearchAtividade As screen:
                 Format: |-
                     ="dd/mm/yyyy hh:mm"
                 IconBackground: =cores.amareloMontepio
+                InputTextPlaceholder: |-
+                    =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                    "dd/mm/yyyy"
                 OnChange: |-
                     =If(DatePicker1_1.SelectedDate > DatePicker2_1.SelectedDate,
                     
                     Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000))
                 PaddingTop: =5
                 Width: =206
-                X: =27
+                X: =21
                 Y: =48
                 ZIndex: =1
 
@@ -302,9 +305,12 @@ SearchAtividade As screen:
                     ="dd/mm/yyyy hh:mm"
                 Height: =43
                 IconBackground: =cores.amareloMontepio
+                InputTextPlaceholder: |-
+                    =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                    "dd/mm/yyyy"
                 PaddingTop: =5
                 Width: =203
-                X: =270
+                X: =264
                 Y: =45
                 ZIndex: =2
 
