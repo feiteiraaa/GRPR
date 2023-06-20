@@ -1599,7 +1599,7 @@ Respetivas As screen:
                         Len(DataCardValue35.Text) = 9,
                         If(
                             SubmitForm(EmpresasRespetivas),
-                            If(
+                           /* If(
                                 localFormRespetivasNew,
                                 Notify(
                                     "Registo criado com sucesso!",
@@ -1610,7 +1610,11 @@ Respetivas As screen:
                                     "Registo atualizado com sucesso!",
                                     NotificationType.Success
                                 )
-                            );
+                            );*/
+                            Notify(
+                                    "Registo atualizado com sucesso!",
+                                    NotificationType.Success
+                                );
                             Navigate(
                                 Inicio,
                                 ScreenTransition.None
