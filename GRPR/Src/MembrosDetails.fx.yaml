@@ -1031,7 +1031,8 @@ MembrosDetails As screen:
                 ZIndex: =5
 
                 DynamicBtn_15 As DynamicBtn:
-                    BtnText: =If(_Associated Or localShowEditForm,"Cancelar","Dissociar")
+                    BtnText: =If(_Associated Or localShowEditForm,"Cancelar","Desassociar")
+                    BtnWidth: =170
                     ButtonIcon: =If(_Associated Or localShowEditForm,Icon.Cancel,Icon.HorizontalLine)
                     Height: =40
                     Visible: |-
@@ -1040,7 +1041,7 @@ MembrosDetails As screen:
                             false,
                             true
                         ) And Or(godMode, DRI, DGC_Editor, DGC_Validador, GCONT_Editor, GCONT_Validador)
-                    Width: =160
+                    Width: =170
                     X: =Parent.X+600
                     Y: =7
                     ZIndex: =2
@@ -1077,6 +1078,7 @@ MembrosDetails As screen:
                             false,
                             true
                         ) And Or(godMode, DRI, DGC_Editor, DGC_Validador, GCONT_Editor, GCONT_Validador)
+                    Width: =170
                     X: =DynamicBtn_15.X
                     Y: =DynamicBtn_15.Y
                     ZIndex: =3
