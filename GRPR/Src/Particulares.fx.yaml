@@ -41,6 +41,7 @@ Particulares As screen:
         Reset(Checkbox1);
         Clear(atividadesMembros);
         Reset(Checkbox1_1);
+        Refresh(Colaboradores_1);
         /*Clear(MembroFamiliar);
         ForAll(
             CollectMembros,
