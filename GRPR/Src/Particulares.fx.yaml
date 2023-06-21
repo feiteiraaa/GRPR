@@ -488,6 +488,7 @@ Particulares As screen:
                 ZIndex: =5
 
                 "'Nome e Designacao' As label":
+                    AutoHeight: =true
                     OnSelect: =Select(Parent)
                     Text: |-
                         =Concatenate(
@@ -562,6 +563,9 @@ Particulares As screen:
                 NomeEliminado As label:
                     Height: ='Nome e Designacao'.Height
                     OnSelect: =Select(Parent)
+                    PaddingBottom: =2
+                    PaddingLeft: =2
+                    PaddingTop: =7
                     Text: |-
                         =If(
                             LookUp(
