@@ -69,7 +69,7 @@ SearchAtividade As screen:
                         true
                     )
                 ),
-                "uipp_data",
+                "createdon",
                 varSortDir
             )
         SelectedFill: =cores.amareloMontepio

@@ -44,7 +44,7 @@ Atividade As screen:
                        
                 
                 
-                ),"uipp_data",varSortDir
+                ), "createdon",varSortDir
             )
             
         SelectedFill: =cores.amareloMontepio
