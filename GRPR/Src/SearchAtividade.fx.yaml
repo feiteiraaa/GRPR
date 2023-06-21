@@ -70,7 +70,7 @@ SearchAtividade As screen:
                     )
                 ),
                 "createdon",
-                varSortDir
+                SortOrder.Descending
             )
         SelectedFill: =cores.amareloMontepio
         Visible: =ShowPesquisaAtividade

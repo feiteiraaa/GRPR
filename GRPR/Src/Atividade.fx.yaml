@@ -44,7 +44,7 @@ Atividade As screen:
                        
                 
                 
-                ), "createdon",varSortDir
+                ), "createdon", SortOrder.Descending
             )
             
         SelectedFill: =cores.amareloMontepio
