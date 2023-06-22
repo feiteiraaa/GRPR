@@ -26,21 +26,21 @@ Listagens As screen:
 
         LabelData As label:
             PaddingLeft: =15
-            Text: ="Text"
+            Text: =Text(ThisItem.'Data de referencia',"dd/mm/yyyy")
             Width: =Label6_24.Width-50
             X: =50
             ZIndex: =2
 
         LabelEstado As label:
             PaddingLeft: =15
-            Text: ="Text"
+            Text: =ThisItem.'Estado (uipp_estado)'
             Width: =Label6_25.Width-10
             X: =Label6_25.X
             ZIndex: =3
 
         LabelTipo As label:
             PaddingLeft: =15
-            Text: ="Text"
+            Text: =ThisItem.Tipo
             Width: =Label6_26.Width-10
             X: =Label6_26.X
             ZIndex: =4
