@@ -2,15 +2,54 @@ Listagens As screen:
 
     LeftSectionComponent_15 As LeftSectionComponent:
 
-    Label1_10 As label:
-        FontWeight: =FontWeight.Bold
-        Height: =48
-        Size: =15
-        Text: ="Listagens"
-        Width: =409
-        X: =384
-        Y: =61
+    GalleryListagens As gallery.galleryVertical:
+        DelayItemLoading: =true
+        Height: =483
+        Items: =Listagens_1
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
+        Width: =980
+        X: =357
+        Y: =255
+        ZIndex: =10
+
+        Label21 As label:
+            Text: ="Text"
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+    Container1_8 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(70, 70, 70, 1)
+        Height: =34
+        Width: =980
+        X: =357
+        Y: =InputPesquisar_1.Y + InputPesquisar_1.Height + 30
         ZIndex: =11
+
+        Label6_24 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Text: ="Data de Referência"
+            Width: =Container1_8.Width/3
+            ZIndex: =1
+
+        Label6_25 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Text: ="Estado"
+            Width: =Container1_8.Width/3
+            X: =Label6_24.X+Label6_24.Width
+            ZIndex: =2
+
+        Label6_26 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Text: ="Tipo de Listagem"
+            Width: =Container1_8.Width/3
+            X: =Label6_25.X+Label6_25.Width
+            ZIndex: =3
 
     PesquisarListagens As group:
         Height: =5
@@ -124,36 +163,15 @@ Listagens As screen:
             Width: =44
             X: =DatePicker1_2.Width+DatePicker1_2.X
             Y: =151
-            ZIndex: =10
+            ZIndex: =9
 
-    Container1_8 As groupContainer.manualLayoutContainer:
-        Fill: =RGBA(70, 70, 70, 1)
-        Height: =34
-        Width: =980
-        X: =357
-        Y: =InputPesquisar_1.Y + InputPesquisar_1.Height + 30
+    Label1_10 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =15
+        Text: ="Listagens"
+        Width: =409
+        X: =384
+        Y: =61
         ZIndex: =12
-
-        Label6_24 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =34
-            Text: ="Data de Referência"
-            Width: =Container1_8.Width/3
-            ZIndex: =1
-
-        Label6_25 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =34
-            Text: ="Estado"
-            Width: =Container1_8.Width/3
-            X: =Label6_24.X+Label6_24.Width
-            ZIndex: =2
-
-        Label6_26 As label:
-            Color: =RGBA(255, 255, 255, 1)
-            Height: =34
-            Text: ="Tipo de Listagem"
-            Width: =Container1_8.Width/3
-            X: =Label6_25.X+Label6_25.Width
-            ZIndex: =3
 
