@@ -574,7 +574,6 @@
     "Icon1": 743,
     "Icon1_1": 66,
     "Icon1_2": 437,
-    "Icon1_3": 1097,
     "Icon1_4": 1050,
     "Icon1_5": 134,
     "Icon1_6": 746,
@@ -1113,7 +1112,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "06/22/2023 15:30:25",
+  "HeaderLastSavedDateTimeUTC": "06/22/2023 15:33:46",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "1e123ecc-1326-48cc-95f2-c45bbd1e0267": "\"/providers/microsoft.powerapps/apis/shared_office365groups/connections/10d9ee635fa14e1a8b42a39c036969d9\"",
@@ -1773,11 +1772,10 @@
       "DatePicker1_2": 2,
       "DatePicker2_2": 3,
       "DynamicBtn_25": 5,
-      "Icon1_3": 7,
       "Icon1_7": 1,
       "InputPesquisar_1": 0,
       "Label11_4": 4,
-      "Label11_5": 8
+      "Label11_5": 7
     },
     "PopUp": {
       "Button4": 12,
@@ -2405,7 +2403,6 @@
     "Icon1": {},
     "Icon1_1": {},
     "Icon1_2": {},
-    "Icon1_3": {},
     "Icon1_4": {},
     "Icon1_5": {},
     "Icon1_6": {},
@@ -3508,7 +3505,6 @@
     "Icon1": 787,
     "Icon1_1": 54,
     "Icon1_2": 708,
-    "Icon1_3": 787,
     "Icon1_4": 282,
     "Icon1_5": 629,
     "Icon1_6": 790,

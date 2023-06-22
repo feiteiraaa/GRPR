@@ -63,7 +63,7 @@ Listagens As screen:
                 =If(DatePicker1_2.SelectedDate > DatePicker2_2.SelectedDate,
                 
                 Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000))
-            Width: =150
+            Width: =165
             X: =700
             Y: =InputPesquisar_1.Y
             ZIndex: =4
@@ -76,8 +76,8 @@ Listagens As screen:
             InputTextPlaceholder: |-
                 =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
                 "dd/mm/yyyy"
-            Width: =150
-            X: =890
+            Width: =165
+            X: =910
             Y: =InputPesquisar_1.Y
             ZIndex: =5
 
@@ -95,7 +95,7 @@ Listagens As screen:
             BtnWidth: =180
             ButtonIcon: =Icon.AddDocument
             Visible: =true
-            X: =1165
+            X: =1120
             Y: =151
             ZIndex: =7
 
@@ -115,29 +115,14 @@ Listagens As screen:
             Y: =DynamicBtn_25.Y
             ZIndex: =8
 
-        Icon1_3 As icon.Filter:
-            Color: =cores.amareloMontepio
-            Fill: =ColorFade(cores.cinzento, 90%)
-            Height: =InputPesquisar_1.Height
-            Icon: =Icon.Filter
-            OnSelect: =Navigate(SearchAtividade)
-            PaddingBottom: =3
-            PaddingLeft: =3
-            PaddingRight: =3
-            PaddingTop: =3
-            Width: =50
-            X: =1080
-            Y: =InputPesquisar_1.Y
-            ZIndex: =9
-
         Label11_5 As label:
             Align: =Align.Center
             FontWeight: =FontWeight.Semibold
             Height: =42
             Size: =15
             Text: ="a"
-            Width: =39
-            X: =851
+            Width: =44
+            X: =DatePicker1_2.Width+DatePicker1_2.X
             Y: =151
             ZIndex: =10
 
