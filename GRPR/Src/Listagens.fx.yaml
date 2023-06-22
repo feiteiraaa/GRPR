@@ -2,3 +2,132 @@ Listagens As screen:
 
     LeftSectionComponent_15 As LeftSectionComponent:
 
+    PesquisarListagens As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        InputPesquisar_1 As text:
+            BorderColor: =ColorFade(cores.cinzento, 80%)
+            BorderThickness: =1
+            Clear: =true
+            Color: |-
+                =//RGBA(0, 0, 0, 1)
+                cores.cinzento
+            Default: =
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =DynamicBtn_25.Height
+            HintText: ="Pesquisar"
+            HoverBorderColor: =RGBA(128, 128, 128, 1)
+            HoverFill: =
+            PaddingLeft: =40
+            Tooltip: =
+            Width: =290
+            X: =364
+            Y: =151
+            ZIndex: =2
+
+        "Icon1_7 As icon.'3DPrinting'":
+            Color: |-
+                =///RGBA(0, 18, 107, 1)
+                cores.amareloMontepio
+            Height: =25
+            Icon: =Icon.Search
+            OnSelect: =//Select(Parent)
+            Width: =25
+            X: =375
+            Y: =158
+            ZIndex: =3
+
+        DatePicker1_2 As datepicker:
+            DefaultDate: =
+            Format: ="dd/mm/yyyy"
+            Height: =InputPesquisar_1.Height
+            IconBackground: =cores.amareloMontepio
+            InputTextPlaceholder: |-
+                =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                "dd/mm/yyyy"
+            OnChange: |-
+                =If(DatePicker1_2.SelectedDate > DatePicker2_2.SelectedDate,
+                
+                Notify("A data inicial deve ser menor do que a data final",NotificationType.Warning, 2000))
+            Width: =150
+            X: =700
+            Y: =InputPesquisar_1.Y
+            ZIndex: =4
+
+        DatePicker2_2 As datepicker:
+            DefaultDate: =
+            Format: ="dd/mm/yyyy"
+            Height: =InputPesquisar_1.Height
+            IconBackground: =cores.amareloMontepio
+            InputTextPlaceholder: |-
+                =//If(IsBlank(Self.SelectedDate), Text(Date(2001,12,31), Self.Format, Self.Language))
+                "dd/mm/yyyy"
+            Width: =150
+            X: =890
+            Y: =InputPesquisar_1.Y
+            ZIndex: =5
+
+        Label11_4 As label:
+            FontWeight: =FontWeight.Semibold
+            Size: =14
+            Text: |-
+                ="Datas:"
+            X: =700
+            Y: =107
+            ZIndex: =6
+
+        DynamicBtn_25 As DynamicBtn:
+            BtnText: ="Novo Pedido"
+            BtnWidth: =180
+            ButtonIcon: =Icon.AddDocument
+            Visible: =true
+            X: =1165
+            Y: =151
+            ZIndex: =7
+
+        Button7_1 As button:
+            Color: =Color.Transparent
+            DisabledBorderColor: =Color.Transparent
+            DisabledColor: =Color.Transparent
+            DisabledFill: =Color.Transparent
+            Fill: =Color.Transparent
+            Height: =DynamicBtn_25.Height
+            HoverBorderColor: =Color.Transparent
+            HoverColor: =Color.Transparent
+            HoverFill: =Color.Transparent
+            Text: =""
+            Width: =DynamicBtn_25.Width
+            X: =DynamicBtn_25.X
+            Y: =DynamicBtn_25.Y
+            ZIndex: =8
+
+        Icon1_3 As icon.Filter:
+            Color: =cores.amareloMontepio
+            Fill: =ColorFade(cores.cinzento, 90%)
+            Height: =InputPesquisar_1.Height
+            Icon: =Icon.Filter
+            OnSelect: =Navigate(SearchAtividade)
+            PaddingBottom: =3
+            PaddingLeft: =3
+            PaddingRight: =3
+            PaddingTop: =3
+            Width: =50
+            X: =1080
+            Y: =InputPesquisar_1.Y
+            ZIndex: =9
+
+        Label11_5 As label:
+            Align: =Align.Center
+            FontWeight: =FontWeight.Semibold
+            Height: =42
+            Size: =15
+            Text: ="a"
+            Width: =39
+            X: =851
+            Y: =151
+            ZIndex: =10
+
