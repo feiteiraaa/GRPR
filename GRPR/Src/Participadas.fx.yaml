@@ -42,6 +42,7 @@ Participadas As screen:
         ZIndex: =2
 
         Nome As dataTableColumn.textualColumn:
+            AutoWidth: =true
             DisplayMode: =DisplayMode.Edit
             FieldDisplayName: ="Designação"
             FieldName: ="uipp_nome"

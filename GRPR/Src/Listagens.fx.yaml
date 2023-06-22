@@ -48,7 +48,7 @@ Listagens As screen:
         Icon10 As icon.Document:
             Color: =cores.amareloMontepio
             Height: =LabelData.Height-7
-            Icon: =Icon.Document
+            Icon: =If(ThisItem.'Estado (uipp_estado)'=Estado.Aprovado,Icon.DockCheckProperties,Icon.Document)
             OnSelect: =Select(Parent)
             Width: =50
             Y: =3
