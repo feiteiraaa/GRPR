@@ -8,17 +8,41 @@ Listagens As screen:
         Items: =Listagens_1
         Layout: =Layout.Vertical
         LoadingSpinner: =LoadingSpinner.Data
-        TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
-        Width: =980
-        X: =357
-        Y: =255
+        TemplateSize: =51
+        Width: =Container1_8.Width
+        X: =Container1_8.X
+        Y: =Container1_8.Y+Container1_8.Height
         ZIndex: =10
 
-        Label21 As label:
-            Text: ="Text"
-            X: =40
-            Y: =40
+        Rectangle3_2 As rectangle:
+            Fill: =RGBA(128, 128, 128, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =970
+            Y: |-
+                =50
+                //If(localseta And ThisItem.IsSelected,126,50)
             ZIndex: =1
+
+        LabelData As label:
+            PaddingLeft: =15
+            Text: ="Text"
+            Width: =Label6_24.Width-10
+            ZIndex: =2
+
+        LabelEstado As label:
+            PaddingLeft: =15
+            Text: ="Text"
+            Width: =Label6_25.Width-10
+            X: =Label6_25.X
+            ZIndex: =3
+
+        LabelTipo As label:
+            PaddingLeft: =15
+            Text: ="Text"
+            Width: =Label6_26.Width-10
+            X: =Label6_26.X
+            ZIndex: =4
 
     Container1_8 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(70, 70, 70, 1)
@@ -31,6 +55,7 @@ Listagens As screen:
         Label6_24 As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =34
+            PaddingLeft: =10
             Text: ="Data de Referência"
             Width: =Container1_8.Width/3
             ZIndex: =1
@@ -38,6 +63,7 @@ Listagens As screen:
         Label6_25 As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =34
+            PaddingLeft: =10
             Text: ="Estado"
             Width: =Container1_8.Width/3
             X: =Label6_24.X+Label6_24.Width
@@ -46,6 +72,7 @@ Listagens As screen:
         Label6_26 As label:
             Color: =RGBA(255, 255, 255, 1)
             Height: =34
+            PaddingLeft: =10
             Text: ="Tipo de Listagem"
             Width: =Container1_8.Width/3
             X: =Label6_25.X+Label6_25.Width
