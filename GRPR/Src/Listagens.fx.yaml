@@ -2,6 +2,16 @@ Listagens As screen:
 
     LeftSectionComponent_15 As LeftSectionComponent:
 
+    Label1_10 As label:
+        FontWeight: =FontWeight.Bold
+        Height: =48
+        Size: =15
+        Text: ="Listagens"
+        Width: =409
+        X: =384
+        Y: =61
+        ZIndex: =11
+
     PesquisarListagens As group:
         Height: =5
         Width: =5
