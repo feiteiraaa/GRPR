@@ -126,3 +126,34 @@ Listagens As screen:
             Y: =151
             ZIndex: =10
 
+    Container1_8 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(70, 70, 70, 1)
+        Height: =34
+        Width: =980
+        X: =357
+        Y: =InputPesquisar_1.Y + InputPesquisar_1.Height + 30
+        ZIndex: =12
+
+        Label6_24 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Text: ="Data de Referência"
+            Width: =Container1_8.Width/3
+            ZIndex: =1
+
+        Label6_25 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Text: ="Estado"
+            Width: =Container1_8.Width/3
+            X: =Label6_24.X+Label6_24.Width
+            ZIndex: =2
+
+        Label6_26 As label:
+            Color: =RGBA(255, 255, 255, 1)
+            Height: =34
+            Text: ="Tipo de Listagem"
+            Width: =Container1_8.Width/3
+            X: =Label6_25.X+Label6_25.Width
+            ZIndex: =3
+
