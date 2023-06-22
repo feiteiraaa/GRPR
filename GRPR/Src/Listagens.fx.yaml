@@ -27,7 +27,8 @@ Listagens As screen:
         LabelData As label:
             PaddingLeft: =15
             Text: ="Text"
-            Width: =Label6_24.Width-10
+            Width: =Label6_24.Width-50
+            X: =50
             ZIndex: =2
 
         LabelEstado As label:
@@ -43,6 +44,15 @@ Listagens As screen:
             Width: =Label6_26.Width-10
             X: =Label6_26.X
             ZIndex: =4
+
+        Icon10 As icon.Document:
+            Color: =cores.amareloMontepio
+            Height: =LabelData.Height-7
+            Icon: =Icon.Document
+            OnSelect: =Select(Parent)
+            Width: =50
+            Y: =3
+            ZIndex: =5
 
     Container1_8 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(70, 70, 70, 1)
